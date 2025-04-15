@@ -1,0 +1,1 @@
+{"embed_dim": 512, "hidden_dims": [256, 128], "num_classes": 11, "dropout_rates": [0.4, 0.3]}

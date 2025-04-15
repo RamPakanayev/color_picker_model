@@ -1,0 +1,204 @@
+[
+  {
+    "id": 0,
+    "description": "A gray canvas containing flag designs.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The French flag with vertical stripes of blue, white, and red.",
+    "parent": 0,
+    "polygon": [
+      [50, 50],
+      [250, 50],
+      [250, 150],
+      [50, 150]
+    ]
+  },
+  {
+    "id": 2,
+    "description": "The blue stripe of the French flag.",
+    "parent": 1,
+    "polygon": [
+      [50, 50],
+      [116, 50],
+      [116, 150],
+      [50, 150]
+    ]
+  },
+  {
+    "id": 3,
+    "description": "The white stripe of the French flag.",
+    "parent": 1,
+    "polygon": [
+      [117, 50],
+      [183, 50],
+      [183, 150],
+      [117, 150]
+    ]
+  },
+  {
+    "id": 4,
+    "description": "The red stripe of the French flag.",
+    "parent": 1,
+    "polygon": [
+      [184, 50],
+      [250, 50],
+      [250, 150],
+      [184, 150]
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The German flag with horizontal stripes of black, red, and yellow (gold).",
+    "parent": 0,
+    "polygon": [
+      [300, 50],
+      [500, 50],
+      [500, 150],
+      [300, 150]
+    ]
+  },
+  {
+    "id": 6,
+    "description": "The black stripe of the German flag.",
+    "parent": 5,
+    "polygon": [
+      [300, 50],
+      [500, 50],
+      [500, 83],
+      [300, 83]
+    ]
+  },
+  {
+    "id": 7,
+    "description": "The red stripe of the German flag.",
+    "parent": 5,
+    "polygon": [
+      [300, 84],
+      [500, 84],
+      [500, 117],
+      [300, 117]
+    ]
+  },
+  {
+    "id": 8,
+    "description": "The yellow (gold) stripe of the German flag.",
+    "parent": 5,
+    "polygon": [
+      [300, 118],
+      [500, 118],
+      [500, 150],
+      [300, 150]
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The Italian flag with vertical stripes of green, white, and red.",
+    "parent": 0,
+    "polygon": [
+      [550, 50],
+      [750, 50],
+      [750, 150],
+      [550, 150]
+    ]
+  },
+  {
+    "id": 10,
+    "description": "The green stripe of the Italian flag.",
+    "parent": 9,
+    "polygon": [
+      [550, 50],
+      [616, 50],
+      [616, 150],
+      [550, 150]
+    ]
+  },
+  {
+    "id": 11,
+    "description": "The white stripe of the Italian flag.",
+    "parent": 9,
+    "polygon": [
+      [617, 50],
+      [683, 50],
+      [683, 150],
+      [617, 150]
+    ]
+  },
+  {
+    "id": 12,
+    "description": "The red stripe of the Italian flag.",
+    "parent": 9,
+    "polygon": [
+      [684, 50],
+      [750, 50],
+      [750, 150],
+      [684, 150]
+    ]
+  },
+  {
+    "id": 13,
+    "description": "The Japanese flag with a white background and a red circle (sun disk).",
+    "parent": 0,
+    "polygon": [
+      [50, 200],
+      [250, 200],
+      [250, 300],
+      [50, 300]
+    ]
+  },
+  {
+    "id": 14,
+    "description": "The red circle (sun disk) in the Japanese flag.",
+    "parent": 13,
+    "polygon": [
+      [125, 225],
+      [150, 215],
+      [175, 225],
+      [185, 250],
+      [175, 275],
+      [150, 285],
+      [125, 275],
+      [115, 250]
+    ]
+  },
+  {
+    "id": 15,
+    "description": "The Swedish flag with a blue background and a yellow cross.",
+    "parent": 0,
+    "polygon": [
+      [300, 200],
+      [500, 200],
+      [500, 300],
+      [300, 300]
+    ]
+  },
+  {
+    "id": 16,
+    "description": "The horizontal yellow stripe of the Swedish flag's cross.",
+    "parent": 15,
+    "polygon": [
+      [300, 240],
+      [500, 240],
+      [500, 260],
+      [300, 260]
+    ]
+  },
+  {
+    "id": 17,
+    "description": "The vertical yellow stripe of the Swedish flag's cross.",
+    "parent": 15,
+    "polygon": [
+      [360, 200],
+      [380, 200],
+      [380, 300],
+      [360, 300]
+    ]
+  }
+]

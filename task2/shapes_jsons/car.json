@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "description": "A gray background canvas.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [600, 0],
+      [600, 400],
+      [0, 400]
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The red body of a sports car.",
+    "parent": 0,
+    "polygon": [
+      [100, 200],
+      [500, 200],
+      [450, 150],
+      [300, 120],
+      [150, 150]
+    ]
+  },
+  {
+    "id": 2,
+    "description": "The black tire on the front left of the car.",
+    "parent": 1,
+    "polygon": [
+      [150, 200],
+      [190, 200],
+      [190, 240],
+      [150, 240]
+    ]
+  },
+  {
+    "id": 3,
+    "description": "The black tire on the back right of the car.",
+    "parent": 1,
+    "polygon": [
+      [410, 200],
+      [450, 200],
+      [450, 240],
+      [410, 240]
+    ]
+  },
+  {
+    "id": 4,
+    "description": "The blue tinted glass windshield of the car.",
+    "parent": 1,
+    "polygon": [
+      [300, 120],
+      [380, 150],
+      [300, 150],
+      [250, 150]
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The yellow headlight on the front of the car.",
+    "parent": 1,
+    "polygon": [
+      [120, 180],
+      [150, 180],
+      [150, 200],
+      [120, 200]
+    ]
+  },
+  {
+    "id": 6,
+    "description": "The asphalt black road beneath the car.",
+    "parent": 0,
+    "polygon": [
+      [0, 240],
+      [600, 240],
+      [600, 300],
+      [0, 300]
+    ]
+  }
+]

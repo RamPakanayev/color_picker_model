@@ -1,0 +1,160 @@
+[
+  {
+    "id": 0,
+    "description": "A canvas with a deep midnight blue background, like the night sky.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [700, 0],
+      [700, 500],
+      [0, 500]
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A vibrant scarlet flame-like shape rising from the bottom.",
+    "parent": 0,
+    "polygon": [
+      [100, 500],
+      [150, 400],
+      [200, 450],
+      [250, 350],
+      [300, 400],
+      [350, 300],
+      [400, 350],
+      [450, 250],
+      [500, 350],
+      [550, 450],
+      [600, 400],
+      [650, 500]
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A shape that appears to be a bright golden sun, radiating warmth.",
+    "parent": 0,
+    "polygon": [
+      [350, 100],
+      [375, 75],
+      [400, 70],
+      [425, 75],
+      [450, 100],
+      [455, 125],
+      [450, 150],
+      [425, 175],
+      [400, 180],
+      [375, 175],
+      [350, 150],
+      [345, 125]
+    ]
+  },
+  {
+    "id": 3,
+    "description": "An emerald green shape that resembles a leaf or plant growing from the flames.",
+    "parent": 1,
+    "polygon": [
+      [200, 400],
+      [225, 375],
+      [250, 350],
+      [275, 375],
+      [300, 350],
+      [325, 375],
+      [325, 400],
+      [300, 425],
+      [275, 400],
+      [250, 425],
+      [225, 400],
+      [200, 425]
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A silver crescent moon shape in the upper left corner of the sky.",
+    "parent": 0,
+    "polygon": [
+      [100, 100],
+      [125, 75],
+      [150, 75],
+      [175, 100],
+      [175, 125],
+      [150, 150],
+      [125, 150],
+      [100, 125]
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A smaller ivory shape inside the silver crescent moon, creating contrast.",
+    "parent": 4,
+    "polygon": [
+      [125, 100],
+      [140, 90],
+      [155, 100],
+      [155, 115],
+      [140, 125],
+      [125, 115]
+    ]
+  },
+  {
+    "id": 6,
+    "description": "Lavender and purple flowing abstract shapes resembling clouds or waves in the sky.",
+    "parent": 0,
+    "polygon": [
+      [500, 50],
+      [550, 100],
+      [600, 75],
+      [650, 125],
+      [625, 150],
+      [575, 125],
+      [525, 150],
+      [475, 100]
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A dark turquoise shape resembling water at the bottom of the canvas.",
+    "parent": 0,
+    "polygon": [
+      [0, 450],
+      [50, 475],
+      [75, 450],
+      [125, 475],
+      [175, 450],
+      [225, 475],
+      [0, 475]
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Small white star-like shapes scattered across the night sky.",
+    "parent": 0,
+    "polygon": [
+      [50, 50],
+      [60, 40],
+      [70, 50],
+      [60, 60]
+    ]
+  },
+  {
+    "id": 9,
+    "description": "Another small white star-like shape in the night sky.",
+    "parent": 0,
+    "polygon": [
+      [600, 200],
+      [610, 190],
+      [620, 200],
+      [610, 210]
+    ]
+  },
+  {
+    "id": 10,
+    "description": "A third small white star-like shape in the night sky.",
+    "parent": 0,
+    "polygon": [
+      [250, 75],
+      [260, 65],
+      [270, 75],
+      [260, 85]
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": 0,
+    "description": "A transparent canvas for a company logo.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [500, 0],
+      [500, 500],
+      [0, 500]
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A corporate blue circular background for the logo.",
+    "parent": 0,
+    "polygon": [
+      [100, 100],
+      [150, 75],
+      [250, 75],
+      [350, 100],
+      [400, 175],
+      [400, 300],
+      [350, 400],
+      [250, 425],
+      [150, 400],
+      [100, 325],
+      [100, 200]
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A white stylized letter 'A' in the center of the logo.",
+    "parent": 1,
+    "polygon": [
+      [200, 250],
+      [250, 150],
+      [300, 250],
+      [275, 250],
+      [250, 200],
+      [225, 250]
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A bright green leaf shape attached to the top of the letter 'A'.",
+    "parent": 2,
+    "polygon": [
+      [250, 150],
+      [275, 125],
+      [300, 150],
+      [275, 175]
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A small yellow dot representing the sun, placed above the leaf.",
+    "parent": 1,
+    "polygon": [
+      [250, 100],
+      [260, 110],
+      [250, 120],
+      [240, 110]
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A horizontal red line underneath the letter 'A' representing ground or foundation.",
+    "parent": 1,
+    "polygon": [
+      [175, 325],
+      [325, 325],
+      [325, 350],
+      [175, 350]
+    ]
+  },
+  {
+    "id": 6,
+    "description": "Three gray curved lines on the left side of the logo, representing wind or movement.",
+    "parent": 1,
+    "polygon": [
+      [150, 200],
+      [175, 190],
+      [150, 225],
+      [175, 215],
+      [150, 250],
+      [175, 240],
+      [150, 275],
+      [125, 250]
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A small purple square in the bottom right of the logo, representing innovation.",
+    "parent": 1,
+    "polygon": [
+      [325, 350],
+      [375, 350],
+      [375, 400],
+      [325, 400]
+    ]
+  },
+  {
+    "id": 8,
+    "description": "An orange diagonal stripe across the logo, representing progress.",
+    "parent": 1,
+    "polygon": [
+      [150, 150],
+      [175, 150],
+      [350, 350],
+      [325, 350]
+    ]
+  }
+]
