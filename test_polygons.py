@@ -1,13 +1,8 @@
 """
-test_polygons.py (Enhanced Version)
+test_polygons.py (RGB Prediction Version)
 
-This script loads a trained classifier along with CLIP's text encoder to predict
-colors for polygons from a given JSON file. Key improvements include:
-- Advanced semantic color understanding
-- Confidence-based color selection
-- Enhanced parent-child relationship handling
-- Smart fallback for low-confidence predictions
-- Hierarchical drawing with transparency control
+This script uses a trained model to predict RGB colors for polygons from text descriptions,
+handling parent-child relationships without relying on predefined color logic.
 """
 
 import os
@@ -19,12 +14,11 @@ import math
 import argparse
 import traceback
 import datetime
-import random
 
 import torch
 import torch.nn as nn
 import clip
-from PIL import Image, ImageDraw, ImageColor
+from PIL import Image, ImageDraw
 
 # Create logs directory if it doesn't exist
 logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -32,7 +26,7 @@ os.makedirs(logs_dir, exist_ok=True)
 
 # Set up log file name with timestamp
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = os.path.join(logs_dir, f"test_polygons_{timestamp}.log")
+log_file = os.path.join(logs_dir, f"test_rgb_polygons_{timestamp}.log")
 
 # Configure detailed logging
 logging.basicConfig(
@@ -44,104 +38,121 @@ logging.basicConfig(
     ]
 )
 
-# Candidate palette (same as training)
-CANDIDATE_COLORS = [
-    ("black",  (0, 0, 0)),
-    ("white",  (255, 255, 255)),
-    ("red",    (255, 0, 0)),
-    ("green",  (0, 255, 0)),
-    ("blue",   (0, 0, 255)),
-    ("yellow", (255, 255, 0)),
-    ("orange", (255, 165, 0)),
-    ("purple", (128, 0, 128)),
-    ("pink",   (255, 192, 203)),
-    ("brown",  (165, 42, 42)),
-    ("gray",   (128, 128, 128))
-]
-NUM_CANDIDATES = len(CANDIDATE_COLORS)
-
-# Expanded color synonyms and associations for enhanced semantic understanding
-COLOR_SYNONYMS = {
-    "black": ["dark", "ebony", "jet", "midnight", "obsidian", "shadow", "cosmic", "void", "space", "night", "darkness"],
-    "white": ["light", "ivory", "snow", "pale", "bright", "blank", "alabaster", "pearl", "glistening", "star", "moon", "cloud"],
-    "red": ["crimson", "scarlet", "maroon", "ruby", "fire", "blood", "ember", "flame", "burning", "cherry", "rose", "lava"],
-    "green": ["emerald", "lime", "forest", "olive", "grass", "moss", "jade", "mint", "alien", "nature", "leaf", "plant", "jungle"],
-    "blue": ["azure", "navy", "turquoise", "sky", "ocean", "teal", "water", "cosmic", "sapphire", "cobalt", "cerulean", "aqua", "sea"],
-    "yellow": ["gold", "golden", "sunny", "sunshine", "lemon", "amber", "solar", "radiant", "sunflower", "bright", "daylight"],
-    "orange": ["amber", "tangerine", "apricot", "peach", "sunset", "rust", "copper", "burning", "saffron", "autumn", "harvest"],
-    "purple": ["violet", "lavender", "indigo", "magenta", "lilac", "amethyst", "royal", "cosmic", "twilight", "nebula", "mauve", "plum"],
-    "pink": ["rose", "salmon", "fuchsia", "blush", "coral", "mallow", "flamingo", "pastel", "cherry-blossom", "bubblegum"],
-    "brown": ["tan", "chocolate", "coffee", "wooden", "wood", "dirt", "earth", "russet", "copper", "chestnut", "mahogany", "mocha", "umber"],
-    "gray": ["grey", "silver", "ash", "charcoal", "slate", "smoke", "pewter", "stone", "graphite", "foggy", "cloud", "overcast"]
-}
-
-# Semantic associations for deeper understanding
-SEMANTIC_ASSOCIATIONS = {
-    "space": "black",
-    "sky": "blue",
-    "star": "white",
-    "nebula": "purple",
-    "galaxy": "blue",
-    "cosmos": "black",
-    "soil": "brown",
-    "grass": "green",
-    "forest": "green",
-    "sea": "blue",
-    "sun": "yellow",
-    "moon": "white",
-    "fire": "red",
-    "blood": "red",
-    "energy": "yellow",
-    "cloud": "white",
-    "metal": "gray",
-    "stone": "gray",
-    "rose": "pink",
-    "sunset": "orange",
-    "cosmic": "blue",
-    "earth": "brown",
-    "flame": "orange",
-    "water": "blue",
-    "rock": "gray",
-    "tree": "brown",
-    "plant": "green",
-    "planet": "blue",
-    "sand": "yellow",
-    "alien": "green",
-    "royal": "purple",
-    "lava": "red",
-    "beam": "yellow",
-    "glow": "white",
-    "shadow": "black",
-    "night": "black",
-    "day": "blue",
-    "ice": "white",
-    "snow": "white",
-    "digital": "blue",
-    "tech": "blue",
-    "futuristic": "blue",
-    "cyber": "blue",
-    "ancient": "brown",
-    "portal": "purple",
-    "light": "white",
-    "dark": "black",
-    "mystical": "purple",
-    "natural": "green",
-    "artificial": "gray",
-    "horizon": "blue"
-}
-
-class EnhancedColorClassifier(nn.Module):
+def process_polygon(polygon, normalize=True):
     """
-    Enhanced neural network classifier with additional layers and dropout.
+    Process polygon coordinates into a fixed-length feature vector.
+    
+    Args:
+        polygon: List of (x, y) coordinate tuples
+        normalize: Whether to normalize coordinates to [0, 1] range
+        
+    Returns:
+        Tensor of processed polygon features
     """
-    def __init__(self, input_dim, hidden_dims=[256, 128], num_classes=NUM_CANDIDATES, dropout_rates=[0.4, 0.3]):
-        super(EnhancedColorClassifier, self).__init__()
+    # Extract features from the polygon
+    if not polygon:
+        # Default empty polygon features
+        return torch.zeros(10)
+    
+    # Get basic geometric features
+    xs = [p[0] for p in polygon]
+    ys = [p[1] for p in polygon]
+    
+    min_x, max_x = min(xs), max(xs)
+    min_y, max_y = min(ys), max(ys)
+    
+    width = max_x - min_x
+    height = max_y - min_y
+    
+    # Calculate polygon area using the Shoelace formula
+    area = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        area += polygon[i][0] * polygon[j][1]
+        area -= polygon[j][0] * polygon[i][1]
+    area = abs(area) / 2.0
+    
+    # Calculate polygon centroid
+    cx = sum(xs) / len(xs)
+    cy = sum(ys) / len(ys)
+    
+    # Calculate polygon perimeter
+    perimeter = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        dx = polygon[j][0] - polygon[i][0]
+        dy = polygon[j][1] - polygon[i][1]
+        perimeter += math.sqrt(dx*dx + dy*dy)
+    
+    # Aspect ratio
+    aspect_ratio = width / height if height != 0 else 1.0
+    
+    # Compute distances from centroid to vertices
+    distances = []
+    for x, y in polygon:
+        dx = x - cx
+        dy = y - cy
+        distances.append(math.sqrt(dx*dx + dy*dy))
+    
+    avg_distance = sum(distances) / len(distances) if distances else 0
+    max_distance = max(distances) if distances else 0
+    
+    # Create feature vector
+    features = [
+        width,
+        height,
+        area,
+        perimeter,
+        cx,
+        cy,
+        aspect_ratio,
+        avg_distance,
+        max_distance,
+        len(polygon)  # Number of vertices
+    ]
+    
+    # Normalize features if requested
+    if normalize:
+        # Create a simple normalization - not optimal but functional
+        feature_tensor = torch.tensor(features, dtype=torch.float32)
+        non_zero_mask = feature_tensor != 0
+        feature_tensor[non_zero_mask] = feature_tensor[non_zero_mask].log1p()  # log(1+x) for positive values
+        feature_tensor = torch.tanh(feature_tensor * 0.1)  # Squash to [-1, 1]
+        return feature_tensor
+    
+    return torch.tensor(features, dtype=torch.float32)
+
+class RGBPredictionModel(nn.Module):
+    """
+    Neural network for predicting RGB values directly from text embeddings 
+    and polygon features.
+    """
+    def __init__(self, text_embed_dim, poly_feature_dim=10, hidden_dims=[256, 128], 
+                output_dim=3, dropout_rates=[0.4, 0.3]):
+        super(RGBPredictionModel, self).__init__()
         
         # Validate parameters
         assert len(hidden_dims) == len(dropout_rates), "Must provide dropout rates for each hidden layer"
         
+        # Process polygon features to a fixed intermediate dimension
+        self.poly_feature_processed_dim = 32
+        
+        # Create polygon feature processing network
+        self.poly_net = nn.Sequential(
+            nn.Linear(poly_feature_dim, self.poly_feature_processed_dim),
+            nn.ReLU(),
+            nn.Dropout(0.2)
+        )
+        
+        # Total input dimension is: parent_embed + processed_poly_features + child_embed
+        total_input_dim = (text_embed_dim * 2) + self.poly_feature_processed_dim
+        
+        # Create main network layers
         layers = []
-        prev_dim = input_dim
+        prev_dim = total_input_dim
+        
+        # Log the input dimension for debugging
+        logging.debug(f"Model input dimension: {prev_dim} = 2*{text_embed_dim} (text) + {self.poly_feature_processed_dim} (polygon)")
         
         # Create hidden layers with dropout
         for i, (hidden_dim, dropout_rate) in enumerate(zip(hidden_dims, dropout_rates)):
@@ -150,226 +161,82 @@ class EnhancedColorClassifier(nn.Module):
             layers.append(nn.Dropout(dropout_rate))
             prev_dim = hidden_dim
         
-        # Final output layer
-        layers.append(nn.Linear(prev_dim, num_classes))
+        # Final output layer for RGB values
+        layers.append(nn.Linear(prev_dim, output_dim))
+        layers.append(nn.Sigmoid())  # Output between 0 and 1, will scale to 0-255 later
         
-        self.model = nn.Sequential(*layers)
+        self.main_network = nn.Sequential(*layers)
     
-    def forward(self, x):
-        return self.model(x)
-
-def parse_explicit_color(description: str):
-    """
-    Enhanced explicit color detection: returns an (R, G, B) tuple if found.
-    Handles various notation formats including RGB and hex.
-    """
-    if not description:
-        return None
-    
-    text_lower = description.lower()
-    
-    # Match flexible RGB format
-    rgb_pattern = r'rgb\s*\(?(\d+)\s*,?\s*(\d+)\s*,?\s*(\d+)\s*\)?'
-    match = re.search(rgb_pattern, text_lower)
-    if match:
-        r, g, b = int(match.group(1)), int(match.group(2)), int(match.group(3))
-        logging.debug("Found explicit rgb color: (%d, %d, %d)", r, g, b)
-        return (r, g, b)
-    
-    # Match hex format
-    hex_pattern = r'#[0-9a-fA-F]{3,6}'
-    match = re.search(hex_pattern, text_lower)
-    if match:
-        hex_str = match.group(0)
-        try:
-            rgb = ImageColor.getrgb(hex_str)
-            logging.debug("Found explicit hex color: %s -> %s", hex_str, str(rgb))
-            return rgb
-        except ValueError:
-            logging.debug("Invalid hex color found: %s", hex_str)
-    
-    # Match color descriptions
-    for name, rgb in CANDIDATE_COLORS:
-        patterns = [
-            fr'\b{name}\s+colou?red\b',
-            fr'\bcolou?red\s+{name}\b',
-            fr'\b{name}\s+fill\b',
-            fr'\bfill.+{name}\b'
-        ]
-        for pattern in patterns:
-            if re.search(pattern, text_lower):
-                logging.debug("Found color description '%s' -> %s", pattern, rgb)
-                return rgb
-                
-    return None
-
-def analyze_semantic_cues(text: str):
-    """
-    Analyzes text for semantic color cues based on associated concepts and themes.
-    Returns a dictionary mapping color names to their semantic strength scores.
-    """
-    if not text:
-        return {}
-    
-    text_lower = text.lower()
-    words = re.findall(r'\b[a-zA-Z]+\b', text_lower)
-    
-    color_scores = {color: 0.0 for color, _ in CANDIDATE_COLORS}
-    
-    # Check for semantic associations
-    for word in words:
-        if word in SEMANTIC_ASSOCIATIONS:
-            color = SEMANTIC_ASSOCIATIONS[word]
-            color_scores[color] += 1.0
-    
-    # Look for descriptive phrases that suggest colors
-    cosmic_phrases = [
-        ("deep space", "black", 1.5),
-        ("night sky", "black", 1.5),
-        ("cosmic horizon", "blue", 1.2),
-        ("blazing comet", "orange", 1.5),
-        ("fiery trail", "red", 1.3),
-        ("mysterious portal", "purple", 1.4),
-        ("alien structure", "green", 1.3),
-        ("energy beam", "yellow", 1.2),
-        ("glowing light", "white", 1.2),
-        ("reflective surface", "white", 1.0),
-        ("distant star", "white", 1.2),
-        ("swirling nebula", "purple", 1.5),
-        ("cosmic dust", "gray", 1.1),
-        ("digital grid", "blue", 1.2),
-        ("ancient artifact", "brown", 1.3),
-        ("crystal formation", "blue", 1.1),
-        ("molten core", "red", 1.4)
-    ]
-    
-    for phrase, color, weight in cosmic_phrases:
-        if phrase in text_lower:
-            color_scores[color] += weight
-    
-    # Normalize scores
-    total_score = sum(color_scores.values()) 
-    if total_score > 0:
-        for color in color_scores:
-            color_scores[color] /= total_score
-    
-    return color_scores
-
-def contains_candidate_color(text: str):
-    """
-    Detects if a text contains a candidate color word or strong synonym.
-    Returns the candidate color word (lowercase) if found, otherwise None.
-    """
-    if not text:
-        return None
-    
-    text_lower = text.lower()
-    words = re.findall(r'\b[a-zA-Z]+\b', text_lower)
-    
-    # First check for direct candidate color names
-    for w in words:
-        if w in {name.lower() for name, _ in CANDIDATE_COLORS}:
-            logging.debug("Found direct candidate color word in text: '%s'", w)
-            return w
-    
-    # Check for color synonyms
-    for color, synonyms in COLOR_SYNONYMS.items():
-        for synonym in synonyms:
-            if synonym in words:
-                # Look for context words that strengthen the color association
-                context_words = ["color", "colour", "fill", "filled", "background", "foreground", 
-                               "hue", "tint", "shade", "tone", "painted", "colored"]
-                
-                word_indices = [i for i, word in enumerate(words) if word == synonym]
-                for idx in word_indices:
-                    context_range = range(max(0, idx-5), min(len(words), idx+5))
-                    for context_idx in context_range:
-                        if words[context_idx] in context_words:
-                            logging.debug("Found color synonym '%s' near context word '%s' -> %s", 
-                                        synonym, words[context_idx], color)
-                            return color
-                
-                # Check for visual objects that imply colors
-                visual_objects = {
-                    "sky": "blue",
-                    "grass": "green",
-                    "sun": "yellow",
-                    "blood": "red",
-                    "snow": "white",
-                    "night": "black",
-                    "wood": "brown",
-                    "rose": "red",
-                    "fire": "red",
-                    "water": "blue",
-                    "nebula": "purple",
-                    "star": "white",
-                    "cosmic": "blue",
-                    "flame": "orange"
-                }
-                
-                for obj, color_name in visual_objects.items():
-                    if obj in words and color_name == color:
-                        logging.debug("Found visual object '%s' implying color '%s'", obj, color_name)
-                        return color_name
-                
-                # Strong explicit color synonyms that always indicate a color
-                strong_synonyms = [
-                    "scarlet", "crimson", "azure", "indigo", "violet", "emerald", 
-                    "ebony", "ivory", "golden", "amber", "ruby", "sapphire"
-                ]
-                if synonym in strong_synonyms:
-                    logging.debug("Found strong color synonym '%s' -> %s", synonym, color)
-                    return color
-    
-    return None
-
-def get_weighted_merged_text(shape, id_to_shape):
-    """
-    Returns a sophisticated merged text combining child and parent descriptions,
-    with weighted emphasis based on color information and semantic content.
-    """
-    desc_child = shape.get("description", "")
-    parent_id = shape.get("parent")
-    shape_id = shape.get("id")
-    
-    logging.debug("Processing shape ID %s with description: '%s'", shape_id, desc_child)
-    logging.debug("Parent ID: %s", parent_id)
-    
-    # Analyze for explicit and semantic color indicators
-    has_explicit_color = parse_explicit_color(desc_child) is not None
-    color_word = contains_candidate_color(desc_child)
-    semantic_scores = analyze_semantic_cues(desc_child)
-    has_strong_semantics = any(score > 0.4 for score in semantic_scores.values())
-    
-    logging.debug("Has explicit color: %s, Color word: %s, Strong semantics: %s", 
-                 has_explicit_color, color_word, has_strong_semantics)
-    
-    if parent_id is not None and parent_id in id_to_shape:
-        desc_parent = id_to_shape[parent_id].get("description", "")
+    def forward(self, parent_embed, child_polygon, child_embed):
+        """
+        Forward pass with three inputs: parent description, child polygon, and child description
         
-        # Weight child description based on color information
-        if has_explicit_color:
-            # Explicit RGB/HEX colors are given highest priority
-            merged = (desc_child + " ") * 5 + desc_parent
-            logging.debug("Child has EXPLICIT color - heavily weighted merge for shape %s", shape_id)
-        elif color_word:
-            # Direct color words get strong weight
-            merged = (desc_child + " ") * 3 + desc_parent
-            logging.debug("Child has color word - heavily weighted merge for shape %s", shape_id)
-        elif has_strong_semantics:
-            # Strong semantic color cues get moderate weight
-            merged = (desc_child + " ") * 3 + desc_parent
-            logging.debug("Child has strong semantic cues - moderately weighted merge for shape %s", shape_id)
-        else:
-            # Default balanced merge
-            merged = (desc_child + " ") * 2 + desc_parent
-            logging.debug("Balanced merge for shape %s", shape_id)
+        Args:
+            parent_embed: Parent description embedding tensor
+            child_polygon: Child polygon feature tensor  
+            child_embed: Child description embedding tensor
             
-        logging.debug("Final merged text: '%s'", merged)
-        return merged
-    else:
-        logging.debug("Using only child description for shape %s", shape_id)
-        return desc_child
+        Returns:
+            RGB values in range 0-255
+        """
+        # Process polygon features through polygon network
+        poly_processed = self.poly_net(child_polygon)
+        
+        # Concatenate all inputs
+        combined = torch.cat([parent_embed, poly_processed, child_embed], dim=1)
+        
+        # Forward through main network
+        raw_output = self.main_network(combined)
+        
+        # Scale to 0-255 range
+        rgb_values = raw_output * 255.0
+        return rgb_values
+
+def get_color_prediction(parent_description, child_polygon, child_description, clip_model, rgb_model, device):
+    """
+    Predict RGB color for a polygon based on parent and child descriptions.
+    
+    Args:
+        parent_description (str): Text description of the parent shape
+        child_polygon (list): Polygon coordinates of the child shape
+        child_description (str): Text description of the child shape
+        clip_model: CLIP text encoder model
+        rgb_model: RGB prediction model
+        device: Device to perform computation on
+        
+    Returns:
+        tuple: (R, G, B) tuple with integer values from 0-255
+    """
+    # Use empty string if parent_description is None
+    if parent_description is None:
+        parent_description = ""
+        
+    if child_description is None:
+        child_description = ""
+    
+    # Process the polygon features
+    polygon_features = process_polygon(child_polygon)
+    polygon_features = polygon_features.unsqueeze(0).to(device)  # Add batch dimension
+    
+    # Generate text embeddings with CLIP
+    parent_tokens = clip.tokenize([parent_description], truncate=True).to(device)
+    child_tokens = clip.tokenize([child_description], truncate=True).to(device)
+    
+    with torch.no_grad():
+        parent_feats = clip_model.encode_text(parent_tokens)
+        parent_feats /= parent_feats.norm(dim=-1, keepdim=True)
+        
+        child_feats = clip_model.encode_text(child_tokens)
+        child_feats /= child_feats.norm(dim=-1, keepdim=True)
+        
+        # Run through RGB model to get RGB prediction (using all three inputs)
+        pred_rgb = rgb_model(parent_feats, polygon_features, child_feats)[0]
+    
+    # Convert to integers in 0-255 range
+    r, g, b = [max(0, min(255, int(round(c.item())))) for c in pred_rgb]
+    
+    logging.debug(f"Predicted RGB: ({r}, {g}, {b}) for text: '{child_description}' with parent: '{parent_description}'")
+    return (r, g, b)
 
 def compute_bounding_box(shapes):
     """
@@ -389,55 +256,6 @@ def compute_bounding_box(shapes):
                  min_x, max_x, min_y, max_y)
     return min_x, max_x, min_y, max_y
 
-def get_color_confidence(logits, top_k=3):
-    """
-    Returns the top color predictions and their confidence scores.
-    """
-    probs = torch.nn.functional.softmax(logits, dim=1)[0]
-    values, indices = torch.topk(probs, min(top_k, NUM_CANDIDATES))
-    
-    result = []
-    for i, idx in enumerate(indices):
-        color_name = CANDIDATE_COLORS[idx.item()][0]
-        confidence = values[i].item() * 100
-        result.append((color_name, confidence))
-    
-    return result
-
-def select_best_color(logits, shape_id, parent_color=None, confidence_threshold=0.3):
-    """
-    Selects the best color based on prediction confidence and context.
-    Uses parent color as a fallback for low confidence predictions.
-    """
-    probs = torch.nn.functional.softmax(logits, dim=1)[0]
-    max_prob, predicted_idx = torch.max(probs, dim=0)
-    predicted_color = CANDIDATE_COLORS[predicted_idx.item()][1]
-    
-    # Get top predictions for logging
-    top_predictions = get_color_confidence(logits)
-    
-    # Log prediction information
-    prediction_msg = f"Shape {shape_id}: Predicted {CANDIDATE_COLORS[predicted_idx.item()][0]} with confidence {max_prob.item()*100:.1f}%"
-    logging.debug(prediction_msg)
-    logging.debug("Top predictions: %s", top_predictions)
-    
-    # Apply confidence-based selection
-    if max_prob.item() >= confidence_threshold:
-        return predicted_color, prediction_msg
-    elif parent_color:
-        fallback_msg = f"{prediction_msg} (low confidence; using parent color instead)"
-        logging.debug("Using parent color as fallback due to low confidence")
-        return parent_color, fallback_msg
-    else:
-        # Default neutral color for very uncertain predictions with no parent color
-        neutral_colors = ["gray", "white", "blue", "black"]
-        fallback_color_name = random.choice(neutral_colors)
-        fallback_color = next(rgb for name, rgb in CANDIDATE_COLORS if name == fallback_color_name)
-        
-        fallback_msg = f"{prediction_msg} (low confidence; using {fallback_color_name} as fallback)"
-        logging.debug("Using fallback color due to low confidence and no parent color")
-        return fallback_color, fallback_msg
-
 def load_model(model_path, model_info_path, device):
     """
     Loads the trained model architecture and weights.
@@ -448,32 +266,36 @@ def load_model(model_path, model_info_path, device):
             with open(model_info_path, 'r') as f:
                 model_info = json.load(f)
                 
-            input_dim = model_info.get('embed_dim', 512)
+            embed_dim = model_info.get('embed_dim', 512)
+            poly_feature_dim = model_info.get('poly_feature_dim', 10)
             hidden_dims = model_info.get('hidden_dims', [256, 128])
-            num_classes = model_info.get('num_classes', NUM_CANDIDATES)
+            output_dim = model_info.get('output_dim', 3)
             dropout_rates = model_info.get('dropout_rates', [0.4, 0.3])
             
             logging.info("Loaded model architecture from info file")
         else:
             # Default architecture if info file not found
             logging.warning("Model info file not found. Using default architecture.")
-            input_dim = 512  # Standard CLIP embedding dim
+            embed_dim = 512  # Standard CLIP embedding dim
+            poly_feature_dim = 10
             hidden_dims = [256, 128]
-            num_classes = NUM_CANDIDATES
+            output_dim = 3
             dropout_rates = [0.4, 0.3]
     except Exception as e:
         logging.error(f"Error loading model info: {e}")
         logging.warning("Using default model architecture")
-        input_dim = 512
+        embed_dim = 512
+        poly_feature_dim = 10
         hidden_dims = [256, 128]
-        num_classes = NUM_CANDIDATES
+        output_dim = 3
         dropout_rates = [0.4, 0.3]
     
     # Create model with the appropriate architecture
-    model = EnhancedColorClassifier(
-        input_dim=input_dim,
+    model = RGBPredictionModel(
+        text_embed_dim=embed_dim,
+        poly_feature_dim=poly_feature_dim,
         hidden_dims=hidden_dims,
-        num_classes=num_classes,
+        output_dim=output_dim,
         dropout_rates=dropout_rates
     ).to(device)
     
@@ -488,15 +310,13 @@ def load_model(model_path, model_info_path, device):
     return model
 
 def main():
-    parser = argparse.ArgumentParser(description="Enhanced polygon color prediction testing")
+    parser = argparse.ArgumentParser(description="RGB polygon color prediction testing")
     parser.add_argument("input_json", help="Input JSON file containing polygon data")
     parser.add_argument("output_image", help="Output image file path")
-    parser.add_argument("--model", default="classifier_weights.pth", 
+    parser.add_argument("--model", default="rgb_model_weights.pth", 
                        help="Path to trained model weights")
-    parser.add_argument("--model-info", default="model_info.json",
+    parser.add_argument("--model-info", default="rgb_model_info.json",
                        help="Path to model architecture information")
-    parser.add_argument("--confidence", type=float, default=0.3,
-                       help="Confidence threshold for color selection (0.0-1.0)")
     parser.add_argument("--debug", action="store_true",
                        help="Enable debug-level logging")
     args = parser.parse_args()
@@ -505,7 +325,7 @@ def main():
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
     
-    logging.info("Starting enhanced test_polygons.py with arguments: %s", args)
+    logging.info("Starting RGB prediction test with arguments: %s", args)
     
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -560,15 +380,15 @@ def main():
         logging.debug("Model info path: %s", model_info_path)
         
         if not os.path.isfile(weights_path):
-            logging.error("Error: Trained classifier weights %s not found.", weights_path)
+            logging.error("Error: Trained model weights %s not found.", weights_path)
             return 1
 
         # Load the model
         try:
-            classifier = load_model(weights_path, model_info_path, device)
-            classifier.eval()
+            rgb_model = load_model(weights_path, model_info_path, device)
+            rgb_model.eval()
         except Exception as e:
-            logging.error("Failed to load classifier model: %s", e)
+            logging.error("Failed to load RGB model: %s", e)
             logging.error(traceback.format_exc())
             return 1
         
@@ -603,10 +423,7 @@ def main():
         
         max_level = max(shapes_by_level.keys()) if shapes_by_level else 0
         logging.info("Maximum hierarchy level: %d", max_level)
-        
-        # Store predicted colors by shape ID for parent color lookup
-        shape_colors = {}
-        
+                
         # Process and draw each shape by hierarchy level (parent shapes first)
         for level in range(max_level + 1):
             level_shapes = shapes_by_level.get(level, [])
@@ -614,40 +431,25 @@ def main():
             
             for shape in level_shapes:
                 shape_id = shape.get("id")
+                child_desc = shape.get("description", "")
+                child_polygon = shape.get("polygon", [])
                 logging.debug("Processing shape ID %s", shape_id)
                 
-                # Get parent color for potential fallback
+                # Get parent description
                 parent_id = shape.get("parent")
-                parent_color = shape_colors.get(parent_id) if parent_id else None
+                parent_desc = ""
+                if parent_id is not None and parent_id in id_to_shape:
+                    parent_desc = id_to_shape[parent_id].get("description", "")
                 
-                # Get merged description text
-                merged_text = get_weighted_merged_text(shape, id_to_shape)
-                
-                # Check for explicit color in description
-                explicit_color = parse_explicit_color(merged_text)
-                if explicit_color:
-                    # Use explicit color directly if present in description
-                    logging.debug("Using explicit color for shape %s: %s", shape_id, explicit_color)
-                    shape_colors[shape_id] = explicit_color
-                    polygon_points = shape["polygon"]
-                    offset_points = [(x - min_x, y - min_y) for (x, y) in polygon_points]
-                    draw.polygon(offset_points, fill=explicit_color)
-                    continue
-                
-                # Process with neural model if no explicit color
-                tokens = clip.tokenize([merged_text], truncate=True).to(device)
-                with torch.no_grad():
-                    text_feats = clip_model.encode_text(tokens)
-                    text_feats /= text_feats.norm(dim=-1, keepdim=True)
-                    logits = classifier(text_feats)
-                
-                # Select best color with confidence-based fallback
-                predicted_color, prediction_msg = select_best_color(
-                    logits, shape_id, parent_color, args.confidence
+                # Always get color prediction from model, regardless of explicit colors in description
+                predicted_color = get_color_prediction(
+                    parent_desc, 
+                    child_polygon,
+                    child_desc, 
+                    clip_model, 
+                    rgb_model, 
+                    device
                 )
-                
-                # Store color for this shape (for children)
-                shape_colors[shape_id] = predicted_color
                 
                 # Draw the polygon
                 polygon_points = shape["polygon"]

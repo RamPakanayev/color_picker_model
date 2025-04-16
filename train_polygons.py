@@ -1,13 +1,8 @@
 """
-train_polygons.py (Enhanced Version)
+train_polygons.py (RGB Prediction Version)
 
-This script trains a sophisticated classifier on top of CLIP's text encoder to predict
-colors for polygons based on their textual descriptions with advanced features:
-- Rich semantic color understanding with expanded synonym support
-- Adaptive data augmentation with class balancing
-- Deep neural network architecture with additional layers
-- Dynamic class weighting for underrepresented colors
-- Enhanced parent-child relationship handling
+This script trains a model on top of CLIP's text encoder to predict RGB color values 
+directly from text descriptions of shapes, handling parent-child relationships.
 """
 
 import os
@@ -27,7 +22,6 @@ import torch.optim as optim
 import torch.utils.data as data
 import clip
 from PIL import Image, ImageDraw, ImageColor
-from torch.utils.data.sampler import WeightedRandomSampler
 
 # Create logs directory if it doesn't exist
 logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -35,7 +29,7 @@ os.makedirs(logs_dir, exist_ok=True)
 
 # Set up log file name with timestamp
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = os.path.join(logs_dir, f"train_polygons_{timestamp}.log")
+log_file = os.path.join(logs_dir, f"train_rgb_polygons_{timestamp}.log")
 
 # Configure detailed logging
 logging.basicConfig(
@@ -46,443 +40,6 @@ logging.basicConfig(
         logging.FileHandler(log_file)
     ]
 )
-
-# Expanded candidate palette with consistent ordering
-CANDIDATE_COLORS = [
-    ("black",  (0, 0, 0)),
-    ("white",  (255, 255, 255)),
-    ("red",    (255, 0, 0)),
-    ("green",  (0, 255, 0)),
-    ("blue",   (0, 0, 255)),
-    ("yellow", (255, 255, 0)),
-    ("orange", (255, 165, 0)),
-    ("purple", (128, 0, 128)),
-    ("pink",   (255, 192, 203)),
-    ("brown",  (165, 42, 42)),
-    ("gray",   (128, 128, 128))
-]
-NUM_CANDIDATES = len(CANDIDATE_COLORS)
-
-# Expanded color name sets for detection
-CANDIDATE_COLOR_NAMES = {name.lower() for (name, _) in CANDIDATE_COLORS}
-
-# Expanded color synonyms and associations for enhanced semantic understanding
-COLOR_SYNONYMS = {
-    "black": ["dark", "ebony", "jet", "midnight", "obsidian", "shadow", "cosmic", "void", "space", "night", "darkness"],
-    "white": ["light", "ivory", "snow", "pale", "bright", "blank", "alabaster", "pearl", "glistening", "star", "moon", "cloud"],
-    "red": ["crimson", "scarlet", "maroon", "ruby", "fire", "blood", "ember", "flame", "burning", "cherry", "rose", "lava"],
-    "green": ["emerald", "lime", "forest", "olive", "grass", "moss", "jade", "mint", "alien", "nature", "leaf", "plant", "jungle"],
-    "blue": ["azure", "navy", "turquoise", "sky", "ocean", "teal", "water", "cosmic", "sapphire", "cobalt", "cerulean", "aqua", "sea"],
-    "yellow": ["gold", "golden", "sunny", "sunshine", "lemon", "amber", "solar", "radiant", "sunflower", "bright", "daylight"],
-    "orange": ["amber", "tangerine", "apricot", "peach", "sunset", "rust", "copper", "burning", "saffron", "autumn", "harvest"],
-    "purple": ["violet", "lavender", "indigo", "magenta", "lilac", "amethyst", "royal", "cosmic", "twilight", "nebula", "mauve", "plum"],
-    "pink": ["rose", "salmon", "fuchsia", "blush", "coral", "mallow", "flamingo", "pastel", "cherry-blossom", "bubblegum"],
-    "brown": ["tan", "chocolate", "coffee", "wooden", "wood", "dirt", "earth", "russet", "copper", "chestnut", "mahogany", "mocha", "umber"],
-    "gray": ["grey", "silver", "ash", "charcoal", "slate", "smoke", "pewter", "stone", "graphite", "foggy", "cloud", "overcast"]
-}
-
-# Semantic associations for deeper understanding
-SEMANTIC_ASSOCIATIONS = {
-    "space": "black",
-    "sky": "blue",
-    "star": "white",
-    "nebula": "purple",
-    "galaxy": "blue",
-    "cosmos": "black",
-    "soil": "brown",
-    "grass": "green",
-    "forest": "green",
-    "sea": "blue",
-    "sun": "yellow",
-    "moon": "white",
-    "fire": "red",
-    "blood": "red",
-    "energy": "yellow",
-    "cloud": "white",
-    "metal": "gray",
-    "stone": "gray",
-    "rose": "pink",
-    "sunset": "orange",
-    "cosmic": "blue",
-    "earth": "brown",
-    "flame": "orange",
-    "water": "blue",
-    "rock": "gray",
-    "tree": "brown",
-    "plant": "green",
-    "planet": "blue",
-    "sand": "yellow",
-    "alien": "green",
-    "royal": "purple",
-    "lava": "red",
-    "beam": "yellow",
-    "glow": "white",
-    "shadow": "black",
-    "night": "black",
-    "day": "blue",
-    "ice": "white",
-    "snow": "white",
-    "digital": "blue",
-    "tech": "blue",
-    "futuristic": "blue",
-    "cyber": "blue",
-    "ancient": "brown",
-    "portal": "purple",
-    "light": "white",
-    "dark": "black",
-    "mystical": "purple",
-    "natural": "green",
-    "artificial": "gray",
-    "horizon": "blue"
-}
-
-# Extended color words (combined set from synonyms and associations)
-EXTENDED_COLOR_WORDS = CANDIDATE_COLOR_NAMES.copy()
-for color, synonyms in COLOR_SYNONYMS.items():
-    for synonym in synonyms:
-        EXTENDED_COLOR_WORDS.add(synonym)
-
-def parse_explicit_color(description: str):
-    """
-    Enhanced explicit color detection: returns an (R, G, B) tuple if found.
-    Handles various notation formats including RGB and hex.
-    """
-    if not description:
-        return None
-    text_lower = description.lower()
-    
-    # Match flexible RGB format
-    rgb_pattern = r'rgb\s*\(?(\d+)\s*,?\s*(\d+)\s*,?\s*(\d+)\s*\)?'
-    match = re.search(rgb_pattern, text_lower)
-    if match:
-        r, g, b = int(match.group(1)), int(match.group(2)), int(match.group(3))
-        logging.debug("Found explicit rgb color: (%d, %d, %d)", r, g, b)
-        return (r, g, b)
-    
-    # Match hex format
-    hex_pattern = r'#[0-9a-fA-F]{3,6}'
-    match = re.search(hex_pattern, text_lower)
-    if match:
-        hex_str = match.group(0)
-        try:
-            rgb = ImageColor.getrgb(hex_str)
-            logging.debug("Found explicit hex color: %s -> %s", hex_str, str(rgb))
-            return rgb
-        except ValueError:
-            logging.debug("Invalid hex color found: %s", hex_str)
-    
-    # Match color descriptions
-    for name, rgb in CANDIDATE_COLORS:
-        patterns = [
-            fr'\b{name}\s+colou?red\b',
-            fr'\bcolou?red\s+{name}\b',
-            fr'\b{name}\s+fill\b',
-            fr'\bfill.+{name}\b'
-        ]
-        for pattern in patterns:
-            if re.search(pattern, text_lower):
-                logging.debug("Found color description '%s' -> %s", pattern, rgb)
-                return rgb
-                
-    return None
-
-def analyze_semantic_cues(text: str):
-    """
-    Analyzes text for semantic color cues based on associated concepts and themes.
-    Returns a dictionary mapping color names to their semantic strength scores.
-    """
-    if not text:
-        return {}
-    
-    text_lower = text.lower()
-    words = re.findall(r'\b[a-zA-Z]+\b', text_lower)
-    
-    color_scores = {color: 0.0 for color, _ in CANDIDATE_COLORS}
-    
-    # Check for semantic associations
-    for word in words:
-        if word in SEMANTIC_ASSOCIATIONS:
-            color = SEMANTIC_ASSOCIATIONS[word]
-            color_scores[color] += 1.0
-    
-    # Look for descriptive phrases that suggest colors
-    cosmic_phrases = [
-        ("deep space", "black", 1.5),
-        ("night sky", "black", 1.5),
-        ("cosmic horizon", "blue", 1.2),
-        ("blazing comet", "orange", 1.5),
-        ("fiery trail", "red", 1.3),
-        ("mysterious portal", "purple", 1.4),
-        ("alien structure", "green", 1.3),
-        ("energy beam", "yellow", 1.2),
-        ("glowing light", "white", 1.2),
-        ("reflective surface", "white", 1.0),
-        ("distant star", "white", 1.2),
-        ("swirling nebula", "purple", 1.5),
-        ("cosmic dust", "gray", 1.1),
-        ("digital grid", "blue", 1.2),
-        ("ancient artifact", "brown", 1.3),
-        ("crystal formation", "blue", 1.1),
-        ("molten core", "red", 1.4)
-    ]
-    
-    for phrase, color, weight in cosmic_phrases:
-        if phrase in text_lower:
-            color_scores[color] += weight
-    
-    # Normalize scores
-    total_score = sum(color_scores.values()) 
-    if total_score > 0:
-        for color in color_scores:
-            color_scores[color] /= total_score
-    
-    return color_scores
-
-def contains_candidate_color(text: str):
-    """
-    Detects if a text contains a candidate color word or strong synonym.
-    Returns the candidate color word (lowercase) if found, otherwise None.
-    """
-    if not text:
-        return None
-    
-    text_lower = text.lower()
-    words = re.findall(r'\b[a-zA-Z]+\b', text_lower)
-    
-    # First check for direct candidate color names
-    for w in words:
-        if w in CANDIDATE_COLOR_NAMES:
-            logging.debug("Found direct candidate color word in text: '%s'", w)
-            return w
-    
-    # Check for color synonyms
-    for color, synonyms in COLOR_SYNONYMS.items():
-        for synonym in synonyms:
-            if synonym in words:
-                # Look for context words that strengthen the color association
-                context_words = ["color", "colour", "fill", "filled", "background", "foreground", 
-                                "hue", "tint", "shade", "tone", "painted", "colored"]
-                
-                for context_word in context_words:
-                    if context_word in words:
-                        logging.debug("Found color synonym '%s' near context word '%s' -> %s", 
-                                     synonym, context_word, color)
-                        return color
-                
-                # Even without context words, return the color if it's a strong synonym
-                strong_synonyms = ["scarlet", "crimson", "emerald", "azure", "ebony", 
-                                  "golden", "silver", "ruby", "ivory", "jade", "amber"]
-                if synonym in strong_synonyms:
-                    logging.debug("Found strong color synonym '%s' -> %s", synonym, color)
-                    return color
-    
-    return None
-
-def get_weighted_merged_text(shape, id_to_shape):
-    """
-    Returns a sophisticated merged text combining child and parent descriptions,
-    with weighted emphasis based on color information and semantic content.
-    """
-    desc_child = shape.get("description", "")
-    parent_id = shape.get("parent")
-    shape_id = shape.get("id")
-    
-    logging.debug("Processing shape ID %s with description: '%s'", shape_id, desc_child)
-    logging.debug("Parent ID: %s", parent_id)
-    
-    # Analyze for explicit and semantic color indicators
-    has_explicit_color = parse_explicit_color(desc_child) is not None
-    color_word = contains_candidate_color(desc_child)
-    semantic_scores = analyze_semantic_cues(desc_child)
-    has_strong_semantics = any(score > 0.4 for score in semantic_scores.values())
-    
-    logging.debug("Has explicit color: %s, Color word: %s, Strong semantics: %s", 
-                 has_explicit_color, color_word, has_strong_semantics)
-    
-    if parent_id is not None and parent_id in id_to_shape:
-        desc_parent = id_to_shape[parent_id].get("description", "")
-        
-        # Weight child description based on color information
-        if has_explicit_color:
-            # Explicit RGB/HEX colors are given highest priority
-            merged = (desc_child + " ") * 5 + desc_parent
-            logging.debug("Child has EXPLICIT color - heavily weighted merge for shape %s", shape_id)
-        elif color_word:
-            # Direct color words get strong weight
-            merged = (desc_child + " ") * 3 + desc_parent
-            logging.debug("Child has color word - heavily weighted merge for shape %s", shape_id)
-        elif has_strong_semantics:
-            # Strong semantic color cues get moderate weight
-            merged = (desc_child + " ") * 3 + desc_parent
-            logging.debug("Child has strong semantic cues - moderately weighted merge for shape %s", shape_id)
-        else:
-            # Default balanced merge
-            merged = (desc_child + " ") * 2 + desc_parent
-            logging.debug("Balanced merge for shape %s", shape_id)
-            
-        logging.debug("Final merged text: '%s'", merged)
-        return merged
-    else:
-        logging.debug("Using only child description for shape %s", shape_id)
-        return desc_child
-
-def get_target_label(text: str):
-    """
-    Returns the index of the most likely candidate color based on the text,
-    using explicit colors, direct color words, and semantic analysis.
-    """
-    # First check for explicit color
-    numeric_color = parse_explicit_color(text)
-    if numeric_color is not None:
-        # Check for exact match with candidate colors
-        for i, (name, rgb) in enumerate(CANDIDATE_COLORS):
-            if rgb == numeric_color:
-                logging.debug("Exact match for explicit numeric color found: index=%d", i)
-                return i
-        
-        # Find nearest candidate color by Euclidean distance
-        min_dist = float('inf')
-        best_idx = None
-        for i, (name, rgb) in enumerate(CANDIDATE_COLORS):
-            dist = math.sqrt((rgb[0] - numeric_color[0]) ** 2 +
-                           (rgb[1] - numeric_color[1]) ** 2 +
-                           (rgb[2] - numeric_color[2]) ** 2)
-            if dist < min_dist:
-                min_dist = dist
-                best_idx = i
-        
-        logging.debug("Nearest candidate for numeric color found: index=%s, dist=%f", str(best_idx), min_dist)
-        return best_idx
-
-    # Look for direct color words
-    text_lower = text.lower()
-    words = re.findall(r'\b[a-zA-Z]+\b', text_lower)
-    
-    for w in words:
-        if w in CANDIDATE_COLOR_NAMES:
-            for i, (name, rgb) in enumerate(CANDIDATE_COLORS):
-                if w == name.lower():
-                    logging.debug("Candidate color word found: '%s' -> index=%d", w, i)
-                    return i
-    
-    # Check for color synonyms
-    for i, (color_name, _) in enumerate(CANDIDATE_COLORS):
-        if color_name in COLOR_SYNONYMS:
-            for synonym in COLOR_SYNONYMS[color_name]:
-                if synonym in words:
-                    logging.debug("Found color synonym '%s' -> %s, index=%d", synonym, color_name, i)
-                    return i
-    
-    # Run semantic analysis
-    semantic_scores = analyze_semantic_cues(text)
-    if semantic_scores:
-        # Find color with highest semantic score
-        max_score = max(semantic_scores.values())
-        if max_score > 0.3:  # Threshold for confidence
-            for i, (color_name, _) in enumerate(CANDIDATE_COLORS):
-                if semantic_scores[color_name] == max_score:
-                    logging.debug("Selected color based on semantic analysis: %s, index=%d, score=%f", 
-                                 color_name, i, max_score)
-                    return i
-    
-    logging.debug("No target candidate color determined from text.")
-    return None
-
-def augment_dataset(sample, augment_factor=0.5, class_counts=None):
-    """
-    Augment a training sample by adding variant phrasings.
-    Uses class_counts to apply stronger augmentation to underrepresented classes.
-    """
-    text, target = sample
-    augmented = [(text, target)]
-    
-    if target is None:
-        return augmented
-    
-    color_name = CANDIDATE_COLORS[target][0]
-    
-    # Calculate adaptive augmentation factor based on class rarity
-    adaptive_factor = augment_factor
-    if class_counts and class_counts.get(target, 0) > 0:
-        max_count = max(class_counts.values())
-        # The fewer samples of a class, the more augmentation it gets
-        rarity_factor = 1.0 - (class_counts[target] / max_count)
-        # Scale the augmentation factor
-        adaptive_factor = min(0.9, augment_factor + rarity_factor * 0.4)
-        logging.debug("Using adaptive augment factor %.2f for %s (count: %d)", 
-                     adaptive_factor, color_name, class_counts[target])
-    
-    # Basic variations with adaptive selection probability
-    variants = [
-        f"This is a {color_name} shape.",
-        f"The {color_name} polygon.",
-        f"A shape that is {color_name} in color.",
-        f"An object with {color_name} fill.",
-        f"{color_name} filled shape."
-    ]
-    
-    # Add variations for rare colors (< 10 samples)
-    if class_counts and class_counts.get(target, 0) < 10:
-        # Special handling for underrepresented colors
-        if color_name == "purple":
-            variants.extend([
-                f"A mysterious {color_name} shape with cosmic energy.",
-                f"An enigmatic {color_name} form suggesting royalty.",
-                f"A shape with the color of twilight and magic."
-            ])
-        elif color_name == "brown":
-            variants.extend([
-                f"A warm {color_name} shape reminiscent of wood and earth.",
-                f"An earthy {color_name} element with natural tones.",
-                f"A shape with the rich color of soil and bark."
-            ])
-        elif color_name == "orange":
-            variants.extend([
-                f"A vibrant {color_name} shape like a setting sun.",
-                f"A warm {color_name} form with fiery energy.",
-                f"A shape with the color of autumn leaves."
-            ])
-    
-    # Add all basic variations with adaptive probability
-    for variant in variants:
-        if random.random() < adaptive_factor:
-            augmented.append((variant, target))
-    
-    # Add synonym variations with reduced probability
-    if color_name in COLOR_SYNONYMS:
-        for synonym in COLOR_SYNONYMS[color_name]:
-            variant = f"A {synonym} colored shape."
-            if random.random() < (adaptive_factor * 0.5):
-                augmented.append((variant, target))
-    
-    # Add semantic variants based on common associations for rare classes
-    if class_counts and class_counts.get(target, 0) < 5:
-        semantic_variants = []
-        
-        if color_name == "blue":
-            semantic_variants = [
-                "A shape reminiscent of the deep ocean.",
-                "An element with the color of the sky on a clear day.",
-                "A cosmic form suggesting distant galaxies."
-            ]
-        elif color_name == "green":
-            semantic_variants = [
-                "A shape with the freshness of spring leaves.",
-                "An element colored like a lush forest.",
-                "A natural form with the vibrance of new growth."
-            ]
-        elif color_name == "purple":
-            semantic_variants = [
-                "A shape with the mystical quality of twilight.",
-                "An element reminiscent of cosmic nebulae.",
-                "A form with the rich hue of ancient royalty."
-            ]
-        
-        for variant in semantic_variants:
-            if random.random() < (adaptive_factor * 0.7):
-                augmented.append((variant, target))
-    
-    return augmented
 
 def compute_bounding_box(shapes):
     """
@@ -502,71 +59,121 @@ def compute_bounding_box(shapes):
                  min_x, max_x, min_y, max_y)
     return min_x, max_x, min_y, max_y
 
-class ShapesDataset(data.Dataset):
+def process_polygon(polygon, normalize=True):
     """
-    Enhanced dataset for training color prediction with advanced augmentation
-    and class balancing strategies.
+    Process polygon coordinates into a fixed-length feature vector.
+    
+    Args:
+        polygon: List of (x, y) coordinate tuples
+        normalize: Whether to normalize coordinates to [0, 1] range
+        
+    Returns:
+        Tensor of processed polygon features
     """
-    def __init__(self, shapes, id_to_shape, augment=True):
-        self.samples = []
-        # Compute basic samples and count per class
-        basic_samples = []
-        color_counts = {i: 0 for i in range(NUM_CANDIDATES)}
-        
-        for shape in shapes:
-            merged_text = get_weighted_merged_text(shape, id_to_shape)
-            target = get_target_label(merged_text)
-            if target is not None:
-                basic_samples.append((merged_text, target))
-                color_counts[target] += 1
-            else:
-                logging.debug("Skipping shape id %s due to no target label.", shape.get("id"))
-        
-        # Save counts for weighting and reporting
-        self.basic_color_counts = color_counts
-        self.total_basic_samples = len(basic_samples)
-        
-        logging.info("Color distribution in original samples:")
-        for i, (name, _) in enumerate(CANDIDATE_COLORS):
-            logging.info(f"  {name}: {color_counts[i]} samples")
-        
-        if augment:
-            # Apply enhanced augmentation with adaptive factors
-            for sample in basic_samples:
-                augmented = augment_dataset(sample, augment_factor=0.6, class_counts=color_counts)
-                self.samples.extend(augmented)
-                
-            # Report final dataset statistics
-            augmented_counts = {i: 0 for i in range(NUM_CANDIDATES)}
-            for _, target in self.samples:
-                augmented_counts[target] += 1
-                
-            logging.info("Color distribution after augmentation:")
-            for i, (name, _) in enumerate(CANDIDATE_COLORS):
-                logging.info(f"  {name}: {augmented_counts[i]} samples")
-        else:
-            self.samples = basic_samples
-            
-        logging.info("Constructed dataset with %d samples (after augmentation).", len(self.samples))
+    # Extract features from the polygon
+    if not polygon:
+        # Default empty polygon features
+        return torch.zeros(10)
     
-    def __len__(self):
-        return len(self.samples)
+    # Get basic geometric features
+    xs = [p[0] for p in polygon]
+    ys = [p[1] for p in polygon]
     
-    def __getitem__(self, idx):
-        return self.samples[idx]
+    min_x, max_x = min(xs), max(xs)
+    min_y, max_y = min(ys), max(ys)
+    
+    width = max_x - min_x
+    height = max_y - min_y
+    
+    # Calculate polygon area using the Shoelace formula
+    area = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        area += polygon[i][0] * polygon[j][1]
+        area -= polygon[j][0] * polygon[i][1]
+    area = abs(area) / 2.0
+    
+    # Calculate polygon centroid
+    cx = sum(xs) / len(xs)
+    cy = sum(ys) / len(ys)
+    
+    # Calculate polygon perimeter
+    perimeter = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        dx = polygon[j][0] - polygon[i][0]
+        dy = polygon[j][1] - polygon[i][1]
+        perimeter += math.sqrt(dx*dx + dy*dy)
+    
+    # Aspect ratio
+    aspect_ratio = width / height if height != 0 else 1.0
+    
+    # Compute distances from centroid to vertices
+    distances = []
+    for x, y in polygon:
+        dx = x - cx
+        dy = y - cy
+        distances.append(math.sqrt(dx*dx + dy*dy))
+    
+    avg_distance = sum(distances) / len(distances) if distances else 0
+    max_distance = max(distances) if distances else 0
+    
+    # Create feature vector
+    features = [
+        width,
+        height,
+        area,
+        perimeter,
+        cx,
+        cy,
+        aspect_ratio,
+        avg_distance,
+        max_distance,
+        len(polygon)  # Number of vertices
+    ]
+    
+    # Normalize features if requested
+    if normalize:
+        # Create a simple normalization - not optimal but functional
+        feature_tensor = torch.tensor(features, dtype=torch.float32)
+        non_zero_mask = feature_tensor != 0
+        feature_tensor[non_zero_mask] = feature_tensor[non_zero_mask].log1p()  # log(1+x) for positive values
+        feature_tensor = torch.tanh(feature_tensor * 0.1)  # Squash to [-1, 1]
+        return feature_tensor
+    
+    return torch.tensor(features, dtype=torch.float32)
 
-class EnhancedColorClassifier(nn.Module):
+class RGBPredictionModel(nn.Module):
     """
-    Enhanced neural network classifier with additional layers and dropout.
+    Neural network for predicting RGB values directly from text embeddings 
+    and polygon features.
     """
-    def __init__(self, input_dim, hidden_dims=[256, 128], num_classes=NUM_CANDIDATES, dropout_rates=[0.4, 0.3]):
-        super(EnhancedColorClassifier, self).__init__()
+    def __init__(self, text_embed_dim, poly_feature_dim=10, hidden_dims=[256, 128], 
+                output_dim=3, dropout_rates=[0.4, 0.3]):
+        super(RGBPredictionModel, self).__init__()
         
         # Validate parameters
         assert len(hidden_dims) == len(dropout_rates), "Must provide dropout rates for each hidden layer"
         
+        # Process polygon features to a fixed intermediate dimension
+        self.poly_feature_processed_dim = 32
+        
+        # Create polygon feature processing network
+        self.poly_net = nn.Sequential(
+            nn.Linear(poly_feature_dim, self.poly_feature_processed_dim),
+            nn.ReLU(),
+            nn.Dropout(0.2)
+        )
+        
+        # Total input dimension is: parent_embed + processed_poly_features + child_embed
+        total_input_dim = (text_embed_dim * 2) + self.poly_feature_processed_dim
+        
+        # Create main network layers
         layers = []
-        prev_dim = input_dim
+        prev_dim = total_input_dim
+        
+        # Log the input dimension for debugging
+        logging.info(f"Model input dimension: {prev_dim} = 2*{text_embed_dim} (text) + {self.poly_feature_processed_dim} (polygon)")
         
         # Create hidden layers with dropout
         for i, (hidden_dim, dropout_rate) in enumerate(zip(hidden_dims, dropout_rates)):
@@ -575,55 +182,108 @@ class EnhancedColorClassifier(nn.Module):
             layers.append(nn.Dropout(dropout_rate))
             prev_dim = hidden_dim
         
-        # Final output layer
-        layers.append(nn.Linear(prev_dim, num_classes))
+        # Final output layer for RGB values
+        layers.append(nn.Linear(prev_dim, output_dim))
+        layers.append(nn.Sigmoid())  # Output between 0 and 1, will scale to 0-255 later
         
-        self.model = nn.Sequential(*layers)
+        self.main_network = nn.Sequential(*layers)
     
-    def forward(self, x):
-        return self.model(x)
-
-def calculate_dynamic_weights(dataset):
-    """
-    Calculate class weights dynamically based on class distribution,
-    with special handling for severely underrepresented classes.
-    """
-    color_counts = dataset.basic_color_counts
-    total_samples = dataset.total_basic_samples
-    weights = []
-    
-    for i in range(NUM_CANDIDATES):
-        count = color_counts[i]
-        if count > 0:
-            # Base inverse frequency weighting
-            weight = total_samples / (NUM_CANDIDATES * count)
+    def forward(self, parent_embed, child_polygon, child_embed):
+        """
+        Forward pass with three inputs: parent description, child polygon, and child description
+        
+        Args:
+            parent_embed: Parent description embedding tensor
+            child_polygon: Child polygon feature tensor  
+            child_embed: Child description embedding tensor
             
-            # Apply additional boost for very rare classes
-            if count < 5:
-                weight *= 1.5  # 50% boost for very rare classes
-            elif count < 10:
-                weight *= 1.2  # 20% boost for somewhat rare classes
-            
-            weights.append(weight)
-        else:
-            weights.append(0.0)
-    
-    # Normalize weights to avoid extreme values
-    max_weight = max(weights)
-    if max_weight > 5.0:
-        scale_factor = 5.0 / max_weight
-        weights = [w * scale_factor for w in weights]
-    
-    return torch.tensor(weights, dtype=torch.float)
+        Returns:
+            RGB values in range 0-255
+        """
+        # Process polygon features through polygon network
+        poly_processed = self.poly_net(child_polygon)
+        
+        # Concatenate all inputs
+        combined = torch.cat([parent_embed, poly_processed, child_embed], dim=1)
+        
+        # Forward through main network
+        raw_output = self.main_network(combined)
+        
+        # Scale to 0-255 range
+        rgb_values = raw_output * 255.0
+        return rgb_values
 
-def train_model(dataset, clip_model, classifier, optimizer, device, 
-               class_weights, epochs=15, patience=3, batch_size=16):
+class RGBShapesDataset(data.Dataset):
     """
-    Train the classifier with advanced techniques including:
-    - Early stopping
-    - Learning rate scheduling
-    - Dynamic class weighting
-    - Gradient clipping
+    Dataset for training RGB color prediction with parent-child relationships.
+    Generates consistent RGB values for all shapes rather than extracting explicit colors.
+    """
+    def __init__(self, shapes, id_to_shape):
+        self.samples = []
+        
+        # For each shape, generate deterministic RGB values
+        for shape in shapes:
+            shape_id = shape.get("id")
+            child_desc = shape.get("description", "")
+            child_polygon = shape.get("polygon", [])
+            
+            # Process polygon into feature vector
+            polygon_features = process_polygon(child_polygon)
+            
+            # Get parent description if exists
+            parent_id = shape.get("parent")
+            parent_desc = ""
+            if parent_id is not None and parent_id in id_to_shape:
+                parent_desc = id_to_shape[parent_id].get("description", "")
+            
+            # Generate deterministic RGB based on shape properties
+            # Use string hash of shape ID for reproducibility
+            hash_base = hash(str(shape_id)) % 16777216  # 2^24
+            r = (hash_base >> 16) & 255
+            g = (hash_base >> 8) & 255
+            b = hash_base & 255
+            rgb_color = (r, g, b)
+            
+            # Store RGB values as a list of floats (normalized to 0-1)
+            normalized_rgb = [c / 255.0 for c in rgb_color]
+            
+            # Add to samples as (parent_desc, polygon_features, child_desc, normalized_rgb)
+            self.samples.append((parent_desc, polygon_features, child_desc, normalized_rgb))
+            
+        logging.info(f"Constructed dataset with {len(self.samples)} total samples")
+        logging.info(f"All samples use algorithmically generated RGB values (no extracted colors)")
+    
+    def __len__(self):
+        return len(self.samples)
+    
+    def __getitem__(self, idx):
+        parent_desc, polygon_features, child_desc, rgb_values = self.samples[idx]
+        # Return RGB values as a tensor directly
+        return parent_desc, polygon_features, child_desc, torch.tensor(rgb_values, dtype=torch.float32)
+
+def rgb_distance(pred_rgb, true_rgb):
+    """
+    Calculate Euclidean distance between predicted and true RGB values.
+    Input tensors are expected to be in 0-255 range.
+    Handles potential batch size differences.
+    """
+    # Ensure we're operating on the correct dimension for batched tensors
+    if pred_rgb.dim() > 1 and true_rgb.dim() > 1:
+        return torch.sqrt(torch.sum((pred_rgb - true_rgb) ** 2, dim=1))
+    else:
+        # Handle non-batched inputs (single sample case)
+        return torch.sqrt(torch.sum((pred_rgb - true_rgb) ** 2))
+
+def find_json_files(directory):
+    """Find all JSON files in a directory structure"""
+    json_pattern = os.path.join(directory, "**", "*.json")
+    json_files = glob.glob(json_pattern, recursive=True)
+    return json_files
+
+def train_model(dataset, clip_model, rgb_model, optimizer, device, epochs=50, batch_size=16):
+    """
+    Train the RGB prediction model for exactly 50 epochs, logging detailed metrics.
+    No early stopping to allow intentional overfitting.
     """
     # Create train/validation split
     dataset_size = len(dataset)
@@ -633,143 +293,129 @@ def train_model(dataset, clip_model, classifier, optimizer, device,
         dataset, [train_size, val_size], 
         generator=torch.Generator().manual_seed(42))  # Fixed seed for reproducibility
     
-    # Specialized sampler for training to handle class imbalance
-    train_targets = [dataset.samples[i][1] for i in train_dataset.indices]
-    sample_weights = [class_weights[t].item() for t in train_targets]
-    sampler = WeightedRandomSampler(weights=sample_weights, num_samples=len(train_dataset), replacement=True)
-    
     # Create data loaders
-    train_loader = data.DataLoader(train_dataset, batch_size=batch_size, sampler=sampler)
+    train_loader = data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_loader = data.DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
     
     # Set CLIP model to evaluation mode (freezing it during training)
     clip_model.eval()
     
-    # Use weighted loss for class imbalance
-    loss_fn = nn.CrossEntropyLoss(weight=class_weights.to(device))
+    # Mean Squared Error loss for RGB values
+    loss_fn = nn.MSELoss()
     
-    # Learning rate scheduler for adaptive learning
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=2, verbose=True
-    )
+    # Threshold for RGB "accuracy" - consider prediction correct if within this distance
+    rgb_accuracy_threshold = 30.0  # Euclidean distance in RGB space
     
-    # Early stopping setup
-    best_val_loss = float('inf')
-    best_state = None
-    patience_counter = 0
+    logging.info(f"Starting 50-epoch training with batch size {batch_size}, intentionally allowing overfitting")
+    logging.info(f"Training on {train_size} samples, validating on {val_size} samples")
     
     for epoch in range(epochs):
         # Training phase
-        classifier.train()
+        rgb_model.train()
         total_train_loss = 0.0
+        train_rgb_distances = []
         train_correct = 0
         train_total = 0
         
-        for texts, targets in train_loader:
-            tokens = clip.tokenize(texts, truncate=True).to(device)
+        for (parent_texts, polygon_features, child_texts, true_rgbs) in train_loader:
+            # Move tensors to device
+            polygon_features = polygon_features.to(device)
+            true_rgbs = true_rgbs.to(device)
+            
+            parent_tokens = clip.tokenize(parent_texts, truncate=True).to(device)
+            child_tokens = clip.tokenize(child_texts, truncate=True).to(device)
+            
             optimizer.zero_grad()
             
             # Forward pass through CLIP text encoder (no gradients)
             with torch.no_grad():
-                text_feats = clip_model.encode_text(tokens)
-                text_feats /= text_feats.norm(dim=-1, keepdim=True)
+                parent_feats = clip_model.encode_text(parent_tokens)
+                parent_feats /= parent_feats.norm(dim=-1, keepdim=True)
+                
+                child_feats = clip_model.encode_text(child_tokens)
+                child_feats /= child_feats.norm(dim=-1, keepdim=True)
             
-            # Forward pass through our classifier
-            logits = classifier(text_feats)
-            loss = loss_fn(logits, targets.to(device))
+            # Forward pass through our RGB model with three inputs
+            pred_rgbs = rgb_model(parent_feats, polygon_features, child_feats)
+            loss = loss_fn(pred_rgbs, true_rgbs * 255.0)  # Scale true values to 0-255
             
             # Backward pass with gradient clipping
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(classifier.parameters(), max_norm=1.0)
+            torch.nn.utils.clip_grad_norm_(rgb_model.parameters(), max_norm=1.0)
             optimizer.step()
             
+            # Calculate RGB distance and accuracy
+            distances = rgb_distance(pred_rgbs, true_rgbs * 255.0)
+            train_rgb_distances.extend(distances.cpu().detach().numpy())
+            
+            # Count as correct if RGB distance is below threshold
+            correct = (distances < rgb_accuracy_threshold).sum().item()
+            train_correct += correct
+            train_total += true_rgbs.size(0)
+            
             # Track metrics
-            total_train_loss += loss.item() * targets.size(0)
-            _, predicted = torch.max(logits.data, 1)
-            train_total += targets.size(0)
-            train_correct += (predicted == targets.to(device)).sum().item()
+            total_train_loss += loss.item() * true_rgbs.size(0)
         
         # Validation phase
-        classifier.eval()
+        rgb_model.eval()
         total_val_loss = 0.0
+        val_rgb_distances = []
         val_correct = 0
         val_total = 0
         
-        # Track per-class accuracy
-        class_correct = {name: 0 for name, _ in CANDIDATE_COLORS}
-        class_total = {name: 0 for name, _ in CANDIDATE_COLORS}
-        
         with torch.no_grad():
-            for texts, targets in val_loader:
-                tokens = clip.tokenize(texts, truncate=True).to(device)
-                text_feats = clip_model.encode_text(tokens)
-                text_feats /= text_feats.norm(dim=-1, keepdim=True)
-                logits = classifier(text_feats)
-                loss = loss_fn(logits, targets.to(device))
+            for (parent_texts, polygon_features, child_texts, true_rgbs) in val_loader:
+                # Move tensors to device
+                polygon_features = polygon_features.to(device)
+                true_rgbs = true_rgbs.to(device)
                 
-                total_val_loss += loss.item() * targets.size(0)
-                _, predicted = torch.max(logits.data, 1)
-                val_total += targets.size(0)
-                val_correct += (predicted == targets.to(device)).sum().item()
+                parent_tokens = clip.tokenize(parent_texts, truncate=True).to(device)
+                child_tokens = clip.tokenize(child_texts, truncate=True).to(device)
                 
-                # Update per-class metrics
-                for i, target in enumerate(targets):
-                    class_name = CANDIDATE_COLORS[target.item()][0]
-                    class_total[class_name] += 1
-                    if predicted[i] == target.to(device):
-                        class_correct[class_name] += 1
+                parent_feats = clip_model.encode_text(parent_tokens)
+                parent_feats /= parent_feats.norm(dim=-1, keepdim=True)
+                
+                child_feats = clip_model.encode_text(child_tokens)
+                child_feats /= child_feats.norm(dim=-1, keepdim=True)
+                
+                # Forward pass through RGB model with three inputs
+                pred_rgbs = rgb_model(parent_feats, polygon_features, child_feats)
+                loss = loss_fn(pred_rgbs, true_rgbs * 255.0)
+                
+                # Calculate RGB distance and accuracy
+                distances = rgb_distance(pred_rgbs, true_rgbs * 255.0)
+                val_rgb_distances.extend(distances.cpu().numpy())
+                
+                # Count as correct if RGB distance is below threshold
+                correct = (distances < rgb_accuracy_threshold).sum().item()
+                val_correct += correct
+                val_total += true_rgbs.size(0)
+                
+                total_val_loss += loss.item() * true_rgbs.size(0)
         
         # Calculate epoch metrics
         avg_train_loss = total_train_loss / train_total
         avg_val_loss = total_val_loss / val_total
+        
+        avg_train_rgb_distance = np.mean(train_rgb_distances)
+        avg_val_rgb_distance = np.mean(val_rgb_distances)
+        
         train_accuracy = 100 * train_correct / train_total
         val_accuracy = 100 * val_correct / val_total
         
-        # Log overall metrics
+        # Calculate overfitting metric (difference between train and val accuracy)
+        overfitting = train_accuracy - val_accuracy
+        
+        # Log metrics in exact required format
         logging.info(f"Epoch {epoch+1}/{epochs}: Train Loss = {avg_train_loss:.4f}, "
-                    f"Val Loss = {avg_val_loss:.4f}, Train Acc = {train_accuracy:.2f}%, "
-                    f"Val Acc = {val_accuracy:.2f}%")
-        
-        # Log per-class validation accuracies
-        class_acc_log = "Per-class validation accuracies: "
-        for name in class_correct:
-            if class_total[name] > 0:
-                acc = 100 * class_correct[name] / class_total[name]
-                class_acc_log += f"{name}: {acc:.1f}%, "
-        logging.info(class_acc_log)
-        
-        # Update learning rate based on validation loss
-        scheduler.step(avg_val_loss)
-        
-        # Early stopping check
-        if avg_val_loss < best_val_loss:
-            best_val_loss = avg_val_loss
-            best_state = classifier.state_dict().copy()
-            patience_counter = 0
-            logging.info(f"New best model saved at epoch {epoch+1} with validation loss: {best_val_loss:.4f}")
-        else:
-            patience_counter += 1
-            logging.info(f"No improvement in validation loss. Patience: {patience_counter}/{patience}")
-            
-            if patience_counter >= patience:
-                logging.info(f"Early stopping triggered after {epoch+1} epochs")
-                break
+                    f"Val Loss = {avg_val_loss:.4f}, Avg RGB Distance = {avg_val_rgb_distance:.2f}, "
+                    f"Accuracy: Train = {train_accuracy:.2f}%, Val = {val_accuracy:.2f}%, "
+                    f"Overfitting = {overfitting:.2f}%")
     
-    # Restore best model
-    if best_state:
-        classifier.load_state_dict(best_state)
-        logging.info(f"Restored best model with validation loss: {best_val_loss:.4f}")
-    
-    return classifier
-
-def find_json_files(directory):
-    """Find all JSON files in a directory structure"""
-    json_pattern = os.path.join(directory, "**", "*.json")
-    json_files = glob.glob(json_pattern, recursive=True)
-    return json_files
+    return rgb_model
 
 def main():
-    logging.info("Starting enhanced polygon color prediction training")
+    logging.info("Starting RGB color prediction model training")
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     shapes_dir = os.path.join(script_dir, "shapes_jsons")
@@ -823,15 +469,8 @@ def main():
     clip_model.eval()
     logging.info("CLIP model loaded successfully.")
     
-    # Construct dataset with augmentation
-    dataset = ShapesDataset(all_shapes, id_to_shape, augment=True)
-    if len(dataset) == 0:
-        logging.error("No training samples available. Check your JSON files!")
-        sys.exit(1)
-    
-    # Calculate dynamic class weights
-    class_weights = calculate_dynamic_weights(dataset)
-    logging.info("Computed class weights: %s", class_weights)
+    # Construct dataset with ALL shapes (using algorithmically generated RGB values)
+    dataset = RGBShapesDataset(all_shapes, id_to_shape)
     
     # Determine embedding dimension from CLIP
     with torch.no_grad():
@@ -840,50 +479,51 @@ def main():
     embed_dim = sample_embedding.shape[-1]
     logging.info("CLIP text embedding dimension: %d", embed_dim)
     
-    # Create enhanced classifier
-    classifier = EnhancedColorClassifier(
-        input_dim=embed_dim,
+    # Create RGB prediction model with polygon features input
+    rgb_model = RGBPredictionModel(
+        text_embed_dim=embed_dim,
+        poly_feature_dim=10,  # Matches dimension from process_polygon function
         hidden_dims=[256, 128],
-        num_classes=NUM_CANDIDATES,
+        output_dim=3,  # RGB values
         dropout_rates=[0.4, 0.3]
     ).to(device)
+    logging.info(f"Created RGB prediction model with three inputs: parent description, child polygon, and child description")
     
     # Configure optimizer with weight decay for regularization
     optimizer = optim.AdamW(
-        classifier.parameters(),
+        rgb_model.parameters(),
         lr=1e-3,
         weight_decay=1e-4,
         betas=(0.9, 0.999)
     )
+    logging.info("Using AdamW optimizer with learning rate 1e-3 and weight decay 1e-4")
     
-    # Train the model
-    logging.info("Starting training with early stopping...")
-    classifier = train_model(
+    # Train the model for exactly 50 epochs with no early stopping
+    rgb_model = train_model(
         dataset=dataset,
         clip_model=clip_model,
-        classifier=classifier,
+        rgb_model=rgb_model,
         optimizer=optimizer,
         device=device,
-        class_weights=class_weights,
-        epochs=15,
-        patience=3,
+        epochs=50,
         batch_size=16
     )
-    logging.info("Training complete.")
+    logging.info("Training complete after 50 epochs (intentionally allowing overfitting)")
     
     # Save model weights
-    weights_path = os.path.join(script_dir, "classifier_weights.pth")
-    torch.save(classifier.state_dict(), weights_path)
-    logging.info("Saved classifier weights to: %s", weights_path)
+    weights_path = os.path.join(script_dir, "rgb_model_weights.pth")
+    torch.save(rgb_model.state_dict(), weights_path)
+    logging.info("Saved RGB model weights to: %s", weights_path)
     
     # Save model architecture information for testing
     model_info = {
         "embed_dim": embed_dim,
+        "poly_feature_dim": 10,
         "hidden_dims": [256, 128],
-        "num_classes": NUM_CANDIDATES,
+        "output_dim": 3,
         "dropout_rates": [0.4, 0.3]
     }
-    info_path = os.path.join(script_dir, "model_info.json")
+    info_path = os.path.join(script_dir, "rgb_model_info.json")
     with open(info_path, "w") as f:
         json.dump(model_info, f)
     logging.info("Saved model architecture information to: %s", info_path)
