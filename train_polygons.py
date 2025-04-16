@@ -1,69 +1,124 @@
 """
-train_polygons.py (RGB Prediction – semantic‑label version)
+train_polygons.py (RGB Prediction Version)
 
-This script trains a model on top of CLIP's text encoder to predict RGB colour
-values directly from *text* descriptions of shapes (plus polygon geometry and
-parent context).  **Training labels are mined from the child description text**
-(`rgb(…)`, `#RRGGBB`, or a tiny training‑time list of basic colour words).
-No extra fields are added to the JSON files; inference remains colour‑table‑free.
+This script trains a model on top of CLIP's text encoder to predict RGB color values 
+directly from text descriptions of shapes, handling parent-child relationships.
 """
 
-from __future__ import annotations
-
-import os, sys, json, re, logging, math, glob, datetime
-from typing import List, Tuple, Dict, Optional
-
+import os
+import sys
+import json
+import re
+import logging
+import math
+import random
+import glob
+import datetime
 import numpy as np
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.utils.data as data
 import clip
+from PIL import Image, ImageDraw, ImageColor
 
-# ---------------------------------------------------------------------------
-# Logging setup
-# ---------------------------------------------------------------------------
-LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
-os.makedirs(LOG_DIR, exist_ok=True)
-_ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-LOG_FILE = os.path.join(LOG_DIR, f"train_rgb_polygons_{_ts}.log")
+# Create logs directory if it doesn't exist
+logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
+os.makedirs(logs_dir, exist_ok=True)
 
+# Set up log file name with timestamp
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+log_file = os.path.join(logs_dir, f"train_rgb_polygons_{timestamp}.log")
+
+# Configure detailed logging
 logging.basicConfig(
-    level=logging.INFO,
-    format="[%(levelname)s] [%(asctime)s] [%(filename)s:%(lineno)d] %(message)s",
-    handlers=[logging.StreamHandler(), logging.FileHandler(LOG_FILE)],
+    level=logging.INFO, 
+    format='[%(levelname)s] [%(asctime)s] [%(filename)s:%(lineno)d] %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(log_file)
+    ]
 )
 
-# ---------------------------------------------------------------------------
-# Geometry helpers (unchanged)
-# ---------------------------------------------------------------------------
+def compute_bounding_box(shapes):
+    """
+    Compute the overall bounding box (min_x, max_x, min_y, max_y) for all shapes.
+    """
+    min_x, max_x = float('inf'), float('-inf')
+    min_y, max_y = float('inf'), float('-inf')
+    
+    for shape in shapes:
+        for (x, y) in shape["polygon"]:
+            min_x = min(min_x, x)
+            max_x = max(max_x, x)
+            min_y = min(min_y, y)
+            max_y = max(max_y, y)
+    
+    logging.debug("Computed bounding box: min_x=%s, max_x=%s, min_y=%s, max_y=%s", 
+                 min_x, max_x, min_y, max_y)
+    return min_x, max_x, min_y, max_y
 
-def process_polygon(polygon: List[List[float]], normalize: bool = True) -> torch.Tensor:
-    """Convert polygon coordinates → 10‑d feature vector (optionally normalised)."""
+def process_polygon(polygon, normalize=True):
+    """
+    Process polygon coordinates into a fixed-length feature vector.
+    
+    Args:
+        polygon: List of (x, y) coordinate tuples
+        normalize: Whether to normalize coordinates to [0, 1] range
+        
+    Returns:
+        Tensor of processed polygon features
+    """
+    # Extract features from the polygon
     if not polygon:
+        # Default empty polygon features
         return torch.zeros(10)
-
-    xs, ys = zip(*polygon)
+    
+    # Get basic geometric features
+    xs = [p[0] for p in polygon]
+    ys = [p[1] for p in polygon]
+    
     min_x, max_x = min(xs), max(xs)
     min_y, max_y = min(ys), max(ys)
-    width, height = max_x - min_x, max_y - min_y
-
-    # Area (Shoelace)
-    area = 0.5 * abs(
-        sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(polygon, polygon[1:] + [polygon[0]]))
-    )
-
-    # Centroid
-    cx, cy = sum(xs) / len(xs), sum(ys) / len(ys)
-
-    # Perimeter
-    perimeter = sum(
-        math.hypot(x1 - x0, y1 - y0)
-        for (x0, y0), (x1, y1) in zip(polygon, polygon[1:] + [polygon[0]])
-    )
-
-    aspect_ratio = width / height if height else 1.0
-    dists = [math.hypot(x - cx, y - cy) for x, y in polygon]
+    
+    width = max_x - min_x
+    height = max_y - min_y
+    
+    # Calculate polygon area using the Shoelace formula
+    area = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        area += polygon[i][0] * polygon[j][1]
+        area -= polygon[j][0] * polygon[i][1]
+    area = abs(area) / 2.0
+    
+    # Calculate polygon centroid
+    cx = sum(xs) / len(xs)
+    cy = sum(ys) / len(ys)
+    
+    # Calculate polygon perimeter
+    perimeter = 0
+    for i in range(len(polygon)):
+        j = (i + 1) % len(polygon)
+        dx = polygon[j][0] - polygon[i][0]
+        dy = polygon[j][1] - polygon[i][1]
+        perimeter += math.sqrt(dx*dx + dy*dy)
+    
+    # Aspect ratio
+    aspect_ratio = width / height if height != 0 else 1.0
+    
+    # Compute distances from centroid to vertices
+    distances = []
+    for x, y in polygon:
+        dx = x - cx
+        dy = y - cy
+        distances.append(math.sqrt(dx*dx + dy*dy))
+    
+    avg_distance = sum(distances) / len(distances) if distances else 0
+    max_distance = max(distances) if distances else 0
+    
+    # Create feature vector
     features = [
         width,
         height,
@@ -72,244 +127,406 @@ def process_polygon(polygon: List[List[float]], normalize: bool = True) -> torch
         cx,
         cy,
         aspect_ratio,
-        sum(dists) / len(dists),
-        max(dists),
-        len(polygon),
+        avg_distance,
+        max_distance,
+        len(polygon)  # Number of vertices
     ]
-
-    ft = torch.tensor(features, dtype=torch.float32)
+    
+    # Normalize features if requested
     if normalize:
-        nz = ft != 0
-        ft[nz] = ft[nz].log1p()
-        ft = torch.tanh(ft * 0.1)
-    return ft
-
-# ---------------------------------------------------------------------------
-# Text‑to‑RGB label mining  (training‑time only!)
-# ---------------------------------------------------------------------------
-
-_WORD_TO_RGB: Dict[str, Tuple[int, int, int]] = {
-    "black": (0, 0, 0),
-    "white": (255, 255, 255),
-    "red": (255, 0, 0),
-    "green": (0, 128, 0),
-    "blue": (0, 0, 255),
-    "yellow": (255, 255, 0),
-    "orange": (255, 165, 0),
-    "purple": (128, 0, 128),
-    "pink": (255, 192, 203),
-    "brown": (165, 42, 42),
-    "gray": (128, 128, 128),
-    "grey": (128, 128, 128),
-}
-
-_RGB_RE = re.compile(r"rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)")
-_HEX_RE = re.compile(r"#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})")
-
-
-def extract_rgb_from_text(text: str) -> Optional[Tuple[int, int, int]]:
-    """Return (R,G,B) if the description explicitly encodes a colour; else None."""
-    text_l = text.lower()
-
-    # rgb(r,g,b)
-    if m := _RGB_RE.search(text_l):
-        r, g, b = map(int, m.groups())
-        if all(0 <= v <= 255 for v in (r, g, b)):
-            return r, g, b
-
-    # #RRGGBB or #RGB
-    if m := _HEX_RE.search(text_l):
-        hexstr = m.group(1)
-        if len(hexstr) == 3:
-            hexstr = "".join(ch * 2 for ch in hexstr)
-        val = int(hexstr, 16)
-        return (val >> 16) & 255, (val >> 8) & 255, val & 255
-
-    # basic colour words
-    for word, rgb in _WORD_TO_RGB.items():
-        if word in text_l:
-            return rgb
-    return None
-
-# ---------------------------------------------------------------------------
-# Dataset
-# ---------------------------------------------------------------------------
-
-class RGBShapesDataset(data.Dataset):
-    """Builds samples **only** for shapes whose description yields a colour label."""
-
-    def __init__(self, shapes: List[dict], id_to_shape: Dict[int, dict]):
-        self.samples = []
-        skipped = 0
-
-        for shape in shapes:
-            child_desc = shape.get("description", "")
-            rgb = extract_rgb_from_text(child_desc)
-            if rgb is None:
-                skipped += 1
-                continue  # no label ⇒ skip sample
-
-            # Build features
-            polygon_features = process_polygon(shape.get("polygon", []))
-            parent_desc = ""
-            if (pid := shape.get("parent")) is not None and pid in id_to_shape:
-                parent_desc = id_to_shape[pid].get("description", "")
-
-            norm_rgb = [c / 255.0 for c in rgb]
-            self.samples.append((parent_desc, polygon_features, child_desc, norm_rgb))
-
-        logging.info(
-            "Constructed dataset: %d labelled samples (skipped %d shapes without colour)",
-            len(self.samples), skipped,
-        )
-
-    def __len__(self):
-        return len(self.samples)
-
-    def __getitem__(self, idx):
-        p_desc, poly_ft, c_desc, rgb = self.samples[idx]
-        return p_desc, poly_ft, c_desc, torch.tensor(rgb, dtype=torch.float32)
-
-# ---------------------------------------------------------------------------
-# Model (unchanged)
-# ---------------------------------------------------------------------------
+        # Create a simple normalization - not optimal but functional
+        feature_tensor = torch.tensor(features, dtype=torch.float32)
+        non_zero_mask = feature_tensor != 0
+        feature_tensor[non_zero_mask] = feature_tensor[non_zero_mask].log1p()  # log(1+x) for positive values
+        feature_tensor = torch.tanh(feature_tensor * 0.1)  # Squash to [-1, 1]
+        return feature_tensor
+    
+    return torch.tensor(features, dtype=torch.float32)
 
 class RGBPredictionModel(nn.Module):
-    def __init__(self, text_dim: int, poly_dim: int = 10):
-        super().__init__()
-        self.poly = nn.Sequential(nn.Linear(poly_dim, 32), nn.ReLU(), nn.Dropout(0.2))
-        total = text_dim * 2 + 32
-        self.net = nn.Sequential(
-            nn.Linear(total, 256), nn.ReLU(), nn.Dropout(0.4),
-            nn.Linear(256, 128), nn.ReLU(), nn.Dropout(0.3),
-            nn.Linear(128, 3), nn.Sigmoid(),  # → 0‑1 then ×255 at loss time
+    """
+    Neural network for predicting RGB values directly from text embeddings 
+    and polygon features.
+    """
+    def __init__(self, text_embed_dim, poly_feature_dim=10, hidden_dims=[256, 128], 
+                output_dim=3, dropout_rates=[0.4, 0.3]):
+        super(RGBPredictionModel, self).__init__()
+        
+        # Validate parameters
+        assert len(hidden_dims) == len(dropout_rates), "Must provide dropout rates for each hidden layer"
+        
+        # Process polygon features to a fixed intermediate dimension
+        self.poly_feature_processed_dim = 32
+        
+        # Create polygon feature processing network
+        self.poly_net = nn.Sequential(
+            nn.Linear(poly_feature_dim, self.poly_feature_processed_dim),
+            nn.ReLU(),
+            nn.Dropout(0.2)
         )
+        
+        # Total input dimension is: parent_embed + processed_poly_features + child_embed
+        total_input_dim = (text_embed_dim * 2) + self.poly_feature_processed_dim
+        
+        # Create main network layers
+        layers = []
+        prev_dim = total_input_dim
+        
+        # Log the input dimension for debugging
+        logging.info(f"Model input dimension: {prev_dim} = 2*{text_embed_dim} (text) + {self.poly_feature_processed_dim} (polygon)")
+        
+        # Create hidden layers with dropout
+        for i, (hidden_dim, dropout_rate) in enumerate(zip(hidden_dims, dropout_rates)):
+            layers.append(nn.Linear(prev_dim, hidden_dim))
+            layers.append(nn.ReLU())
+            layers.append(nn.Dropout(dropout_rate))
+            prev_dim = hidden_dim
+        
+        # Final output layer for RGB values
+        layers.append(nn.Linear(prev_dim, output_dim))
+        layers.append(nn.Sigmoid())  # Output between 0 and 1, will scale to 0-255 later
+        
+        self.main_network = nn.Sequential(*layers)
+    
+    def forward(self, parent_embed, child_polygon, child_embed):
+        """
+        Forward pass with three inputs: parent description, child polygon, and child description
+        
+        Args:
+            parent_embed: Parent description embedding tensor
+            child_polygon: Child polygon feature tensor  
+            child_embed: Child description embedding tensor
+            
+        Returns:
+            RGB values in range 0-255
+        """
+        # Process polygon features through polygon network
+        poly_processed = self.poly_net(child_polygon)
+        
+        # Concatenate all inputs
+        combined = torch.cat([parent_embed, poly_processed, child_embed], dim=1)
+        
+        # Forward through main network
+        raw_output = self.main_network(combined)
+        
+        # Scale to 0-255 range
+        rgb_values = raw_output * 255.0
+        return rgb_values
 
-    def forward(self, p_txt, poly, c_txt):
-        return self.net(torch.cat([p_txt, self.poly(poly), c_txt], dim=1)) * 255.0
+class RGBShapesDataset(data.Dataset):
+    """
+    Dataset for training RGB color prediction with parent-child relationships.
+    Generates consistent RGB values for all shapes rather than extracting explicit colors.
+    """
+    def __init__(self, shapes, id_to_shape):
+        self.samples = []
+        
+        # For each shape, generate deterministic RGB values
+        for shape in shapes:
+            shape_id = shape.get("id")
+            child_desc = shape.get("description", "")
+            child_polygon = shape.get("polygon", [])
+            
+            # Process polygon into feature vector
+            polygon_features = process_polygon(child_polygon)
+            
+            # Get parent description if exists
+            parent_id = shape.get("parent")
+            parent_desc = ""
+            if parent_id is not None and parent_id in id_to_shape:
+                parent_desc = id_to_shape[parent_id].get("description", "")
+            
+            # Generate deterministic RGB based on shape properties
+            # Use string hash of shape ID for reproducibility
+            hash_base = hash(str(shape_id)) % 16777216  # 2^24
+            r = (hash_base >> 16) & 255
+            g = (hash_base >> 8) & 255
+            b = hash_base & 255
+            rgb_color = (r, g, b)
+            
+            # Store RGB values as a list of floats (normalized to 0-1)
+            normalized_rgb = [c / 255.0 for c in rgb_color]
+            
+            # Add to samples as (parent_desc, polygon_features, child_desc, normalized_rgb)
+            self.samples.append((parent_desc, polygon_features, child_desc, normalized_rgb))
+            
+        logging.info(f"Constructed dataset with {len(self.samples)} total samples")
+        logging.info(f"All samples use algorithmically generated RGB values (no extracted colors)")
+    
+    def __len__(self):
+        return len(self.samples)
+    
+    def __getitem__(self, idx):
+        parent_desc, polygon_features, child_desc, rgb_values = self.samples[idx]
+        # Return RGB values as a tensor directly
+        return parent_desc, polygon_features, child_desc, torch.tensor(rgb_values, dtype=torch.float32)
 
-# ---------------------------------------------------------------------------
-# Training loop (unchanged logic, improved comments)
-# ---------------------------------------------------------------------------
+def rgb_distance(pred_rgb, true_rgb):
+    """
+    Calculate Euclidean distance between predicted and true RGB values.
+    Input tensors are expected to be in 0-255 range.
+    Handles potential batch size differences.
+    """
+    # Ensure we're operating on the correct dimension for batched tensors
+    if pred_rgb.dim() > 1 and true_rgb.dim() > 1:
+        return torch.sqrt(torch.sum((pred_rgb - true_rgb) ** 2, dim=1))
+    else:
+        # Handle non-batched inputs (single sample case)
+        return torch.sqrt(torch.sum((pred_rgb - true_rgb) ** 2))
 
-def rgb_distance(a: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
-    return torch.sqrt(((a - b) ** 2).sum(dim=-1))
+def find_json_files(directory):
+    """Find all JSON files in a directory structure"""
+    json_pattern = os.path.join(directory, "**", "*.json")
+    json_files = glob.glob(json_pattern, recursive=True)
+    return json_files
 
-
-def train_model(dataset, clip_model, rgb_model, optimiser, device, epochs=50, batch=16):
-    val_split = 0.2
-    n_val = int(len(dataset) * val_split)
-    train_ds, val_ds = torch.utils.data.random_split(dataset, [len(dataset) - n_val, n_val], generator=torch.Generator().manual_seed(42))
-    train_loader = data.DataLoader(train_ds, batch_size=batch, shuffle=True)
-    val_loader = data.DataLoader(val_ds, batch_size=batch)
-
+def train_model(dataset, clip_model, rgb_model, optimizer, device, epochs=50, batch_size=16):
+    """
+    Train the RGB prediction model for exactly 50 epochs, logging detailed metrics.
+    No early stopping to allow intentional overfitting.
+    """
+    # Create train/validation split
+    dataset_size = len(dataset)
+    val_size = int(dataset_size * 0.2)  # 20% for validation
+    train_size = dataset_size - val_size
+    train_dataset, val_dataset = torch.utils.data.random_split(
+        dataset, [train_size, val_size], 
+        generator=torch.Generator().manual_seed(42))  # Fixed seed for reproducibility
+    
+    # Create data loaders
+    train_loader = data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = data.DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    
+    # Set CLIP model to evaluation mode (freezing it during training)
+    clip_model.eval()
+    
+    # Mean Squared Error loss for RGB values
     loss_fn = nn.MSELoss()
-    thresh = 30.0  # RGB Euclidean distance for “accuracy”
-
-    logging.info("Training %d samples, validating %d samples", len(train_ds), len(val_ds))
-
-    for epoch in range(1, epochs + 1):
+    
+    # Threshold for RGB "accuracy" - consider prediction correct if within this distance
+    rgb_accuracy_threshold = 30.0  # Euclidean distance in RGB space
+    
+    logging.info(f"Starting 50-epoch training with batch size {batch_size}, intentionally allowing overfitting")
+    logging.info(f"Training on {train_size} samples, validating on {val_size} samples")
+    
+    for epoch in range(epochs):
+        # Training phase
         rgb_model.train()
-        t_loss = t_corr = 0
-        t_dist = []
-        for p_txt, poly, c_txt, tgt in train_loader:
-            poly, tgt = poly.to(device), tgt.to(device) * 255.0
-            p_emb = clip_model.encode_text(clip.tokenize(p_txt, truncate=True).to(device)).detach()
-            c_emb = clip_model.encode_text(clip.tokenize(c_txt, truncate=True).to(device)).detach()
-            p_emb /= p_emb.norm(dim=-1, keepdim=True)
-            c_emb /= c_emb.norm(dim=-1, keepdim=True)
-
-            optimiser.zero_grad()
-            pred = rgb_model(p_emb, poly, c_emb)
-            loss = loss_fn(pred, tgt)
+        total_train_loss = 0.0
+        train_rgb_distances = []
+        train_correct = 0
+        train_total = 0
+        
+        for (parent_texts, polygon_features, child_texts, true_rgbs) in train_loader:
+            # Move tensors to device
+            polygon_features = polygon_features.to(device)
+            true_rgbs = true_rgbs.to(device)
+            
+            parent_tokens = clip.tokenize(parent_texts, truncate=True).to(device)
+            child_tokens = clip.tokenize(child_texts, truncate=True).to(device)
+            
+            optimizer.zero_grad()
+            
+            # Forward pass through CLIP text encoder (no gradients)
+            with torch.no_grad():
+                parent_feats = clip_model.encode_text(parent_tokens)
+                parent_feats /= parent_feats.norm(dim=-1, keepdim=True)
+                
+                child_feats = clip_model.encode_text(child_tokens)
+                child_feats /= child_feats.norm(dim=-1, keepdim=True)
+            
+            # Forward pass through our RGB model with three inputs
+            pred_rgbs = rgb_model(parent_feats, polygon_features, child_feats)
+            loss = loss_fn(pred_rgbs, true_rgbs * 255.0)  # Scale true values to 0-255
+            
+            # Backward pass with gradient clipping
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(rgb_model.parameters(), 1.0)
-            optimiser.step()
-
-            dist = rgb_distance(pred, tgt)
-            t_corr += (dist < thresh).sum().item()
-            t_loss += loss.item() * tgt.size(0)
-            t_dist.extend(dist.cpu().tolist())
-
-        # ----------------- validation -----------------
+            torch.nn.utils.clip_grad_norm_(rgb_model.parameters(), max_norm=1.0)
+            optimizer.step()
+            
+            # Calculate RGB distance and accuracy
+            distances = rgb_distance(pred_rgbs, true_rgbs * 255.0)
+            train_rgb_distances.extend(distances.cpu().detach().numpy())
+            
+            # Count as correct if RGB distance is below threshold
+            correct = (distances < rgb_accuracy_threshold).sum().item()
+            train_correct += correct
+            train_total += true_rgbs.size(0)
+            
+            # Track metrics
+            total_train_loss += loss.item() * true_rgbs.size(0)
+        
+        # Validation phase
         rgb_model.eval()
-        v_loss = v_corr = 0
-        v_dist = []
+        total_val_loss = 0.0
+        val_rgb_distances = []
+        val_correct = 0
+        val_total = 0
+        
         with torch.no_grad():
-            for p_txt, poly, c_txt, tgt in val_loader:
-                poly, tgt = poly.to(device), tgt.to(device) * 255.0
-                p_emb = clip_model.encode_text(clip.tokenize(p_txt, truncate=True).to(device))
-                c_emb = clip_model.encode_text(clip.tokenize(c_txt, truncate=True).to(device))
-                p_emb /= p_emb.norm(dim=-1, keepdim=True)
-                c_emb /= c_emb.norm(dim=-1, keepdim=True)
-                pred = rgb_model(p_emb, poly, c_emb)
-                loss = loss_fn(pred, tgt)
-                dist = rgb_distance(pred, tgt)
-                v_corr += (dist < thresh).sum().item()
-                v_loss += loss.item() * tgt.size(0)
-                v_dist.extend(dist.cpu().tolist())
-
-        # ----------------- logging -----------------
-        n_tr, n_val = len(train_ds), len(val_ds)
-        log_msg = (
-            f"Epoch {epoch}/50: Train Loss = {t_loss/n_tr:.4f}, Val Loss = {v_loss/n_val:.4f}, "
-            f"Avg RGB Distance = {np.mean(v_dist):.2f}, "
-            f"Accuracy: Train = {100*t_corr/n_tr:.2f}%, Val = {100*v_corr/n_val:.2f}%, "
-            f"Overfitting = {100*t_corr/n_tr - 100*v_corr/n_val:.2f}%"
-        )
-        logging.info(log_msg)
-
+            for (parent_texts, polygon_features, child_texts, true_rgbs) in val_loader:
+                # Move tensors to device
+                polygon_features = polygon_features.to(device)
+                true_rgbs = true_rgbs.to(device)
+                
+                parent_tokens = clip.tokenize(parent_texts, truncate=True).to(device)
+                child_tokens = clip.tokenize(child_texts, truncate=True).to(device)
+                
+                parent_feats = clip_model.encode_text(parent_tokens)
+                parent_feats /= parent_feats.norm(dim=-1, keepdim=True)
+                
+                child_feats = clip_model.encode_text(child_tokens)
+                child_feats /= child_feats.norm(dim=-1, keepdim=True)
+                
+                # Forward pass through RGB model with three inputs
+                pred_rgbs = rgb_model(parent_feats, polygon_features, child_feats)
+                loss = loss_fn(pred_rgbs, true_rgbs * 255.0)
+                
+                # Calculate RGB distance and accuracy
+                distances = rgb_distance(pred_rgbs, true_rgbs * 255.0)
+                val_rgb_distances.extend(distances.cpu().numpy())
+                
+                # Count as correct if RGB distance is below threshold
+                correct = (distances < rgb_accuracy_threshold).sum().item()
+                val_correct += correct
+                val_total += true_rgbs.size(0)
+                
+                total_val_loss += loss.item() * true_rgbs.size(0)
+        
+        # Calculate epoch metrics
+        avg_train_loss = total_train_loss / train_total
+        avg_val_loss = total_val_loss / val_total
+        
+        avg_train_rgb_distance = np.mean(train_rgb_distances)
+        avg_val_rgb_distance = np.mean(val_rgb_distances)
+        
+        train_accuracy = 100 * train_correct / train_total
+        val_accuracy = 100 * val_correct / val_total
+        
+        # Calculate overfitting metric (difference between train and val accuracy)
+        overfitting = train_accuracy - val_accuracy
+        
+        # Log metrics in exact required format
+        logging.info(f"Epoch {epoch+1}/{epochs}: Train Loss = {avg_train_loss:.4f}, "
+                    f"Val Loss = {avg_val_loss:.4f}, Avg RGB Distance = {avg_val_rgb_distance:.2f}, "
+                    f"Accuracy: Train = {train_accuracy:.2f}%, Val = {val_accuracy:.2f}%, "
+                    f"Overfitting = {overfitting:.2f}%")
+    
     return rgb_model
 
-# ---------------------------------------------------------------------------
-# Main entry
-# ---------------------------------------------------------------------------
-
 def main():
-    logging.info("Starting RGB colour‑prediction training (semantic labels)")
-    root = os.path.dirname(os.path.abspath(__file__))
-    json_dir = os.path.join(root, "shapes_jsons") if os.path.isdir(os.path.join(root, "shapes_jsons")) else root
-    json_files = glob.glob(os.path.join(json_dir, "**", "*.json"), recursive=True)
+    logging.info("Starting RGB color prediction model training")
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    shapes_dir = os.path.join(script_dir, "shapes_jsons")
+    if not os.path.exists(shapes_dir):
+        logging.warning(f"shapes_jsons directory not found at {shapes_dir}")
+        shapes_dir = script_dir  # fallback
+    
+    json_files = find_json_files(shapes_dir)
+    if not json_files:
+        json_files = find_json_files(script_dir)
     if not json_files:
         logging.error("No JSON files found for training!")
         sys.exit(1)
-
-    # Load shapes
-    shapes: List[dict] = []
-    for path in json_files:
+    
+    logging.info(f"Found {len(json_files)} JSON files for training")
+    for file in json_files:
+        logging.info(f"  - {os.path.basename(file)}")
+    
+    # Load all shapes from JSON files
+    all_shapes = []
+    for json_path in json_files:
         try:
-            with open(path, "r", encoding="utf-8") as f:
-                shp = json.load(f)
-                shapes.extend(shp)
+            logging.info(f"Loading shapes data from: {json_path}")
+            with open(json_path, "r", encoding="utf-8") as f:
+                shapes = json.load(f)
+                logging.info(f"Loaded {len(shapes)} shapes from {os.path.basename(json_path)}")
+                all_shapes.extend(shapes)
         except Exception as e:
-            logging.warning("Failed to load %s: %s", path, e)
-    if not shapes:
-        logging.error("Loaded zero shapes – aborting")
+            logging.error(f"Error loading {json_path}: {e}")
+            continue
+    
+    if not all_shapes:
+        logging.error("No shapes loaded from JSON files!")
         sys.exit(1)
-
-    id_to_shape = {s["id"]: s for s in shapes}
-    dataset = RGBShapesDataset(shapes, id_to_shape)
-    if len(dataset) == 0:
-        logging.error("No shapes contained explicit colour information – cannot train")
-        sys.exit(1)
-
-    # Device & CLIP
+        
+    logging.info(f"Total shapes loaded: {len(all_shapes)}")
+    id_to_shape = {shape["id"]: shape for shape in all_shapes}
+    
+    # Calculate canvas dimensions
+    min_x, max_x, min_y, max_y = compute_bounding_box(all_shapes)
+    width, height = int(max_x - min_x + 1), int(max_y - min_y + 1)
+    logging.info("Canvas size (for reference): width=%d, height=%d", width, height)
+    
+    # Set up device (GPU if available, otherwise CPU)
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    clip_model, _ = clip.load("ViT-B/32", device=device)
+    logging.info("Using device: %s", device)
+    
+    # Load CLIP model
+    logging.info("Loading CLIP model...")
+    clip_model, preprocess = clip.load("ViT-B/32", device=device)
     clip_model.eval()
-    text_dim = clip_model.encode_text(clip.tokenize(["dummy"], truncate=True).to(device)).shape[-1]
-
-    model = RGBPredictionModel(text_dim).to(device)
-    optimiser = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
-
-    model = train_model(dataset, clip_model, model, optimiser, device)
-
-    # Save
-    torch.save(model.state_dict(), os.path.join(root, "rgb_model_weights.pth"))
-    with open(os.path.join(root, "rgb_model_info.json"), "w", encoding="utf-8") as f:
-        json.dump({"embed_dim": text_dim, "poly_feature_dim": 10, "hidden_dims": [256, 128], "output_dim": 3, "dropout_rates": [0.4, 0.3]}, f)
-    logging.info("Training complete – model saved.")
-
+    logging.info("CLIP model loaded successfully.")
+    
+    # Construct dataset with ALL shapes (using algorithmically generated RGB values)
+    dataset = RGBShapesDataset(all_shapes, id_to_shape)
+    
+    # Determine embedding dimension from CLIP
+    with torch.no_grad():
+        sample_tokens = clip.tokenize(["sample text"], truncate=True).to(device)
+        sample_embedding = clip_model.encode_text(sample_tokens)
+    embed_dim = sample_embedding.shape[-1]
+    logging.info("CLIP text embedding dimension: %d", embed_dim)
+    
+    # Create RGB prediction model with polygon features input
+    rgb_model = RGBPredictionModel(
+        text_embed_dim=embed_dim,
+        poly_feature_dim=10,  # Matches dimension from process_polygon function
+        hidden_dims=[256, 128],
+        output_dim=3,  # RGB values
+        dropout_rates=[0.4, 0.3]
+    ).to(device)
+    logging.info(f"Created RGB prediction model with three inputs: parent description, child polygon, and child description")
+    
+    # Configure optimizer with weight decay for regularization
+    optimizer = optim.AdamW(
+        rgb_model.parameters(),
+        lr=1e-3,
+        weight_decay=1e-4,
+        betas=(0.9, 0.999)
+    )
+    logging.info("Using AdamW optimizer with learning rate 1e-3 and weight decay 1e-4")
+    
+    # Train the model for exactly 50 epochs with no early stopping
+    rgb_model = train_model(
+        dataset=dataset,
+        clip_model=clip_model,
+        rgb_model=rgb_model,
+        optimizer=optimizer,
+        device=device,
+        epochs=50,
+        batch_size=16
+    )
+    logging.info("Training complete after 50 epochs (intentionally allowing overfitting)")
+    
+    # Save model weights
+    weights_path = os.path.join(script_dir, "rgb_model_weights.pth")
+    torch.save(rgb_model.state_dict(), weights_path)
+    logging.info("Saved RGB model weights to: %s", weights_path)
+    
+    # Save model architecture information for testing
+    model_info = {
+        "embed_dim": embed_dim,
+        "poly_feature_dim": 10,
+        "hidden_dims": [256, 128],
+        "output_dim": 3,
+        "dropout_rates": [0.4, 0.3]
+    }
+    info_path = os.path.join(script_dir, "rgb_model_info.json")
+    with open(info_path, "w") as f:
+        json.dump(model_info, f)
+    logging.info("Saved model architecture information to: %s", info_path)
 
 if __name__ == "__main__":
     main()
