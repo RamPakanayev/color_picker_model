@@ -196,9 +196,9 @@ def find_json_files(directory):
     json_files = glob.glob(json_pattern, recursive=True)
     return json_files
 
-def train_model(dataset, clip_model, rgb_model, optimizer, device, epochs=200, batch_size=16):
+def train_model(dataset, clip_model, rgb_model, optimizer, device, epochs=50, batch_size=16):
     """
-    Train the text-only RGB prediction model for exactly 200 epochs, logging detailed metrics.
+    Train the text-only RGB prediction model for exactly 50 epochs, logging detailed metrics.
     No early stopping to allow intentional overfitting.
     """
     # Create train/validation split
@@ -222,7 +222,7 @@ def train_model(dataset, clip_model, rgb_model, optimizer, device, epochs=200, b
     # Threshold for RGB "accuracy" - consider prediction correct if within this distance
     rgb_accuracy_threshold = 30.0  # Euclidean distance in RGB space
     
-    logging.info(f"Starting 200-epoch training with batch size {batch_size}, intentionally allowing overfitting")
+    logging.info(f"Starting 50-epoch training with batch size {batch_size}, intentionally allowing overfitting")
     logging.info(f"Training on {train_size} samples, validating on {val_size} samples")
     
     # Log the initial combination weights to see how they evolve during training
@@ -433,7 +433,7 @@ def main():
         rgb_model=rgb_model,
         optimizer=optimizer,
         device=device,
-        epochs=200,
+        epochs=50,
         batch_size=16
     )
     logging.info("Training complete after 50 epochs (intentionally allowing overfitting)")

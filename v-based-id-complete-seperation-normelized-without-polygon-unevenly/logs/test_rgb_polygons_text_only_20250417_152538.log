@@ -1,0 +1,19 @@
+[INFO] [2025-04-17 15:25:38,879] [test_polygons.py:245] Starting text-only RGB prediction test with arguments: Namespace(input_json='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\shapes_jsons\\shapes2.json', output_image='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\results\\output_shapes2.png', model='rgb_model_text_only_weights.pth', model_info='rgb_model_text_only_info.json', debug=False)
+[INFO] [2025-04-17 15:25:38,880] [test_polygons.py:266] Loaded 4 shapes from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\shapes2.json
+[INFO] [2025-04-17 15:25:38,881] [test_polygons.py:277] Canvas size: width=388, height=687
+[INFO] [2025-04-17 15:25:38,881] [test_polygons.py:281] Using device: cpu
+[INFO] [2025-04-17 15:25:38,881] [test_polygons.py:284] Loading CLIP model...
+[INFO] [2025-04-17 15:25:42,420] [test_polygons.py:287] CLIP model loaded successfully
+[INFO] [2025-04-17 15:25:42,421] [test_polygons.py:190] Loaded model architecture from info file
+[INFO] [2025-04-17 15:25:42,424] [test_polygons.py:82] Created text-only model with two pathways for parent and child descriptions
+[INFO] [2025-04-17 15:25:42,425] [test_polygons.py:83] Child description pathway is weighted twice as heavily as parent description pathway
+[INFO] [2025-04-17 15:25:42,430] [test_polygons.py:217] Successfully loaded model weights from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_text_only_weights.pth
+[INFO] [2025-04-17 15:25:42,430] [test_polygons.py:222] Pathway weights: Parent=0.1754, Child=0.8246
+[INFO] [2025-04-17 15:25:42,431] [test_polygons.py:313] Creating composite image with dimensions: 388x687
+[INFO] [2025-04-17 15:25:42,432] [test_polygons.py:342] Maximum hierarchy level: 2
+[INFO] [2025-04-17 15:25:42,432] [test_polygons.py:347] Processing 1 shapes at level 0
+[INFO] [2025-04-17 15:25:42,527] [test_polygons.py:347] Processing 2 shapes at level 1
+[INFO] [2025-04-17 15:25:42,729] [test_polygons.py:347] Processing 1 shapes at level 2
+[INFO] [2025-04-17 15:25:42,842] [test_polygons.py:394] Saving image to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_shapes2.png
+[INFO] [2025-04-17 15:25:42,872] [test_polygons.py:397] Final composite image saved to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_shapes2.png
+[INFO] [2025-04-17 15:25:42,894] [test_polygons.py:412] Script completed with exit code: 0
