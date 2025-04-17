@@ -1,0 +1,1 @@
+{"embed_dim": 512, "poly_feature_dim": 10, "hidden_dims": [256, 128], "output_dim": 3, "dropout_rates": [0.4, 0.3], "model_type": "hybrid_fusion"}
