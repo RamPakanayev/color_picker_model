@@ -1,0 +1,19 @@
+[INFO] [2025-04-17 14:48:16,133] [test_polygons.py:411] Starting RGB prediction test with arguments: Namespace(input_json='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\shapes_jsons\\landscape.json', output_image='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\results\\output_landscape.png', model='rgb_model_separate_weights.pth', model_info='rgb_model_separate_info.json', debug=False)
+[INFO] [2025-04-17 14:48:16,134] [test_polygons.py:432] Loaded 9 shapes from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\landscape.json
+[INFO] [2025-04-17 14:48:16,135] [test_polygons.py:443] Canvas size: width=801, height=601
+[INFO] [2025-04-17 14:48:16,135] [test_polygons.py:447] Using device: cpu
+[INFO] [2025-04-17 14:48:16,135] [test_polygons.py:450] Loading CLIP model...
+[INFO] [2025-04-17 14:48:20,043] [test_polygons.py:453] CLIP model loaded successfully
+[INFO] [2025-04-17 14:48:20,044] [test_polygons.py:348] Loaded model architecture from info file. Model type: separate_pathways
+[INFO] [2025-04-17 14:48:20,049] [test_polygons.py:188] Created model with completely separate pathways for parent, polygon, and child
+[INFO] [2025-04-17 14:48:20,056] [test_polygons.py:381] Successfully loaded model weights from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_separate_weights.pth
+[INFO] [2025-04-17 14:48:20,056] [test_polygons.py:387] Pathway contribution weights: Parent=0.0460, Polygon=0.0294, Child=0.9246
+[INFO] [2025-04-17 14:48:20,057] [test_polygons.py:479] Creating composite image with dimensions: 801x601
+[INFO] [2025-04-17 14:48:20,058] [test_polygons.py:508] Maximum hierarchy level: 3
+[INFO] [2025-04-17 14:48:20,058] [test_polygons.py:513] Processing 1 shapes at level 0
+[INFO] [2025-04-17 14:48:20,168] [test_polygons.py:513] Processing 3 shapes at level 1
+[INFO] [2025-04-17 14:48:20,546] [test_polygons.py:513] Processing 4 shapes at level 2
+[INFO] [2025-04-17 14:48:21,037] [test_polygons.py:513] Processing 1 shapes at level 3
+[INFO] [2025-04-17 14:48:21,166] [test_polygons.py:561] Saving image to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_landscape.png
+[INFO] [2025-04-17 14:48:21,217] [test_polygons.py:564] Final composite image saved to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_landscape.png
+[INFO] [2025-04-17 14:48:21,245] [test_polygons.py:579] Script completed with exit code: 0

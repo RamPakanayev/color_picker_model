@@ -1,0 +1,163 @@
+[INFO] [2025-04-17 14:34:21,339] [train_polygons.py:460] Starting RGB color prediction model training with completely separate pathways
+[INFO] [2025-04-17 14:34:21,339] [train_polygons.py:475] Found 14 JSON files for training
+[INFO] [2025-04-17 14:34:21,340] [train_polygons.py:477]   - abstract_art.json
+[INFO] [2025-04-17 14:34:21,340] [train_polygons.py:477]   - car.json
+[INFO] [2025-04-17 14:34:21,340] [train_polygons.py:477]   - color_conflict.json
+[INFO] [2025-04-17 14:34:21,340] [train_polygons.py:477]   - complex64.json
+[INFO] [2025-04-17 14:34:21,341] [train_polygons.py:477]   - face.json
+[INFO] [2025-04-17 14:34:21,341] [train_polygons.py:477]   - flags.json
+[INFO] [2025-04-17 14:34:21,341] [train_polygons.py:477]   - house.json
+[INFO] [2025-04-17 14:34:21,341] [train_polygons.py:477]   - landscape.json
+[INFO] [2025-04-17 14:34:21,342] [train_polygons.py:477]   - logo.json
+[INFO] [2025-04-17 14:34:21,342] [train_polygons.py:477]   - nested_shapes.json
+[INFO] [2025-04-17 14:34:21,342] [train_polygons.py:477]   - rgb_explicit_test.json
+[INFO] [2025-04-17 14:34:21,342] [train_polygons.py:477]   - semantic_colors.json
+[INFO] [2025-04-17 14:34:21,343] [train_polygons.py:477]   - shapes.json
+[INFO] [2025-04-17 14:34:21,343] [train_polygons.py:477]   - shapes2.json
+[INFO] [2025-04-17 14:34:21,343] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\abstract_art.json
+[INFO] [2025-04-17 14:34:21,344] [train_polygons.py:486] Loaded 11 shapes from abstract_art.json
+[INFO] [2025-04-17 14:34:21,344] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\car.json
+[INFO] [2025-04-17 14:34:21,345] [train_polygons.py:486] Loaded 7 shapes from car.json
+[INFO] [2025-04-17 14:34:21,345] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\color_conflict.json
+[INFO] [2025-04-17 14:34:21,345] [train_polygons.py:486] Loaded 9 shapes from color_conflict.json
+[INFO] [2025-04-17 14:34:21,345] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\complex64.json
+[INFO] [2025-04-17 14:34:21,346] [train_polygons.py:486] Loaded 65 shapes from complex64.json
+[INFO] [2025-04-17 14:34:21,346] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\face.json
+[INFO] [2025-04-17 14:34:21,348] [train_polygons.py:486] Loaded 11 shapes from face.json
+[INFO] [2025-04-17 14:34:21,349] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\flags.json
+[INFO] [2025-04-17 14:34:21,350] [train_polygons.py:486] Loaded 18 shapes from flags.json
+[INFO] [2025-04-17 14:34:21,350] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\house.json
+[INFO] [2025-04-17 14:34:21,351] [train_polygons.py:486] Loaded 7 shapes from house.json
+[INFO] [2025-04-17 14:34:21,351] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\landscape.json
+[INFO] [2025-04-17 14:34:21,352] [train_polygons.py:486] Loaded 9 shapes from landscape.json
+[INFO] [2025-04-17 14:34:21,352] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\logo.json
+[INFO] [2025-04-17 14:34:21,353] [train_polygons.py:486] Loaded 9 shapes from logo.json
+[INFO] [2025-04-17 14:34:21,353] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\nested_shapes.json
+[INFO] [2025-04-17 14:34:21,354] [train_polygons.py:486] Loaded 9 shapes from nested_shapes.json
+[INFO] [2025-04-17 14:34:21,355] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\rgb_explicit_test.json
+[INFO] [2025-04-17 14:34:21,355] [train_polygons.py:486] Loaded 8 shapes from rgb_explicit_test.json
+[INFO] [2025-04-17 14:34:21,356] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\semantic_colors.json
+[INFO] [2025-04-17 14:34:21,356] [train_polygons.py:486] Loaded 10 shapes from semantic_colors.json
+[INFO] [2025-04-17 14:34:21,357] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\shapes.json
+[INFO] [2025-04-17 14:34:21,357] [train_polygons.py:486] Loaded 3 shapes from shapes.json
+[INFO] [2025-04-17 14:34:21,358] [train_polygons.py:483] Loading shapes data from: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\shapes2.json
+[INFO] [2025-04-17 14:34:21,358] [train_polygons.py:486] Loaded 4 shapes from shapes2.json
+[INFO] [2025-04-17 14:34:21,359] [train_polygons.py:496] Total shapes loaded: 180
+[INFO] [2025-04-17 14:34:21,360] [train_polygons.py:502] Canvas size (for reference): width=2001, height=1501
+[INFO] [2025-04-17 14:34:21,360] [train_polygons.py:506] Using device: cpu
+[INFO] [2025-04-17 14:34:21,360] [train_polygons.py:509] Loading CLIP model...
+[INFO] [2025-04-17 14:34:24,608] [train_polygons.py:512] CLIP model loaded successfully.
+[INFO] [2025-04-17 14:34:24,631] [train_polygons.py:281] Constructed dataset with 180 total samples
+[INFO] [2025-04-17 14:34:24,631] [train_polygons.py:282] All samples use algorithmically generated RGB values (no extracted colors)
+[INFO] [2025-04-17 14:34:24,677] [train_polygons.py:522] CLIP text embedding dimension: 512
+[INFO] [2025-04-17 14:34:24,682] [train_polygons.py:208] Model created with completely separate pathways for parent, polygon, and child
+[INFO] [2025-04-17 14:34:24,682] [train_polygons.py:209] Each pathway independently predicts RGB values that are then weighted and combined
+[INFO] [2025-04-17 14:34:24,682] [train_polygons.py:532] Created RGB prediction model with three completely separate pathways that each predict RGB values
+[INFO] [2025-04-17 14:34:24,683] [train_polygons.py:541] Using AdamW optimizer with learning rate 1e-3 and weight decay 1e-4
+[INFO] [2025-04-17 14:34:24,684] [train_polygons.py:337] Starting 50-epoch training with batch size 16, intentionally allowing overfitting
+[INFO] [2025-04-17 14:34:24,684] [train_polygons.py:338] Training on 144 samples, validating on 36 samples
+[INFO] [2025-04-17 14:34:24,685] [train_polygons.py:343] Initial pathway weights: Parent=0.0453, Polygon=0.0453, Child=0.9094
+[INFO] [2025-04-17 14:34:37,173] [train_polygons.py:444] Current pathway weights: Parent=0.0454, Polygon=0.0453, Child=0.9094
+[INFO] [2025-04-17 14:34:37,173] [train_polygons.py:447] Epoch 1/50: Train Loss = 5470.4135, Val Loss = 5454.0900, Avg RGB Distance = 121.93, Accuracy: Train = 0.69%, Val = 2.78%, Overfitting = -2.08%
+[INFO] [2025-04-17 14:34:50,700] [train_polygons.py:444] Current pathway weights: Parent=0.0454, Polygon=0.0452, Child=0.9094
+[INFO] [2025-04-17 14:34:50,701] [train_polygons.py:447] Epoch 2/50: Train Loss = 5377.9054, Val Loss = 5413.5043, Avg RGB Distance = 121.58, Accuracy: Train = 0.00%, Val = 2.78%, Overfitting = -2.78%
+[INFO] [2025-04-17 14:35:04,676] [train_polygons.py:444] Current pathway weights: Parent=0.0456, Polygon=0.0451, Child=0.9094
+[INFO] [2025-04-17 14:35:04,677] [train_polygons.py:447] Epoch 3/50: Train Loss = 5315.2627, Val Loss = 5380.8276, Avg RGB Distance = 121.31, Accuracy: Train = 0.00%, Val = 2.78%, Overfitting = -2.78%
+[INFO] [2025-04-17 14:35:18,779] [train_polygons.py:444] Current pathway weights: Parent=0.0455, Polygon=0.0447, Child=0.9098
+[INFO] [2025-04-17 14:35:18,780] [train_polygons.py:447] Epoch 4/50: Train Loss = 5236.4508, Val Loss = 5378.4829, Avg RGB Distance = 121.26, Accuracy: Train = 0.00%, Val = 0.00%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:35:33,358] [train_polygons.py:444] Current pathway weights: Parent=0.0455, Polygon=0.0442, Child=0.9103
+[INFO] [2025-04-17 14:35:33,358] [train_polygons.py:447] Epoch 5/50: Train Loss = 5217.4120, Val Loss = 5362.2831, Avg RGB Distance = 121.08, Accuracy: Train = 0.00%, Val = 0.00%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:35:47,848] [train_polygons.py:444] Current pathway weights: Parent=0.0455, Polygon=0.0437, Child=0.9109
+[INFO] [2025-04-17 14:35:47,849] [train_polygons.py:447] Epoch 6/50: Train Loss = 5106.8037, Val Loss = 5443.9807, Avg RGB Distance = 121.80, Accuracy: Train = 0.00%, Val = 0.00%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:36:02,724] [train_polygons.py:444] Current pathway weights: Parent=0.0454, Polygon=0.0430, Child=0.9116
+[INFO] [2025-04-17 14:36:02,724] [train_polygons.py:447] Epoch 7/50: Train Loss = 4939.3154, Val Loss = 5428.7096, Avg RGB Distance = 121.59, Accuracy: Train = 0.69%, Val = 0.00%, Overfitting = 0.69%
+[INFO] [2025-04-17 14:36:17,370] [train_polygons.py:444] Current pathway weights: Parent=0.0452, Polygon=0.0423, Child=0.9125
+[INFO] [2025-04-17 14:36:17,371] [train_polygons.py:447] Epoch 8/50: Train Loss = 4815.1317, Val Loss = 5422.4275, Avg RGB Distance = 121.43, Accuracy: Train = 0.00%, Val = 0.00%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:36:33,307] [train_polygons.py:444] Current pathway weights: Parent=0.0453, Polygon=0.0417, Child=0.9131
+[INFO] [2025-04-17 14:36:33,308] [train_polygons.py:447] Epoch 9/50: Train Loss = 4638.9232, Val Loss = 5446.1200, Avg RGB Distance = 121.40, Accuracy: Train = 0.69%, Val = 0.00%, Overfitting = 0.69%
+[INFO] [2025-04-17 14:36:49,155] [train_polygons.py:444] Current pathway weights: Parent=0.0451, Polygon=0.0410, Child=0.9139
+[INFO] [2025-04-17 14:36:49,156] [train_polygons.py:447] Epoch 10/50: Train Loss = 4468.4562, Val Loss = 5471.7983, Avg RGB Distance = 121.37, Accuracy: Train = 1.39%, Val = 0.00%, Overfitting = 1.39%
+[INFO] [2025-04-17 14:37:07,446] [train_polygons.py:444] Current pathway weights: Parent=0.0452, Polygon=0.0404, Child=0.9143
+[INFO] [2025-04-17 14:37:07,447] [train_polygons.py:447] Epoch 11/50: Train Loss = 4332.4478, Val Loss = 5626.3344, Avg RGB Distance = 122.35, Accuracy: Train = 1.39%, Val = 0.00%, Overfitting = 1.39%
+[INFO] [2025-04-17 14:37:24,149] [train_polygons.py:444] Current pathway weights: Parent=0.0454, Polygon=0.0399, Child=0.9147
+[INFO] [2025-04-17 14:37:24,150] [train_polygons.py:447] Epoch 12/50: Train Loss = 4100.6560, Val Loss = 5654.5509, Avg RGB Distance = 122.23, Accuracy: Train = 2.08%, Val = 0.00%, Overfitting = 2.08%
+[INFO] [2025-04-17 14:37:39,335] [train_polygons.py:444] Current pathway weights: Parent=0.0458, Polygon=0.0395, Child=0.9148
+[INFO] [2025-04-17 14:37:39,335] [train_polygons.py:447] Epoch 13/50: Train Loss = 3884.7451, Val Loss = 5882.2440, Avg RGB Distance = 123.97, Accuracy: Train = 2.08%, Val = 0.00%, Overfitting = 2.08%
+[INFO] [2025-04-17 14:37:54,885] [train_polygons.py:444] Current pathway weights: Parent=0.0461, Polygon=0.0391, Child=0.9148
+[INFO] [2025-04-17 14:37:54,886] [train_polygons.py:447] Epoch 14/50: Train Loss = 3612.2535, Val Loss = 6014.9475, Avg RGB Distance = 124.40, Accuracy: Train = 2.08%, Val = 2.78%, Overfitting = -0.69%
+[INFO] [2025-04-17 14:38:09,891] [train_polygons.py:444] Current pathway weights: Parent=0.0463, Polygon=0.0386, Child=0.9150
+[INFO] [2025-04-17 14:38:09,892] [train_polygons.py:447] Epoch 15/50: Train Loss = 3436.2042, Val Loss = 6074.5124, Avg RGB Distance = 124.48, Accuracy: Train = 2.08%, Val = 2.78%, Overfitting = -0.69%
+[INFO] [2025-04-17 14:38:26,340] [train_polygons.py:444] Current pathway weights: Parent=0.0467, Polygon=0.0384, Child=0.9150
+[INFO] [2025-04-17 14:38:26,340] [train_polygons.py:447] Epoch 16/50: Train Loss = 3292.6635, Val Loss = 6144.4630, Avg RGB Distance = 124.34, Accuracy: Train = 2.78%, Val = 2.78%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:38:43,089] [train_polygons.py:444] Current pathway weights: Parent=0.0469, Polygon=0.0380, Child=0.9152
+[INFO] [2025-04-17 14:38:43,090] [train_polygons.py:447] Epoch 17/50: Train Loss = 3013.3343, Val Loss = 6414.6546, Avg RGB Distance = 126.86, Accuracy: Train = 1.39%, Val = 2.78%, Overfitting = -1.39%
+[INFO] [2025-04-17 14:38:58,843] [train_polygons.py:444] Current pathway weights: Parent=0.0470, Polygon=0.0376, Child=0.9154
+[INFO] [2025-04-17 14:38:58,844] [train_polygons.py:447] Epoch 18/50: Train Loss = 2908.6145, Val Loss = 6323.6657, Avg RGB Distance = 125.06, Accuracy: Train = 4.86%, Val = 2.78%, Overfitting = 2.08%
+[INFO] [2025-04-17 14:39:14,164] [train_polygons.py:444] Current pathway weights: Parent=0.0473, Polygon=0.0373, Child=0.9155
+[INFO] [2025-04-17 14:39:14,165] [train_polygons.py:447] Epoch 19/50: Train Loss = 2863.2453, Val Loss = 6563.4827, Avg RGB Distance = 127.29, Accuracy: Train = 2.78%, Val = 5.56%, Overfitting = -2.78%
+[INFO] [2025-04-17 14:39:29,743] [train_polygons.py:444] Current pathway weights: Parent=0.0475, Polygon=0.0370, Child=0.9156
+[INFO] [2025-04-17 14:39:29,744] [train_polygons.py:447] Epoch 20/50: Train Loss = 2645.3924, Val Loss = 6512.8764, Avg RGB Distance = 126.93, Accuracy: Train = 3.47%, Val = 5.56%, Overfitting = -2.08%
+[INFO] [2025-04-17 14:39:44,822] [train_polygons.py:444] Current pathway weights: Parent=0.0476, Polygon=0.0366, Child=0.9158
+[INFO] [2025-04-17 14:39:44,823] [train_polygons.py:447] Epoch 21/50: Train Loss = 2433.4092, Val Loss = 6789.5163, Avg RGB Distance = 128.96, Accuracy: Train = 3.47%, Val = 8.33%, Overfitting = -4.86%
+[INFO] [2025-04-17 14:40:00,303] [train_polygons.py:444] Current pathway weights: Parent=0.0476, Polygon=0.0362, Child=0.9162
+[INFO] [2025-04-17 14:40:00,304] [train_polygons.py:447] Epoch 22/50: Train Loss = 2428.2672, Val Loss = 6728.1221, Avg RGB Distance = 128.29, Accuracy: Train = 4.86%, Val = 11.11%, Overfitting = -6.25%
+[INFO] [2025-04-17 14:40:15,840] [train_polygons.py:444] Current pathway weights: Parent=0.0477, Polygon=0.0359, Child=0.9164
+[INFO] [2025-04-17 14:40:15,840] [train_polygons.py:447] Epoch 23/50: Train Loss = 2117.6764, Val Loss = 6949.5332, Avg RGB Distance = 130.32, Accuracy: Train = 9.03%, Val = 8.33%, Overfitting = 0.69%
+[INFO] [2025-04-17 14:40:31,409] [train_polygons.py:444] Current pathway weights: Parent=0.0477, Polygon=0.0355, Child=0.9168
+[INFO] [2025-04-17 14:40:31,410] [train_polygons.py:447] Epoch 24/50: Train Loss = 2198.5358, Val Loss = 6850.0036, Avg RGB Distance = 128.98, Accuracy: Train = 4.86%, Val = 11.11%, Overfitting = -6.25%
+[INFO] [2025-04-17 14:40:46,466] [train_polygons.py:444] Current pathway weights: Parent=0.0479, Polygon=0.0352, Child=0.9169
+[INFO] [2025-04-17 14:40:46,467] [train_polygons.py:447] Epoch 25/50: Train Loss = 1992.9175, Val Loss = 6968.9575, Avg RGB Distance = 130.46, Accuracy: Train = 8.33%, Val = 8.33%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:41:03,116] [train_polygons.py:444] Current pathway weights: Parent=0.0479, Polygon=0.0349, Child=0.9172
+[INFO] [2025-04-17 14:41:03,116] [train_polygons.py:447] Epoch 26/50: Train Loss = 1784.8367, Val Loss = 7048.3698, Avg RGB Distance = 131.70, Accuracy: Train = 9.03%, Val = 5.56%, Overfitting = 3.47%
+[INFO] [2025-04-17 14:41:18,271] [train_polygons.py:444] Current pathway weights: Parent=0.0478, Polygon=0.0346, Child=0.9176
+[INFO] [2025-04-17 14:41:18,271] [train_polygons.py:447] Epoch 27/50: Train Loss = 1876.6520, Val Loss = 7143.1215, Avg RGB Distance = 131.94, Accuracy: Train = 8.33%, Val = 8.33%, Overfitting = 0.00%
+[INFO] [2025-04-17 14:41:33,631] [train_polygons.py:444] Current pathway weights: Parent=0.0476, Polygon=0.0342, Child=0.9182
+[INFO] [2025-04-17 14:41:33,631] [train_polygons.py:447] Epoch 28/50: Train Loss = 1605.4910, Val Loss = 7352.7164, Avg RGB Distance = 134.14, Accuracy: Train = 12.50%, Val = 5.56%, Overfitting = 6.94%
+[INFO] [2025-04-17 14:41:49,363] [train_polygons.py:444] Current pathway weights: Parent=0.0476, Polygon=0.0339, Child=0.9186
+[INFO] [2025-04-17 14:41:49,364] [train_polygons.py:447] Epoch 29/50: Train Loss = 1536.1879, Val Loss = 7213.2818, Avg RGB Distance = 132.07, Accuracy: Train = 6.25%, Val = 11.11%, Overfitting = -4.86%
+[INFO] [2025-04-17 14:42:04,708] [train_polygons.py:444] Current pathway weights: Parent=0.0474, Polygon=0.0335, Child=0.9191
+[INFO] [2025-04-17 14:42:04,708] [train_polygons.py:447] Epoch 30/50: Train Loss = 1451.3384, Val Loss = 7315.7818, Avg RGB Distance = 133.69, Accuracy: Train = 11.11%, Val = 2.78%, Overfitting = 8.33%
+[INFO] [2025-04-17 14:42:20,249] [train_polygons.py:444] Current pathway weights: Parent=0.0474, Polygon=0.0333, Child=0.9193
+[INFO] [2025-04-17 14:42:20,249] [train_polygons.py:447] Epoch 31/50: Train Loss = 1462.9362, Val Loss = 7360.8193, Avg RGB Distance = 133.68, Accuracy: Train = 12.50%, Val = 8.33%, Overfitting = 4.17%
+[INFO] [2025-04-17 14:42:35,893] [train_polygons.py:444] Current pathway weights: Parent=0.0472, Polygon=0.0329, Child=0.9199
+[INFO] [2025-04-17 14:42:35,893] [train_polygons.py:447] Epoch 32/50: Train Loss = 1378.8172, Val Loss = 7433.4775, Avg RGB Distance = 133.82, Accuracy: Train = 12.50%, Val = 8.33%, Overfitting = 4.17%
+[INFO] [2025-04-17 14:42:50,986] [train_polygons.py:444] Current pathway weights: Parent=0.0471, Polygon=0.0327, Child=0.9202
+[INFO] [2025-04-17 14:42:50,987] [train_polygons.py:447] Epoch 33/50: Train Loss = 1369.2991, Val Loss = 7386.7720, Avg RGB Distance = 133.41, Accuracy: Train = 15.97%, Val = 8.33%, Overfitting = 7.64%
+[INFO] [2025-04-17 14:43:06,416] [train_polygons.py:444] Current pathway weights: Parent=0.0470, Polygon=0.0324, Child=0.9206
+[INFO] [2025-04-17 14:43:06,417] [train_polygons.py:447] Epoch 34/50: Train Loss = 1223.8346, Val Loss = 7659.8910, Avg RGB Distance = 136.26, Accuracy: Train = 11.81%, Val = 11.11%, Overfitting = 0.69%
+[INFO] [2025-04-17 14:43:21,549] [train_polygons.py:444] Current pathway weights: Parent=0.0470, Polygon=0.0322, Child=0.9208
+[INFO] [2025-04-17 14:43:21,549] [train_polygons.py:447] Epoch 35/50: Train Loss = 1243.5180, Val Loss = 7328.7540, Avg RGB Distance = 132.80, Accuracy: Train = 24.31%, Val = 8.33%, Overfitting = 15.97%
+[INFO] [2025-04-17 14:43:36,999] [train_polygons.py:444] Current pathway weights: Parent=0.0470, Polygon=0.0320, Child=0.9210
+[INFO] [2025-04-17 14:43:37,000] [train_polygons.py:447] Epoch 36/50: Train Loss = 1207.9436, Val Loss = 7471.9600, Avg RGB Distance = 134.08, Accuracy: Train = 19.44%, Val = 8.33%, Overfitting = 11.11%
+[INFO] [2025-04-17 14:43:52,521] [train_polygons.py:444] Current pathway weights: Parent=0.0470, Polygon=0.0318, Child=0.9212
+[INFO] [2025-04-17 14:43:52,521] [train_polygons.py:447] Epoch 37/50: Train Loss = 1108.3662, Val Loss = 7603.9116, Avg RGB Distance = 135.82, Accuracy: Train = 22.92%, Val = 8.33%, Overfitting = 14.58%
+[INFO] [2025-04-17 14:44:07,789] [train_polygons.py:444] Current pathway weights: Parent=0.0468, Polygon=0.0315, Child=0.9216
+[INFO] [2025-04-17 14:44:07,791] [train_polygons.py:447] Epoch 38/50: Train Loss = 1055.6689, Val Loss = 7606.7938, Avg RGB Distance = 135.38, Accuracy: Train = 20.83%, Val = 2.78%, Overfitting = 18.06%
+[INFO] [2025-04-17 14:44:23,162] [train_polygons.py:444] Current pathway weights: Parent=0.0468, Polygon=0.0313, Child=0.9219
+[INFO] [2025-04-17 14:44:23,163] [train_polygons.py:447] Epoch 39/50: Train Loss = 1021.9009, Val Loss = 7685.9571, Avg RGB Distance = 135.89, Accuracy: Train = 20.83%, Val = 5.56%, Overfitting = 15.28%
+[INFO] [2025-04-17 14:44:38,319] [train_polygons.py:444] Current pathway weights: Parent=0.0467, Polygon=0.0311, Child=0.9222
+[INFO] [2025-04-17 14:44:38,319] [train_polygons.py:447] Epoch 40/50: Train Loss = 939.3688, Val Loss = 7611.9435, Avg RGB Distance = 134.69, Accuracy: Train = 27.08%, Val = 8.33%, Overfitting = 18.75%
+[INFO] [2025-04-17 14:44:53,816] [train_polygons.py:444] Current pathway weights: Parent=0.0466, Polygon=0.0309, Child=0.9225
+[INFO] [2025-04-17 14:44:53,816] [train_polygons.py:447] Epoch 41/50: Train Loss = 984.0595, Val Loss = 7604.8964, Avg RGB Distance = 135.06, Accuracy: Train = 25.00%, Val = 8.33%, Overfitting = 16.67%
+[INFO] [2025-04-17 14:45:09,132] [train_polygons.py:444] Current pathway weights: Parent=0.0467, Polygon=0.0308, Child=0.9225
+[INFO] [2025-04-17 14:45:09,132] [train_polygons.py:447] Epoch 42/50: Train Loss = 996.8588, Val Loss = 7877.0781, Avg RGB Distance = 137.17, Accuracy: Train = 29.17%, Val = 8.33%, Overfitting = 20.83%
+[INFO] [2025-04-17 14:45:24,818] [train_polygons.py:444] Current pathway weights: Parent=0.0469, Polygon=0.0306, Child=0.9225
+[INFO] [2025-04-17 14:45:24,819] [train_polygons.py:447] Epoch 43/50: Train Loss = 913.2291, Val Loss = 7935.0220, Avg RGB Distance = 138.18, Accuracy: Train = 27.78%, Val = 11.11%, Overfitting = 16.67%
+[INFO] [2025-04-17 14:45:40,019] [train_polygons.py:444] Current pathway weights: Parent=0.0467, Polygon=0.0304, Child=0.9228
+[INFO] [2025-04-17 14:45:40,020] [train_polygons.py:447] Epoch 44/50: Train Loss = 832.9389, Val Loss = 7929.8929, Avg RGB Distance = 138.39, Accuracy: Train = 31.94%, Val = 5.56%, Overfitting = 26.39%
+[INFO] [2025-04-17 14:45:55,712] [train_polygons.py:444] Current pathway weights: Parent=0.0466, Polygon=0.0302, Child=0.9231
+[INFO] [2025-04-17 14:45:55,713] [train_polygons.py:447] Epoch 45/50: Train Loss = 867.2342, Val Loss = 7988.1113, Avg RGB Distance = 139.38, Accuracy: Train = 28.47%, Val = 2.78%, Overfitting = 25.69%
+[INFO] [2025-04-17 14:46:10,670] [train_polygons.py:444] Current pathway weights: Parent=0.0465, Polygon=0.0301, Child=0.9235
+[INFO] [2025-04-17 14:46:10,670] [train_polygons.py:447] Epoch 46/50: Train Loss = 802.3650, Val Loss = 7901.7681, Avg RGB Distance = 137.98, Accuracy: Train = 34.72%, Val = 8.33%, Overfitting = 26.39%
+[INFO] [2025-04-17 14:46:26,596] [train_polygons.py:444] Current pathway weights: Parent=0.0463, Polygon=0.0298, Child=0.9239
+[INFO] [2025-04-17 14:46:26,597] [train_polygons.py:447] Epoch 47/50: Train Loss = 801.2290, Val Loss = 8088.1551, Avg RGB Distance = 139.68, Accuracy: Train = 34.03%, Val = 8.33%, Overfitting = 25.69%
+[INFO] [2025-04-17 14:46:41,731] [train_polygons.py:444] Current pathway weights: Parent=0.0460, Polygon=0.0296, Child=0.9244
+[INFO] [2025-04-17 14:46:41,732] [train_polygons.py:447] Epoch 48/50: Train Loss = 800.2108, Val Loss = 8098.7501, Avg RGB Distance = 139.70, Accuracy: Train = 31.25%, Val = 8.33%, Overfitting = 22.92%
+[INFO] [2025-04-17 14:46:56,955] [train_polygons.py:444] Current pathway weights: Parent=0.0460, Polygon=0.0295, Child=0.9245
+[INFO] [2025-04-17 14:46:56,956] [train_polygons.py:447] Epoch 49/50: Train Loss = 787.5900, Val Loss = 7989.6739, Avg RGB Distance = 138.38, Accuracy: Train = 36.11%, Val = 5.56%, Overfitting = 30.56%
+[INFO] [2025-04-17 14:47:11,888] [train_polygons.py:444] Current pathway weights: Parent=0.0460, Polygon=0.0294, Child=0.9246
+[INFO] [2025-04-17 14:47:11,889] [train_polygons.py:447] Epoch 50/50: Train Loss = 725.3731, Val Loss = 8113.9591, Avg RGB Distance = 139.76, Accuracy: Train = 33.33%, Val = 8.33%, Overfitting = 25.00%
+[INFO] [2025-04-17 14:47:11,889] [train_polygons.py:455] Final learned pathway weights: Parent=0.0460, Polygon=0.0294, Child=0.9246
+[INFO] [2025-04-17 14:47:11,890] [train_polygons.py:553] Training complete after 50 epochs (intentionally allowing overfitting)
+[INFO] [2025-04-17 14:47:11,898] [train_polygons.py:558] Saved separate pathways RGB model weights to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_separate_weights.pth
+[INFO] [2025-04-17 14:47:11,900] [train_polygons.py:572] Saved model architecture information to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_separate_info.json

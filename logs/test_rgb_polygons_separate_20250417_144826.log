@@ -1,0 +1,20 @@
+[INFO] [2025-04-17 14:48:26,978] [test_polygons.py:411] Starting RGB prediction test with arguments: Namespace(input_json='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\shapes_jsons\\nested_shapes.json', output_image='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\results\\output_nested_shapes.png', model='rgb_model_separate_weights.pth', model_info='rgb_model_separate_info.json', debug=False)
+[INFO] [2025-04-17 14:48:26,979] [test_polygons.py:432] Loaded 9 shapes from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\nested_shapes.json
+[INFO] [2025-04-17 14:48:26,980] [test_polygons.py:443] Canvas size: width=501, height=501
+[INFO] [2025-04-17 14:48:26,980] [test_polygons.py:447] Using device: cpu
+[INFO] [2025-04-17 14:48:26,980] [test_polygons.py:450] Loading CLIP model...
+[INFO] [2025-04-17 14:48:30,509] [test_polygons.py:453] CLIP model loaded successfully
+[INFO] [2025-04-17 14:48:30,509] [test_polygons.py:348] Loaded model architecture from info file. Model type: separate_pathways
+[INFO] [2025-04-17 14:48:30,514] [test_polygons.py:188] Created model with completely separate pathways for parent, polygon, and child
+[INFO] [2025-04-17 14:48:30,520] [test_polygons.py:381] Successfully loaded model weights from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_separate_weights.pth
+[INFO] [2025-04-17 14:48:30,521] [test_polygons.py:387] Pathway contribution weights: Parent=0.0460, Polygon=0.0294, Child=0.9246
+[INFO] [2025-04-17 14:48:30,521] [test_polygons.py:479] Creating composite image with dimensions: 501x501
+[INFO] [2025-04-17 14:48:30,522] [test_polygons.py:508] Maximum hierarchy level: 4
+[INFO] [2025-04-17 14:48:30,522] [test_polygons.py:513] Processing 1 shapes at level 0
+[INFO] [2025-04-17 14:48:30,612] [test_polygons.py:513] Processing 1 shapes at level 1
+[INFO] [2025-04-17 14:48:30,715] [test_polygons.py:513] Processing 3 shapes at level 2
+[INFO] [2025-04-17 14:48:31,023] [test_polygons.py:513] Processing 3 shapes at level 3
+[INFO] [2025-04-17 14:48:31,371] [test_polygons.py:513] Processing 1 shapes at level 4
+[INFO] [2025-04-17 14:48:31,473] [test_polygons.py:561] Saving image to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_nested_shapes.png
+[INFO] [2025-04-17 14:48:31,506] [test_polygons.py:564] Final composite image saved to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_nested_shapes.png
+[INFO] [2025-04-17 14:48:31,531] [test_polygons.py:579] Script completed with exit code: 0

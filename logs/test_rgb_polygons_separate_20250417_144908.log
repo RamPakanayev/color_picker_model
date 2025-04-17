@@ -1,0 +1,18 @@
+[INFO] [2025-04-17 14:49:08,354] [test_polygons.py:411] Starting RGB prediction test with arguments: Namespace(input_json='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\shapes_jsons\\abstract_art.json', output_image='C:\\Users\\raman\\OneDrive\\Documents\\GitHub\\color_picker_model\\results\\output_abstract_art.png', model='rgb_model_separate_weights.pth', model_info='rgb_model_separate_info.json', debug=False)
+[INFO] [2025-04-17 14:49:08,355] [test_polygons.py:432] Loaded 11 shapes from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\shapes_jsons\abstract_art.json
+[INFO] [2025-04-17 14:49:08,355] [test_polygons.py:443] Canvas size: width=701, height=501
+[INFO] [2025-04-17 14:49:08,355] [test_polygons.py:447] Using device: cpu
+[INFO] [2025-04-17 14:49:08,355] [test_polygons.py:450] Loading CLIP model...
+[INFO] [2025-04-17 14:49:11,615] [test_polygons.py:453] CLIP model loaded successfully
+[INFO] [2025-04-17 14:49:11,616] [test_polygons.py:348] Loaded model architecture from info file. Model type: separate_pathways
+[INFO] [2025-04-17 14:49:11,620] [test_polygons.py:188] Created model with completely separate pathways for parent, polygon, and child
+[INFO] [2025-04-17 14:49:11,627] [test_polygons.py:381] Successfully loaded model weights from C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\rgb_model_separate_weights.pth
+[INFO] [2025-04-17 14:49:11,627] [test_polygons.py:387] Pathway contribution weights: Parent=0.0460, Polygon=0.0294, Child=0.9246
+[INFO] [2025-04-17 14:49:11,627] [test_polygons.py:479] Creating composite image with dimensions: 701x501
+[INFO] [2025-04-17 14:49:11,628] [test_polygons.py:508] Maximum hierarchy level: 2
+[INFO] [2025-04-17 14:49:11,629] [test_polygons.py:513] Processing 1 shapes at level 0
+[INFO] [2025-04-17 14:49:11,728] [test_polygons.py:513] Processing 8 shapes at level 1
+[INFO] [2025-04-17 14:49:12,600] [test_polygons.py:513] Processing 2 shapes at level 2
+[INFO] [2025-04-17 14:49:12,841] [test_polygons.py:561] Saving image to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_abstract_art.png
+[INFO] [2025-04-17 14:49:12,883] [test_polygons.py:564] Final composite image saved to: C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_abstract_art.png
+[INFO] [2025-04-17 14:49:12,912] [test_polygons.py:579] Script completed with exit code: 0
