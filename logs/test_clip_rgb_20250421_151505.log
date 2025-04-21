@@ -1,0 +1,8 @@
+[INFO] [2025-04-21 15:15:08,859] 'A gray background canvas.' -> (118, 120, 114)
+[INFO] [2025-04-21 15:15:08,891] 'The red body of a sports car.' -> (241, 15, 11)
+[INFO] [2025-04-21 15:15:08,928] 'The black tire on the front left of the car.' -> (23, 28, 17)
+[INFO] [2025-04-21 15:15:08,965] 'The black tire on the back right of the car.' -> (21, 26, 16)
+[INFO] [2025-04-21 15:15:09,016] 'The blue tinted glass windshield of the car.' -> (30, 143, 212)
+[INFO] [2025-04-21 15:15:09,057] 'The yellow headlight on the front of the car.' -> (227, 208, 22)
+[INFO] [2025-04-21 15:15:09,109] 'The asphalt black road beneath the car.' -> (25, 24, 11)
+[INFO] [2025-04-21 15:15:09,127] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_car.png

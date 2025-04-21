@@ -1,1 +1,0 @@
-{"embed_dim": 512, "hidden_dims": [256, 128], "output_dim": 3, "dropout_rates": [0.4, 0.3], "model_type": "text_only"}

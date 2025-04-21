@@ -1,0 +1,4 @@
+[INFO] [2025-04-21 15:14:42,922] 'A black canvas with an aspect ratio of 3.91. It fills the entire image and contains other shapes.' -> (45, 37, 24)
+[INFO] [2025-04-21 15:14:42,959] 'A red shape near the point (290, 88) on the canvas. It spans about 479x134 pixels and has an aspect ratio of 3.57. It has an irregular polygonal outline.' -> (236, 30, 38)
+[INFO] [2025-04-21 15:14:42,998] 'A white shape near the point (290, 87) on the canvas. It spans about 324x67 pixels and has an aspect ratio of 4.84. It has an irregular polygonal outline.' -> (245, 241, 241)
+[INFO] [2025-04-21 15:14:43,021] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_shapes.png

@@ -1,0 +1,10 @@
+[INFO] [2025-04-21 15:15:34,650] 'A white canvas with shapes that have conflicting color descriptions.' -> (240, 237, 224)
+[INFO] [2025-04-21 15:15:34,685] 'A red container shape.' -> (218, 32, 27)
+[INFO] [2025-04-21 15:15:34,720] 'A blue shape inside the red container, but the documentation says this should remain blue despite the parent being red.' -> (50, 42, 197)
+[INFO] [2025-04-21 15:15:34,758] 'A green container shape.' -> (43, 149, 36)
+[INFO] [2025-04-21 15:15:34,794] 'This shape should be green like its parent.' -> (45, 81, 27)
+[INFO] [2025-04-21 15:15:34,827] 'A yellow container at the bottom.' -> (219, 191, 18)
+[INFO] [2025-04-21 15:15:34,863] 'This shape is described as purple, but its parent is yellow. The purple description should take precedence.' -> (143, 60, 68)
+[INFO] [2025-04-21 15:15:34,901] 'This rgb(255,0,0) shape is inside a parent with ambiguous coloring.' -> (195, 44, 52)
+[INFO] [2025-04-21 15:15:34,942] 'This shape has no explicit color and should inherit visual cues from context.' -> (131, 95, 62)
+[INFO] [2025-04-21 15:15:34,962] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_color_conflict.png
