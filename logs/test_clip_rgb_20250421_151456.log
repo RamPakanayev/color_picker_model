@@ -1,8 +1,0 @@
-[INFO] [2025-04-21 15:15:00,220] 'A black canvas that contains a house design.' -> (15, 17, 13)
-[INFO] [2025-04-21 15:15:00,260] 'The white main body of the house.' -> (245, 241, 232)
-[INFO] [2025-04-21 15:15:00,298] 'The brown roof of the house.' -> (147, 60, 26)
-[INFO] [2025-04-21 15:15:00,349] 'A square window on the left side of the house. Windows are typically white.' -> (242, 243, 235)
-[INFO] [2025-04-21 15:15:00,386] 'A square window on the right side of the house. Windows are typically white.' -> (242, 243, 236)
-[INFO] [2025-04-21 15:15:00,424] 'A red door in the center of the house.' -> (243, 27, 22)
-[INFO] [2025-04-21 15:15:00,471] 'A green lawn in front of the house.' -> (34, 140, 32)
-[INFO] [2025-04-21 15:15:00,493] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_house.png

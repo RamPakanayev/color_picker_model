@@ -1,0 +1,162 @@
+[
+  {
+    "id": 0,
+    "description": "A dark space background with stars.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [5, 5, 20]
+  },
+  {
+    "id": 1,
+    "description": "The Sun at the center of the solar system.",
+    "parent": 0,
+    "polygon": [
+      [375, 275],
+      [400, 250],
+      [425, 275],
+      [400, 300]
+    ],
+    "rgb": [255, 215, 0]
+  },
+  {
+    "id": 2,
+    "description": "Mercury, the smallest and innermost planet.",
+    "parent": 0,
+    "polygon": [
+      [330, 275],
+      [335, 270],
+      [340, 275],
+      [335, 280]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 3,
+    "description": "Venus, the second planet from the Sun.",
+    "parent": 0,
+    "polygon": [
+      [300, 250],
+      [310, 240],
+      [320, 250],
+      [310, 260]
+    ],
+    "rgb": [255, 198, 73]
+  },
+  {
+    "id": 4,
+    "description": "Earth, our home planet, with its blue oceans.",
+    "parent": 0,
+    "polygon": [
+      [250, 300],
+      [265, 285],
+      [280, 300],
+      [265, 315]
+    ],
+    "rgb": [30, 144, 255]
+  },
+  {
+    "id": 5,
+    "description": "Mars, the red planet.",
+    "parent": 0,
+    "polygon": [
+      [200, 250],
+      [210, 240],
+      [220, 250],
+      [210, 260]
+    ],
+    "rgb": [255, 69, 0]
+  },
+  {
+    "id": 6,
+    "description": "Jupiter, the largest planet in the solar system.",
+    "parent": 0,
+    "polygon": [
+      [150, 300],
+      [180, 270],
+      [210, 300],
+      [180, 330]
+    ],
+    "rgb": [255, 222, 173]
+  },
+  {
+    "id": 7,
+    "description": "Saturn with its distinctive rings.",
+    "parent": 0,
+    "polygon": [
+      [100, 250],
+      [120, 230],
+      [140, 250],
+      [120, 270]
+    ],
+    "rgb": [238, 232, 170]
+  },
+  {
+    "id": 8,
+    "description": "Saturn's rings surrounding the planet.",
+    "parent": 7,
+    "polygon": [
+      [80, 250],
+      [160, 250],
+      [160, 255],
+      [80, 255]
+    ],
+    "rgb": [245, 245, 220]
+  },
+  {
+    "id": 9,
+    "description": "Uranus, the seventh planet from the Sun.",
+    "parent": 0,
+    "polygon": [
+      [60, 300],
+      [75, 285],
+      [90, 300],
+      [75, 315]
+    ],
+    "rgb": [173, 216, 230]
+  },
+  {
+    "id": 10,
+    "description": "Neptune, the eighth and farthest planet.",
+    "parent": 0,
+    "polygon": [
+      [25, 250],
+      [35, 240],
+      [45, 250],
+      [35, 260]
+    ],
+    "rgb": [65, 105, 225]
+  },
+  {
+    "id": 11,
+    "description": "A comet passing through the solar system.",
+    "parent": 0,
+    "polygon": [
+      [500, 100],
+      [510, 110],
+      [520, 120],
+      [530, 130],
+      [540, 140],
+      [550, 150]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 12,
+    "description": "The comet's glowing tail.",
+    "parent": 11,
+    "polygon": [
+      [500, 100],
+      [490, 90],
+      [480, 80],
+      [470, 70],
+      [460, 60],
+      [450, 50]
+    ],
+    "rgb": [173, 216, 230]
+  }
+]

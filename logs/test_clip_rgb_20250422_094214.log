@@ -1,0 +1,12 @@
+[INFO] [2025-04-22 09:42:17,610] 'A white background canvas for a simple face drawing.' -> (255, 255, 255)
+[INFO] [2025-04-22 09:42:17,652] 'A skin-colored circular face shape.' -> (251, 222, 173)
+[INFO] [2025-04-22 09:42:17,698] 'A pink smiling mouth on the face.' -> (255, 107, 180)
+[INFO] [2025-04-22 09:42:17,742] 'A blue left eye.' -> (4, 121, 231)
+[INFO] [2025-04-22 09:42:17,790] 'A blue right eye.' -> (5, 119, 226)
+[INFO] [2025-04-22 09:42:17,836] 'A black pupil in the left eye.' -> (3, 8, 11)
+[INFO] [2025-04-22 09:42:17,883] 'A black pupil in the right eye.' -> (2, 9, 11)
+[INFO] [2025-04-22 09:42:17,940] 'A small brown nose in the center of the face.' -> (140, 68, 15)
+[INFO] [2025-04-22 09:42:18,002] 'Yellow hair on top of the head.' -> (254, 213, 2)
+[INFO] [2025-04-22 09:42:18,061] 'Red cheeks on the face.' -> (247, 8, 6)
+[INFO] [2025-04-22 09:42:18,114] 'Red cheeks on the other side of the face.' -> (249, 13, 6)
+[INFO] [2025-04-22 09:42:18,143] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_face.png

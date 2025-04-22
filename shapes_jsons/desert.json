@@ -1,0 +1,228 @@
+[
+  {
+    "id": 0,
+    "description": "A bright blue sky above the desert landscape.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 300],
+      [0, 300]
+    ],
+    "rgb": [135, 206, 235]
+  },
+  {
+    "id": 1,
+    "description": "Golden sand dunes covering the desert ground.",
+    "parent": null,
+    "polygon": [
+      [0, 300],
+      [800, 300],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [210, 180, 140]
+  },
+  {
+    "id": 2,
+    "description": "A large sand dune with shadow.",
+    "parent": 1,
+    "polygon": [
+      [100, 400],
+      [300, 300],
+      [500, 400],
+      [500, 500],
+      [100, 500]
+    ],
+    "rgb": [194, 178, 128]
+  },
+  {
+    "id": 3,
+    "description": "Shadow area on the sand dune.",
+    "parent": 2,
+    "polygon": [
+      [300, 350],
+      [500, 400],
+      [500, 500],
+      [300, 450]
+    ],
+    "rgb": [160, 140, 90]
+  },
+  {
+    "id": 4,
+    "description": "A towering red rock formation.",
+    "parent": null,
+    "polygon": [
+      [550, 200],
+      [650, 200],
+      [680, 450],
+      [520, 450]
+    ],
+    "rgb": [178, 34, 34]
+  },
+  {
+    "id": 5,
+    "description": "Shadow side of the rock formation.",
+    "parent": 4,
+    "polygon": [
+      [550, 200],
+      [600, 200],
+      [580, 450],
+      [520, 450]
+    ],
+    "rgb": [139, 0, 0]
+  },
+  {
+    "id": 6,
+    "description": "A tall green cactus growing in the sand.",
+    "parent": 1,
+    "polygon": [
+      [200, 350],
+      [220, 350],
+      [220, 450],
+      [200, 450]
+    ],
+    "rgb": [0, 100, 0]
+  },
+  {
+    "id": 7,
+    "description": "Left arm of the cactus.",
+    "parent": 6,
+    "polygon": [
+      [200, 380],
+      [180, 380],
+      [180, 400],
+      [200, 400]
+    ],
+    "rgb": [0, 100, 0]
+  },
+  {
+    "id": 8,
+    "description": "Right arm of the cactus.",
+    "parent": 6,
+    "polygon": [
+      [220, 420],
+      [240, 420],
+      [240, 440],
+      [220, 440]
+    ],
+    "rgb": [0, 100, 0]
+  },
+  {
+    "id": 9,
+    "description": "A smaller barrel cactus nearby.",
+    "parent": 1,
+    "polygon": [
+      [400, 425],
+      [420, 415],
+      [440, 425],
+      [440, 450],
+      [400, 450]
+    ],
+    "rgb": [0, 128, 0]
+  },
+  {
+    "id": 10,
+    "description": "Spines on the barrel cactus.",
+    "parent": 9,
+    "polygon": [
+      [410, 420],
+      [410, 415],
+      [415, 415],
+      [415, 420]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 11,
+    "description": "More spines on the barrel cactus.",
+    "parent": 9,
+    "polygon": [
+      [425, 420],
+      [425, 415],
+      [430, 415],
+      [430, 420]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 12,
+    "description": "A red flower blooming on top of the barrel cactus.",
+    "parent": 9,
+    "polygon": [
+      [415, 410],
+      [420, 405],
+      [425, 410],
+      [420, 415]
+    ],
+    "rgb": [255, 0, 0]
+  },
+  {
+    "id": 13,
+    "description": "A road winding through the desert.",
+    "parent": 1,
+    "polygon": [
+      [0, 550],
+      [100, 530],
+      [300, 520],
+      [500, 530],
+      [700, 550],
+      [800, 560],
+      [800, 580],
+      [0, 580]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 14,
+    "description": "Yellow lines painted in the middle of the road.",
+    "parent": 13,
+    "polygon": [
+      [0, 565],
+      [100, 550],
+      [300, 540],
+      [500, 550],
+      [700, 570],
+      [800, 575],
+      [800, 577],
+      [0, 567]
+    ],
+    "rgb": [255, 215, 0]
+  },
+  {
+    "id": 15,
+    "description": "A small tumbleweed rolling across the desert.",
+    "parent": 1,
+    "polygon": [
+      [350, 480],
+      [360, 470],
+      [370, 480],
+      [360, 490]
+    ],
+    "rgb": [139, 69, 19]
+  },
+  {
+    "id": 16,
+    "description": "A bright yellow sun in the sky.",
+    "parent": 0,
+    "polygon": [
+      [650, 80],
+      [680, 50],
+      [710, 80],
+      [680, 110]
+    ],
+    "rgb": [255, 255, 0]
+  },
+  {
+    "id": 17,
+    "description": "A vulture flying in the distance.",
+    "parent": 0,
+    "polygon": [
+      [100, 100],
+      [120, 90],
+      [140, 100],
+      [120, 110]
+    ],
+    "rgb": [0, 0, 0]
+  }
+]

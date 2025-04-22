@@ -63,7 +63,7 @@ class CLIPToRGB(nn.Module):
         return self.net(x)
 
 # ---------------- Training ------------------
-def train(model, dataset, device, epochs=50, batch_size=16):
+def train(model, dataset, device, epochs=200, batch_size=16):
     loader = data.DataLoader(dataset, batch_size=batch_size, shuffle=True)
     optimizer = optim.AdamW(model.parameters(), lr=1e-3)
     scheduler = CosineAnnealingWarmRestarts(optimizer, T_0=5, T_mult=2)

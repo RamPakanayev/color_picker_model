@@ -1,185 +1,173 @@
-# color_picker_model
+# Polygon Color Prediction with CLIP
 
-This project contains a sophisticated polygon color prediction system that uses a trained neural network classifier built on top of OpenAI's CLIP text encoder. It analyzes textual descriptions of shapes and predicts appropriate colors for polygons defined in JSON files, producing composite images with the predicted colors.
+A deep learning system that predicts RGB colors for polygons based on text descriptions using OpenAI's CLIP model.
 
-## Features
+## Table of Contents
 
-- Advanced semantic color understanding with expanded synonym support
-- Confidence-based color selection with smart fallback mechanisms
-- Enhanced parent-child relationship handling for contextual color inheritance
-- Adaptive data augmentation with class balancing for better training
-- Hierarchical drawing with transparency control
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Training](#training)
+  - [Testing](#testing)
+- [JSON Format](#json-format)
+- [Technical Details](#technical-details)
 
-## Directory Structure
+## Overview
+
+This project implements a neural network model that can predict appropriate RGB colors for polygons based on their text descriptions. It utilizes OpenAI's CLIP (Contrastive Language-Image Pretraining) model to convert textual descriptions into embeddings, which are then used to predict RGB color values through a simple neural network.
+
+The system processes JSON files containing polygon data (coordinates and descriptions) and generates images with appropriately colored shapes. It can be used for automatic coloring of vector graphics based on natural language descriptions.
+
+## Project Structure
 
 ```
-color_picker_model/
-├── __pycache__/
-│   └── color_extraction.cpython-312.pyc
-├── logs/                      # Log files directory
-├── original_images/           # Sample reference images
-│   ├── s1.png
-│   └── s2.png
-├── results/                   # Generated output images
-├── shapes_jsons/              # Input polygon definitions
-│   ├── abstract_art.json
-│   ├── car.json
-│   ├── color_conflict.json
-│   ├── complex64.json
-│   ├── cosmos.json
-│   ├── cyberpunk.json
-│   ├── face.json
-│   ├── flags.json
-│   ├── house.json
-│   ├── landscape.json
-│   ├── logo.json
-│   ├── nested_shapes.json
-│   ├── rgb_explicit_test.json
-│   ├── semantic_colors.json
-│   ├── shapes.json
-│   └── shapes2.json
-├── classifier_weights.pth     # Trained model weights
-├── inst.bat                   # Dependency installation script
-├── model_info.json            # Model architecture information
-├── README.md                  # This file
-├── script.py                  # Batch processing script
-├── test_polygons.py           # Inference script
-└── train_polygons.py          # Training script
+polygon-color-prediction/
+├── __pycache__/           # Python cache directory
+├── logs/                  # Directory for log files
+├── results/               # Output images directory
+├── shapes_jsons/          # Directory containing input JSON files
+├── clip_to_rgb_model_info.json  # Model metadata
+├── clip_to_rgb_model.pth  # Trained model weights
+├── inst.bat               # Installation script for Windows
+├── README.md              # This documentation file
+├── script.py              # Script to run tests on all JSON files
+├── test_polygons.py       # Script to test the model on a single JSON file
+└── train_polygons.py      # Script to train the model
 ```
+
+## Prerequisites
+
+- Python 3.6 or higher
+- Windows (for the batch installation script) or adapt the commands for your OS
 
 ## Installation
 
-Run the included batch script to install all required dependencies:
+1. Clone this repository to your local machine.
 
-```bash
-.\inst.bat
-```
+2. Run the installation script to install all required dependencies:
+   ```
+   inst.bat
+   ```
 
-This will install:
-- PyTorch (CPU version by default)
-- numpy (for numerical computations)
-- pillow (for image processing - PIL fork)
-- CLIP from OpenAI's GitHub repository (along with its dependencies)
+   This script installs:
+   - PyTorch (CPU version)
+   - NumPy
+   - Pillow (PIL fork)
+   - OpenAI's CLIP model
 
-If you're using a different environment or operating system, the core dependencies can be installed with:
-
-```bash
-pip install torch numpy pillow git+https://github.com/openai/CLIP.git
-```
+   If you're not using Windows, you can manually install the dependencies using pip:
+   ```
+   pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
+   pip install numpy pillow
+   pip install git+https://github.com/openai/CLIP.git
+   ```
 
 ## Usage
 
-### Training (Optional)
+### Training
 
-The repository already includes pre-trained weights (`classifier_weights.pth`), but if you want to retrain the model with your own data:
+The model has been pre-trained and the weights are stored in `clip_to_rgb_model.pth`. If you want to retrain the model with your own data or improve the existing model, you can run:
 
-```bash
+```
 python train_polygons.py
 ```
 
-This will:
-1. Load and process all JSON files from the `shapes_jsons` directory
-2. Train an enhanced classifier with dynamic class weighting and regularization
-3. Save new weights to `classifier_weights.pth` and architecture information to `model_info.json`
+This script:
+1. Loads all JSON files from the `shapes_jsons` directory
+2. Extracts polygon descriptions and their corresponding RGB values
+3. Uses CLIP to convert text descriptions to embeddings
+4. Trains a neural network to map these embeddings to RGB values
+5. Saves the trained model to `clip_to_rgb_model.pth`
 
-### Inference
+Training progress is logged to the console and to a log file in the `logs` directory.
 
-To run the model on test JSON files and generate colored images:
+### Testing
 
-```bash
+To generate images for all JSON files in the `shapes_jsons` directory:
+
+```
 python script.py
 ```
 
-The script will:
-1. Process the JSON files specified in the script
-2. Generate colored output images in the `results/` directory
-3. Log detailed information to the `logs/` directory
+This script:
+1. Finds all JSON files in the `shapes_jsons` directory
+2. For each JSON file, calls `test_polygons.py` to generate an image
+3. Saves the output images to the `results` directory
+4. Reports success/failure for each file
 
-### Manual Testing
+To test a specific JSON file:
 
-To run the model on a specific JSON file:
-
-```bash
-python test_polygons.py [input_json_path] [output_image_path] [--confidence 0.3] [--debug]
+```
+python test_polygons.py path/to/input.json path/to/output.png
 ```
 
-Example:
-```bash
-python test_polygons.py shapes_jsons/cosmos.json results/output_cosmos.png
-```
+## JSON Format
 
-Parameters:
-- `input_json_path`: Path to the input JSON file containing polygon data
-- `output_image_path`: Path where the output image will be saved
-- `--confidence`: (Optional) Confidence threshold for color selection (0.0-1.0)
-- `--debug`: (Optional) Enable debug-level logging
-
-## Input JSON Format
-
-The model expects JSON files with the following structure:
+The input JSON files should contain an array of polygon objects with the following structure:
 
 ```json
 [
   {
     "id": 0,
-    "description": "A black cosmic background of deep space",
-    "polygon": [[0, 0], [800, 0], [800, 600], [0, 600]],
-    "parent": null
+    "description": "A white background canvas for a simple face drawing.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [400, 0],
+      [400, 400],
+      [0, 400]
+    ],
+    "rgb": [255, 255, 255]
   },
   {
     "id": 1,
-    "description": "A glowing blue nebula",
-    "polygon": [[200, 150], [600, 150], [500, 400], [300, 400]],
-    "parent": 0
+    "description": "A skin-colored circular face shape.",
+    "parent": 0,
+    "polygon": [
+      [100, 75],
+      [150, 50],
+      /* more coordinates */
+    ],
+    "rgb": [255, 222, 173]
   }
+  /* more polygons */
 ]
 ```
 
-Each shape must have:
-- `id`: Unique identifier
-- `description`: Textual description used to determine color
-- `polygon`: Array of [x, y] coordinate pairs defining the shape
-- `parent`: ID of the parent shape (or null)
-
-The descriptions can include:
-- Direct color words ("red", "blue", etc.)
-- Color synonyms ("crimson", "azure", etc.)
-- Semantic associations ("fire", "sky", "forest", etc.)
-- Explicit RGB or hex values ("rgb(255, 0, 0)", "#FF0000")
-
-## Logging
-
-The system creates detailed logs in the `logs/` directory with timestamps, including:
-- Shape processing details
-- Color prediction confidences
-- Parent-child relationship handling
-- Any errors encountered
-
-## Output
-
-The output images show all the polygons filled with their predicted colors, drawn in hierarchical order (parents first, then children).
+Each polygon object should include:
+- `id`: Unique identifier for the polygon
+- `description`: Text description of the polygon (used to predict color)
+- `parent`: ID of the parent polygon (or `null` if none)
+- `polygon`: Array of [x, y] coordinate pairs defining the polygon's shape
+- `rgb`: RGB color value [r, g, b] (optional during testing, used during training)
 
 ## Technical Details
 
-The model architecture consists of:
-- OpenAI's CLIP text encoder (frozen pre-trained weights)
-- A custom neural network classifier with:
-  - Multiple hidden layers with dropout
-  - Enhanced regularization
-  - Class weighting to handle imbalanced data
+### Model Architecture
 
-The color prediction process includes:
-1. Parsing explicit colors from descriptions
-2. Analyzing semantic color cues
-3. Intelligent text merging of parent and child descriptions
-4. Neural network classification with confidence-based selection
-5. Parent color inheritance for low-confidence predictions
+The system uses two main components:
 
-## License
+1. **CLIP Model (ViT-B/32)**: Converts text descriptions into 512-dimensional embeddings
+2. **Color Prediction Network**: A simple feed-forward neural network with:
+   - Input layer: 512 neurons (CLIP embedding dimension)
+   - Hidden layer: 256 neurons with ReLU activation
+   - Output layer: 3 neurons (R, G, B) with Sigmoid activation to ensure values between 0-1
 
-[Include your license information here]
+### Training Process
 
-## Acknowledgments
+The model is trained using:
+- AdamW optimizer with a learning rate of 0.001
+- Mean Squared Error (MSE) loss function
+- Cosine Annealing Warm Restarts learning rate scheduler
+- Batch size of 16
+- 200 epochs
 
-- This project uses OpenAI's CLIP for text encoding
-- PyTorch framework for neural network implementation
+### Prediction Process
+
+During prediction:
+1. The text description is encoded using CLIP to get an embedding
+2. The embedding is normalized and passed through the color prediction network
+3. The output is converted from [0,1] range to [0,255] range for RGB values
+4. These colors are used to fill the polygons in the output image

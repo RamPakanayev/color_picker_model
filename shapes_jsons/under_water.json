@@ -1,0 +1,260 @@
+[
+  {
+    "id": 0,
+    "description": "Deep blue ocean water background.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [0, 105, 148]
+  },
+  {
+    "id": 1,
+    "description": "Sandy ocean floor.",
+    "parent": 0,
+    "polygon": [
+      [0, 500],
+      [800, 500],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [210, 180, 140]
+  },
+  {
+    "id": 2,
+    "description": "A vibrant orange coral reef.",
+    "parent": 0,
+    "polygon": [
+      [100, 450],
+      [150, 400],
+      [200, 450],
+      [250, 425],
+      [300, 450],
+      [300, 500],
+      [100, 500]
+    ],
+    "rgb": [255, 127, 80]
+  },
+  {
+    "id": 3,
+    "description": "A bright yellow coral formation.",
+    "parent": 0,
+    "polygon": [
+      [350, 475],
+      [375, 425],
+      [400, 475],
+      [400, 500],
+      [350, 500]
+    ],
+    "rgb": [255, 215, 0]
+  },
+  {
+    "id": 4,
+    "description": "A purple sea anemone.",
+    "parent": 0,
+    "polygon": [
+      [450, 475],
+      [460, 450],
+      [470, 460],
+      [480, 450],
+      [490, 475],
+      [490, 500],
+      [450, 500]
+    ],
+    "rgb": [138, 43, 226]
+  },
+  {
+    "id": 5,
+    "description": "A large rock formation on the sea floor.",
+    "parent": 0,
+    "polygon": [
+      [550, 425],
+      [600, 400],
+      [650, 425],
+      [675, 450],
+      [650, 500],
+      [550, 500]
+    ],
+    "rgb": [105, 105, 105]
+  },
+  {
+    "id": 6,
+    "description": "A bright orange clownfish.",
+    "parent": 0,
+    "polygon": [
+      [150, 300],
+      [175, 290],
+      [200, 300],
+      [175, 310]
+    ],
+    "rgb": [255, 140, 0]
+  },
+  {
+    "id": 7,
+    "description": "White stripes on the clownfish.",
+    "parent": 6,
+    "polygon": [
+      [165, 300],
+      [170, 295],
+      [175, 300],
+      [170, 305]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 8,
+    "description": "Another white stripe on the clownfish.",
+    "parent": 6,
+    "polygon": [
+      [185, 300],
+      [190, 295],
+      [195, 300],
+      [190, 305]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 9,
+    "description": "A blue tang fish.",
+    "parent": 0,
+    "polygon": [
+      [300, 200],
+      [325, 175],
+      [350, 200],
+      [325, 225]
+    ],
+    "rgb": [30, 144, 255]
+  },
+  {
+    "id": 10,
+    "description": "A yellow fin on the blue tang fish.",
+    "parent": 9,
+    "polygon": [
+      [325, 175],
+      [330, 165],
+      [335, 175]
+    ],
+    "rgb": [255, 255, 0]
+  },
+  {
+    "id": 11,
+    "description": "A tail fin on the blue tang fish.",
+    "parent": 9,
+    "polygon": [
+      [350, 200],
+      [360, 190],
+      [360, 210]
+    ],
+    "rgb": [30, 144, 255]
+  },
+  {
+    "id": 12,
+    "description": "A green sea turtle swimming.",
+    "parent": 0,
+    "polygon": [
+      [500, 200],
+      [550, 175],
+      [600, 200],
+      [550, 225]
+    ],
+    "rgb": [46, 139, 87]
+  },
+  {
+    "id": 13,
+    "description": "The sea turtle's head.",
+    "parent": 12,
+    "polygon": [
+      [600, 200],
+      [620, 190],
+      [620, 210]
+    ],
+    "rgb": [46, 139, 87]
+  },
+  {
+    "id": 14,
+    "description": "The sea turtle's right flipper.",
+    "parent": 12,
+    "polygon": [
+      [550, 175],
+      [570, 150],
+      [580, 175]
+    ],
+    "rgb": [46, 139, 87]
+  },
+  {
+    "id": 15,
+    "description": "The sea turtle's left flipper.",
+    "parent": 12,
+    "polygon": [
+      [550, 225],
+      [570, 250],
+      [580, 225]
+    ],
+    "rgb": [46, 139, 87]
+  },
+  {
+    "id": 16,
+    "description": "Long green seaweed growing from the ocean floor.",
+    "parent": 0,
+    "polygon": [
+      [700, 400],
+      [710, 300],
+      [720, 400],
+      [720, 500],
+      [700, 500]
+    ],
+    "rgb": [0, 128, 0]
+  },
+  {
+    "id": 17,
+    "description": "More seaweed growing from the ocean floor.",
+    "parent": 0,
+    "polygon": [
+      [730, 450],
+      [740, 350],
+      [750, 450],
+      [750, 500],
+      [730, 500]
+    ],
+    "rgb": [0, 128, 0]
+  },
+  {
+    "id": 18,
+    "description": "Sunlight rays penetrating the water surface.",
+    "parent": 0,
+    "polygon": [
+      [50, 0],
+      [100, 0],
+      [150, 200],
+      [100, 200]
+    ],
+    "rgb": [173, 216, 230]
+  },
+  {
+    "id": 19,
+    "description": "More sunlight rays penetrating the water.",
+    "parent": 0,
+    "polygon": [
+      [400, 0],
+      [450, 0],
+      [500, 200],
+      [450, 200]
+    ],
+    "rgb": [173, 216, 230]
+  },
+  {
+    "id": 20,
+    "description": "A school of small silver fish swimming together.",
+    "parent": 0,
+    "polygon": [
+      [250, 100],
+      [300, 75],
+      [350, 100],
+      [300, 125]
+    ],
+    "rgb": [192, 192, 192]
+  }
+]

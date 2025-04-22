@@ -1,0 +1,812 @@
+[
+  {
+    "id": 0,
+    "description": "A gradient blue sky background for the NYC skyline.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [1000, 0],
+      [1000, 600],
+      [0, 600]
+    ],
+    "rgb": [135, 206, 235]
+  },
+  {
+    "id": 1,
+    "description": "The golden sun in the sky above NYC.",
+    "parent": 0,
+    "polygon": [
+      [790, 40],
+      [850, 40],
+      [910, 100],
+      [910, 160],
+      [850, 160],
+      [790, 100]
+    ],
+    "rgb": [255, 223, 0]
+  },
+  {
+    "id": 2,
+    "description": "A fluffy white cloud in the sky.",
+    "parent": 0,
+    "polygon": [
+      [100, 40],
+      [180, 30],
+      [260, 50],
+      [220, 80],
+      [150, 90],
+      [100, 70]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 3,
+    "description": "Another fluffy white cloud in the sky.",
+    "parent": 0,
+    "polygon": [
+      [600, 60],
+      [700, 50],
+      [800, 70],
+      [780, 100],
+      [680, 110],
+      [620, 90]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 4,
+    "description": "Deep blue Hudson and East Rivers.",
+    "parent": 0,
+    "polygon": [
+      [0, 500],
+      [1000, 500],
+      [1000, 600],
+      [0, 600]
+    ],
+    "rgb": [0, 105, 148]
+  },
+  {
+    "id": 5,
+    "description": "The island of Manhattan with gray urban landscape.",
+    "parent": 0,
+    "polygon": [
+      [250, 300],
+      [300, 310],
+      [350, 315],
+      [400, 318],
+      [450, 320],
+      [500, 320],
+      [550, 318],
+      [600, 315],
+      [650, 310],
+      [700, 305],
+      [750, 300],
+      [750, 500],
+      [250, 500]
+    ],
+    "rgb": [130, 130, 130]
+  },
+  {
+    "id": 6,
+    "description": "Brooklyn skyline in the background.",
+    "parent": 0,
+    "polygon": [
+      [50, 280],
+      [80, 280],
+      [80, 380],
+      [50, 380]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 7,
+    "description": "Another Brooklyn building in the background.",
+    "parent": 0,
+    "polygon": [
+      [90, 300],
+      [130, 300],
+      [130, 380],
+      [90, 380]
+    ],
+    "rgb": [180, 180, 180]
+  },
+  {
+    "id": 8,
+    "description": "A third Brooklyn building in the background.",
+    "parent": 0,
+    "polygon": [
+      [140, 290],
+      [175, 290],
+      [175, 380],
+      [140, 380]
+    ],
+    "rgb": [160, 160, 160]
+  },
+  {
+    "id": 9,
+    "description": "Queens skyline building in the background.",
+    "parent": 0,
+    "polygon": [
+      [800, 290],
+      [845, 290],
+      [845, 380],
+      [800, 380]
+    ],
+    "rgb": [170, 170, 170]
+  },
+  {
+    "id": 10,
+    "description": "Another Queens building in the background.",
+    "parent": 0,
+    "polygon": [
+      [855, 270],
+      [885, 270],
+      [885, 380],
+      [855, 380]
+    ],
+    "rgb": [165, 165, 165]
+  },
+  {
+    "id": 11,
+    "description": "A third Queens building in the background.",
+    "parent": 0,
+    "polygon": [
+      [895, 300],
+      [945, 300],
+      [945, 380],
+      [895, 380]
+    ],
+    "rgb": [175, 175, 175]
+  },
+  {
+    "id": 12,
+    "description": "One World Trade Center, a silver skyscraper in Lower Manhattan.",
+    "parent": 5,
+    "polygon": [
+      [325, 100],
+      [355, 100],
+      [350, 105],
+      [345, 110],
+      [345, 300],
+      [335, 300],
+      [335, 110],
+      [330, 105]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 13,
+    "description": "Blue-tinted windows at the top of One World Trade Center.",
+    "parent": 12,
+    "polygon": [
+      [325, 100],
+      [355, 100],
+      [355, 110],
+      [325, 110]
+    ],
+    "rgb": [100, 149, 237]
+  },
+  {
+    "id": 14,
+    "description": "Empire State Building main body with its beige color.",
+    "parent": 5,
+    "polygon": [
+      [485, 200],
+      [515, 200],
+      [515, 300],
+      [485, 300]
+    ],
+    "rgb": [245, 222, 179]
+  },
+  {
+    "id": 15,
+    "description": "Empire State Building mid-section.",
+    "parent": 5,
+    "polygon": [
+      [490, 150],
+      [510, 150],
+      [510, 200],
+      [490, 200]
+    ],
+    "rgb": [245, 222, 179]
+  },
+  {
+    "id": 16,
+    "description": "Empire State Building upper tapered section.",
+    "parent": 5,
+    "polygon": [
+      [490, 150],
+      [510, 150],
+      [505, 120],
+      [495, 120]
+    ],
+    "rgb": [245, 222, 179]
+  },
+  {
+    "id": 17,
+    "description": "Empire State Building spire.",
+    "parent": 5,
+    "polygon": [
+      [495, 100],
+      [505, 100],
+      [505, 120],
+      [495, 120]
+    ],
+    "rgb": [245, 222, 179]
+  },
+  {
+    "id": 18,
+    "description": "Chrysler Building main body with silver color.",
+    "parent": 5,
+    "polygon": [
+      [570, 220],
+      [595, 220],
+      [595, 300],
+      [570, 300]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 19,
+    "description": "Chrysler Building first crown section.",
+    "parent": 5,
+    "polygon": [
+      [570, 220],
+      [595, 220],
+      [590, 200],
+      [575, 200]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 20,
+    "description": "Chrysler Building second crown section.",
+    "parent": 5,
+    "polygon": [
+      [575, 200],
+      [590, 200],
+      [585, 180],
+      [580, 180]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 21,
+    "description": "Chrysler Building spire.",
+    "parent": 5,
+    "polygon": [
+      [580, 180],
+      [585, 180],
+      [583, 150],
+      [582, 150]
+    ],
+    "rgb": [220, 220, 220]
+  },
+  {
+    "id": 22,
+    "description": "A gray Manhattan skyscraper.",
+    "parent": 5,
+    "polygon": [
+      [400, 200],
+      [420, 200],
+      [420, 300],
+      [400, 300]
+    ],
+    "rgb": [110, 110, 110]
+  },
+  {
+    "id": 23,
+    "description": "Another Manhattan skyscraper.",
+    "parent": 5,
+    "polygon": [
+      [430, 180],
+      [455, 180],
+      [455, 300],
+      [430, 300]
+    ],
+    "rgb": [120, 120, 120]
+  },
+  {
+    "id": 24,
+    "description": "A third Manhattan skyscraper.",
+    "parent": 5,
+    "polygon": [
+      [460, 220],
+      [475, 220],
+      [475, 300],
+      [460, 300]
+    ],
+    "rgb": [100, 100, 100]
+  },
+  {
+    "id": 25,
+    "description": "A Midtown Manhattan building.",
+    "parent": 5,
+    "polygon": [
+      [520, 230],
+      [540, 230],
+      [540, 300],
+      [520, 300]
+    ],
+    "rgb": [130, 130, 130]
+  },
+  {
+    "id": 26,
+    "description": "Another Midtown Manhattan building.",
+    "parent": 5,
+    "polygon": [
+      [550, 210],
+      [565, 210],
+      [565, 300],
+      [550, 300]
+    ],
+    "rgb": [140, 140, 140]
+  },
+  {
+    "id": 27,
+    "description": "An East Side Manhattan skyscraper.",
+    "parent": 5,
+    "polygon": [
+      [610, 190],
+      [630, 190],
+      [630, 300],
+      [610, 300]
+    ],
+    "rgb": [150, 150, 150]
+  },
+  {
+    "id": 28,
+    "description": "The UN Headquarters with blue-green glass.",
+    "parent": 5,
+    "polygon": [
+      [640, 170],
+      [670, 170],
+      [670, 300],
+      [640, 300]
+    ],
+    "rgb": [0, 128, 128]
+  },
+  {
+    "id": 29,
+    "description": "An Upper East Side building.",
+    "parent": 5,
+    "polygon": [
+      [680, 210],
+      [705, 210],
+      [705, 300],
+      [680, 300]
+    ],
+    "rgb": [125, 125, 125]
+  },
+  {
+    "id": 30,
+    "description": "Another Upper East Side building.",
+    "parent": 5,
+    "polygon": [
+      [710, 230],
+      [725, 230],
+      [725, 300],
+      [710, 300]
+    ],
+    "rgb": [135, 135, 135]
+  },
+  {
+    "id": 31,
+    "description": "Central Park with vibrant green color.",
+    "parent": 5,
+    "polygon": [
+      [450, 320],
+      [550, 320],
+      [550, 400],
+      [450, 400]
+    ],
+    "rgb": [34, 139, 34]
+  },
+  {
+    "id": 32,
+    "description": "A tree in Central Park.",
+    "parent": 31,
+    "polygon": [
+      [460, 335],
+      [480, 335],
+      [470, 320]
+    ],
+    "rgb": [20, 100, 20]
+  },
+  {
+    "id": 33,
+    "description": "Another tree in Central Park.",
+    "parent": 31,
+    "polygon": [
+      [490, 342],
+      [510, 342],
+      [500, 320]
+    ],
+    "rgb": [20, 100, 20]
+  },
+  {
+    "id": 34,
+    "description": "A third tree in Central Park.",
+    "parent": 31,
+    "polygon": [
+      [520, 335],
+      [540, 335],
+      [530, 315]
+    ],
+    "rgb": [20, 100, 20]
+  },
+  {
+    "id": 35,
+    "description": "Brooklyn Bridge main span.",
+    "parent": 0,
+    "polygon": [
+      [650, 445],
+      [655, 445],
+      [850, 445],
+      [855, 445],
+      [855, 455],
+      [850, 455],
+      [655, 455],
+      [650, 455]
+    ],
+    "rgb": [210, 180, 140]
+  },
+  {
+    "id": 36,
+    "description": "Brooklyn Bridge left tower.",
+    "parent": 35,
+    "polygon": [
+      [680, 400],
+      [700, 400],
+      [700, 450],
+      [680, 450]
+    ],
+    "rgb": [210, 180, 140]
+  },
+  {
+    "id": 37,
+    "description": "Brooklyn Bridge right tower.",
+    "parent": 35,
+    "polygon": [
+      [800, 400],
+      [820, 400],
+      [820, 450],
+      [800, 450]
+    ],
+    "rgb": [210, 180, 140]
+  },
+  {
+    "id": 38,
+    "description": "Brooklyn Bridge roadway.",
+    "parent": 35,
+    "polygon": [
+      [650, 450],
+      [850, 450],
+      [850, 460],
+      [650, 460]
+    ],
+    "rgb": [80, 80, 80]
+  },
+  {
+    "id": 39,
+    "description": "The Statue of Liberty's green body.",
+    "parent": 0,
+    "polygon": [
+      [175, 370],
+      [190, 300],
+      [205, 370],
+      [200, 390],
+      [190, 450],
+      [180, 390]
+    ],
+    "rgb": [76, 153, 0]
+  },
+  {
+    "id": 40,
+    "description": "The Statue of Liberty's crown.",
+    "parent": 39,
+    "polygon": [
+      [175, 300],
+      [190, 270],
+      [205, 300]
+    ],
+    "rgb": [76, 153, 0]
+  },
+  {
+    "id": 41,
+    "description": "The Statue of Liberty's golden torch.",
+    "parent": 39,
+    "polygon": [
+      [190, 270],
+      [195, 240],
+      [200, 270]
+    ],
+    "rgb": [255, 215, 0]
+  },
+  {
+    "id": 42,
+    "description": "Times Square with vibrant pink color.",
+    "parent": 5,
+    "polygon": [
+      [475, 280],
+      [525, 280],
+      [525, 300],
+      [475, 300]
+    ],
+    "rgb": [255, 0, 127]
+  },
+  {
+    "id": 43,
+    "description": "A yellow billboard in Times Square.",
+    "parent": 42,
+    "polygon": [
+      [480, 285],
+      [485, 285],
+      [485, 295],
+      [480, 295]
+    ],
+    "rgb": [255, 255, 0]
+  },
+  {
+    "id": 44,
+    "description": "A cyan billboard in Times Square.",
+    "parent": 42,
+    "polygon": [
+      [490, 285],
+      [495, 285],
+      [495, 295],
+      [490, 295]
+    ],
+    "rgb": [0, 255, 255]
+  },
+  {
+    "id": 45,
+    "description": "A green billboard in Times Square.",
+    "parent": 42,
+    "polygon": [
+      [500, 285],
+      [505, 285],
+      [505, 295],
+      [500, 295]
+    ],
+    "rgb": [0, 255, 0]
+  },
+  {
+    "id": 46,
+    "description": "A magenta billboard in Times Square.",
+    "parent": 42,
+    "polygon": [
+      [510, 285],
+      [515, 285],
+      [515, 295],
+      [510, 295]
+    ],
+    "rgb": [255, 0, 255]
+  },
+  {
+    "id": 47,
+    "description": "A yellow taxi in Manhattan.",
+    "parent": 5,
+    "polygon": [
+      [400, 480],
+      [420, 480],
+      [420, 490],
+      [400, 490]
+    ],
+    "rgb": [255, 204, 0]
+  },
+  {
+    "id": 48,
+    "description": "Another yellow taxi in Manhattan.",
+    "parent": 5,
+    "polygon": [
+      [600, 485],
+      [620, 485],
+      [620, 495],
+      [600, 495]
+    ],
+    "rgb": [255, 204, 0]
+  },
+  {
+    "id": 49,
+    "description": "A third yellow taxi in Manhattan.",
+    "parent": 5,
+    "polygon": [
+      [330, 450],
+      [350, 450],
+      [350, 460],
+      [330, 460]
+    ],
+    "rgb": [255, 204, 0]
+  },
+  {
+    "id": 50,
+    "description": "A fourth yellow taxi in Manhattan.",
+    "parent": 5,
+    "polygon": [
+      [520, 425],
+      [540, 425],
+      [540, 435],
+      [520, 435]
+    ],
+    "rgb": [255, 204, 0]
+  },
+  {
+    "id": 51,
+    "description": "The High Line with green vegetation.",
+    "parent": 5,
+    "polygon": [
+      [300, 450],
+      [380, 450],
+      [380, 460],
+      [300, 460]
+    ],
+    "rgb": [107, 142, 35]
+  },
+  {
+    "id": 52,
+    "description": "Plants on the High Line.",
+    "parent": 51,
+    "polygon": [
+      [305, 442],
+      [315, 442],
+      [310, 435]
+    ],
+    "rgb": [50, 120, 50]
+  },
+  {
+    "id": 53,
+    "description": "More plants on the High Line.",
+    "parent": 51,
+    "polygon": [
+      [325, 442],
+      [335, 442],
+      [330, 435]
+    ],
+    "rgb": [50, 120, 50]
+  },
+  {
+    "id": 54,
+    "description": "Additional plants on the High Line.",
+    "parent": 51,
+    "polygon": [
+      [345, 442],
+      [355, 442],
+      [350, 435]
+    ],
+    "rgb": [50, 120, 50]
+  },
+  {
+    "id": 55,
+    "description": "More vegetation on the High Line.",
+    "parent": 51,
+    "polygon": [
+      [365, 442],
+      [375, 442],
+      [370, 435]
+    ],
+    "rgb": [50, 120, 50]
+  },
+  {
+    "id": 56,
+    "description": "A white boat on the Hudson River.",
+    "parent": 4,
+    "polygon": [
+      [100, 520],
+      [140, 520],
+      [150, 527],
+      [140, 535],
+      [100, 535]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 57,
+    "description": "Another white boat on the East River.",
+    "parent": 4,
+    "polygon": [
+      [800, 530],
+      [830, 530],
+      [830, 540],
+      [800, 540],
+      [790, 535]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 58,
+    "description": "A vertical Manhattan avenue.",
+    "parent": 5,
+    "polygon": [
+      [298, 320],
+      [302, 320],
+      [302, 500],
+      [298, 500]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 59,
+    "description": "Another vertical Manhattan avenue.",
+    "parent": 5,
+    "polygon": [
+      [398, 320],
+      [402, 320],
+      [402, 500],
+      [398, 500]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 60,
+    "description": "A third vertical Manhattan avenue.",
+    "parent": 5,
+    "polygon": [
+      [498, 320],
+      [502, 320],
+      [502, 500],
+      [498, 500]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 61,
+    "description": "A fourth vertical Manhattan avenue.",
+    "parent": 5,
+    "polygon": [
+      [598, 320],
+      [602, 320],
+      [602, 500],
+      [598, 500]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 62,
+    "description": "A fifth vertical Manhattan avenue.",
+    "parent": 5,
+    "polygon": [
+      [698, 320],
+      [702, 320],
+      [702, 500],
+      [698, 500]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 63,
+    "description": "A horizontal Manhattan street.",
+    "parent": 5,
+    "polygon": [
+      [250, 348],
+      [750, 348],
+      [750, 352],
+      [250, 352]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 64,
+    "description": "Another horizontal Manhattan street.",
+    "parent": 5,
+    "polygon": [
+      [250, 398],
+      [750, 398],
+      [750, 402],
+      [250, 402]
+    ],
+    "rgb": [50, 50, 50]
+  },
+  {
+    "id": 65,
+    "description": "A third horizontal Manhattan street.",
+    "parent": 5,
+    "polygon": [
+      [250, 448],
+      [750, 448],
+      [750, 452],
+      [250, 452]
+    ],
+    "rgb": [50, 50, 50]
+  }
+]

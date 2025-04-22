@@ -1,0 +1,242 @@
+[
+  {
+    "id": 0,
+    "description": "A white technical background for the robot assembly diagram.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [245, 245, 245]
+  },
+  {
+    "id": 1,
+    "description": "The main body chassis of the robot.",
+    "parent": 0,
+    "polygon": [
+      [300, 250],
+      [500, 250],
+      [500, 400],
+      [300, 400]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 2,
+    "description": "A blue control panel on the robot's body.",
+    "parent": 1,
+    "polygon": [
+      [350, 275],
+      [450, 275],
+      [450, 325],
+      [350, 325]
+    ],
+    "rgb": [30, 144, 255]
+  },
+  {
+    "id": 3,
+    "description": "A small red power button on the control panel.",
+    "parent": 2,
+    "polygon": [
+      [390, 290],
+      [410, 290],
+      [410, 310],
+      [390, 310]
+    ],
+    "rgb": [255, 0, 0]
+  },
+  {
+    "id": 4,
+    "description": "A green status indicator light.",
+    "parent": 2,
+    "polygon": [
+      [425, 290],
+      [440, 290],
+      [440, 305],
+      [425, 305]
+    ],
+    "rgb": [0, 255, 0]
+  },
+  {
+    "id": 5,
+    "description": "The robot's cylindrical head.",
+    "parent": 0,
+    "polygon": [
+      [350, 150],
+      [450, 150],
+      [450, 250],
+      [350, 250]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 6,
+    "description": "A visor-like sensor array on the robot's head.",
+    "parent": 5,
+    "polygon": [
+      [375, 175],
+      [425, 175],
+      [425, 200],
+      [375, 200]
+    ],
+    "rgb": [0, 0, 255]
+  },
+  {
+    "id": 7,
+    "description": "An antenna on top of the robot's head.",
+    "parent": 5,
+    "polygon": [
+      [390, 130],
+      [400, 130],
+      [410, 150],
+      [380, 150]
+    ],
+    "rgb": [128, 128, 128]
+  },
+  {
+    "id": 8,
+    "description": "The left arm of the robot.",
+    "parent": 1,
+    "polygon": [
+      [275, 275],
+      [300, 275],
+      [300, 375],
+      [275, 375]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 9,
+    "description": "The robot's left hand with three fingers.",
+    "parent": 8,
+    "polygon": [
+      [260, 375],
+      [290, 375],
+      [290, 400],
+      [260, 400]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 10,
+    "description": "The right arm of the robot.",
+    "parent": 1,
+    "polygon": [
+      [500, 275],
+      [525, 275],
+      [525, 375],
+      [500, 375]
+    ],
+    "rgb": [192, 192, 192]
+  },
+  {
+    "id": 11,
+    "description": "The robot's right hand with three fingers.",
+    "parent": 10,
+    "polygon": [
+      [510, 375],
+      [540, 375],
+      [540, 400],
+      [510, 400]
+    ],
+    "rgb": [169, 169, 169]
+  },
+  {
+    "id": 12,
+    "description": "The left leg of the robot.",
+    "parent": 1,
+    "polygon": [
+      [350, 400],
+      [375, 400],
+      [375, 500],
+      [350, 500]
+    ],
+    "rgb": [128, 128, 128]
+  },
+  {
+    "id": 13,
+    "description": "The left foot of the robot.",
+    "parent": 12,
+    "polygon": [
+      [340, 500],
+      [385, 500],
+      [385, 525],
+      [340, 525]
+    ],
+    "rgb": [105, 105, 105]
+  },
+  {
+    "id": 14,
+    "description": "The right leg of the robot.",
+    "parent": 1,
+    "polygon": [
+      [425, 400],
+      [450, 400],
+      [450, 500],
+      [425, 500]
+    ],
+    "rgb": [128, 128, 128]
+  },
+  {
+    "id": 15,
+    "description": "The right foot of the robot.",
+    "parent": 14,
+    "polygon": [
+      [415, 500],
+      [460, 500],
+      [460, 525],
+      [415, 525]
+    ],
+    "rgb": [105, 105, 105]
+  },
+  {
+    "id": 16,
+    "description": "A storage battery component for the robot.",
+    "parent": 0,
+    "polygon": [
+      [600, 300],
+      [650, 300],
+      [650, 350],
+      [600, 350]
+    ],
+    "rgb": [255, 215, 0]
+  },
+  {
+    "id": 17,
+    "description": "An extra sensor module component.",
+    "parent": 0,
+    "polygon": [
+      [650, 400],
+      [700, 400],
+      [700, 450],
+      [650, 450]
+    ],
+    "rgb": [0, 128, 128]
+  },
+  {
+    "id": 18,
+    "description": "A toolbox with repair instruments.",
+    "parent": 0,
+    "polygon": [
+      [150, 350],
+      [200, 350],
+      [200, 400],
+      [150, 400]
+    ],
+    "rgb": [165, 42, 42]
+  },
+  {
+    "id": 19,
+    "description": "Assembly instructions document.",
+    "parent": 0,
+    "polygon": [
+      [100, 450],
+      [175, 450],
+      [175, 500],
+      [100, 500]
+    ],
+    "rgb": [255, 255, 255]
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "id": 0,
+    "description": "A light blue sky background for the forest scene.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [135, 206, 235]
+  },
+  {
+    "id": 1,
+    "description": "Brown dirt ground at the bottom of the scene.",
+    "parent": 0,
+    "polygon": [
+      [0, 500],
+      [800, 500],
+      [800, 600],
+      [0, 600]
+    ],
+    "rgb": [139, 69, 19]
+  },
+  {
+    "id": 2,
+    "description": "A large oak tree with a thick brown trunk.",
+    "parent": 0,
+    "polygon": [
+      [150, 300],
+      [180, 300],
+      [180, 500],
+      [150, 500]
+    ],
+    "rgb": [101, 67, 33]
+  },
+  {
+    "id": 3,
+    "description": "The oak tree's green leafy canopy.",
+    "parent": 2,
+    "polygon": [
+      [90, 300],
+      [165, 200],
+      [240, 300]
+    ],
+    "rgb": [34, 139, 34]
+  },
+  {
+    "id": 4,
+    "description": "A pine tree with a tall thin trunk.",
+    "parent": 0,
+    "polygon": [
+      [300, 350],
+      [315, 350],
+      [315, 500],
+      [300, 500]
+    ],
+    "rgb": [101, 67, 33]
+  },
+  {
+    "id": 5,
+    "description": "The pine tree's triangular green top.",
+    "parent": 4,
+    "polygon": [
+      [260, 350],
+      [307, 200],
+      [355, 350]
+    ],
+    "rgb": [0, 100, 0]
+  },
+  {
+    "id": 6,
+    "description": "A birch tree with a white trunk.",
+    "parent": 0,
+    "polygon": [
+      [500, 320],
+      [520, 320],
+      [520, 500],
+      [500, 500]
+    ],
+    "rgb": [245, 245, 245]
+  },
+  {
+    "id": 7,
+    "description": "Black stripes on the birch tree trunk.",
+    "parent": 6,
+    "polygon": [
+      [500, 350],
+      [520, 350],
+      [520, 353],
+      [500, 353]
+    ],
+    "rgb": [0, 0, 0]
+  },
+  {
+    "id": 8,
+    "description": "More black stripes on the birch tree trunk.",
+    "parent": 6,
+    "polygon": [
+      [500, 400],
+      [520, 400],
+      [520, 403],
+      [500, 403]
+    ],
+    "rgb": [0, 0, 0]
+  },
+  {
+    "id": 9,
+    "description": "The birch tree's round green foliage.",
+    "parent": 6,
+    "polygon": [
+      [460, 320],
+      [510, 250],
+      [560, 320]
+    ],
+    "rgb": [60, 179, 113]
+  },
+  {
+    "id": 10,
+    "description": "A small bush with green leaves.",
+    "parent": 0,
+    "polygon": [
+      [400, 450],
+      [430, 430],
+      [460, 450],
+      [460, 500],
+      [400, 500]
+    ],
+    "rgb": [46, 139, 87]
+  },
+  {
+    "id": 11,
+    "description": "Red berries on the bush.",
+    "parent": 10,
+    "polygon": [
+      [410, 440],
+      [415, 440],
+      [415, 445],
+      [410, 445]
+    ],
+    "rgb": [220, 20, 60]
+  },
+  {
+    "id": 12,
+    "description": "More red berries on the bush.",
+    "parent": 10,
+    "polygon": [
+      [430, 435],
+      [435, 435],
+      [435, 440],
+      [430, 440]
+    ],
+    "rgb": [220, 20, 60]
+  },
+  {
+    "id": 13,
+    "description": "Even more red berries on the bush.",
+    "parent": 10,
+    "polygon": [
+      [450, 445],
+      [455, 445],
+      [455, 450],
+      [450, 450]
+    ],
+    "rgb": [220, 20, 60]
+  },
+  {
+    "id": 14,
+    "description": "A gray rock near the trees.",
+    "parent": 0,
+    "polygon": [
+      [600, 450],
+      [650, 450],
+      [675, 475],
+      [650, 500],
+      [600, 500]
+    ],
+    "rgb": [128, 128, 128]
+  },
+  {
+    "id": 15,
+    "description": "A brown rabbit sitting by the rock.",
+    "parent": 0,
+    "polygon": [
+      [570, 475],
+      [580, 465],
+      [590, 475],
+      [590, 490],
+      [570, 490]
+    ],
+    "rgb": [139, 69, 19]
+  },
+  {
+    "id": 16,
+    "description": "The rabbit's white tail.",
+    "parent": 15,
+    "polygon": [
+      [570, 480],
+      [575, 480],
+      [575, 485],
+      [570, 485]
+    ],
+    "rgb": [255, 255, 255]
+  },
+  {
+    "id": 17,
+    "description": "A yellow sun in the sky.",
+    "parent": 0,
+    "polygon": [
+      [700, 50],
+      [730, 80],
+      [700, 110],
+      [670, 80]
+    ],
+    "rgb": [255, 255, 0]
+  }
+]

@@ -8,44 +8,22 @@ import subprocess
 import sys
 import os
 import time
+import glob
 
 # Get the current directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Define the actual paths to the JSON files
-TEST_FILES = [
-    os.path.join(current_dir, "shapes_jsons", "shapes.json"),
-    os.path.join(current_dir, "shapes_jsons", "shapes2.json"),
-    os.path.join(current_dir, "shapes_jsons", "house.json"),
-    os.path.join(current_dir, "shapes_jsons", "car.json"),
-    os.path.join(current_dir, "shapes_jsons", "rgb_explicit_test.json"),
-    os.path.join(current_dir, "shapes_jsons", "landscape.json"),
-    os.path.join(current_dir, "shapes_jsons", "nested_shapes.json"),
-    os.path.join(current_dir, "shapes_jsons", "color_conflict.json"),
-    os.path.join(current_dir, "shapes_jsons", "semantic_colors.json"),
-    os.path.join(current_dir, "shapes_jsons", "flags.json"),
-    os.path.join(current_dir, "shapes_jsons", "abstract_art.json"),
-    os.path.join(current_dir, "shapes_jsons", "logo.json"),
-    os.path.join(current_dir, "shapes_jsons", "face.json"),
-    os.path.join(current_dir, "shapes_jsons", "shapes2 copy.json"),
-    os.path.join(current_dir, "shapes_jsons", "cosmos.json"),
-      os.path.join(current_dir, "shapes_jsons", "cyberpunk.json"),
-]
+# Path to the shapes_jsons directory
+shapes_dir = os.path.join(current_dir, "shapes_jsons")
 
-# Verify which files actually exist and filter the list
-existing_files = []
-for file_path in TEST_FILES:
-    if os.path.exists(file_path):
-        existing_files.append(file_path)
-    else:
-        print(f"Warning: File not found: {file_path}")
+# Find all JSON files in the directory
+json_files = glob.glob(os.path.join(shapes_dir, "*.json"))
 
-if not existing_files:
-    print("Error: No test files found!")
+if not json_files:
+    print("Error: No JSON files found in the shapes_jsons directory!")
     sys.exit(1)
 else:
-    print(f"Found {len(existing_files)} test files.")
-    TEST_FILES = existing_files
+    print(f"Found {len(json_files)} JSON files to test.")
 
 # Create results directory if it doesn't exist
 results_dir = os.path.join(current_dir, "results")
@@ -53,13 +31,13 @@ os.makedirs(results_dir, exist_ok=True)
 
 # Generate commands
 commands = []
-for json_file in TEST_FILES:
+for json_file in json_files:
     base_name = os.path.basename(json_file).replace(".json", "")
     output_file = os.path.join(results_dir, f"output_{base_name}.png")
     commands.append([sys.executable, os.path.join(current_dir, "test_polygons.py"), json_file, output_file])
 
 # Execute each command one after the other
-print(f"Running tests on {len(TEST_FILES)} JSON files...")
+print(f"Running tests on {len(json_files)} JSON files...")
 start_time = time.time()
 
 success_count = 0
