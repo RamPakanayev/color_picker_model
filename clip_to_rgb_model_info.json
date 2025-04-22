@@ -1,1 +1,1 @@
-{"embed_dim": 512}
+{"embed_dim": 512, "context_weight": 0.3, "model_type": "sibling_contextual"}
