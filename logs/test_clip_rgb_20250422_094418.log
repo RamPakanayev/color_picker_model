@@ -1,5 +1,0 @@
-[INFO] [2025-04-22 09:44:22,416] 'A orange canvas with an aspect ratio of 0.56. It fills the entire image and contains other shapes.' -> (253, 164, 3)
-[INFO] [2025-04-22 09:44:22,473] 'A rgb(255,174,201) shape near the point (191, 267) on the canvas. It spans about 238x233 pixels and has an aspect ratio of 1.02. It has an irregular polygonal outline.' -> (237, 175, 204)
-[INFO] [2025-04-22 09:44:22,532] 'A rgb(0,162,232) shape near the point (198, 519) on the canvas. It spans about 232x181 pixels and has an aspect ratio of 1.28. It has an irregular polygonal outline.' -> (12, 163, 230)
-[INFO] [2025-04-22 09:44:22,592] 'A rgb(163,73,164) shape near the point (141, 267) on the canvas. It spans about 43x205 pixels and has an aspect ratio of 0.21. It has an irregular polygonal outline.' -> (162, 72, 161)
-[INFO] [2025-04-22 09:44:22,626] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_model\results\output_shapes2.png
