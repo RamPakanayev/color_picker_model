@@ -1,0 +1,184 @@
+[
+  {
+    "id": 0,
+    "description": "The bright blue sky.",
+    "parent": null,
+    "polygon": [
+      [0, 0],
+      [800, 0],
+      [800, 600],
+      [0, 600]
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The bright yellow sun.",
+    "parent": 0,
+    "polygon": [
+      [650, 80],
+      [700, 50],
+      [750, 80],
+      [780, 130],
+      [750, 180],
+      [700, 210],
+      [650, 180],
+      [620, 130]
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A magnificent rainbow arching across the sky.",
+    "parent": 0,
+    "polygon": [
+      [100, 300],
+      [150, 250],
+      [250, 200],
+      [350, 180],
+      [450, 175],
+      [550, 180],
+      [650, 200],
+      [750, 250],
+      [750, 270],
+      [650, 220],
+      [550, 200],
+      [450, 195],
+      [350, 200],
+      [250, 220],
+      [150, 270],
+      [100, 320]
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A fluffy cloud on the left side.",
+    "parent": 0,
+    "polygon": [
+      [100, 120],
+      [150, 100],
+      [200, 105],
+      [240, 115],
+      [230, 140],
+      [200, 155],
+      [150, 150],
+      [90, 140]
+    ]
+  },
+  {
+    "id": 4,
+    "description": "Another cloud near the center.",
+    "parent": 0,
+    "polygon": [
+      [300, 150],
+      [350, 130],
+      [400, 135],
+      [430, 150],
+      [420, 180],
+      [380, 190],
+      [330, 185],
+      [290, 170]
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A smaller cloud in the distance.",
+    "parent": 0,
+    "polygon": [
+      [500, 100],
+      [530, 90],
+      [560, 95],
+      [575, 110],
+      [565, 125],
+      [535, 130],
+      [505, 120]
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A commercial passenger airplane flying through the sky.",
+    "parent": 0,
+    "polygon": [
+      [250, 300],
+      [500, 300],
+      [550, 315],
+      [500, 330],
+      [250, 330]
+    ]
+  },
+  {
+    "id": 7,
+    "description": "The vertical tail fin of the airplane.",
+    "parent": 6,
+    "polygon": [
+      [500, 300],
+      [525, 265],
+      [505, 265],
+      [480, 300]
+    ]
+  },
+  {
+    "id": 8,
+    "description": "The left wing of the airplane.",
+    "parent": 6,
+    "polygon": [
+      [350, 300],
+      [420, 300],
+      [380, 260],
+      [320, 260]
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The right wing of the airplane.",
+    "parent": 6,
+    "polygon": [
+      [350, 330],
+      [420, 330],
+      [380, 370],
+      [320, 370]
+    ]
+  },
+  {
+    "id": 10,
+    "description": "The cockpit windows at the front of the airplane.",
+    "parent": 6,
+    "polygon": [
+      [250, 305],
+      [285, 305],
+      [285, 325],
+      [250, 325]
+    ]
+  },
+  {
+    "id": 11,
+    "description": "A bird flying to the left of the airplane.",
+    "parent": 0,
+    "polygon": [
+      [150, 350],
+      [160, 340],
+      [180, 350],
+      [160, 360]
+    ]
+  },
+  {
+    "id": 12,
+    "description": "Another bird flying to the right of the airplane.",
+    "parent": 0,
+    "polygon": [
+      [600, 250],
+      [610, 240],
+      [630, 250],
+      [610, 260]
+    ]
+  },
+  {
+    "id": 13,
+    "description": "A third bird fly high near the sun.",
+    "parent": 0,
+    "polygon": [
+      [600, 100],
+      [610, 90],
+      [630, 100],
+      [610, 110]
+    ]
+  }
+]

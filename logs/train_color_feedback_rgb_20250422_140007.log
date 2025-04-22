@@ -1,0 +1,398 @@
+[INFO] [2025-04-22 14:00:07,924] Found 22 JSON files in C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\shapes_jsons
+[INFO] [2025-04-22 14:00:07,925] Loaded 11 shapes from abstract_art.json
+[INFO] [2025-04-22 14:00:07,925] Loaded 14 shapes from abstract_complex.json
+[INFO] [2025-04-22 14:00:07,926] Loaded 7 shapes from car.json
+[INFO] [2025-04-22 14:00:07,926] Loaded 9 shapes from color_conflict.json
+[INFO] [2025-04-22 14:00:07,928] Loaded 23 shapes from complex_coral_reef.json
+[INFO] [2025-04-22 14:00:07,929] Loaded 18 shapes from desert.json
+[INFO] [2025-04-22 14:00:07,929] Loaded 11 shapes from face.json
+[INFO] [2025-04-22 14:00:07,930] Loaded 18 shapes from flags.json
+[INFO] [2025-04-22 14:00:07,930] Loaded 18 shapes from forest.json
+[INFO] [2025-04-22 14:00:07,931] Loaded 11 shapes from fractal_landscape.json
+[INFO] [2025-04-22 14:00:07,931] Loaded 16 shapes from futuristic_city.json
+[INFO] [2025-04-22 14:00:07,933] Loaded 7 shapes from house.json
+[INFO] [2025-04-22 14:00:07,933] Loaded 9 shapes from landscape.json
+[INFO] [2025-04-22 14:00:07,935] Loaded 14 shapes from landscape2.json
+[INFO] [2025-04-22 14:00:07,936] Loaded 9 shapes from nested_shapes.json
+[WARNING] [2025-04-22 14:00:07,938] Error loading C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\shapes_jsons\neural_network_visualization.json: Expecting value: line 1 column 1 (char 0)
+[INFO] [2025-04-22 14:00:07,938] Loaded 66 shapes from nyc.json
+[INFO] [2025-04-22 14:00:07,938] Loaded 20 shapes from robot.json
+[INFO] [2025-04-22 14:00:07,939] Loaded 3 shapes from shapes.json
+[INFO] [2025-04-22 14:00:07,940] Loaded 4 shapes from shapes2.json
+[INFO] [2025-04-22 14:00:07,940] Loaded 13 shapes from solar_system.json
+[INFO] [2025-04-22 14:00:07,941] Loaded 21 shapes from under_water.json
+[INFO] [2025-04-22 14:00:07,941] Using device: cpu
+[INFO] [2025-04-22 14:00:11,919] CLIP model loaded
+[INFO] [2025-04-22 14:00:11,975] Processing file: abstract_art.json with 11 shapes
+[INFO] [2025-04-22 14:00:11,976] Processing shapes in order: ['0:A canvas with a deep...', '1:A vibrant scarlet fl...', '2:A shape that appears...', '4:A silver crescent mo...', '6:Lavender and purple ...', '7:A dark turquoise sha...', '8:Small white star-lik...', '9:Another small white ...', '10:A third small white ...', '3:An emerald green sha...', '5:A smaller ivory shap...']
+[INFO] [2025-04-22 14:00:12,488] Processing file: abstract_complex.json with 14 shapes
+[INFO] [2025-04-22 14:00:12,489] Processing shapes in order: ['0:A midnight blue canv...', '1:A flowing crimson sh...', '2:An electric cobalt b...', '3:A spiraling golden s...', '4:A complex emerald gr...', '5:A royal purple starb...', '6:A vermillion shape w...', '7:An iridescent turquo...', '8:A hot pink explosive...', '9:A swirling amber sha...', '10:A silvery shape with...', '11:A complex deep coral...', '12:A lime green asymmet...', '13:An indigo shape with...']
+[INFO] [2025-04-22 14:00:13,129] Processing file: car.json with 7 shapes
+[INFO] [2025-04-22 14:00:13,129] Processing shapes in order: ['0:A gray background ca...', '1:The red body of a sp...', '6:The asphalt black ro...', '2:The black tire on th...', '3:The black tire on th...', '4:The blue tinted glas...', '5:The yellow headlight...']
+[INFO] [2025-04-22 14:00:13,432] Processing file: color_conflict.json with 9 shapes
+[INFO] [2025-04-22 14:00:13,432] Processing shapes in order: ['0:A white canvas with ...', '1:A red container shap...', '3:A green container sh...', '5:A yellow container a...', '7:This rgb(255,0,0) sh...', '8:This shape has no ex...', '2:A blue shape inside ...', '4:This shape should be...', '6:This shape is descri...']
+[INFO] [2025-04-22 14:00:13,822] Processing file: complex_coral_reef.json with 23 shapes
+[INFO] [2025-04-22 14:00:13,822] Processing shapes in order: ['0:Deep teal ocean wate...', '1:A complex branching ...', '2:A purple sea fan wit...', '3:A bright yellow brai...', '4:A cluster of bright ...', '5:A green lettuce cora...', '6:A school of silver f...', '7:A vibrant pink anemo...', '10:A red starfish with ...', '11:A swirling pattern o...', '12:A group of blue-purp...', '14:A mottled green and ...', '17:A massive table cora...', '18:Intricate, ornate pa...', '19:A camouflaged octopu...', '21:Sunlight rays penetr...', '22:More light beams fil...', '8:An orange and white ...', '13:Long, needle-like sp...', '15:The shell pattern on...', "16:The sea turtle's fli...", '20:Color-changing patte...', '9:White stripes on the...']
+[INFO] [2025-04-22 14:00:15,069] Processing file: desert.json with 18 shapes
+[INFO] [2025-04-22 14:00:15,069] Processing shapes in order: ['0:A bright blue sky ab...', '1:Golden sand dunes co...', '4:A towering red rock ...', '16:A bright yellow sun ...', '17:A vulture flying in ...', '2:A large sand dune wi...', '6:A tall green cactus ...', '9:A smaller barrel cac...', '13:A road winding throu...', '15:A small tumbleweed r...', '5:Shadow side of the r...', '3:Shadow area on the s...', '7:Left arm of the cact...', '8:Right arm of the cac...', '10:Spines on the barrel...', '11:More spines on the b...', '12:A red flower bloomin...', '14:Yellow lines painted...']
+[INFO] [2025-04-22 14:00:16,120] Processing file: face.json with 11 shapes
+[INFO] [2025-04-22 14:00:16,120] Processing shapes in order: ['0:A white background c...', '1:A skin-colored circu...', '2:A pink smiling mouth...', '3:A blue left eye....', '4:A blue right eye....', '7:A small brown nose i...', '8:Yellow hair on top o...', '9:Red cheeks on the fa...', '10:Red cheeks on the ot...', '5:A black pupil in the...', '6:A black pupil in the...']
+[INFO] [2025-04-22 14:00:16,763] Processing file: flags.json with 18 shapes
+[INFO] [2025-04-22 14:00:16,764] Processing shapes in order: ['0:A gray canvas contai...', '1:The French flag with...', '5:The German flag with...', '9:The Italian flag wit...', '13:The Japanese flag wi...', '15:The Swedish flag wit...', '2:The blue stripe of t...', '3:The white stripe of ...', '4:The red stripe of th...', '6:The black stripe of ...', '7:The red stripe of th...', '8:The yellow (gold) st...', '10:The green stripe of ...', '11:The white stripe of ...', '12:The red stripe of th...', '14:The red circle (sun ...', '16:The horizontal yello...', '17:The vertical yellow ...']
+[INFO] [2025-04-22 14:00:17,798] Processing file: forest.json with 18 shapes
+[INFO] [2025-04-22 14:00:17,799] Processing shapes in order: ['0:A light blue sky bac...', '1:Brown dirt ground at...', '2:A large oak tree wit...', '4:A pine tree with a t...', '6:A birch tree with a ...', '10:A small bush with gr...', '14:A gray rock near the...', '15:A brown rabbit sitti...', '17:A yellow sun in the ...', "3:The oak tree's green...", "5:The pine tree's tria...", '7:Black stripes on the...', '8:More black stripes o...', "9:The birch tree's rou...", '11:Red berries on the b...', '12:More red berries on ...', '13:Even more red berrie...', "16:The rabbit's white t..."]
+[INFO] [2025-04-22 14:00:18,820] Processing file: fractal_landscape.json with 11 shapes
+[INFO] [2025-04-22 14:00:18,820] Processing shapes in order: ['0:A gradient backgroun...', '1:A recursive, self-si...', '3:A complex, Koch snow...', '2:A smaller-scale, sel...', '4:Mandelbrot-like frac...', '5:A recursive spiral s...', '6:A Julia set-inspired...', '7:Self-similar tree st...', '8:Sierpinski gasket-in...', '9:Dragons curve-inspir...', '10:Hilbert curve-inspir...']
+[INFO] [2025-04-22 14:00:19,534] Processing file: futuristic_city.json with 16 shapes
+[INFO] [2025-04-22 14:00:19,535] Processing shapes in order: ['0:A dark night sky wit...', '1:The neon-lit horizon...', '15:A hovering surveilla...', '2:A massive central sk...', '4:A twisted helix-shap...', '6:A suspended floating...', '8:A crystalline pyrami...', '10:A biomorphic structu...', '12:A network of elevate...', '14:A holographic advert...', '3:Glowing blue-cyan wi...', '5:Pulsating purple-mag...', '7:Green anti-gravity p...', '9:Light reflections an...', '11:Glowing bioluminesce...', '13:Flowing traffic ligh...']
+[INFO] [2025-04-22 14:00:20,500] Processing file: house.json with 7 shapes
+[INFO] [2025-04-22 14:00:20,500] Processing shapes in order: ['0:A black canvas that ...', '1:The white main body ...', '2:The brown roof of th...', '6:A green lawn in fron...', '3:A square window on t...', '4:A square window on t...', '5:A red door in the ce...']
+[INFO] [2025-04-22 14:00:20,900] Processing file: landscape.json with 9 shapes
+[INFO] [2025-04-22 14:00:20,900] Processing shapes in order: ['0:A blue sky backgroun...', '1:A large bright yello...', '2:Rolling green hills ...', '3:A brown mountain ran...', '5:A light blue lake at...', '6:A small wooden brown...', '8:A tall green pine tr...', '4:White snow caps on t...', '7:A red roof on top of...']
+[INFO] [2025-04-22 14:00:21,419] Processing file: landscape2.json with 14 shapes
+[INFO] [2025-04-22 14:00:21,420] Processing shapes in order: ['0:A gradient sky from ...', '1:A large rugged mount...', '3:A secondary mountain...', '4:A green valley with ...', '12:Low-hanging clouds w...', '2:Snow-capped peaks of...', '8:A rocky outcropping ...', '13:A herd of mountain g...', '10:A high alpine lake w...', '5:A flowing river with...', '6:A cluster of diverse...', '7:Another group of pin...', '9:A meadow of wildflow...', '11:A group of scattered...']
+[INFO] [2025-04-22 14:00:22,243] Processing file: nested_shapes.json with 9 shapes
+[INFO] [2025-04-22 14:00:22,244] Processing shapes in order: ['0:A black canvas conta...', '1:A large red square c...', '2:A blue circle inside...', '4:A green square insid...', '6:A purple diamond in ...', '3:A yellow triangle in...', '5:An orange triangle i...', '7:A small white square...', '8:A tiny black dot ins...']
+[INFO] [2025-04-22 14:00:22,728] Processing file: nyc.json with 66 shapes
+[INFO] [2025-04-22 14:00:22,729] Processing shapes in order: ['0:A gradient blue sky ...', '1:The golden sun in th...', '2:A fluffy white cloud...', '3:Another fluffy white...', '4:Deep blue Hudson and...', '5:The island of Manhat...', '6:Brooklyn skyline in ...', '7:Another Brooklyn bui...', '8:A third Brooklyn bui...', '9:Queens skyline build...', '10:Another Queens build...', '11:A third Queens build...', '35:Brooklyn Bridge main...', '39:The Statue of Libert...', '56:A white boat on the ...', '57:Another white boat o...', '12:One World Trade Cent...', '14:Empire State Buildin...', '15:Empire State Buildin...', '16:Empire State Buildin...', '17:Empire State Buildin...', '18:Chrysler Building ma...', '19:Chrysler Building fi...', '20:Chrysler Building se...', '21:Chrysler Building sp...', '22:A gray Manhattan sky...', '23:Another Manhattan sk...', '24:A third Manhattan sk...', '25:A Midtown Manhattan ...', '26:Another Midtown Manh...', '27:An East Side Manhatt...', '28:The UN Headquarters ...', '29:An Upper East Side b...', '30:Another Upper East S...', '31:Central Park with vi...', '42:Times Square with vi...', '47:A yellow taxi in Man...', '48:Another yellow taxi ...', '49:A third yellow taxi ...', '50:A fourth yellow taxi...', '51:The High Line with g...', '58:A vertical Manhattan...', '59:Another vertical Man...', '60:A third vertical Man...', '61:A fourth vertical Ma...', '62:A fifth vertical Man...', '63:A horizontal Manhatt...', '64:Another horizontal M...', '65:A third horizontal M...', '36:Brooklyn Bridge left...', '37:Brooklyn Bridge righ...', '38:Brooklyn Bridge road...', '40:The Statue of Libert...', '41:The Statue of Libert...', '13:Blue-tinted windows ...', '32:A tree in Central Pa...', '33:Another tree in Cent...', '34:A third tree in Cent...', '43:A yellow billboard i...', '44:A cyan billboard in ...', '45:A green billboard in...', '46:A magenta billboard ...', '52:Plants on the High L...', '53:More plants on the H...', '54:Additional plants on...', '55:More vegetation on t...']
+[INFO] [2025-04-22 14:00:26,286] Processing file: robot.json with 20 shapes
+[INFO] [2025-04-22 14:00:26,287] Processing shapes in order: ['0:A white technical ba...', '1:The main body chassi...', "5:The robot's cylindri...", '16:A storage battery co...', '17:An extra sensor modu...', '18:A toolbox with repai...', '19:Assembly instruction...', '2:A blue control panel...', '8:The left arm of the ...', '10:The right arm of the...', '12:The left leg of the ...', '14:The right leg of the...', '6:A visor-like sensor ...', '7:An antenna on top of...', '3:A small red power bu...', '4:A green status indic...', "9:The robot's left han...", "11:The robot's right ha...", '13:The left foot of the...', '15:The right foot of th...']
+[INFO] [2025-04-22 14:00:27,384] Processing file: shapes.json with 3 shapes
+[INFO] [2025-04-22 14:00:27,385] Processing shapes in order: ['0:A black canvas with ...', '1:A red shape near the...', '2:A white shape near t...']
+[INFO] [2025-04-22 14:00:27,558] Processing file: shapes2.json with 4 shapes
+[INFO] [2025-04-22 14:00:27,558] Processing shapes in order: ['0:A orange canvas with...', '2:A rgb(255,174,201) s...', '3:A rgb(0,162,232) sha...', '1:A rgb(163,73,164) sh...']
+[INFO] [2025-04-22 14:00:27,782] Processing file: solar_system.json with 13 shapes
+[INFO] [2025-04-22 14:00:27,782] Processing shapes in order: ['0:A dark space backgro...', '1:The Sun at the cente...', '2:Mercury, the smalles...', '3:Venus, the second pl...', '4:Earth, our home plan...', '5:Mars, the red planet...', '6:Jupiter, the largest...', '7:Saturn with its dist...', '9:Uranus, the seventh ...', '10:Neptune, the eighth ...', '11:A comet passing thro...', "8:Saturn's rings surro...", "12:The comet's glowing ..."]
+[INFO] [2025-04-22 14:00:28,519] Processing file: under_water.json with 21 shapes
+[INFO] [2025-04-22 14:00:28,520] Processing shapes in order: ['0:Deep blue ocean wate...', '1:Sandy ocean floor....', '2:A vibrant orange cor...', '3:A bright yellow cora...', '4:A purple sea anemone...', '5:A large rock formati...', '6:A bright orange clow...', '9:A blue tang fish....', '12:A green sea turtle s...', '16:Long green seaweed g...', '17:More seaweed growing...', '18:Sunlight rays penetr...', '19:More sunlight rays p...', '20:A school of small si...', '7:White stripes on the...', '8:Another white stripe...', '10:A yellow fin on the ...', '11:A tail fin on the bl...', "13:The sea turtle's hea...", "14:The sea turtle's rig...", "15:The sea turtle's lef..."]
+[INFO] [2025-04-22 14:00:29,664] Total dataset size: 322
+[INFO] [2025-04-22 14:00:29,666] Created model with input dimension: 512
+[INFO] [2025-04-22 14:00:29,667] Starting training: 200 epochs, batch size 16
+[INFO] [2025-04-22 14:00:29,770] Epoch 1/200 - Loss: 0.1307
+[INFO] [2025-04-22 14:00:29,775] Saved best model with loss: 0.1307
+[INFO] [2025-04-22 14:00:29,833] Epoch 2/200 - Loss: 0.1242
+[INFO] [2025-04-22 14:00:29,836] Saved best model with loss: 0.1242
+[INFO] [2025-04-22 14:00:29,898] Epoch 3/200 - Loss: 0.1139
+[INFO] [2025-04-22 14:00:29,901] Saved best model with loss: 0.1139
+[INFO] [2025-04-22 14:00:29,966] Epoch 4/200 - Loss: 0.1022
+[INFO] [2025-04-22 14:00:29,968] Saved best model with loss: 0.1022
+[INFO] [2025-04-22 14:00:30,024] Epoch 5/200 - Loss: 0.0960
+[INFO] [2025-04-22 14:00:30,027] Saved best model with loss: 0.0960
+[INFO] [2025-04-22 14:00:30,082] Epoch 6/200 - Loss: 0.0845
+[INFO] [2025-04-22 14:00:30,085] Saved best model with loss: 0.0845
+[INFO] [2025-04-22 14:00:30,142] Epoch 7/200 - Loss: 0.0650
+[INFO] [2025-04-22 14:00:30,145] Saved best model with loss: 0.0650
+[INFO] [2025-04-22 14:00:30,200] Epoch 8/200 - Loss: 0.0551
+[INFO] [2025-04-22 14:00:30,204] Saved best model with loss: 0.0551
+[INFO] [2025-04-22 14:00:30,260] Epoch 9/200 - Loss: 0.0471
+[INFO] [2025-04-22 14:00:30,263] Saved best model with loss: 0.0471
+[INFO] [2025-04-22 14:00:30,317] Epoch 10/200 - Loss: 0.0416
+[INFO] [2025-04-22 14:00:30,321] Saved best model with loss: 0.0416
+[INFO] [2025-04-22 14:00:30,380] Epoch 11/200 - Loss: 0.0383
+[INFO] [2025-04-22 14:00:30,384] Saved best model with loss: 0.0383
+[INFO] [2025-04-22 14:00:30,439] Epoch 12/200 - Loss: 0.0378
+[INFO] [2025-04-22 14:00:30,442] Saved best model with loss: 0.0378
+[INFO] [2025-04-22 14:00:30,504] Epoch 13/200 - Loss: 0.0348
+[INFO] [2025-04-22 14:00:30,506] Saved best model with loss: 0.0348
+[INFO] [2025-04-22 14:00:30,573] Epoch 14/200 - Loss: 0.0340
+[INFO] [2025-04-22 14:00:30,576] Saved best model with loss: 0.0340
+[INFO] [2025-04-22 14:00:30,636] Epoch 15/200 - Loss: 0.0336
+[INFO] [2025-04-22 14:00:30,640] Saved best model with loss: 0.0336
+[INFO] [2025-04-22 14:00:30,698] Epoch 16/200 - Loss: 0.0340
+[INFO] [2025-04-22 14:00:30,749] Epoch 17/200 - Loss: 0.0333
+[INFO] [2025-04-22 14:00:30,752] Saved best model with loss: 0.0333
+[INFO] [2025-04-22 14:00:30,813] Epoch 18/200 - Loss: 0.0318
+[INFO] [2025-04-22 14:00:30,816] Saved best model with loss: 0.0318
+[INFO] [2025-04-22 14:00:30,876] Epoch 19/200 - Loss: 0.0306
+[INFO] [2025-04-22 14:00:30,880] Saved best model with loss: 0.0306
+[INFO] [2025-04-22 14:00:30,942] Epoch 20/200 - Loss: 0.0277
+[INFO] [2025-04-22 14:00:30,945] Saved best model with loss: 0.0277
+[INFO] [2025-04-22 14:00:31,009] Epoch 21/200 - Loss: 0.0248
+[INFO] [2025-04-22 14:00:31,013] Saved best model with loss: 0.0248
+[INFO] [2025-04-22 14:00:31,073] Epoch 22/200 - Loss: 0.0255
+[INFO] [2025-04-22 14:00:31,133] Epoch 23/200 - Loss: 0.0263
+[INFO] [2025-04-22 14:00:31,194] Epoch 24/200 - Loss: 0.0228
+[INFO] [2025-04-22 14:00:31,197] Saved best model with loss: 0.0228
+[INFO] [2025-04-22 14:00:31,253] Epoch 25/200 - Loss: 0.0213
+[INFO] [2025-04-22 14:00:31,256] Saved best model with loss: 0.0213
+[INFO] [2025-04-22 14:00:31,314] Epoch 26/200 - Loss: 0.0213
+[INFO] [2025-04-22 14:00:31,364] Epoch 27/200 - Loss: 0.0189
+[INFO] [2025-04-22 14:00:31,367] Saved best model with loss: 0.0189
+[INFO] [2025-04-22 14:00:31,423] Epoch 28/200 - Loss: 0.0182
+[INFO] [2025-04-22 14:00:31,426] Saved best model with loss: 0.0182
+[INFO] [2025-04-22 14:00:31,483] Epoch 29/200 - Loss: 0.0179
+[INFO] [2025-04-22 14:00:31,486] Saved best model with loss: 0.0179
+[INFO] [2025-04-22 14:00:31,546] Epoch 30/200 - Loss: 0.0175
+[INFO] [2025-04-22 14:00:31,549] Saved best model with loss: 0.0175
+[INFO] [2025-04-22 14:00:31,608] Epoch 31/200 - Loss: 0.0171
+[INFO] [2025-04-22 14:00:31,612] Saved best model with loss: 0.0171
+[INFO] [2025-04-22 14:00:31,670] Epoch 32/200 - Loss: 0.0168
+[INFO] [2025-04-22 14:00:31,674] Saved best model with loss: 0.0168
+[INFO] [2025-04-22 14:00:31,736] Epoch 33/200 - Loss: 0.0167
+[INFO] [2025-04-22 14:00:31,739] Saved best model with loss: 0.0167
+[INFO] [2025-04-22 14:00:31,803] Epoch 34/200 - Loss: 0.0166
+[INFO] [2025-04-22 14:00:31,806] Saved best model with loss: 0.0166
+[INFO] [2025-04-22 14:00:31,868] Epoch 35/200 - Loss: 0.0165
+[INFO] [2025-04-22 14:00:31,870] Saved best model with loss: 0.0165
+[INFO] [2025-04-22 14:00:31,937] Epoch 36/200 - Loss: 0.0177
+[INFO] [2025-04-22 14:00:31,999] Epoch 37/200 - Loss: 0.0191
+[INFO] [2025-04-22 14:00:32,060] Epoch 38/200 - Loss: 0.0171
+[INFO] [2025-04-22 14:00:32,116] Epoch 39/200 - Loss: 0.0153
+[INFO] [2025-04-22 14:00:32,118] Saved best model with loss: 0.0153
+[INFO] [2025-04-22 14:00:32,179] Epoch 40/200 - Loss: 0.0155
+[INFO] [2025-04-22 14:00:32,239] Epoch 41/200 - Loss: 0.0144
+[INFO] [2025-04-22 14:00:32,242] Saved best model with loss: 0.0144
+[INFO] [2025-04-22 14:00:32,310] Epoch 42/200 - Loss: 0.0135
+[INFO] [2025-04-22 14:00:32,313] Saved best model with loss: 0.0135
+[INFO] [2025-04-22 14:00:32,380] Epoch 43/200 - Loss: 0.0119
+[INFO] [2025-04-22 14:00:32,384] Saved best model with loss: 0.0119
+[INFO] [2025-04-22 14:00:32,450] Epoch 44/200 - Loss: 0.0111
+[INFO] [2025-04-22 14:00:32,453] Saved best model with loss: 0.0111
+[INFO] [2025-04-22 14:00:32,514] Epoch 45/200 - Loss: 0.0105
+[INFO] [2025-04-22 14:00:32,517] Saved best model with loss: 0.0105
+[INFO] [2025-04-22 14:00:32,578] Epoch 46/200 - Loss: 0.0102
+[INFO] [2025-04-22 14:00:32,581] Saved best model with loss: 0.0102
+[INFO] [2025-04-22 14:00:32,640] Epoch 47/200 - Loss: 0.0097
+[INFO] [2025-04-22 14:00:32,644] Saved best model with loss: 0.0097
+[INFO] [2025-04-22 14:00:32,700] Epoch 48/200 - Loss: 0.0100
+[INFO] [2025-04-22 14:00:32,758] Epoch 49/200 - Loss: 0.0093
+[INFO] [2025-04-22 14:00:32,761] Saved best model with loss: 0.0093
+[INFO] [2025-04-22 14:00:32,817] Epoch 50/200 - Loss: 0.0088
+[INFO] [2025-04-22 14:00:32,821] Saved best model with loss: 0.0088
+[INFO] [2025-04-22 14:00:32,884] Epoch 51/200 - Loss: 0.0081
+[INFO] [2025-04-22 14:00:32,887] Saved best model with loss: 0.0081
+[INFO] [2025-04-22 14:00:32,946] Epoch 52/200 - Loss: 0.0080
+[INFO] [2025-04-22 14:00:32,948] Saved best model with loss: 0.0080
+[INFO] [2025-04-22 14:00:33,007] Epoch 53/200 - Loss: 0.0078
+[INFO] [2025-04-22 14:00:33,010] Saved best model with loss: 0.0078
+[INFO] [2025-04-22 14:00:33,071] Epoch 54/200 - Loss: 0.0074
+[INFO] [2025-04-22 14:00:33,074] Saved best model with loss: 0.0074
+[INFO] [2025-04-22 14:00:33,138] Epoch 55/200 - Loss: 0.0074
+[INFO] [2025-04-22 14:00:33,197] Epoch 56/200 - Loss: 0.0077
+[INFO] [2025-04-22 14:00:33,259] Epoch 57/200 - Loss: 0.0070
+[INFO] [2025-04-22 14:00:33,261] Saved best model with loss: 0.0070
+[INFO] [2025-04-22 14:00:33,317] Epoch 58/200 - Loss: 0.0068
+[INFO] [2025-04-22 14:00:33,320] Saved best model with loss: 0.0068
+[INFO] [2025-04-22 14:00:33,380] Epoch 59/200 - Loss: 0.0064
+[INFO] [2025-04-22 14:00:33,383] Saved best model with loss: 0.0064
+[INFO] [2025-04-22 14:00:33,439] Epoch 60/200 - Loss: 0.0063
+[INFO] [2025-04-22 14:00:33,442] Saved best model with loss: 0.0063
+[INFO] [2025-04-22 14:00:33,499] Epoch 61/200 - Loss: 0.0062
+[INFO] [2025-04-22 14:00:33,502] Saved best model with loss: 0.0062
+[INFO] [2025-04-22 14:00:33,558] Epoch 62/200 - Loss: 0.0061
+[INFO] [2025-04-22 14:00:33,562] Saved best model with loss: 0.0061
+[INFO] [2025-04-22 14:00:33,620] Epoch 63/200 - Loss: 0.0059
+[INFO] [2025-04-22 14:00:33,624] Saved best model with loss: 0.0059
+[INFO] [2025-04-22 14:00:33,684] Epoch 64/200 - Loss: 0.0058
+[INFO] [2025-04-22 14:00:33,687] Saved best model with loss: 0.0058
+[INFO] [2025-04-22 14:00:33,748] Epoch 65/200 - Loss: 0.0058
+[INFO] [2025-04-22 14:00:33,750] Saved best model with loss: 0.0058
+[INFO] [2025-04-22 14:00:33,809] Epoch 66/200 - Loss: 0.0057
+[INFO] [2025-04-22 14:00:33,813] Saved best model with loss: 0.0057
+[INFO] [2025-04-22 14:00:33,878] Epoch 67/200 - Loss: 0.0056
+[INFO] [2025-04-22 14:00:33,881] Saved best model with loss: 0.0056
+[INFO] [2025-04-22 14:00:33,945] Epoch 68/200 - Loss: 0.0056
+[INFO] [2025-04-22 14:00:33,948] Saved best model with loss: 0.0056
+[INFO] [2025-04-22 14:00:34,060] Epoch 69/200 - Loss: 0.0055
+[INFO] [2025-04-22 14:00:34,063] Saved best model with loss: 0.0055
+[INFO] [2025-04-22 14:00:34,126] Epoch 70/200 - Loss: 0.0055
+[INFO] [2025-04-22 14:00:34,129] Saved best model with loss: 0.0055
+[INFO] [2025-04-22 14:00:34,187] Epoch 71/200 - Loss: 0.0055
+[INFO] [2025-04-22 14:00:34,192] Saved best model with loss: 0.0055
+[INFO] [2025-04-22 14:00:34,256] Epoch 72/200 - Loss: 0.0054
+[INFO] [2025-04-22 14:00:34,259] Saved best model with loss: 0.0054
+[INFO] [2025-04-22 14:00:34,320] Epoch 73/200 - Loss: 0.0054
+[INFO] [2025-04-22 14:00:34,322] Saved best model with loss: 0.0054
+[INFO] [2025-04-22 14:00:34,383] Epoch 74/200 - Loss: 0.0054
+[INFO] [2025-04-22 14:00:34,386] Saved best model with loss: 0.0054
+[INFO] [2025-04-22 14:00:34,447] Epoch 75/200 - Loss: 0.0054
+[INFO] [2025-04-22 14:00:34,450] Saved best model with loss: 0.0054
+[INFO] [2025-04-22 14:00:34,512] Epoch 76/200 - Loss: 0.0081
+[INFO] [2025-04-22 14:00:34,570] Epoch 77/200 - Loss: 0.0072
+[INFO] [2025-04-22 14:00:34,630] Epoch 78/200 - Loss: 0.0060
+[INFO] [2025-04-22 14:00:34,687] Epoch 79/200 - Loss: 0.0075
+[INFO] [2025-04-22 14:00:34,745] Epoch 80/200 - Loss: 0.0106
+[INFO] [2025-04-22 14:00:34,800] Epoch 81/200 - Loss: 0.0076
+[INFO] [2025-04-22 14:00:34,858] Epoch 82/200 - Loss: 0.0058
+[INFO] [2025-04-22 14:00:34,917] Epoch 83/200 - Loss: 0.0053
+[INFO] [2025-04-22 14:00:34,919] Saved best model with loss: 0.0053
+[INFO] [2025-04-22 14:00:34,979] Epoch 84/200 - Loss: 0.0054
+[INFO] [2025-04-22 14:00:35,035] Epoch 85/200 - Loss: 0.0051
+[INFO] [2025-04-22 14:00:35,038] Saved best model with loss: 0.0051
+[INFO] [2025-04-22 14:00:35,096] Epoch 86/200 - Loss: 0.0045
+[INFO] [2025-04-22 14:00:35,099] Saved best model with loss: 0.0045
+[INFO] [2025-04-22 14:00:35,160] Epoch 87/200 - Loss: 0.0063
+[INFO] [2025-04-22 14:00:35,221] Epoch 88/200 - Loss: 0.0051
+[INFO] [2025-04-22 14:00:35,276] Epoch 89/200 - Loss: 0.0048
+[INFO] [2025-04-22 14:00:35,334] Epoch 90/200 - Loss: 0.0042
+[INFO] [2025-04-22 14:00:35,337] Saved best model with loss: 0.0042
+[INFO] [2025-04-22 14:00:35,400] Epoch 91/200 - Loss: 0.0043
+[INFO] [2025-04-22 14:00:35,459] Epoch 92/200 - Loss: 0.0040
+[INFO] [2025-04-22 14:00:35,462] Saved best model with loss: 0.0040
+[INFO] [2025-04-22 14:00:35,519] Epoch 93/200 - Loss: 0.0065
+[INFO] [2025-04-22 14:00:35,574] Epoch 94/200 - Loss: 0.0043
+[INFO] [2025-04-22 14:00:35,633] Epoch 95/200 - Loss: 0.0037
+[INFO] [2025-04-22 14:00:35,635] Saved best model with loss: 0.0037
+[INFO] [2025-04-22 14:00:35,691] Epoch 96/200 - Loss: 0.0033
+[INFO] [2025-04-22 14:00:35,695] Saved best model with loss: 0.0033
+[INFO] [2025-04-22 14:00:35,754] Epoch 97/200 - Loss: 0.0030
+[INFO] [2025-04-22 14:00:35,757] Saved best model with loss: 0.0030
+[INFO] [2025-04-22 14:00:35,817] Epoch 98/200 - Loss: 0.0029
+[INFO] [2025-04-22 14:00:35,820] Saved best model with loss: 0.0029
+[INFO] [2025-04-22 14:00:35,882] Epoch 99/200 - Loss: 0.0028
+[INFO] [2025-04-22 14:00:35,885] Saved best model with loss: 0.0028
+[INFO] [2025-04-22 14:00:35,948] Epoch 100/200 - Loss: 0.0027
+[INFO] [2025-04-22 14:00:35,950] Saved best model with loss: 0.0027
+[INFO] [2025-04-22 14:00:36,013] Epoch 101/200 - Loss: 0.0026
+[INFO] [2025-04-22 14:00:36,015] Saved best model with loss: 0.0026
+[INFO] [2025-04-22 14:00:36,076] Epoch 102/200 - Loss: 0.0026
+[INFO] [2025-04-22 14:00:36,079] Saved best model with loss: 0.0026
+[INFO] [2025-04-22 14:00:36,134] Epoch 103/200 - Loss: 0.0025
+[INFO] [2025-04-22 14:00:36,137] Saved best model with loss: 0.0025
+[INFO] [2025-04-22 14:00:36,195] Epoch 104/200 - Loss: 0.0025
+[INFO] [2025-04-22 14:00:36,198] Saved best model with loss: 0.0025
+[INFO] [2025-04-22 14:00:36,256] Epoch 105/200 - Loss: 0.0024
+[INFO] [2025-04-22 14:00:36,259] Saved best model with loss: 0.0024
+[INFO] [2025-04-22 14:00:36,317] Epoch 106/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:36,320] Saved best model with loss: 0.0023
+[INFO] [2025-04-22 14:00:36,376] Epoch 107/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:36,432] Epoch 108/200 - Loss: 0.0024
+[INFO] [2025-04-22 14:00:36,487] Epoch 109/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:36,548] Epoch 110/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:36,550] Saved best model with loss: 0.0021
+[INFO] [2025-04-22 14:00:36,610] Epoch 111/200 - Loss: 0.0022
+[INFO] [2025-04-22 14:00:36,665] Epoch 112/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:36,722] Epoch 113/200 - Loss: 0.0020
+[INFO] [2025-04-22 14:00:36,726] Saved best model with loss: 0.0020
+[INFO] [2025-04-22 14:00:36,782] Epoch 114/200 - Loss: 0.0020
+[INFO] [2025-04-22 14:00:36,784] Saved best model with loss: 0.0020
+[INFO] [2025-04-22 14:00:36,839] Epoch 115/200 - Loss: 0.0019
+[INFO] [2025-04-22 14:00:36,843] Saved best model with loss: 0.0019
+[INFO] [2025-04-22 14:00:36,903] Epoch 116/200 - Loss: 0.0020
+[INFO] [2025-04-22 14:00:36,965] Epoch 117/200 - Loss: 0.0019
+[INFO] [2025-04-22 14:00:36,968] Saved best model with loss: 0.0019
+[INFO] [2025-04-22 14:00:37,029] Epoch 118/200 - Loss: 0.0018
+[INFO] [2025-04-22 14:00:37,032] Saved best model with loss: 0.0018
+[INFO] [2025-04-22 14:00:37,087] Epoch 119/200 - Loss: 0.0018
+[INFO] [2025-04-22 14:00:37,090] Saved best model with loss: 0.0018
+[INFO] [2025-04-22 14:00:37,149] Epoch 120/200 - Loss: 0.0018
+[INFO] [2025-04-22 14:00:37,152] Saved best model with loss: 0.0018
+[INFO] [2025-04-22 14:00:37,210] Epoch 121/200 - Loss: 0.0017
+[INFO] [2025-04-22 14:00:37,213] Saved best model with loss: 0.0017
+[INFO] [2025-04-22 14:00:37,273] Epoch 122/200 - Loss: 0.0017
+[INFO] [2025-04-22 14:00:37,277] Saved best model with loss: 0.0017
+[INFO] [2025-04-22 14:00:37,334] Epoch 123/200 - Loss: 0.0017
+[INFO] [2025-04-22 14:00:37,337] Saved best model with loss: 0.0017
+[INFO] [2025-04-22 14:00:37,395] Epoch 124/200 - Loss: 0.0017
+[INFO] [2025-04-22 14:00:37,398] Saved best model with loss: 0.0017
+[INFO] [2025-04-22 14:00:37,456] Epoch 125/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:37,460] Saved best model with loss: 0.0016
+[INFO] [2025-04-22 14:00:37,517] Epoch 126/200 - Loss: 0.0018
+[INFO] [2025-04-22 14:00:37,571] Epoch 127/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:37,632] Epoch 128/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:37,634] Saved best model with loss: 0.0016
+[INFO] [2025-04-22 14:00:37,689] Epoch 129/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:37,693] Saved best model with loss: 0.0016
+[INFO] [2025-04-22 14:00:37,755] Epoch 130/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:37,758] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:37,816] Epoch 131/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:37,819] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:37,878] Epoch 132/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:37,881] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:37,998] Epoch 133/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:38,062] Epoch 134/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:38,065] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:38,133] Epoch 135/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:38,136] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:38,205] Epoch 136/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:38,210] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:38,276] Epoch 137/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:38,278] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:38,338] Epoch 138/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:38,342] Saved best model with loss: 0.0015
+[INFO] [2025-04-22 14:00:38,404] Epoch 139/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,406] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,466] Epoch 140/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,526] Epoch 141/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,529] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,586] Epoch 142/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,589] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,649] Epoch 143/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,706] Epoch 144/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,709] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,770] Epoch 145/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,772] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,836] Epoch 146/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,838] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,903] Epoch 147/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,905] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:38,966] Epoch 148/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:38,969] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,034] Epoch 149/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,036] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,099] Epoch 150/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,102] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,161] Epoch 151/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,163] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,226] Epoch 152/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,229] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,290] Epoch 153/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,293] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,353] Epoch 154/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,356] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,419] Epoch 155/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:39,423] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:39,482] Epoch 156/200 - Loss: 0.0017
+[INFO] [2025-04-22 14:00:39,545] Epoch 157/200 - Loss: 0.0019
+[INFO] [2025-04-22 14:00:39,649] Epoch 158/200 - Loss: 0.0029
+[INFO] [2025-04-22 14:00:39,742] Epoch 159/200 - Loss: 0.0036
+[INFO] [2025-04-22 14:00:39,802] Epoch 160/200 - Loss: 0.0064
+[INFO] [2025-04-22 14:00:39,864] Epoch 161/200 - Loss: 0.0056
+[INFO] [2025-04-22 14:00:39,923] Epoch 162/200 - Loss: 0.0049
+[INFO] [2025-04-22 14:00:39,981] Epoch 163/200 - Loss: 0.0042
+[INFO] [2025-04-22 14:00:40,040] Epoch 164/200 - Loss: 0.0039
+[INFO] [2025-04-22 14:00:40,102] Epoch 165/200 - Loss: 0.0028
+[INFO] [2025-04-22 14:00:40,158] Epoch 166/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:40,211] Epoch 167/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:40,269] Epoch 168/200 - Loss: 0.0022
+[INFO] [2025-04-22 14:00:40,326] Epoch 169/200 - Loss: 0.0027
+[INFO] [2025-04-22 14:00:40,386] Epoch 170/200 - Loss: 0.0027
+[INFO] [2025-04-22 14:00:40,446] Epoch 171/200 - Loss: 0.0024
+[INFO] [2025-04-22 14:00:40,504] Epoch 172/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:40,576] Epoch 173/200 - Loss: 0.0026
+[INFO] [2025-04-22 14:00:40,650] Epoch 174/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:40,723] Epoch 175/200 - Loss: 0.0027
+[INFO] [2025-04-22 14:00:40,787] Epoch 176/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:40,854] Epoch 177/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:40,914] Epoch 178/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:40,974] Epoch 179/200 - Loss: 0.0020
+[INFO] [2025-04-22 14:00:41,039] Epoch 180/200 - Loss: 0.0026
+[INFO] [2025-04-22 14:00:41,097] Epoch 181/200 - Loss: 0.0020
+[INFO] [2025-04-22 14:00:41,157] Epoch 182/200 - Loss: 0.0023
+[INFO] [2025-04-22 14:00:41,214] Epoch 183/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:41,273] Epoch 184/200 - Loss: 0.0021
+[INFO] [2025-04-22 14:00:41,328] Epoch 185/200 - Loss: 0.0018
+[INFO] [2025-04-22 14:00:41,385] Epoch 186/200 - Loss: 0.0016
+[INFO] [2025-04-22 14:00:41,443] Epoch 187/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:41,497] Epoch 188/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:41,500] Saved best model with loss: 0.0014
+[INFO] [2025-04-22 14:00:41,561] Epoch 189/200 - Loss: 0.0013
+[INFO] [2025-04-22 14:00:41,564] Saved best model with loss: 0.0013
+[INFO] [2025-04-22 14:00:41,620] Epoch 190/200 - Loss: 0.0015
+[INFO] [2025-04-22 14:00:41,675] Epoch 191/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:41,736] Epoch 192/200 - Loss: 0.0012
+[INFO] [2025-04-22 14:00:41,738] Saved best model with loss: 0.0012
+[INFO] [2025-04-22 14:00:41,798] Epoch 193/200 - Loss: 0.0012
+[INFO] [2025-04-22 14:00:41,801] Saved best model with loss: 0.0012
+[INFO] [2025-04-22 14:00:41,859] Epoch 194/200 - Loss: 0.0012
+[INFO] [2025-04-22 14:00:41,914] Epoch 195/200 - Loss: 0.0013
+[INFO] [2025-04-22 14:00:41,972] Epoch 196/200 - Loss: 0.0012
+[INFO] [2025-04-22 14:00:42,028] Epoch 197/200 - Loss: 0.0012
+[INFO] [2025-04-22 14:00:42,086] Epoch 198/200 - Loss: 0.0011
+[INFO] [2025-04-22 14:00:42,089] Saved best model with loss: 0.0011
+[INFO] [2025-04-22 14:00:42,147] Epoch 199/200 - Loss: 0.0010
+[INFO] [2025-04-22 14:00:42,149] Saved best model with loss: 0.0010
+[INFO] [2025-04-22 14:00:42,206] Epoch 200/200 - Loss: 0.0014
+[INFO] [2025-04-22 14:00:42,210] Final model saved as clip_to_rgb_model.pth
+[INFO] [2025-04-22 14:00:42,210] Best model saved as clip_to_rgb_model_best.pth (loss: 0.0010)
+[INFO] [2025-04-22 14:00:42,210] Saved model info: {'embed_dim': 512, 'context_weight': 0.3, 'color_weight': 0.1, 'model_type': 'color_feedback_contextual'}
