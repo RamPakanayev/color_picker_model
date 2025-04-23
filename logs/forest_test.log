@@ -1,0 +1,55 @@
+[INFO] [2025-04-23 16:09:30,469] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:30,469] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:30,470] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:33,635] Processing shapes in order: ['0:A light blue sky bac...', '1:Brown dirt ground at...', '2:A large oak tree wit...', '4:A pine tree with a t...', '6:A birch tree with a ...', '10:A small bush with gr...', '14:A gray rock near the...', '15:A brown rabbit sitti...', '17:A yellow sun in the ...', "3:The oak tree's green...", "5:The pine tree's tria...", '7:Black stripes on the...', '8:More black stripes o...', "9:The birch tree's rou...", '11:Red berries on the b...', '12:More red berries on ...', '13:Even more red berrie...', "16:The rabbit's white t..."]
+[INFO] [2025-04-23 16:09:33,717] Shape 0 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:33,717] Shape 0 - 'A light blue sky background for the forest scene.' -> (134, 209, 237)
+[INFO] [2025-04-23 16:09:33,795] Shape 1 weights: text=0.989, context=0.006, color=0.005
+[INFO] [2025-04-23 16:09:33,795] Shape 1 - 'Brown dirt ground at the bottom of the scene.' -> (138, 69, 17)
+[INFO] [2025-04-23 16:09:33,865] Shape 2 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:33,865] Shape 2 - 'A large oak tree with a thick brown trunk.' -> (98, 67, 34)
+[INFO] [2025-04-23 16:09:33,940] Shape 4 weights: text=0.997, context=0.002, color=0.002
+[INFO] [2025-04-23 16:09:33,941] Shape 4 - 'A pine tree with a tall thin trunk.' -> (98, 68, 32)
+[INFO] [2025-04-23 16:09:34,025] Shape 6 weights: text=0.620, context=0.000, color=0.380
+[INFO] [2025-04-23 16:09:34,025] Shape 6 - 'A birch tree with a white trunk.' -> (255, 254, 253)
+[INFO] [2025-04-23 16:09:34,099] Shape 10 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:09:34,099] Shape 10 - 'A small bush with green leaves.' -> (44, 140, 88)
+[INFO] [2025-04-23 16:09:34,173] Shape 14 weights: text=0.988, context=0.007, color=0.005
+[INFO] [2025-04-23 16:09:34,173] Shape 14 - 'A gray rock near the trees.' -> (126, 128, 132)
+[INFO] [2025-04-23 16:09:34,249] Shape 15 weights: text=0.991, context=0.005, color=0.004
+[INFO] [2025-04-23 16:09:34,249] Shape 15 - 'A brown rabbit sitting by the rock.' -> (137, 70, 19)
+[INFO] [2025-04-23 16:09:34,323] Shape 17 weights: text=0.679, context=0.007, color=0.314
+[INFO] [2025-04-23 16:09:34,323] Shape 17 - 'A yellow sun in the sky.' -> (255, 249, 1)
+[INFO] [2025-04-23 16:09:34,420] Shape 3 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:34,420] Shape 3 - 'The oak tree's green leafy canopy.' -> (33, 140, 33)
+[INFO] [2025-04-23 16:09:34,518] Shape 5 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:09:34,518] Shape 5 - 'The pine tree's triangular green top.' -> (4, 98, 4)
+[INFO] [2025-04-23 16:09:34,587] Shape 7 weights: text=0.981, context=0.003, color=0.016
+[INFO] [2025-04-23 16:09:34,587] Shape 7 - 'Black stripes on the birch tree trunk.' -> (2, 2, 2)
+[INFO] [2025-04-23 16:09:34,659] Shape 8 weights: text=0.945, context=0.004, color=0.052
+[INFO] [2025-04-23 16:09:34,660] Shape 8 - 'More black stripes on the birch tree trunk.' -> (4, 4, 3)
+[INFO] [2025-04-23 16:09:34,730] Shape 9 weights: text=0.989, context=0.002, color=0.009
+[INFO] [2025-04-23 16:09:34,730] Shape 9 - 'The birch tree's round green foliage.' -> (60, 180, 113)
+[INFO] [2025-04-23 16:09:34,805] Shape 11 weights: text=0.995, context=0.002, color=0.003
+[INFO] [2025-04-23 16:09:34,805] Shape 11 - 'Red berries on the bush.' -> (221, 18, 60)
+[INFO] [2025-04-23 16:09:34,874] Shape 12 weights: text=0.992, context=0.003, color=0.005
+[INFO] [2025-04-23 16:09:34,874] Shape 12 - 'More red berries on the bush.' -> (221, 20, 63)
+[INFO] [2025-04-23 16:09:34,942] Shape 13 weights: text=0.995, context=0.002, color=0.003
+[INFO] [2025-04-23 16:09:34,942] Shape 13 - 'Even more red berries on the bush.' -> (217, 18, 57)
+[INFO] [2025-04-23 16:09:35,011] Shape 16 weights: text=0.615, context=0.003, color=0.381
+[INFO] [2025-04-23 16:09:35,011] Shape 16 - 'The rabbit's white tail.' -> (254, 252, 251)
+[INFO] [2025-04-23 16:09:35,036] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_forest.png
+[INFO] [2025-04-23 16:09:35,036] Weight statistics summary:
+[INFO] [2025-04-23 16:09:35,036] Average weights: text=0.931, context=0.003, color=0.066
+[INFO] [2025-04-23 16:09:35,036] Dominant source patterns:
+[INFO] [2025-04-23 16:09:35,037]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:09:35,037]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:35,037]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:35,037] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:35,037]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:35,037]   Context > Color: 44.4% of shapes
+[INFO] [2025-04-23 16:09:35,037]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:09:35,038] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\forest_weight_analysis.json
+[INFO] [2025-04-23 16:09:35,038] Highest text weight (0.999): Shape 10 - 'A small bush with green leaves....'
+[INFO] [2025-04-23 16:09:35,038] Highest context weight (0.007): Shape 17 - 'A yellow sun in the sky....'
+[INFO] [2025-04-23 16:09:35,038] Highest color weight (0.381): Shape 16 - 'The rabbit's white tail....'

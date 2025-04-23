@@ -1,0 +1,42 @@
+[INFO] [2025-04-23 16:08:25,194] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:08:25,194] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:08:25,194] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:08:28,606] Processing shapes in order: ['0:A canvas with a deep...', '1:A vibrant scarlet fl...', '2:A shape that appears...', '4:A silver crescent mo...', '6:Lavender and purple ...', '7:A dark turquoise sha...', '8:Small white star-lik...', '9:Another small white ...', '10:A third small white ...', '3:An emerald green sha...', '5:A smaller ivory shap...']
+[INFO] [2025-04-23 16:08:28,687] Shape 0 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:08:28,688] Shape 0 - 'A canvas with a deep midnight blue background, like the night sky.' -> (5, 21, 113)
+[INFO] [2025-04-23 16:08:28,786] Shape 1 weights: text=0.880, context=0.002, color=0.118
+[INFO] [2025-04-23 16:08:28,786] Shape 1 - 'A vibrant scarlet flame-like shape rising from the bottom.' -> (253, 34, 4)
+[INFO] [2025-04-23 16:08:28,877] Shape 2 weights: text=0.881, context=0.005, color=0.113
+[INFO] [2025-04-23 16:08:28,877] Shape 2 - 'A shape that appears to be a bright golden sun, radiating warmth.' -> (253, 216, 3)
+[INFO] [2025-04-23 16:08:28,961] Shape 4 weights: text=0.863, context=0.002, color=0.136
+[INFO] [2025-04-23 16:08:28,962] Shape 4 - 'A silver crescent moon shape in the upper left corner of the sky.' -> (192, 192, 192)
+[INFO] [2025-04-23 16:08:29,049] Shape 6 weights: text=0.992, context=0.003, color=0.004
+[INFO] [2025-04-23 16:08:29,049] Shape 6 - 'Lavender and purple flowing abstract shapes resembling clouds or waves in the sky.' -> (150, 123, 183)
+[INFO] [2025-04-23 16:08:29,197] Shape 7 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:08:29,197] Shape 7 - 'A dark turquoise shape resembling water at the bottom of the canvas.' -> (1, 138, 140)
+[INFO] [2025-04-23 16:08:29,315] Shape 8 weights: text=0.452, context=0.002, color=0.546
+[INFO] [2025-04-23 16:08:29,315] Shape 8 - 'Small white star-like shapes scattered across the night sky.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:08:29,412] Shape 9 weights: text=0.572, context=0.004, color=0.425
+[INFO] [2025-04-23 16:08:29,413] Shape 9 - 'Another small white star-like shape in the night sky.' -> (255, 254, 253)
+[INFO] [2025-04-23 16:08:29,494] Shape 10 weights: text=0.590, context=0.003, color=0.408
+[INFO] [2025-04-23 16:08:29,494] Shape 10 - 'A third small white star-like shape in the night sky.' -> (255, 254, 253)
+[INFO] [2025-04-23 16:08:29,571] Shape 3 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:08:29,571] Shape 3 - 'An emerald green shape that resembles a leaf or plant growing from the flames.' -> (1, 202, 90)
+[INFO] [2025-04-23 16:08:29,660] Shape 5 weights: text=0.723, context=0.001, color=0.276
+[INFO] [2025-04-23 16:08:29,660] Shape 5 - 'A smaller ivory shape inside the silver crescent moon, creating contrast.' -> (254, 252, 248)
+[INFO] [2025-04-23 16:08:29,699] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_abstract_art.png
+[INFO] [2025-04-23 16:08:29,699] Weight statistics summary:
+[INFO] [2025-04-23 16:08:29,699] Average weights: text=0.814, context=0.002, color=0.184
+[INFO] [2025-04-23 16:08:29,700] Dominant source patterns:
+[INFO] [2025-04-23 16:08:29,700]   text dominant: 90.9% of shapes
+[INFO] [2025-04-23 16:08:29,700]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:29,700]   Color dominant: 9.1% of shapes
+[INFO] [2025-04-23 16:08:29,700] Pairwise comparisons:
+[INFO] [2025-04-23 16:08:29,701]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:08:29,701]   Context > Color: 27.3% of shapes
+[INFO] [2025-04-23 16:08:29,701]   text > Color: 90.9% of shapes
+[INFO] [2025-04-23 16:08:29,703] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\abstract_art_weight_analysis.json
+[INFO] [2025-04-23 16:08:29,703] Highest text weight (1.000): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:08:29,703] Highest context weight (0.005): Shape 2 - 'A shape that appears to be a bright golden sun, ra...'
+[INFO] [2025-04-23 16:08:29,703] Highest color weight (0.546): Shape 8 - 'Small white star-like shapes scattered across the ...'
+[INFO] [2025-04-23 16:08:29,703] Example with color dominance: Shape 8 - 'Small white star-like shapes scattered across the ...' - weights: [0.4522411525249481, 0.0018804108258336782, 0.5458784699440002]

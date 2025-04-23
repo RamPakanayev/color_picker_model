@@ -1,0 +1,37 @@
+[INFO] [2025-04-23 16:08:53,358] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:08:53,358] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:08:53,359] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:08:56,594] Processing shapes in order: ['0:A white canvas with ...', '1:A red container shap...', '3:A green container sh...', '5:A yellow container a...', '7:This rgb(255,0,0) sh...', '8:This shape has no ex...', '2:A blue shape inside ...', '4:This shape should be...', '6:This shape is descri...']
+[INFO] [2025-04-23 16:08:56,673] Shape 0 weights: text=0.515, context=0.003, color=0.482
+[INFO] [2025-04-23 16:08:56,673] Shape 0 - 'A white canvas with shapes that have conflicting color descriptions.' -> (249, 249, 252)
+[INFO] [2025-04-23 16:08:56,738] Shape 1 weights: text=0.902, context=0.002, color=0.095
+[INFO] [2025-04-23 16:08:56,739] Shape 1 - 'A red container shape.' -> (252, 5, 2)
+[INFO] [2025-04-23 16:08:56,807] Shape 3 weights: text=0.986, context=0.005, color=0.009
+[INFO] [2025-04-23 16:08:56,807] Shape 3 - 'A green container shape.' -> (3, 129, 1)
+[INFO] [2025-04-23 16:08:56,894] Shape 5 weights: text=0.569, context=0.006, color=0.426
+[INFO] [2025-04-23 16:08:56,894] Shape 5 - 'A yellow container at the bottom.' -> (255, 248, 4)
+[INFO] [2025-04-23 16:08:56,969] Shape 7 weights: text=0.989, context=0.006, color=0.004
+[INFO] [2025-04-23 16:08:56,969] Shape 7 - 'This rgb(255,0,0) shape is inside a parent with ambiguous coloring.' -> (251, 6, 4)
+[INFO] [2025-04-23 16:08:57,041] Shape 8 weights: text=0.928, context=0.015, color=0.057
+[INFO] [2025-04-23 16:08:57,041] Shape 8 - 'This shape has no explicit color and should inherit visual cues from context.' -> (129, 129, 131)
+[INFO] [2025-04-23 16:08:57,152] Shape 2 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:08:57,152] Shape 2 - 'A blue shape inside the red container, but the documentation says this should remain blue despite the parent being red.' -> (3, 5, 249)
+[INFO] [2025-04-23 16:08:57,219] Shape 4 weights: text=0.990, context=0.006, color=0.005
+[INFO] [2025-04-23 16:08:57,219] Shape 4 - 'This shape should be green like its parent.' -> (5, 128, 6)
+[INFO] [2025-04-23 16:08:57,283] Shape 6 weights: text=0.984, context=0.007, color=0.008
+[INFO] [2025-04-23 16:08:57,284] Shape 6 - 'This shape is described as purple, but its parent is yellow. The purple description should take precedence.' -> (125, 4, 127)
+[INFO] [2025-04-23 16:08:57,302] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_color_conflict.png
+[INFO] [2025-04-23 16:08:57,302] Weight statistics summary:
+[INFO] [2025-04-23 16:08:57,302] Average weights: text=0.873, context=0.006, color=0.121
+[INFO] [2025-04-23 16:08:57,302] Dominant source patterns:
+[INFO] [2025-04-23 16:08:57,302]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:08:57,303]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:57,303]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:57,303] Pairwise comparisons:
+[INFO] [2025-04-23 16:08:57,303]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:08:57,303]   Context > Color: 33.3% of shapes
+[INFO] [2025-04-23 16:08:57,303]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:08:57,305] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\color_conflict_weight_analysis.json
+[INFO] [2025-04-23 16:08:57,305] Highest text weight (0.998): Shape 2 - 'A blue shape inside the red container, but the doc...'
+[INFO] [2025-04-23 16:08:57,305] Highest context weight (0.015): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:08:57,305] Highest color weight (0.482): Shape 0 - 'A white canvas with shapes that have conflicting c...'

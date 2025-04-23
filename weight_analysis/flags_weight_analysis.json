@@ -1,0 +1,254 @@
+[
+  {
+    "id": 0,
+    "description": "A gray canvas containing flag designs.",
+    "weights": [
+      0.6141079664230347,
+      0.014056374318897724,
+      0.3718356788158417
+    ],
+    "rgb": [
+      124,
+      128,
+      132
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The French flag with vertical stripes of blue, white, and red.",
+    "weights": [
+      0.348248690366745,
+      0.0003560102777555585,
+      0.651395320892334
+    ],
+    "rgb": [
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The German flag with horizontal stripes of black, red, and yellow (gold).",
+    "weights": [
+      0.18853379786014557,
+      0.00021418613323476166,
+      0.8112519979476929
+    ],
+    "rgb": [
+      255,
+      255,
+      252
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The Italian flag with vertical stripes of green, white, and red.",
+    "weights": [
+      0.2330346703529358,
+      0.00037945728399790823,
+      0.7665858864784241
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 13,
+    "description": "The Japanese flag with a white background and a red circle (sun disk).",
+    "weights": [
+      0.38936832547187805,
+      0.00249239313416183,
+      0.6081392168998718
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 15,
+    "description": "The Swedish flag with a blue background and a yellow cross.",
+    "weights": [
+      0.9980912804603577,
+      0.0011967713944613934,
+      0.0007119799847714603
+    ],
+    "rgb": [
+      6,
+      105,
+      169
+    ]
+  },
+  {
+    "id": 2,
+    "description": "The blue stripe of the French flag.",
+    "weights": [
+      0.9686993360519409,
+      0.0028266997542232275,
+      0.02847396396100521
+    ],
+    "rgb": [
+      6,
+      85,
+      163
+    ]
+  },
+  {
+    "id": 3,
+    "description": "The white stripe of the French flag.",
+    "weights": [
+      0.5906853675842285,
+      0.002463335171341896,
+      0.40685129165649414
+    ],
+    "rgb": [
+      255,
+      254,
+      252
+    ]
+  },
+  {
+    "id": 4,
+    "description": "The red stripe of the French flag.",
+    "weights": [
+      0.9237337112426758,
+      0.0029223414603620768,
+      0.07334395498037338
+    ],
+    "rgb": [
+      237,
+      62,
+      50
+    ]
+  },
+  {
+    "id": 6,
+    "description": "The black stripe of the German flag.",
+    "weights": [
+      0.9577271938323975,
+      0.009024705737829208,
+      0.033248115330934525
+    ],
+    "rgb": [
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "id": 7,
+    "description": "The red stripe of the German flag.",
+    "weights": [
+      0.9338613152503967,
+      0.005329401232302189,
+      0.06080932170152664
+    ],
+    "rgb": [
+      238,
+      10,
+      2
+    ]
+  },
+  {
+    "id": 8,
+    "description": "The yellow (gold) stripe of the German flag.",
+    "weights": [
+      0.48895764350891113,
+      0.0020133245270699263,
+      0.5090290307998657
+    ],
+    "rgb": [
+      254,
+      211,
+      4
+    ]
+  },
+  {
+    "id": 10,
+    "description": "The green stripe of the Italian flag.",
+    "weights": [
+      0.9815940856933594,
+      0.004036980215460062,
+      0.014368867501616478
+    ],
+    "rgb": [
+      2,
+      145,
+      68
+    ]
+  },
+  {
+    "id": 11,
+    "description": "The white stripe of the Italian flag.",
+    "weights": [
+      0.6162859201431274,
+      0.003589484840631485,
+      0.380124568939209
+    ],
+    "rgb": [
+      253,
+      253,
+      254
+    ]
+  },
+  {
+    "id": 12,
+    "description": "The red stripe of the Italian flag.",
+    "weights": [
+      0.9600924253463745,
+      0.0037056643050163984,
+      0.03620200604200363
+    ],
+    "rgb": [
+      203,
+      42,
+      56
+    ]
+  },
+  {
+    "id": 14,
+    "description": "The red circle (sun disk) in the Japanese flag.",
+    "weights": [
+      0.9756301045417786,
+      0.008667686954140663,
+      0.015702180564403534
+    ],
+    "rgb": [
+      186,
+      3,
+      46
+    ]
+  },
+  {
+    "id": 16,
+    "description": "The horizontal yellow stripe of the Swedish flag's cross.",
+    "weights": [
+      0.8505293726921082,
+      0.00498560257256031,
+      0.1444850116968155
+    ],
+    "rgb": [
+      247,
+      203,
+      4
+    ]
+  },
+  {
+    "id": 17,
+    "description": "The vertical yellow stripe of the Swedish flag's cross.",
+    "weights": [
+      0.7899730205535889,
+      0.0034497296437621117,
+      0.20657725632190704
+    ],
+    "rgb": [
+      252,
+      204,
+      3
+    ]
+  }
+]

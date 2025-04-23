@@ -1,0 +1,62 @@
+[INFO] [2025-04-23 16:11:23,250] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:11:23,251] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:11:23,251] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:11:26,752] Processing shapes in order: ['0:Deep blue ocean wate...', '1:Sandy ocean floor....', '2:A vibrant orange cor...', '3:A bright yellow cora...', '4:A purple sea anemone...', '5:A large rock formati...', '6:A bright orange clow...', '9:A blue tang fish....', '12:A green sea turtle s...', '16:Long green seaweed g...', '17:More seaweed growing...', '18:Sunlight rays penetr...', '19:More sunlight rays p...', '20:A school of small si...', '7:White stripes on the...', '8:Another white stripe...', '10:A yellow fin on the ...', '11:A tail fin on the bl...', "13:The sea turtle's hea...", "14:The sea turtle's rig...", "15:The sea turtle's lef..."]
+[INFO] [2025-04-23 16:11:26,847] Shape 0 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:11:26,847] Shape 0 - 'Deep blue ocean water background.' -> (4, 105, 149)
+[INFO] [2025-04-23 16:11:26,942] Shape 1 weights: text=0.991, context=0.005, color=0.004
+[INFO] [2025-04-23 16:11:26,943] Shape 1 - 'Sandy ocean floor.' -> (210, 182, 143)
+[INFO] [2025-04-23 16:11:27,021] Shape 2 weights: text=0.997, context=0.001, color=0.003
+[INFO] [2025-04-23 16:11:27,022] Shape 2 - 'A vibrant orange coral reef.' -> (253, 128, 81)
+[INFO] [2025-04-23 16:11:27,131] Shape 3 weights: text=0.878, context=0.002, color=0.119
+[INFO] [2025-04-23 16:11:27,132] Shape 3 - 'A bright yellow coral formation.' -> (255, 215, 2)
+[INFO] [2025-04-23 16:11:27,241] Shape 4 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:11:27,242] Shape 4 - 'A purple sea anemone.' -> (138, 42, 227)
+[INFO] [2025-04-23 16:11:27,363] Shape 5 weights: text=0.994, context=0.004, color=0.003
+[INFO] [2025-04-23 16:11:27,363] Shape 5 - 'A large rock formation on the sea floor.' -> (103, 106, 107)
+[INFO] [2025-04-23 16:11:27,486] Shape 6 weights: text=0.942, context=0.000, color=0.058
+[INFO] [2025-04-23 16:11:27,487] Shape 6 - 'A bright orange clownfish.' -> (255, 140, 4)
+[INFO] [2025-04-23 16:11:27,630] Shape 9 weights: text=0.992, context=0.001, color=0.007
+[INFO] [2025-04-23 16:11:27,630] Shape 9 - 'A blue tang fish.' -> (29, 146, 251)
+[INFO] [2025-04-23 16:11:27,778] Shape 12 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:11:27,778] Shape 12 - 'A green sea turtle swimming.' -> (47, 140, 90)
+[INFO] [2025-04-23 16:11:27,927] Shape 16 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:11:27,927] Shape 16 - 'Long green seaweed growing from the ocean floor.' -> (2, 127, 3)
+[INFO] [2025-04-23 16:11:28,062] Shape 17 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:11:28,063] Shape 17 - 'More seaweed growing from the ocean floor.' -> (5, 128, 6)
+[INFO] [2025-04-23 16:11:28,217] Shape 18 weights: text=0.988, context=0.006, color=0.006
+[INFO] [2025-04-23 16:11:28,217] Shape 18 - 'Sunlight rays penetrating the water surface.' -> (171, 215, 230)
+[INFO] [2025-04-23 16:11:28,396] Shape 19 weights: text=0.986, context=0.007, color=0.008
+[INFO] [2025-04-23 16:11:28,396] Shape 19 - 'More sunlight rays penetrating the water.' -> (173, 217, 230)
+[INFO] [2025-04-23 16:11:28,569] Shape 20 weights: text=0.984, context=0.004, color=0.012
+[INFO] [2025-04-23 16:11:28,569] Shape 20 - 'A school of small silver fish swimming together.' -> (191, 193, 195)
+[INFO] [2025-04-23 16:11:28,723] Shape 7 weights: text=0.490, context=0.000, color=0.509
+[INFO] [2025-04-23 16:11:28,723] Shape 7 - 'White stripes on the clownfish.' -> (255, 253, 254)
+[INFO] [2025-04-23 16:11:28,886] Shape 8 weights: text=0.616, context=0.001, color=0.383
+[INFO] [2025-04-23 16:11:28,887] Shape 8 - 'Another white stripe on the clownfish.' -> (255, 255, 253)
+[INFO] [2025-04-23 16:11:29,056] Shape 10 weights: text=0.718, context=0.001, color=0.281
+[INFO] [2025-04-23 16:11:29,057] Shape 10 - 'A yellow fin on the blue tang fish.' -> (254, 250, 6)
+[INFO] [2025-04-23 16:11:29,211] Shape 11 weights: text=0.978, context=0.001, color=0.021
+[INFO] [2025-04-23 16:11:29,211] Shape 11 - 'A tail fin on the blue tang fish.' -> (30, 144, 249)
+[INFO] [2025-04-23 16:11:29,378] Shape 13 weights: text=0.993, context=0.004, color=0.003
+[INFO] [2025-04-23 16:11:29,379] Shape 13 - 'The sea turtle's head.' -> (46, 141, 93)
+[INFO] [2025-04-23 16:11:29,547] Shape 14 weights: text=0.991, context=0.005, color=0.004
+[INFO] [2025-04-23 16:11:29,548] Shape 14 - 'The sea turtle's right flipper.' -> (46, 141, 90)
+[INFO] [2025-04-23 16:11:29,726] Shape 15 weights: text=0.994, context=0.003, color=0.003
+[INFO] [2025-04-23 16:11:29,727] Shape 15 - 'The sea turtle's left flipper.' -> (46, 140, 90)
+[INFO] [2025-04-23 16:11:29,793] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_under_water.png
+[INFO] [2025-04-23 16:11:29,793] Weight statistics summary:
+[INFO] [2025-04-23 16:11:29,795] Average weights: text=0.930, context=0.002, color=0.068
+[INFO] [2025-04-23 16:11:29,796] Dominant source patterns:
+[INFO] [2025-04-23 16:11:29,796]   text dominant: 95.2% of shapes
+[INFO] [2025-04-23 16:11:29,796]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:11:29,796]   Color dominant: 4.8% of shapes
+[INFO] [2025-04-23 16:11:29,797] Pairwise comparisons:
+[INFO] [2025-04-23 16:11:29,797]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:11:29,797]   Context > Color: 42.9% of shapes
+[INFO] [2025-04-23 16:11:29,797]   text > Color: 95.2% of shapes
+[INFO] [2025-04-23 16:11:29,802] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\under_water_weight_analysis.json
+[INFO] [2025-04-23 16:11:29,802] Highest text weight (0.999): Shape 16 - 'Long green seaweed growing from the ocean floor....'
+[INFO] [2025-04-23 16:11:29,802] Highest context weight (0.007): Shape 19 - 'More sunlight rays penetrating the water....'
+[INFO] [2025-04-23 16:11:29,802] Highest color weight (0.509): Shape 7 - 'White stripes on the clownfish....'
+[INFO] [2025-04-23 16:11:29,803] Example with color dominance: Shape 7 - 'White stripes on the clownfish....' - weights: [0.4901915490627289, 0.00045729379053227603, 0.5093511343002319]

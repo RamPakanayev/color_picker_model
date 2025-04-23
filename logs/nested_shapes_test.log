@@ -1,0 +1,37 @@
+[INFO] [2025-04-23 16:09:59,529] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:59,529] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:59,529] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:10:02,796] Processing shapes in order: ['0:A black canvas conta...', '1:A large red square c...', '2:A blue circle inside...', '4:A green square insid...', '6:A purple diamond in ...', '3:A yellow triangle in...', '5:An orange triangle i...', '7:A small white square...', '8:A tiny black dot ins...']
+[INFO] [2025-04-23 16:10:02,903] Shape 0 weights: text=0.989, context=0.007, color=0.004
+[INFO] [2025-04-23 16:10:02,903] Shape 0 - 'A black canvas containing nested shapes of various colors.' -> (1, 2, 2)
+[INFO] [2025-04-23 16:10:03,006] Shape 1 weights: text=0.994, context=0.003, color=0.003
+[INFO] [2025-04-23 16:10:03,006] Shape 1 - 'A large red square covering most of the canvas.' -> (253, 2, 2)
+[INFO] [2025-04-23 16:10:03,119] Shape 2 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:03,119] Shape 2 - 'A blue circle inside the red square.' -> (3, 7, 248)
+[INFO] [2025-04-23 16:10:03,233] Shape 4 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:03,234] Shape 4 - 'A green square inside the red square, opposite to the blue circle.' -> (4, 127, 4)
+[INFO] [2025-04-23 16:10:03,346] Shape 6 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:03,346] Shape 6 - 'A purple diamond in the center of the red square.' -> (129, 1, 124)
+[INFO] [2025-04-23 16:10:03,458] Shape 3 weights: text=0.544, context=0.005, color=0.451
+[INFO] [2025-04-23 16:10:03,458] Shape 3 - 'A yellow triangle inside the blue circle.' -> (255, 253, 3)
+[INFO] [2025-04-23 16:10:03,574] Shape 5 weights: text=0.903, context=0.004, color=0.094
+[INFO] [2025-04-23 16:10:03,574] Shape 5 - 'An orange triangle inside the green square.' -> (250, 165, 0)
+[INFO] [2025-04-23 16:10:03,692] Shape 7 weights: text=0.555, context=0.003, color=0.442
+[INFO] [2025-04-23 16:10:03,692] Shape 7 - 'A small white square inside the purple diamond.' -> (255, 253, 251)
+[INFO] [2025-04-23 16:10:03,807] Shape 8 weights: text=0.979, context=0.010, color=0.010
+[INFO] [2025-04-23 16:10:03,808] Shape 8 - 'A tiny black dot inside the white square.' -> (2, 5, 3)
+[INFO] [2025-04-23 16:10:03,844] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_nested_shapes.png
+[INFO] [2025-04-23 16:10:03,844] Weight statistics summary:
+[INFO] [2025-04-23 16:10:03,844] Average weights: text=0.884, context=0.004, color=0.112
+[INFO] [2025-04-23 16:10:03,844] Dominant source patterns:
+[INFO] [2025-04-23 16:10:03,845]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:10:03,845]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:10:03,845]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:10:03,845] Pairwise comparisons:
+[INFO] [2025-04-23 16:10:03,845]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:10:03,845]   Context > Color: 55.6% of shapes
+[INFO] [2025-04-23 16:10:03,845]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:10:03,848] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\nested_shapes_weight_analysis.json
+[INFO] [2025-04-23 16:10:03,849] Highest text weight (0.998): Shape 4 - 'A green square inside the red square, opposite to ...'
+[INFO] [2025-04-23 16:10:03,849] Highest context weight (0.010): Shape 8 - 'A tiny black dot inside the white square....'
+[INFO] [2025-04-23 16:10:03,849] Highest color weight (0.451): Shape 3 - 'A yellow triangle inside the blue circle....'

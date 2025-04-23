@@ -1,0 +1,56 @@
+[INFO] [2025-04-23 16:09:20,874] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:20,875] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:20,875] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:24,035] Processing shapes in order: ['0:A gray canvas contai...', '1:The French flag with...', '5:The German flag with...', '9:The Italian flag wit...', '13:The Japanese flag wi...', '15:The Swedish flag wit...', '2:The blue stripe of t...', '3:The white stripe of ...', '4:The red stripe of th...', '6:The black stripe of ...', '7:The red stripe of th...', '8:The yellow (gold) st...', '10:The green stripe of ...', '11:The white stripe of ...', '12:The red stripe of th...', '14:The red circle (sun ...', '16:The horizontal yello...', '17:The vertical yellow ...']
+[INFO] [2025-04-23 16:09:24,146] Shape 0 weights: text=0.614, context=0.014, color=0.372
+[INFO] [2025-04-23 16:09:24,146] Shape 0 - 'A gray canvas containing flag designs.' -> (124, 128, 132)
+[INFO] [2025-04-23 16:09:24,228] Shape 1 weights: text=0.348, context=0.000, color=0.651
+[INFO] [2025-04-23 16:09:24,228] Shape 1 - 'The French flag with vertical stripes of blue, white, and red.' -> (255, 255, 255)
+[INFO] [2025-04-23 16:09:24,292] Shape 5 weights: text=0.189, context=0.000, color=0.811
+[INFO] [2025-04-23 16:09:24,293] Shape 5 - 'The German flag with horizontal stripes of black, red, and yellow (gold).' -> (255, 255, 252)
+[INFO] [2025-04-23 16:09:24,372] Shape 9 weights: text=0.233, context=0.000, color=0.767
+[INFO] [2025-04-23 16:09:24,372] Shape 9 - 'The Italian flag with vertical stripes of green, white, and red.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:24,450] Shape 13 weights: text=0.389, context=0.002, color=0.608
+[INFO] [2025-04-23 16:09:24,450] Shape 13 - 'The Japanese flag with a white background and a red circle (sun disk).' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:24,526] Shape 15 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:24,526] Shape 15 - 'The Swedish flag with a blue background and a yellow cross.' -> (6, 105, 169)
+[INFO] [2025-04-23 16:09:24,614] Shape 2 weights: text=0.969, context=0.003, color=0.028
+[INFO] [2025-04-23 16:09:24,615] Shape 2 - 'The blue stripe of the French flag.' -> (6, 85, 163)
+[INFO] [2025-04-23 16:09:24,686] Shape 3 weights: text=0.591, context=0.002, color=0.407
+[INFO] [2025-04-23 16:09:24,686] Shape 3 - 'The white stripe of the French flag.' -> (255, 254, 252)
+[INFO] [2025-04-23 16:09:24,768] Shape 4 weights: text=0.924, context=0.003, color=0.073
+[INFO] [2025-04-23 16:09:24,768] Shape 4 - 'The red stripe of the French flag.' -> (237, 62, 50)
+[INFO] [2025-04-23 16:09:24,845] Shape 6 weights: text=0.958, context=0.009, color=0.033
+[INFO] [2025-04-23 16:09:24,846] Shape 6 - 'The black stripe of the German flag.' -> (2, 3, 2)
+[INFO] [2025-04-23 16:09:24,924] Shape 7 weights: text=0.934, context=0.005, color=0.061
+[INFO] [2025-04-23 16:09:24,924] Shape 7 - 'The red stripe of the German flag.' -> (238, 10, 2)
+[INFO] [2025-04-23 16:09:24,998] Shape 8 weights: text=0.489, context=0.002, color=0.509
+[INFO] [2025-04-23 16:09:24,998] Shape 8 - 'The yellow (gold) stripe of the German flag.' -> (254, 211, 4)
+[INFO] [2025-04-23 16:09:25,078] Shape 10 weights: text=0.982, context=0.004, color=0.014
+[INFO] [2025-04-23 16:09:25,078] Shape 10 - 'The green stripe of the Italian flag.' -> (2, 145, 68)
+[INFO] [2025-04-23 16:09:25,158] Shape 11 weights: text=0.616, context=0.004, color=0.380
+[INFO] [2025-04-23 16:09:25,158] Shape 11 - 'The white stripe of the Italian flag.' -> (253, 253, 254)
+[INFO] [2025-04-23 16:09:25,245] Shape 12 weights: text=0.960, context=0.004, color=0.036
+[INFO] [2025-04-23 16:09:25,247] Shape 12 - 'The red stripe of the Italian flag.' -> (203, 42, 56)
+[INFO] [2025-04-23 16:09:25,322] Shape 14 weights: text=0.976, context=0.009, color=0.016
+[INFO] [2025-04-23 16:09:25,323] Shape 14 - 'The red circle (sun disk) in the Japanese flag.' -> (186, 3, 46)
+[INFO] [2025-04-23 16:09:25,400] Shape 16 weights: text=0.851, context=0.005, color=0.144
+[INFO] [2025-04-23 16:09:25,400] Shape 16 - 'The horizontal yellow stripe of the Swedish flag's cross.' -> (247, 203, 4)
+[INFO] [2025-04-23 16:09:25,459] Shape 17 weights: text=0.790, context=0.003, color=0.207
+[INFO] [2025-04-23 16:09:25,459] Shape 17 - 'The vertical yellow stripe of the Swedish flag's cross.' -> (252, 204, 3)
+[INFO] [2025-04-23 16:09:25,483] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_flags.png
+[INFO] [2025-04-23 16:09:25,483] Weight statistics summary:
+[INFO] [2025-04-23 16:09:25,483] Average weights: text=0.712, context=0.004, color=0.284
+[INFO] [2025-04-23 16:09:25,483] Dominant source patterns:
+[INFO] [2025-04-23 16:09:25,483]   text dominant: 72.2% of shapes
+[INFO] [2025-04-23 16:09:25,484]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:25,484]   Color dominant: 27.8% of shapes
+[INFO] [2025-04-23 16:09:25,484] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:25,484]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:25,484]   Context > Color: 5.6% of shapes
+[INFO] [2025-04-23 16:09:25,484]   text > Color: 72.2% of shapes
+[INFO] [2025-04-23 16:09:25,486] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\flags_weight_analysis.json
+[INFO] [2025-04-23 16:09:25,486] Highest text weight (0.998): Shape 15 - 'The Swedish flag with a blue background and a yell...'
+[INFO] [2025-04-23 16:09:25,486] Highest context weight (0.014): Shape 0 - 'A gray canvas containing flag designs....'
+[INFO] [2025-04-23 16:09:25,486] Highest color weight (0.811): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:09:25,486] Example with color dominance: Shape 1 - 'The French flag with vertical stripes of blue, whi...' - weights: [0.348248690366745, 0.0003560102777555585, 0.651395320892334]

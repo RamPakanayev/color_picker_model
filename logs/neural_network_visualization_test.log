@@ -1,0 +1,17 @@
+[ERROR] [2025-04-23 16:10:09,167] Traceback (most recent call last):
+  File "C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\test_polygons.py", line 262, in main
+    shapes = json.load(f)
+             ^^^^^^^^^^^^
+  File "C:\Users\raman\Anaconda3\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\raman\Anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raman\Anaconda3\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raman\Anaconda3\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+

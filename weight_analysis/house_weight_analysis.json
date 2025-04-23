@@ -1,0 +1,100 @@
+[
+  {
+    "id": 0,
+    "description": "A black canvas that contains a house design.",
+    "weights": [
+      0.9939494132995605,
+      0.0037217566277831793,
+      0.0023288580123335123
+    ],
+    "rgb": [
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The white main body of the house.",
+    "weights": [
+      0.5585237741470337,
+      0.0013099523494020104,
+      0.4401662349700928
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 2,
+    "description": "The brown roof of the house.",
+    "weights": [
+      0.9921907782554626,
+      0.003949318081140518,
+      0.0038598470855504274
+    ],
+    "rgb": [
+      135,
+      69,
+      20
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A green lawn in front of the house.",
+    "weights": [
+      0.9978777170181274,
+      0.001294709276407957,
+      0.0008276022272184491
+    ],
+    "rgb": [
+      32,
+      140,
+      34
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A square window on the left side of the house. Windows are typically white.",
+    "weights": [
+      0.4602585434913635,
+      0.00196541054174304,
+      0.5377760529518127
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A square window on the right side of the house. Windows are typically white.",
+    "weights": [
+      0.4563012421131134,
+      0.0019142015371471643,
+      0.5417845845222473
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A red door in the center of the house.",
+    "weights": [
+      0.9839959740638733,
+      0.001077587134204805,
+      0.014926492236554623
+    ],
+    "rgb": [
+      254,
+      2,
+      3
+    ]
+  }
+]

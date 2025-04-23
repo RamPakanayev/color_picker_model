@@ -1,0 +1,184 @@
+[
+  {
+    "id": 0,
+    "description": "A dark space background with stars.",
+    "weights": [
+      0.8993630409240723,
+      0.013168184086680412,
+      0.08746886998414993
+    ],
+    "rgb": [
+      9,
+      9,
+      19
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The Sun at the center of the solar system.",
+    "weights": [
+      0.829137921333313,
+      0.006595967337489128,
+      0.1642661690711975
+    ],
+    "rgb": [
+      255,
+      214,
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "description": "Mercury, the smallest and innermost planet.",
+    "weights": [
+      0.9978532195091248,
+      0.0010559756774455309,
+      0.0010908329859375954
+    ],
+    "rgb": [
+      170,
+      169,
+      170
+    ]
+  },
+  {
+    "id": 3,
+    "description": "Venus, the second planet from the Sun.",
+    "weights": [
+      0.9636622667312622,
+      0.00099348952062428,
+      0.035344190895557404
+    ],
+    "rgb": [
+      249,
+      198,
+      74
+    ]
+  },
+  {
+    "id": 4,
+    "description": "Earth, our home planet, with its blue oceans.",
+    "weights": [
+      0.9971869587898254,
+      0.001585920574143529,
+      0.0012271597515791655
+    ],
+    "rgb": [
+      29,
+      145,
+      246
+    ]
+  },
+  {
+    "id": 5,
+    "description": "Mars, the red planet.",
+    "weights": [
+      0.9384061694145203,
+      0.0024785595014691353,
+      0.05911529064178467
+    ],
+    "rgb": [
+      251,
+      69,
+      7
+    ]
+  },
+  {
+    "id": 6,
+    "description": "Jupiter, the largest planet in the solar system.",
+    "weights": [
+      0.9388445615768433,
+      0.0023059193044900894,
+      0.058849580585956573
+    ],
+    "rgb": [
+      248,
+      223,
+      173
+    ]
+  },
+  {
+    "id": 7,
+    "description": "Saturn with its distinctive rings.",
+    "weights": [
+      0.909024715423584,
+      0.0005516831879504025,
+      0.09042362123727798
+    ],
+    "rgb": [
+      240,
+      229,
+      162
+    ]
+  },
+  {
+    "id": 9,
+    "description": "Uranus, the seventh planet from the Sun.",
+    "weights": [
+      0.981019914150238,
+      0.0011281862389296293,
+      0.01785191148519516
+    ],
+    "rgb": [
+      172,
+      215,
+      231
+    ]
+  },
+  {
+    "id": 10,
+    "description": "Neptune, the eighth and farthest planet.",
+    "weights": [
+      0.9989355206489563,
+      0.0005401517264544964,
+      0.0005242835031822324
+    ],
+    "rgb": [
+      65,
+      104,
+      227
+    ]
+  },
+  {
+    "id": 11,
+    "description": "A comet passing through the solar system.",
+    "weights": [
+      0.5444716811180115,
+      0.010691014118492603,
+      0.4448372423648834
+    ],
+    "rgb": [
+      254,
+      254,
+      251
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Saturn's rings surrounding the planet.",
+    "weights": [
+      0.7691945433616638,
+      0.0018818649696186185,
+      0.22892364859580994
+    ],
+    "rgb": [
+      251,
+      244,
+      222
+    ]
+  },
+  {
+    "id": 12,
+    "description": "The comet's glowing tail.",
+    "weights": [
+      0.9489728808403015,
+      0.0012574370484799147,
+      0.04976976662874222
+    ],
+    "rgb": [
+      173,
+      217,
+      232
+    ]
+  }
+]

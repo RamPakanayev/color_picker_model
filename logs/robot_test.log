@@ -1,0 +1,60 @@
+[INFO] [2025-04-23 16:10:34,985] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:10:34,985] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:10:34,985] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:10:39,196] Processing shapes in order: ['0:A white technical ba...', '1:The main body chassi...', "5:The robot's cylindri...", '16:A storage battery co...', '17:An extra sensor modu...', '18:A toolbox with repai...', '19:Assembly instruction...', '2:A blue control panel...', '8:The left arm of the ...', '10:The right arm of the...', '12:The left leg of the ...', '14:The right leg of the...', '6:A visor-like sensor ...', '7:An antenna on top of...', '3:A small red power bu...', '4:A green status indic...', "9:The robot's left han...", "11:The robot's right ha...", '13:The left foot of the...', '15:The right foot of th...']
+[INFO] [2025-04-23 16:10:39,285] Shape 0 weights: text=0.481, context=0.003, color=0.516
+[INFO] [2025-04-23 16:10:39,285] Shape 0 - 'A white technical background for the robot assembly diagram.' -> (246, 246, 252)
+[INFO] [2025-04-23 16:10:39,379] Shape 1 weights: text=0.974, context=0.005, color=0.021
+[INFO] [2025-04-23 16:10:39,380] Shape 1 - 'The main body chassis of the robot.' -> (191, 191, 197)
+[INFO] [2025-04-23 16:10:39,481] Shape 5 weights: text=0.967, context=0.004, color=0.029
+[INFO] [2025-04-23 16:10:39,482] Shape 5 - 'The robot's cylindrical head.' -> (170, 170, 176)
+[INFO] [2025-04-23 16:10:39,592] Shape 16 weights: text=0.818, context=0.004, color=0.178
+[INFO] [2025-04-23 16:10:39,592] Shape 16 - 'A storage battery component for the robot.' -> (249, 216, 5)
+[INFO] [2025-04-23 16:10:39,695] Shape 17 weights: text=0.979, context=0.005, color=0.016
+[INFO] [2025-04-23 16:10:39,695] Shape 17 - 'An extra sensor module component.' -> (5, 129, 131)
+[INFO] [2025-04-23 16:10:39,841] Shape 18 weights: text=0.988, context=0.006, color=0.005
+[INFO] [2025-04-23 16:10:39,841] Shape 18 - 'A toolbox with repair instruments.' -> (164, 42, 44)
+[INFO] [2025-04-23 16:10:39,984] Shape 19 weights: text=0.523, context=0.014, color=0.463
+[INFO] [2025-04-23 16:10:39,984] Shape 19 - 'Assembly instructions document.' -> (253, 253, 252)
+[INFO] [2025-04-23 16:10:40,150] Shape 2 weights: text=0.999, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:40,150] Shape 2 - 'A blue control panel on the robot's body.' -> (30, 146, 251)
+[INFO] [2025-04-23 16:10:40,307] Shape 8 weights: text=0.988, context=0.005, color=0.008
+[INFO] [2025-04-23 16:10:40,308] Shape 8 - 'The left arm of the robot.' -> (192, 192, 196)
+[INFO] [2025-04-23 16:10:40,481] Shape 10 weights: text=0.986, context=0.006, color=0.007
+[INFO] [2025-04-23 16:10:40,481] Shape 10 - 'The right arm of the robot.' -> (196, 195, 197)
+[INFO] [2025-04-23 16:10:40,646] Shape 12 weights: text=0.994, context=0.003, color=0.003
+[INFO] [2025-04-23 16:10:40,647] Shape 12 - 'The left leg of the robot.' -> (130, 128, 133)
+[INFO] [2025-04-23 16:10:40,810] Shape 14 weights: text=0.992, context=0.005, color=0.004
+[INFO] [2025-04-23 16:10:40,810] Shape 14 - 'The right leg of the robot.' -> (128, 132, 135)
+[INFO] [2025-04-23 16:10:40,973] Shape 6 weights: text=0.994, context=0.002, color=0.005
+[INFO] [2025-04-23 16:10:40,973] Shape 6 - 'A visor-like sensor array on the robot's head.' -> (8, 11, 247)
+[INFO] [2025-04-23 16:10:41,143] Shape 7 weights: text=0.943, context=0.002, color=0.055
+[INFO] [2025-04-23 16:10:41,143] Shape 7 - 'An antenna on top of the robot's head.' -> (129, 128, 132)
+[INFO] [2025-04-23 16:10:41,326] Shape 3 weights: text=0.950, context=0.001, color=0.049
+[INFO] [2025-04-23 16:10:41,327] Shape 3 - 'A small red power button on the control panel.' -> (251, 6, 4)
+[INFO] [2025-04-23 16:10:41,505] Shape 4 weights: text=0.995, context=0.002, color=0.004
+[INFO] [2025-04-23 16:10:41,506] Shape 4 - 'A green status indicator light.' -> (3, 249, 3)
+[INFO] [2025-04-23 16:10:41,707] Shape 9 weights: text=0.988, context=0.006, color=0.007
+[INFO] [2025-04-23 16:10:41,708] Shape 9 - 'The robot's left hand with three fingers.' -> (169, 166, 174)
+[INFO] [2025-04-23 16:10:41,910] Shape 11 weights: text=0.986, context=0.006, color=0.008
+[INFO] [2025-04-23 16:10:41,910] Shape 11 - 'The robot's right hand with three fingers.' -> (166, 172, 174)
+[INFO] [2025-04-23 16:10:42,110] Shape 13 weights: text=0.994, context=0.003, color=0.003
+[INFO] [2025-04-23 16:10:42,111] Shape 13 - 'The left foot of the robot.' -> (105, 109, 113)
+[INFO] [2025-04-23 16:10:42,292] Shape 15 weights: text=0.994, context=0.003, color=0.002
+[INFO] [2025-04-23 16:10:42,292] Shape 15 - 'The right foot of the robot.' -> (105, 103, 109)
+[INFO] [2025-04-23 16:10:42,356] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_robot.png
+[INFO] [2025-04-23 16:10:42,356] Weight statistics summary:
+[INFO] [2025-04-23 16:10:42,358] Average weights: text=0.927, context=0.004, color=0.069
+[INFO] [2025-04-23 16:10:42,358] Dominant source patterns:
+[INFO] [2025-04-23 16:10:42,358]   text dominant: 95.0% of shapes
+[INFO] [2025-04-23 16:10:42,358]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:10:42,358]   Color dominant: 5.0% of shapes
+[INFO] [2025-04-23 16:10:42,359] Pairwise comparisons:
+[INFO] [2025-04-23 16:10:42,359]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:10:42,359]   Context > Color: 25.0% of shapes
+[INFO] [2025-04-23 16:10:42,359]   text > Color: 95.0% of shapes
+[INFO] [2025-04-23 16:10:42,362] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\robot_weight_analysis.json
+[INFO] [2025-04-23 16:10:42,363] Highest text weight (0.999): Shape 2 - 'A blue control panel on the robot's body....'
+[INFO] [2025-04-23 16:10:42,363] Highest context weight (0.014): Shape 19 - 'Assembly instructions document....'
+[INFO] [2025-04-23 16:10:42,363] Highest color weight (0.516): Shape 0 - 'A white technical background for the robot assembl...'
+[INFO] [2025-04-23 16:10:42,364] Example with color dominance: Shape 0 - 'A white technical background for the robot assembl...' - weights: [0.4812076985836029, 0.0027455994859337807, 0.5160467624664307]

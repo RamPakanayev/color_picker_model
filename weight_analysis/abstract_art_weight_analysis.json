@@ -1,0 +1,156 @@
+[
+  {
+    "id": 0,
+    "description": "A canvas with a deep midnight blue background, like the night sky.",
+    "weights": [
+      0.9988947510719299,
+      0.0007160681998357177,
+      0.00038923975080251694
+    ],
+    "rgb": [
+      5,
+      21,
+      113
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A vibrant scarlet flame-like shape rising from the bottom.",
+    "weights": [
+      0.8800777196884155,
+      0.0018257653573527932,
+      0.11809647083282471
+    ],
+    "rgb": [
+      253,
+      34,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A shape that appears to be a bright golden sun, radiating warmth.",
+    "weights": [
+      0.8813421726226807,
+      0.0052543943747878075,
+      0.11340341717004776
+    ],
+    "rgb": [
+      253,
+      216,
+      3
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A silver crescent moon shape in the upper left corner of the sky.",
+    "weights": [
+      0.8625770807266235,
+      0.0015458754496648908,
+      0.13587701320648193
+    ],
+    "rgb": [
+      192,
+      192,
+      192
+    ]
+  },
+  {
+    "id": 6,
+    "description": "Lavender and purple flowing abstract shapes resembling clouds or waves in the sky.",
+    "weights": [
+      0.9924855828285217,
+      0.003166375681757927,
+      0.0043480778113007545
+    ],
+    "rgb": [
+      150,
+      123,
+      183
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A dark turquoise shape resembling water at the bottom of the canvas.",
+    "weights": [
+      0.9999333620071411,
+      4.7581535909557715e-05,
+      1.9084878658759408e-05
+    ],
+    "rgb": [
+      1,
+      138,
+      140
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Small white star-like shapes scattered across the night sky.",
+    "weights": [
+      0.4522411525249481,
+      0.0018804108258336782,
+      0.5458784699440002
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 9,
+    "description": "Another small white star-like shape in the night sky.",
+    "weights": [
+      0.5719189047813416,
+      0.003523872932419181,
+      0.42455723881721497
+    ],
+    "rgb": [
+      255,
+      254,
+      253
+    ]
+  },
+  {
+    "id": 10,
+    "description": "A third small white star-like shape in the night sky.",
+    "weights": [
+      0.5896943807601929,
+      0.002681074198335409,
+      0.40762457251548767
+    ],
+    "rgb": [
+      255,
+      254,
+      253
+    ]
+  },
+  {
+    "id": 3,
+    "description": "An emerald green shape that resembles a leaf or plant growing from the flames.",
+    "weights": [
+      0.9984373450279236,
+      0.0008517568348906934,
+      0.0007109666476026177
+    ],
+    "rgb": [
+      1,
+      202,
+      90
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A smaller ivory shape inside the silver crescent moon, creating contrast.",
+    "weights": [
+      0.722683846950531,
+      0.001122629619203508,
+      0.2761934995651245
+    ],
+    "rgb": [
+      254,
+      252,
+      248
+    ]
+  }
+]

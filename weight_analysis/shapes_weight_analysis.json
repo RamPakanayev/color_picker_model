@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "description": "A black canvas with an aspect ratio of 3.91. It fills the entire image and contains other shapes.",
+    "weights": [
+      0.9891588091850281,
+      0.006566991098225117,
+      0.004274107050150633
+    ],
+    "rgb": [
+      6,
+      6,
+      3
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A red shape near the point (290, 88) on the canvas. It spans about 479x134 pixels and has an aspect ratio of 3.57. It has an irregular polygonal outline.",
+    "weights": [
+      0.9925075173377991,
+      0.003462825436145067,
+      0.004029644187539816
+    ],
+    "rgb": [
+      254,
+      3,
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A white shape near the point (290, 87) on the canvas. It spans about 324x67 pixels and has an aspect ratio of 4.84. It has an irregular polygonal outline.",
+    "weights": [
+      0.6370424032211304,
+      0.005192440934479237,
+      0.35776519775390625
+    ],
+    "rgb": [
+      254,
+      253,
+      253
+    ]
+  }
+]

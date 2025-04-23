@@ -1,0 +1,37 @@
+[INFO] [2025-04-23 16:09:49,867] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:49,867] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:49,867] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:53,469] Processing shapes in order: ['0:A blue sky backgroun...', '1:A large bright yello...', '2:Rolling green hills ...', '3:A brown mountain ran...', '5:A light blue lake at...', '6:A small wooden brown...', '8:A tall green pine tr...', '4:White snow caps on t...', '7:A red roof on top of...']
+[INFO] [2025-04-23 16:09:53,560] Shape 0 weights: text=0.999, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:53,560] Shape 0 - 'A blue sky background for a landscape scene.' -> (134, 205, 236)
+[INFO] [2025-04-23 16:09:53,646] Shape 1 weights: text=0.693, context=0.004, color=0.303
+[INFO] [2025-04-23 16:09:53,646] Shape 1 - 'A large bright yellow sun in the sky.' -> (255, 253, 1)
+[INFO] [2025-04-23 16:09:53,739] Shape 2 weights: text=0.986, context=0.006, color=0.008
+[INFO] [2025-04-23 16:09:53,739] Shape 2 - 'Rolling green hills in the middle of the landscape.' -> (34, 139, 34)
+[INFO] [2025-04-23 16:09:53,832] Shape 3 weights: text=0.992, context=0.004, color=0.004
+[INFO] [2025-04-23 16:09:53,833] Shape 3 - 'A brown mountain range in the background.' -> (136, 68, 21)
+[INFO] [2025-04-23 16:09:53,933] Shape 5 weights: text=0.992, context=0.003, color=0.005
+[INFO] [2025-04-23 16:09:53,933] Shape 5 - 'A light blue lake at the bottom of the hills.' -> (172, 216, 234)
+[INFO] [2025-04-23 16:09:54,034] Shape 6 weights: text=0.990, context=0.005, color=0.005
+[INFO] [2025-04-23 16:09:54,034] Shape 6 - 'A small wooden brown house on the hills.' -> (157, 82, 46)
+[INFO] [2025-04-23 16:09:54,143] Shape 8 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:54,143] Shape 8 - 'A tall green pine tree next to the house.' -> (6, 99, 6)
+[INFO] [2025-04-23 16:09:54,249] Shape 4 weights: text=0.572, context=0.007, color=0.421
+[INFO] [2025-04-23 16:09:54,249] Shape 4 - 'White snow caps on top of the mountains.' -> (253, 253, 254)
+[INFO] [2025-04-23 16:09:54,351] Shape 7 weights: text=0.988, context=0.001, color=0.011
+[INFO] [2025-04-23 16:09:54,351] Shape 7 - 'A red roof on top of the house.' -> (220, 16, 61)
+[INFO] [2025-04-23 16:09:54,401] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_landscape.png
+[INFO] [2025-04-23 16:09:54,401] Weight statistics summary:
+[INFO] [2025-04-23 16:09:54,401] Average weights: text=0.912, context=0.004, color=0.084
+[INFO] [2025-04-23 16:09:54,402] Dominant source patterns:
+[INFO] [2025-04-23 16:09:54,402]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:09:54,402]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:54,402]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:54,402] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:54,402]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:54,402]   Context > Color: 44.4% of shapes
+[INFO] [2025-04-23 16:09:54,402]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:09:54,405] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\landscape_weight_analysis.json
+[INFO] [2025-04-23 16:09:54,405] Highest text weight (0.999): Shape 0 - 'A blue sky background for a landscape scene....'
+[INFO] [2025-04-23 16:09:54,405] Highest context weight (0.007): Shape 4 - 'White snow caps on top of the mountains....'
+[INFO] [2025-04-23 16:09:54,405] Highest color weight (0.421): Shape 4 - 'White snow caps on top of the mountains....'

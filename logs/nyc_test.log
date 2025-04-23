@@ -1,0 +1,152 @@
+[INFO] [2025-04-23 16:10:14,073] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:10:14,073] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:10:14,073] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:10:18,671] Processing shapes in order: ['0:A gradient blue sky ...', '1:The golden sun in th...', '2:A fluffy white cloud...', '3:Another fluffy white...', '4:Deep blue Hudson and...', '5:The island of Manhat...', '6:Brooklyn skyline in ...', '7:Another Brooklyn bui...', '8:A third Brooklyn bui...', '9:Queens skyline build...', '10:Another Queens build...', '11:A third Queens build...', '35:Brooklyn Bridge main...', '39:The Statue of Libert...', '56:A white boat on the ...', '57:Another white boat o...', '12:One World Trade Cent...', '14:Empire State Buildin...', '15:Empire State Buildin...', '16:Empire State Buildin...', '17:Empire State Buildin...', '18:Chrysler Building ma...', '19:Chrysler Building fi...', '20:Chrysler Building se...', '21:Chrysler Building sp...', '22:A gray Manhattan sky...', '23:Another Manhattan sk...', '24:A third Manhattan sk...', '25:A Midtown Manhattan ...', '26:Another Midtown Manh...', '27:An East Side Manhatt...', '28:The UN Headquarters ...', '29:An Upper East Side b...', '30:Another Upper East S...', '31:Central Park with vi...', '42:Times Square with vi...', '47:A yellow taxi in Man...', '48:Another yellow taxi ...', '49:A third yellow taxi ...', '50:A fourth yellow taxi...', '51:The High Line with g...', '58:A vertical Manhattan...', '59:Another vertical Man...', '60:A third vertical Man...', '61:A fourth vertical Ma...', '62:A fifth vertical Man...', '63:A horizontal Manhatt...', '64:Another horizontal M...', '65:A third horizontal M...', '36:Brooklyn Bridge left...', '37:Brooklyn Bridge righ...', '38:Brooklyn Bridge road...', '40:The Statue of Libert...', '41:The Statue of Libert...', '13:Blue-tinted windows ...', '32:A tree in Central Pa...', '33:Another tree in Cent...', '34:A third tree in Cent...', '43:A yellow billboard i...', '44:A cyan billboard in ...', '45:A green billboard in...', '46:A magenta billboard ...', '52:Plants on the High L...', '53:More plants on the H...', '54:Additional plants on...', '55:More vegetation on t...']
+[INFO] [2025-04-23 16:10:18,823] Shape 0 weights: text=0.999, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:18,823] Shape 0 - 'A gradient blue sky background for the NYC skyline.' -> (133, 207, 232)
+[INFO] [2025-04-23 16:10:18,960] Shape 1 weights: text=0.986, context=0.005, color=0.008
+[INFO] [2025-04-23 16:10:18,962] Shape 1 - 'The golden sun in the sky above NYC.' -> (250, 222, 4)
+[INFO] [2025-04-23 16:10:19,097] Shape 2 weights: text=0.526, context=0.002, color=0.472
+[INFO] [2025-04-23 16:10:19,097] Shape 2 - 'A fluffy white cloud in the sky.' -> (255, 254, 253)
+[INFO] [2025-04-23 16:10:19,290] Shape 3 weights: text=0.514, context=0.002, color=0.484
+[INFO] [2025-04-23 16:10:19,290] Shape 3 - 'Another fluffy white cloud in the sky.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:10:19,455] Shape 4 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:10:19,455] Shape 4 - 'Deep blue Hudson and East Rivers.' -> (8, 105, 150)
+[INFO] [2025-04-23 16:10:19,606] Shape 5 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:19,607] Shape 5 - 'The island of Manhattan with gray urban landscape.' -> (128, 128, 131)
+[INFO] [2025-04-23 16:10:19,751] Shape 6 weights: text=0.995, context=0.003, color=0.002
+[INFO] [2025-04-23 16:10:19,751] Shape 6 - 'Brooklyn skyline in the background.' -> (167, 169, 170)
+[INFO] [2025-04-23 16:10:19,892] Shape 7 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:19,892] Shape 7 - 'Another Brooklyn building in the background.' -> (175, 178, 184)
+[INFO] [2025-04-23 16:10:20,027] Shape 8 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:20,027] Shape 8 - 'A third Brooklyn building in the background.' -> (158, 160, 163)
+[INFO] [2025-04-23 16:10:20,149] Shape 9 weights: text=0.993, context=0.003, color=0.004
+[INFO] [2025-04-23 16:10:20,150] Shape 9 - 'Queens skyline building in the background.' -> (169, 172, 172)
+[INFO] [2025-04-23 16:10:20,269] Shape 10 weights: text=0.995, context=0.003, color=0.003
+[INFO] [2025-04-23 16:10:20,269] Shape 10 - 'Another Queens building in the background.' -> (162, 167, 169)
+[INFO] [2025-04-23 16:10:20,384] Shape 11 weights: text=0.992, context=0.003, color=0.004
+[INFO] [2025-04-23 16:10:20,384] Shape 11 - 'A third Queens building in the background.' -> (171, 175, 175)
+[INFO] [2025-04-23 16:10:20,511] Shape 35 weights: text=0.990, context=0.004, color=0.006
+[INFO] [2025-04-23 16:10:20,511] Shape 35 - 'Brooklyn Bridge main span.' -> (208, 179, 141)
+[INFO] [2025-04-23 16:10:20,641] Shape 39 weights: text=0.999, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:20,641] Shape 39 - 'The Statue of Liberty's green body.' -> (75, 153, 1)
+[INFO] [2025-04-23 16:10:20,764] Shape 56 weights: text=0.493, context=0.001, color=0.506
+[INFO] [2025-04-23 16:10:20,764] Shape 56 - 'A white boat on the Hudson River.' -> (255, 255, 255)
+[INFO] [2025-04-23 16:10:20,887] Shape 57 weights: text=0.437, context=0.001, color=0.563
+[INFO] [2025-04-23 16:10:20,887] Shape 57 - 'Another white boat on the East River.' -> (255, 255, 255)
+[INFO] [2025-04-23 16:10:21,018] Shape 12 weights: text=0.986, context=0.002, color=0.012
+[INFO] [2025-04-23 16:10:21,018] Shape 12 - 'One World Trade Center, a silver skyscraper in Lower Manhattan.' -> (190, 193, 194)
+[INFO] [2025-04-23 16:10:21,152] Shape 14 weights: text=0.959, context=0.000, color=0.041
+[INFO] [2025-04-23 16:10:21,152] Shape 14 - 'Empire State Building main body with its beige color.' -> (253, 223, 181)
+[INFO] [2025-04-23 16:10:21,288] Shape 15 weights: text=0.859, context=0.003, color=0.138
+[INFO] [2025-04-23 16:10:21,288] Shape 15 - 'Empire State Building mid-section.' -> (245, 222, 180)
+[INFO] [2025-04-23 16:10:21,421] Shape 16 weights: text=0.875, context=0.002, color=0.123
+[INFO] [2025-04-23 16:10:21,421] Shape 16 - 'Empire State Building upper tapered section.' -> (245, 223, 181)
+[INFO] [2025-04-23 16:10:21,558] Shape 17 weights: text=0.848, context=0.002, color=0.150
+[INFO] [2025-04-23 16:10:21,558] Shape 17 - 'Empire State Building spire.' -> (240, 224, 182)
+[INFO] [2025-04-23 16:10:21,689] Shape 18 weights: text=0.991, context=0.001, color=0.009
+[INFO] [2025-04-23 16:10:21,689] Shape 18 - 'Chrysler Building main body with silver color.' -> (190, 193, 194)
+[INFO] [2025-04-23 16:10:21,842] Shape 19 weights: text=0.945, context=0.001, color=0.053
+[INFO] [2025-04-23 16:10:21,842] Shape 19 - 'Chrysler Building first crown section.' -> (190, 192, 194)
+[INFO] [2025-04-23 16:10:21,967] Shape 20 weights: text=0.950, context=0.002, color=0.049
+[INFO] [2025-04-23 16:10:21,967] Shape 20 - 'Chrysler Building second crown section.' -> (189, 191, 192)
+[INFO] [2025-04-23 16:10:22,086] Shape 21 weights: text=0.853, context=0.002, color=0.145
+[INFO] [2025-04-23 16:10:22,087] Shape 21 - 'Chrysler Building spire.' -> (221, 219, 217)
+[INFO] [2025-04-23 16:10:22,210] Shape 22 weights: text=0.997, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,211] Shape 22 - 'A gray Manhattan skyscraper.' -> (107, 110, 111)
+[INFO] [2025-04-23 16:10:22,333] Shape 23 weights: text=0.995, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,334] Shape 23 - 'Another Manhattan skyscraper.' -> (116, 119, 122)
+[INFO] [2025-04-23 16:10:22,469] Shape 24 weights: text=0.995, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,470] Shape 24 - 'A third Manhattan skyscraper.' -> (98, 101, 103)
+[INFO] [2025-04-23 16:10:22,591] Shape 25 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,591] Shape 25 - 'A Midtown Manhattan building.' -> (126, 129, 135)
+[INFO] [2025-04-23 16:10:22,709] Shape 26 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,710] Shape 26 - 'Another Midtown Manhattan building.' -> (136, 140, 144)
+[INFO] [2025-04-23 16:10:22,826] Shape 27 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:22,826] Shape 27 - 'An East Side Manhattan skyscraper.' -> (145, 149, 154)
+[INFO] [2025-04-23 16:10:22,939] Shape 28 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:22,940] Shape 28 - 'The UN Headquarters with blue-green glass.' -> (4, 127, 130)
+[INFO] [2025-04-23 16:10:23,051] Shape 29 weights: text=0.991, context=0.004, color=0.005
+[INFO] [2025-04-23 16:10:23,051] Shape 29 - 'An Upper East Side building.' -> (121, 126, 128)
+[INFO] [2025-04-23 16:10:23,174] Shape 30 weights: text=0.991, context=0.004, color=0.005
+[INFO] [2025-04-23 16:10:23,174] Shape 30 - 'Another Upper East Side building.' -> (134, 133, 138)
+[INFO] [2025-04-23 16:10:23,330] Shape 31 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:23,331] Shape 31 - 'Central Park with vibrant green color.' -> (32, 139, 35)
+[INFO] [2025-04-23 16:10:23,554] Shape 42 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:23,554] Shape 42 - 'Times Square with vibrant pink color.' -> (253, 4, 122)
+[INFO] [2025-04-23 16:10:23,744] Shape 47 weights: text=0.917, context=0.006, color=0.078
+[INFO] [2025-04-23 16:10:23,745] Shape 47 - 'A yellow taxi in Manhattan.' -> (254, 202, 0)
+[INFO] [2025-04-23 16:10:23,918] Shape 48 weights: text=0.934, context=0.006, color=0.061
+[INFO] [2025-04-23 16:10:23,919] Shape 48 - 'Another yellow taxi in Manhattan.' -> (253, 204, 0)
+[INFO] [2025-04-23 16:10:24,088] Shape 49 weights: text=0.885, context=0.006, color=0.109
+[INFO] [2025-04-23 16:10:24,088] Shape 49 - 'A third yellow taxi in Manhattan.' -> (254, 202, 0)
+[INFO] [2025-04-23 16:10:24,267] Shape 50 weights: text=0.901, context=0.006, color=0.093
+[INFO] [2025-04-23 16:10:24,268] Shape 50 - 'A fourth yellow taxi in Manhattan.' -> (253, 200, 0)
+[INFO] [2025-04-23 16:10:24,442] Shape 51 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:24,443] Shape 51 - 'The High Line with green vegetation.' -> (105, 141, 37)
+[INFO] [2025-04-23 16:10:24,629] Shape 58 weights: text=0.997, context=0.001, color=0.002
+[INFO] [2025-04-23 16:10:24,630] Shape 58 - 'A vertical Manhattan avenue.' -> (51, 48, 51)
+[INFO] [2025-04-23 16:10:24,820] Shape 59 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:24,821] Shape 59 - 'Another vertical Manhattan avenue.' -> (51, 53, 51)
+[INFO] [2025-04-23 16:10:25,005] Shape 60 weights: text=0.996, context=0.002, color=0.003
+[INFO] [2025-04-23 16:10:25,005] Shape 60 - 'A third vertical Manhattan avenue.' -> (45, 49, 49)
+[INFO] [2025-04-23 16:10:25,213] Shape 61 weights: text=0.995, context=0.002, color=0.003
+[INFO] [2025-04-23 16:10:25,214] Shape 61 - 'A fourth vertical Manhattan avenue.' -> (47, 49, 53)
+[INFO] [2025-04-23 16:10:25,370] Shape 62 weights: text=0.996, context=0.002, color=0.003
+[INFO] [2025-04-23 16:10:25,370] Shape 62 - 'A fifth vertical Manhattan avenue.' -> (49, 50, 49)
+[INFO] [2025-04-23 16:10:25,518] Shape 63 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:25,518] Shape 63 - 'A horizontal Manhattan street.' -> (47, 48, 50)
+[INFO] [2025-04-23 16:10:25,668] Shape 64 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:25,668] Shape 64 - 'Another horizontal Manhattan street.' -> (49, 50, 50)
+[INFO] [2025-04-23 16:10:25,815] Shape 65 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:10:25,816] Shape 65 - 'A third horizontal Manhattan street.' -> (49, 49, 51)
+[INFO] [2025-04-23 16:10:25,944] Shape 36 weights: text=0.986, context=0.006, color=0.008
+[INFO] [2025-04-23 16:10:25,944] Shape 36 - 'Brooklyn Bridge left tower.' -> (210, 183, 138)
+[INFO] [2025-04-23 16:10:26,072] Shape 37 weights: text=0.986, context=0.006, color=0.008
+[INFO] [2025-04-23 16:10:26,072] Shape 37 - 'Brooklyn Bridge right tower.' -> (208, 176, 142)
+[INFO] [2025-04-23 16:10:26,201] Shape 38 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:26,201] Shape 38 - 'Brooklyn Bridge roadway.' -> (78, 79, 79)
+[INFO] [2025-04-23 16:10:26,330] Shape 40 weights: text=0.990, context=0.005, color=0.005
+[INFO] [2025-04-23 16:10:26,331] Shape 40 - 'The Statue of Liberty's crown.' -> (73, 152, 4)
+[INFO] [2025-04-23 16:10:26,454] Shape 41 weights: text=0.908, context=0.004, color=0.087
+[INFO] [2025-04-23 16:10:26,454] Shape 41 - 'The Statue of Liberty's golden torch.' -> (252, 215, 3)
+[INFO] [2025-04-23 16:10:26,587] Shape 13 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:26,587] Shape 13 - 'Blue-tinted windows at the top of One World Trade Center.' -> (98, 148, 239)
+[INFO] [2025-04-23 16:10:26,751] Shape 32 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:10:26,751] Shape 32 - 'A tree in Central Park.' -> (19, 97, 19)
+[INFO] [2025-04-23 16:10:26,911] Shape 33 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:26,911] Shape 33 - 'Another tree in Central Park.' -> (19, 99, 21)
+[INFO] [2025-04-23 16:10:27,075] Shape 34 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:27,075] Shape 34 - 'A third tree in Central Park.' -> (19, 100, 21)
+[INFO] [2025-04-23 16:10:27,237] Shape 43 weights: text=0.871, context=0.005, color=0.124
+[INFO] [2025-04-23 16:10:27,238] Shape 43 - 'A yellow billboard in Times Square.' -> (254, 251, 0)
+[INFO] [2025-04-23 16:10:27,404] Shape 44 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:27,405] Shape 44 - 'A cyan billboard in Times Square.' -> (3, 249, 250)
+[INFO] [2025-04-23 16:10:27,584] Shape 45 weights: text=0.999, context=0.000, color=0.000
+[INFO] [2025-04-23 16:10:27,584] Shape 45 - 'A green billboard in Times Square.' -> (1, 249, 6)
+[INFO] [2025-04-23 16:10:27,773] Shape 46 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:27,774] Shape 46 - 'A magenta billboard in Times Square.' -> (249, 8, 248)
+[INFO] [2025-04-23 16:10:27,968] Shape 52 weights: text=0.995, context=0.003, color=0.002
+[INFO] [2025-04-23 16:10:27,968] Shape 52 - 'Plants on the High Line.' -> (50, 120, 51)
+[INFO] [2025-04-23 16:10:28,157] Shape 53 weights: text=0.996, context=0.002, color=0.001
+[INFO] [2025-04-23 16:10:28,158] Shape 53 - 'More plants on the High Line.' -> (46, 119, 53)
+[INFO] [2025-04-23 16:10:28,341] Shape 54 weights: text=0.996, context=0.002, color=0.001
+[INFO] [2025-04-23 16:10:28,341] Shape 54 - 'Additional plants on the High Line.' -> (50, 119, 51)
+[INFO] [2025-04-23 16:10:28,521] Shape 55 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:10:28,521] Shape 55 - 'More vegetation on the High Line.' -> (50, 120, 49)
+[INFO] [2025-04-23 16:10:28,605] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_nyc.png
+[INFO] [2025-04-23 16:10:28,605] Weight statistics summary:
+[INFO] [2025-04-23 16:10:28,606] Average weights: text=0.946, context=0.002, color=0.051
+[INFO] [2025-04-23 16:10:28,606] Dominant source patterns:
+[INFO] [2025-04-23 16:10:28,606]   text dominant: 97.0% of shapes
+[INFO] [2025-04-23 16:10:28,606]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:10:28,607]   Color dominant: 3.0% of shapes
+[INFO] [2025-04-23 16:10:28,607] Pairwise comparisons:
+[INFO] [2025-04-23 16:10:28,607]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:10:28,607]   Context > Color: 45.5% of shapes
+[INFO] [2025-04-23 16:10:28,608]   text > Color: 97.0% of shapes
+[INFO] [2025-04-23 16:10:28,617] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\nyc_weight_analysis.json
+[INFO] [2025-04-23 16:10:28,618] Highest text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:10:28,618] Highest context weight (0.006): Shape 50 - 'A fourth yellow taxi in Manhattan....'
+[INFO] [2025-04-23 16:10:28,618] Highest color weight (0.563): Shape 57 - 'Another white boat on the East River....'
+[INFO] [2025-04-23 16:10:28,618] Example with color dominance: Shape 56 - 'A white boat on the Hudson River....' - weights: [0.49308446049690247, 0.000766968762036413, 0.5061485171318054]

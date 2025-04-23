@@ -1,0 +1,41 @@
+[INFO] [2025-04-23 16:09:12,020] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:12,020] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:12,021] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:15,072] Processing shapes in order: ['0:A white background c...', '1:A skin-colored circu...', '2:A pink smiling mouth...', '3:A blue left eye....', '4:A blue right eye....', '7:A small brown nose i...', '8:Yellow hair on top o...', '9:Red cheeks on the fa...', '10:Red cheeks on the ot...', '5:A black pupil in the...', '6:A black pupil in the...']
+[INFO] [2025-04-23 16:09:15,151] Shape 0 weights: text=0.510, context=0.008, color=0.482
+[INFO] [2025-04-23 16:09:15,151] Shape 0 - 'A white background canvas for a simple face drawing.' -> (253, 250, 252)
+[INFO] [2025-04-23 16:09:15,225] Shape 1 weights: text=0.864, context=0.003, color=0.133
+[INFO] [2025-04-23 16:09:15,225] Shape 1 - 'A skin-colored circular face shape.' -> (252, 222, 170)
+[INFO] [2025-04-23 16:09:15,300] Shape 2 weights: text=0.883, context=0.003, color=0.114
+[INFO] [2025-04-23 16:09:15,300] Shape 2 - 'A pink smiling mouth on the face.' -> (254, 106, 182)
+[INFO] [2025-04-23 16:09:15,379] Shape 3 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:15,379] Shape 3 - 'A blue left eye.' -> (3, 124, 230)
+[INFO] [2025-04-23 16:09:15,464] Shape 4 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:15,464] Shape 4 - 'A blue right eye.' -> (2, 123, 233)
+[INFO] [2025-04-23 16:09:15,538] Shape 7 weights: text=0.987, context=0.005, color=0.008
+[INFO] [2025-04-23 16:09:15,538] Shape 7 - 'A small brown nose in the center of the face.' -> (137, 69, 17)
+[INFO] [2025-04-23 16:09:15,612] Shape 8 weights: text=0.795, context=0.003, color=0.202
+[INFO] [2025-04-23 16:09:15,612] Shape 8 - 'Yellow hair on top of the head.' -> (255, 214, 1)
+[INFO] [2025-04-23 16:09:15,678] Shape 9 weights: text=0.916, context=0.006, color=0.077
+[INFO] [2025-04-23 16:09:15,678] Shape 9 - 'Red cheeks on the face.' -> (252, 7, 3)
+[INFO] [2025-04-23 16:09:15,750] Shape 10 weights: text=0.936, context=0.006, color=0.058
+[INFO] [2025-04-23 16:09:15,750] Shape 10 - 'Red cheeks on the other side of the face.' -> (251, 8, 4)
+[INFO] [2025-04-23 16:09:15,825] Shape 5 weights: text=0.995, context=0.003, color=0.003
+[INFO] [2025-04-23 16:09:15,825] Shape 5 - 'A black pupil in the left eye.' -> (2, 6, 3)
+[INFO] [2025-04-23 16:09:15,899] Shape 6 weights: text=0.995, context=0.003, color=0.002
+[INFO] [2025-04-23 16:09:15,899] Shape 6 - 'A black pupil in the right eye.' -> (1, 6, 4)
+[INFO] [2025-04-23 16:09:15,917] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_face.png
+[INFO] [2025-04-23 16:09:15,917] Weight statistics summary:
+[INFO] [2025-04-23 16:09:15,917] Average weights: text=0.898, context=0.004, color=0.098
+[INFO] [2025-04-23 16:09:15,918] Dominant source patterns:
+[INFO] [2025-04-23 16:09:15,918]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:09:15,918]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:15,918]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:15,918] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:15,919]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:15,920]   Context > Color: 36.4% of shapes
+[INFO] [2025-04-23 16:09:15,920]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:09:15,921] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\face_weight_analysis.json
+[INFO] [2025-04-23 16:09:15,921] Highest text weight (0.998): Shape 3 - 'A blue left eye....'
+[INFO] [2025-04-23 16:09:15,921] Highest context weight (0.008): Shape 0 - 'A white background canvas for a simple face drawin...'
+[INFO] [2025-04-23 16:09:15,921] Highest color weight (0.482): Shape 0 - 'A white background canvas for a simple face drawin...'

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "description": "A orange canvas with an aspect ratio of 0.56. It fills the entire image and contains other shapes.",
+    "weights": [
+      0.9808034896850586,
+      0.004992181900888681,
+      0.0142043586820364
+    ],
+    "rgb": [
+      254,
+      163,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A rgb(255,174,201) shape near the point (191, 267) on the canvas. It spans about 238x233 pixels and has an aspect ratio of 1.02. It has an irregular polygonal outline.",
+    "weights": [
+      0.9952425956726074,
+      0.0029170792549848557,
+      0.0018404131988063455
+    ],
+    "rgb": [
+      241,
+      173,
+      204
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A rgb(0,162,232) shape near the point (198, 519) on the canvas. It spans about 232x181 pixels and has an aspect ratio of 1.28. It has an irregular polygonal outline.",
+    "weights": [
+      0.9996645450592041,
+      0.00022870110115036368,
+      0.00010677928366931155
+    ],
+    "rgb": [
+      5,
+      160,
+      236
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A rgb(163,73,164) shape near the point (141, 267) on the canvas. It spans about 43x205 pixels and has an aspect ratio of 0.21. It has an irregular polygonal outline.",
+    "weights": [
+      0.9985179305076599,
+      0.0009545782231725752,
+      0.0005275659495964646
+    ],
+    "rgb": [
+      166,
+      68,
+      166
+    ]
+  }
+]

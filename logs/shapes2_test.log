@@ -1,0 +1,27 @@
+[INFO] [2025-04-23 16:10:59,647] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:10:59,647] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:10:59,647] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:11:05,553] Processing shapes in order: ['0:A orange canvas with...', '2:A rgb(255,174,201) s...', '3:A rgb(0,162,232) sha...', '1:A rgb(163,73,164) sh...']
+[INFO] [2025-04-23 16:11:05,649] Shape 0 weights: text=0.981, context=0.005, color=0.014
+[INFO] [2025-04-23 16:11:05,649] Shape 0 - 'A orange canvas with an aspect ratio of 0.56. It fills the entire image and contains other shapes.' -> (254, 163, 4)
+[INFO] [2025-04-23 16:11:05,744] Shape 2 weights: text=0.995, context=0.003, color=0.002
+[INFO] [2025-04-23 16:11:05,744] Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267) on the canvas. It spans about 238x233 pixels and has an aspect ratio of 1.02. It has an irregular polygonal outline.' -> (241, 173, 204)
+[INFO] [2025-04-23 16:11:05,826] Shape 3 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:11:05,827] Shape 3 - 'A rgb(0,162,232) shape near the point (198, 519) on the canvas. It spans about 232x181 pixels and has an aspect ratio of 1.28. It has an irregular polygonal outline.' -> (5, 160, 236)
+[INFO] [2025-04-23 16:11:05,933] Shape 1 weights: text=0.999, context=0.001, color=0.001
+[INFO] [2025-04-23 16:11:05,933] Shape 1 - 'A rgb(163,73,164) shape near the point (141, 267) on the canvas. It spans about 43x205 pixels and has an aspect ratio of 0.21. It has an irregular polygonal outline.' -> (166, 68, 166)
+[INFO] [2025-04-23 16:11:05,965] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_shapes2.png
+[INFO] [2025-04-23 16:11:05,965] Weight statistics summary:
+[INFO] [2025-04-23 16:11:05,966] Average weights: text=0.994, context=0.002, color=0.004
+[INFO] [2025-04-23 16:11:05,966] Dominant source patterns:
+[INFO] [2025-04-23 16:11:05,966]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:11:05,966]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:11:05,966]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:11:05,966] Pairwise comparisons:
+[INFO] [2025-04-23 16:11:05,966]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:11:05,966]   Context > Color: 75.0% of shapes
+[INFO] [2025-04-23 16:11:05,967]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:11:05,968] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\shapes2_weight_analysis.json
+[INFO] [2025-04-23 16:11:05,968] Highest text weight (1.000): Shape 3 - 'A rgb(0,162,232) shape near the point (198, 519) o...'
+[INFO] [2025-04-23 16:11:05,969] Highest context weight (0.005): Shape 0 - 'A orange canvas with an aspect ratio of 0.56. It f...'
+[INFO] [2025-04-23 16:11:05,969] Highest color weight (0.014): Shape 0 - 'A orange canvas with an aspect ratio of 0.56. It f...'

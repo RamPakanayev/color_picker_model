@@ -1,0 +1,56 @@
+[INFO] [2025-04-23 16:09:02,273] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:02,273] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:02,273] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:05,389] Processing shapes in order: ['0:A bright blue sky ab...', '1:Golden sand dunes co...', '4:A towering red rock ...', '16:A bright yellow sun ...', '17:A vulture flying in ...', '2:A large sand dune wi...', '6:A tall green cactus ...', '9:A smaller barrel cac...', '13:A road winding throu...', '15:A small tumbleweed r...', '5:Shadow side of the r...', '3:Shadow area on the s...', '7:Left arm of the cact...', '8:Right arm of the cac...', '10:Spines on the barrel...', '11:More spines on the b...', '12:A red flower bloomin...', '14:Yellow lines painted...']
+[INFO] [2025-04-23 16:09:05,468] Shape 0 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:05,469] Shape 0 - 'A bright blue sky above the desert landscape.' -> (133, 207, 239)
+[INFO] [2025-04-23 16:09:05,548] Shape 1 weights: text=0.974, context=0.008, color=0.017
+[INFO] [2025-04-23 16:09:05,549] Shape 1 - 'Golden sand dunes covering the desert ground.' -> (247, 179, 140)
+[INFO] [2025-04-23 16:09:05,627] Shape 4 weights: text=0.994, context=0.003, color=0.003
+[INFO] [2025-04-23 16:09:05,627] Shape 4 - 'A towering red rock formation.' -> (178, 30, 34)
+[INFO] [2025-04-23 16:09:05,700] Shape 16 weights: text=0.687, context=0.005, color=0.308
+[INFO] [2025-04-23 16:09:05,701] Shape 16 - 'A bright yellow sun in the sky.' -> (255, 253, 1)
+[INFO] [2025-04-23 16:09:05,776] Shape 17 weights: text=0.989, context=0.004, color=0.007
+[INFO] [2025-04-23 16:09:05,776] Shape 17 - 'A vulture flying in the distance.' -> (7, 9, 6)
+[INFO] [2025-04-23 16:09:05,859] Shape 2 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:09:05,859] Shape 2 - 'A large sand dune with shadow.' -> (192, 178, 128)
+[INFO] [2025-04-23 16:09:05,956] Shape 6 weights: text=0.999, context=0.001, color=0.000
+[INFO] [2025-04-23 16:09:05,957] Shape 6 - 'A tall green cactus growing in the sand.' -> (1, 99, 2)
+[INFO] [2025-04-23 16:09:06,037] Shape 9 weights: text=0.929, context=0.031, color=0.040
+[INFO] [2025-04-23 16:09:06,037] Shape 9 - 'A smaller barrel cactus nearby.' -> (3, 128, 4)
+[INFO] [2025-04-23 16:09:06,126] Shape 13 weights: text=0.953, context=0.004, color=0.043
+[INFO] [2025-04-23 16:09:06,127] Shape 13 - 'A road winding through the desert.' -> (169, 170, 170)
+[INFO] [2025-04-23 16:09:06,215] Shape 15 weights: text=0.991, context=0.005, color=0.004
+[INFO] [2025-04-23 16:09:06,215] Shape 15 - 'A small tumbleweed rolling across the desert.' -> (136, 68, 19)
+[INFO] [2025-04-23 16:09:06,284] Shape 5 weights: text=0.994, context=0.004, color=0.002
+[INFO] [2025-04-23 16:09:06,285] Shape 5 - 'Shadow side of the rock formation.' -> (137, 11, 6)
+[INFO] [2025-04-23 16:09:06,364] Shape 3 weights: text=0.996, context=0.002, color=0.002
+[INFO] [2025-04-23 16:09:06,364] Shape 3 - 'Shadow area on the sand dune.' -> (158, 140, 90)
+[INFO] [2025-04-23 16:09:06,445] Shape 7 weights: text=0.984, context=0.009, color=0.007
+[INFO] [2025-04-23 16:09:06,445] Shape 7 - 'Left arm of the cactus.' -> (3, 102, 3)
+[INFO] [2025-04-23 16:09:06,526] Shape 8 weights: text=0.986, context=0.009, color=0.006
+[INFO] [2025-04-23 16:09:06,526] Shape 8 - 'Right arm of the cactus.' -> (3, 99, 4)
+[INFO] [2025-04-23 16:09:06,595] Shape 10 weights: text=0.355, context=0.009, color=0.636
+[INFO] [2025-04-23 16:09:06,595] Shape 10 - 'Spines on the barrel cactus.' -> (254, 254, 253)
+[INFO] [2025-04-23 16:09:06,669] Shape 11 weights: text=0.340, context=0.009, color=0.651
+[INFO] [2025-04-23 16:09:06,669] Shape 11 - 'More spines on the barrel cactus.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:06,742] Shape 12 weights: text=0.853, context=0.007, color=0.140
+[INFO] [2025-04-23 16:09:06,742] Shape 12 - 'A red flower blooming on top of the barrel cactus.' -> (252, 4, 1)
+[INFO] [2025-04-23 16:09:06,830] Shape 14 weights: text=0.851, context=0.006, color=0.144
+[INFO] [2025-04-23 16:09:06,830] Shape 14 - 'Yellow lines painted in the middle of the road.' -> (254, 214, 0)
+[INFO] [2025-04-23 16:09:06,856] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_desert.png
+[INFO] [2025-04-23 16:09:06,856] Weight statistics summary:
+[INFO] [2025-04-23 16:09:06,856] Average weights: text=0.882, context=0.007, color=0.112
+[INFO] [2025-04-23 16:09:06,857] Dominant source patterns:
+[INFO] [2025-04-23 16:09:06,857]   text dominant: 88.9% of shapes
+[INFO] [2025-04-23 16:09:06,857]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:06,857]   Color dominant: 11.1% of shapes
+[INFO] [2025-04-23 16:09:06,857] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:06,857]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:06,857]   Context > Color: 44.4% of shapes
+[INFO] [2025-04-23 16:09:06,857]   text > Color: 88.9% of shapes
+[INFO] [2025-04-23 16:09:06,859] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\desert_weight_analysis.json
+[INFO] [2025-04-23 16:09:06,859] Highest text weight (0.999): Shape 6 - 'A tall green cactus growing in the sand....'
+[INFO] [2025-04-23 16:09:06,859] Highest context weight (0.031): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:09:06,859] Highest color weight (0.651): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:09:06,860] Example with color dominance: Shape 10 - 'Spines on the barrel cactus....' - weights: [0.35518911480903625, 0.008837771601974964, 0.6359731554985046]

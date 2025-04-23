@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "description": "A blue sky background for a landscape scene.",
+    "weights": [
+      0.9985644221305847,
+      0.0009217440965585411,
+      0.0005139472195878625
+    ],
+    "rgb": [
+      134,
+      205,
+      236
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A large bright yellow sun in the sky.",
+    "weights": [
+      0.6932023167610168,
+      0.0037658321671187878,
+      0.30303192138671875
+    ],
+    "rgb": [
+      255,
+      253,
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "description": "Rolling green hills in the middle of the landscape.",
+    "weights": [
+      0.9859632849693298,
+      0.006208931561559439,
+      0.00782772246748209
+    ],
+    "rgb": [
+      34,
+      139,
+      34
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A brown mountain range in the background.",
+    "weights": [
+      0.991612434387207,
+      0.004334182478487492,
+      0.004053409676998854
+    ],
+    "rgb": [
+      136,
+      68,
+      21
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A light blue lake at the bottom of the hills.",
+    "weights": [
+      0.9920579791069031,
+      0.002739469287917018,
+      0.005202631466090679
+    ],
+    "rgb": [
+      172,
+      216,
+      234
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A small wooden brown house on the hills.",
+    "weights": [
+      0.9904868006706238,
+      0.004758134949952364,
+      0.004755152389407158
+    ],
+    "rgb": [
+      157,
+      82,
+      46
+    ]
+  },
+  {
+    "id": 8,
+    "description": "A tall green pine tree next to the house.",
+    "weights": [
+      0.9981478452682495,
+      0.0011208856012672186,
+      0.0007313320529647171
+    ],
+    "rgb": [
+      6,
+      99,
+      6
+    ]
+  },
+  {
+    "id": 4,
+    "description": "White snow caps on top of the mountains.",
+    "weights": [
+      0.5723006129264832,
+      0.0068913898430764675,
+      0.4208080470561981
+    ],
+    "rgb": [
+      253,
+      253,
+      254
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A red roof on top of the house.",
+    "weights": [
+      0.9875476360321045,
+      0.0010068225674331188,
+      0.011445596814155579
+    ],
+    "rgb": [
+      220,
+      16,
+      61
+    ]
+  }
+]

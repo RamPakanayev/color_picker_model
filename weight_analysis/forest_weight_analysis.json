@@ -1,0 +1,254 @@
+[
+  {
+    "id": 0,
+    "description": "A light blue sky background for the forest scene.",
+    "weights": [
+      0.998056173324585,
+      0.0011335128219798207,
+      0.0008103956934064627
+    ],
+    "rgb": [
+      134,
+      209,
+      237
+    ]
+  },
+  {
+    "id": 1,
+    "description": "Brown dirt ground at the bottom of the scene.",
+    "weights": [
+      0.9890108704566956,
+      0.005975321866571903,
+      0.005013836547732353
+    ],
+    "rgb": [
+      138,
+      69,
+      17
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A large oak tree with a thick brown trunk.",
+    "weights": [
+      0.9981328845024109,
+      0.0011067257728427649,
+      0.0007604151614941657
+    ],
+    "rgb": [
+      98,
+      67,
+      34
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A pine tree with a tall thin trunk.",
+    "weights": [
+      0.9967398047447205,
+      0.0016288438346236944,
+      0.0016314338427037
+    ],
+    "rgb": [
+      98,
+      68,
+      32
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A birch tree with a white trunk.",
+    "weights": [
+      0.6200048327445984,
+      0.00035795403528027236,
+      0.3796371817588806
+    ],
+    "rgb": [
+      255,
+      254,
+      253
+    ]
+  },
+  {
+    "id": 10,
+    "description": "A small bush with green leaves.",
+    "weights": [
+      0.998867392539978,
+      0.0007151594036258757,
+      0.00041742416215129197
+    ],
+    "rgb": [
+      44,
+      140,
+      88
+    ]
+  },
+  {
+    "id": 14,
+    "description": "A gray rock near the trees.",
+    "weights": [
+      0.988153874874115,
+      0.006550926249474287,
+      0.005295240320265293
+    ],
+    "rgb": [
+      126,
+      128,
+      132
+    ]
+  },
+  {
+    "id": 15,
+    "description": "A brown rabbit sitting by the rock.",
+    "weights": [
+      0.9914393424987793,
+      0.004800030961632729,
+      0.0037606647238135338
+    ],
+    "rgb": [
+      137,
+      70,
+      19
+    ]
+  },
+  {
+    "id": 17,
+    "description": "A yellow sun in the sky.",
+    "weights": [
+      0.6787205338478088,
+      0.007020450197160244,
+      0.31425899267196655
+    ],
+    "rgb": [
+      255,
+      249,
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "description": "The oak tree's green leafy canopy.",
+    "weights": [
+      0.9981775283813477,
+      0.0011137040564790368,
+      0.0007088348502293229
+    ],
+    "rgb": [
+      33,
+      140,
+      33
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The pine tree's triangular green top.",
+    "weights": [
+      0.996478259563446,
+      0.0019581925589591265,
+      0.0015634704614058137
+    ],
+    "rgb": [
+      4,
+      98,
+      4
+    ]
+  },
+  {
+    "id": 7,
+    "description": "Black stripes on the birch tree trunk.",
+    "weights": [
+      0.9808433651924133,
+      0.0031722199637442827,
+      0.01598443277180195
+    ],
+    "rgb": [
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "id": 8,
+    "description": "More black stripes on the birch tree trunk.",
+    "weights": [
+      0.9446430802345276,
+      0.003744394751265645,
+      0.05161258950829506
+    ],
+    "rgb": [
+      4,
+      4,
+      3
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The birch tree's round green foliage.",
+    "weights": [
+      0.9894651174545288,
+      0.0017452724277973175,
+      0.008789610117673874
+    ],
+    "rgb": [
+      60,
+      180,
+      113
+    ]
+  },
+  {
+    "id": 11,
+    "description": "Red berries on the bush.",
+    "weights": [
+      0.994942843914032,
+      0.002190864412114024,
+      0.0028662453405559063
+    ],
+    "rgb": [
+      221,
+      18,
+      60
+    ]
+  },
+  {
+    "id": 12,
+    "description": "More red berries on the bush.",
+    "weights": [
+      0.9920817613601685,
+      0.0025575996842235327,
+      0.0053606294095516205
+    ],
+    "rgb": [
+      221,
+      20,
+      63
+    ]
+  },
+  {
+    "id": 13,
+    "description": "Even more red berries on the bush.",
+    "weights": [
+      0.9946669340133667,
+      0.0022386633791029453,
+      0.003094422398135066
+    ],
+    "rgb": [
+      217,
+      18,
+      57
+    ]
+  },
+  {
+    "id": 16,
+    "description": "The rabbit's white tail.",
+    "weights": [
+      0.6152001023292542,
+      0.0034624547697603703,
+      0.38133737444877625
+    ],
+    "rgb": [
+      254,
+      252,
+      251
+    ]
+  }
+]

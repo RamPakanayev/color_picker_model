@@ -1,0 +1,100 @@
+[
+  {
+    "id": 0,
+    "description": "A gray background canvas.",
+    "weights": [
+      0.9781413674354553,
+      0.01110653206706047,
+      0.010752072557806969
+    ],
+    "rgb": [
+      128,
+      129,
+      130
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The red body of a sports car.",
+    "weights": [
+      0.9852404594421387,
+      0.0008647682843729854,
+      0.013894746080040932
+    ],
+    "rgb": [
+      254,
+      5,
+      4
+    ]
+  },
+  {
+    "id": 6,
+    "description": "The asphalt black road beneath the car.",
+    "weights": [
+      0.9966750144958496,
+      0.0019359863363206387,
+      0.0013890049885958433
+    ],
+    "rgb": [
+      31,
+      30,
+      32
+    ]
+  },
+  {
+    "id": 2,
+    "description": "The black tire on the front left of the car.",
+    "weights": [
+      0.9973160624504089,
+      0.001639566384255886,
+      0.0010442795464769006
+    ],
+    "rgb": [
+      4,
+      5,
+      4
+    ]
+  },
+  {
+    "id": 3,
+    "description": "The black tire on the back right of the car.",
+    "weights": [
+      0.997065007686615,
+      0.0017855314072221518,
+      0.001149526098743081
+    ],
+    "rgb": [
+      4,
+      5,
+      4
+    ]
+  },
+  {
+    "id": 4,
+    "description": "The blue tinted glass windshield of the car.",
+    "weights": [
+      0.9996024966239929,
+      0.00024421748821623623,
+      0.000153313361806795
+    ],
+    "rgb": [
+      69,
+      131,
+      183
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The yellow headlight on the front of the car.",
+    "weights": [
+      0.6670288443565369,
+      0.0031088886316865683,
+      0.3298622965812683
+    ],
+    "rgb": [
+      255,
+      252,
+      1
+    ]
+  }
+]

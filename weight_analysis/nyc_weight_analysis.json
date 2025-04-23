@@ -1,0 +1,926 @@
+[
+  {
+    "id": 0,
+    "description": "A gradient blue sky background for the NYC skyline.",
+    "weights": [
+      0.9994807839393616,
+      0.00032687807106412947,
+      0.00019237640663050115
+    ],
+    "rgb": [
+      133,
+      207,
+      232
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The golden sun in the sky above NYC.",
+    "weights": [
+      0.98634272813797,
+      0.005297828000038862,
+      0.0083594536408782
+    ],
+    "rgb": [
+      250,
+      222,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A fluffy white cloud in the sky.",
+    "weights": [
+      0.5257198214530945,
+      0.0019664177671074867,
+      0.4723137319087982
+    ],
+    "rgb": [
+      255,
+      254,
+      253
+    ]
+  },
+  {
+    "id": 3,
+    "description": "Another fluffy white cloud in the sky.",
+    "weights": [
+      0.5137696266174316,
+      0.002412950387224555,
+      0.4838173985481262
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 4,
+    "description": "Deep blue Hudson and East Rivers.",
+    "weights": [
+      0.9989578723907471,
+      0.0006748372106812894,
+      0.0003672894963528961
+    ],
+    "rgb": [
+      8,
+      105,
+      150
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The island of Manhattan with gray urban landscape.",
+    "weights": [
+      0.9979934692382812,
+      0.0011667263461276889,
+      0.0008397549390792847
+    ],
+    "rgb": [
+      128,
+      128,
+      131
+    ]
+  },
+  {
+    "id": 6,
+    "description": "Brooklyn skyline in the background.",
+    "weights": [
+      0.9950025677680969,
+      0.0027628904208540916,
+      0.0022345534525811672
+    ],
+    "rgb": [
+      167,
+      169,
+      170
+    ]
+  },
+  {
+    "id": 7,
+    "description": "Another Brooklyn building in the background.",
+    "weights": [
+      0.9963507652282715,
+      0.002133705420419574,
+      0.0015156087465584278
+    ],
+    "rgb": [
+      175,
+      178,
+      184
+    ]
+  },
+  {
+    "id": 8,
+    "description": "A third Brooklyn building in the background.",
+    "weights": [
+      0.9960699081420898,
+      0.0022430226672440767,
+      0.0016870619729161263
+    ],
+    "rgb": [
+      158,
+      160,
+      163
+    ]
+  },
+  {
+    "id": 9,
+    "description": "Queens skyline building in the background.",
+    "weights": [
+      0.9934921860694885,
+      0.0029160187114030123,
+      0.0035917821805924177
+    ],
+    "rgb": [
+      169,
+      172,
+      172
+    ]
+  },
+  {
+    "id": 10,
+    "description": "Another Queens building in the background.",
+    "weights": [
+      0.9946012496948242,
+      0.002776579698547721,
+      0.0026222511660307646
+    ],
+    "rgb": [
+      162,
+      167,
+      169
+    ]
+  },
+  {
+    "id": 11,
+    "description": "A third Queens building in the background.",
+    "weights": [
+      0.9924018383026123,
+      0.0032526988070458174,
+      0.004345352295786142
+    ],
+    "rgb": [
+      171,
+      175,
+      175
+    ]
+  },
+  {
+    "id": 35,
+    "description": "Brooklyn Bridge main span.",
+    "weights": [
+      0.9900932908058167,
+      0.003609185805544257,
+      0.006297518964856863
+    ],
+    "rgb": [
+      208,
+      179,
+      141
+    ]
+  },
+  {
+    "id": 39,
+    "description": "The Statue of Liberty's green body.",
+    "weights": [
+      0.9985128045082092,
+      0.0008746518287807703,
+      0.0006125399377197027
+    ],
+    "rgb": [
+      75,
+      153,
+      1
+    ]
+  },
+  {
+    "id": 56,
+    "description": "A white boat on the Hudson River.",
+    "weights": [
+      0.49308446049690247,
+      0.000766968762036413,
+      0.5061485171318054
+    ],
+    "rgb": [
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "id": 57,
+    "description": "Another white boat on the East River.",
+    "weights": [
+      0.4366438686847687,
+      0.0007266575121320784,
+      0.5626294612884521
+    ],
+    "rgb": [
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "id": 12,
+    "description": "One World Trade Center, a silver skyscraper in Lower Manhattan.",
+    "weights": [
+      0.9860550761222839,
+      0.0020226428750902414,
+      0.011922292411327362
+    ],
+    "rgb": [
+      190,
+      193,
+      194
+    ]
+  },
+  {
+    "id": 14,
+    "description": "Empire State Building main body with its beige color.",
+    "weights": [
+      0.9591257572174072,
+      0.000303336390061304,
+      0.0405709445476532
+    ],
+    "rgb": [
+      253,
+      223,
+      181
+    ]
+  },
+  {
+    "id": 15,
+    "description": "Empire State Building mid-section.",
+    "weights": [
+      0.8588439226150513,
+      0.0031025363132357597,
+      0.13805359601974487
+    ],
+    "rgb": [
+      245,
+      222,
+      180
+    ]
+  },
+  {
+    "id": 16,
+    "description": "Empire State Building upper tapered section.",
+    "weights": [
+      0.8752943873405457,
+      0.0019615443889051676,
+      0.12274409830570221
+    ],
+    "rgb": [
+      245,
+      223,
+      181
+    ]
+  },
+  {
+    "id": 17,
+    "description": "Empire State Building spire.",
+    "weights": [
+      0.847682535648346,
+      0.0020666865166276693,
+      0.15025074779987335
+    ],
+    "rgb": [
+      240,
+      224,
+      182
+    ]
+  },
+  {
+    "id": 18,
+    "description": "Chrysler Building main body with silver color.",
+    "weights": [
+      0.9906388521194458,
+      0.0006227811682038009,
+      0.008738276548683643
+    ],
+    "rgb": [
+      190,
+      193,
+      194
+    ]
+  },
+  {
+    "id": 19,
+    "description": "Chrysler Building first crown section.",
+    "weights": [
+      0.9454383850097656,
+      0.0014819101197645068,
+      0.053079672157764435
+    ],
+    "rgb": [
+      190,
+      192,
+      194
+    ]
+  },
+  {
+    "id": 20,
+    "description": "Chrysler Building second crown section.",
+    "weights": [
+      0.9497315287590027,
+      0.0015649631386622787,
+      0.048703521490097046
+    ],
+    "rgb": [
+      189,
+      191,
+      192
+    ]
+  },
+  {
+    "id": 21,
+    "description": "Chrysler Building spire.",
+    "weights": [
+      0.8530247807502747,
+      0.0015304980333894491,
+      0.14544478058815002
+    ],
+    "rgb": [
+      221,
+      219,
+      217
+    ]
+  },
+  {
+    "id": 22,
+    "description": "A gray Manhattan skyscraper.",
+    "weights": [
+      0.9965105652809143,
+      0.0017616987461224198,
+      0.001727772643789649
+    ],
+    "rgb": [
+      107,
+      110,
+      111
+    ]
+  },
+  {
+    "id": 23,
+    "description": "Another Manhattan skyscraper.",
+    "weights": [
+      0.9954935312271118,
+      0.0023790053091943264,
+      0.0021274450700730085
+    ],
+    "rgb": [
+      116,
+      119,
+      122
+    ]
+  },
+  {
+    "id": 24,
+    "description": "A third Manhattan skyscraper.",
+    "weights": [
+      0.995353102684021,
+      0.002255269791930914,
+      0.002391651039943099
+    ],
+    "rgb": [
+      98,
+      101,
+      103
+    ]
+  },
+  {
+    "id": 25,
+    "description": "A Midtown Manhattan building.",
+    "weights": [
+      0.9964039325714111,
+      0.001931081060320139,
+      0.0016649054596200585
+    ],
+    "rgb": [
+      126,
+      129,
+      135
+    ]
+  },
+  {
+    "id": 26,
+    "description": "Another Midtown Manhattan building.",
+    "weights": [
+      0.9959542751312256,
+      0.0022022526245564222,
+      0.001843511126935482
+    ],
+    "rgb": [
+      136,
+      140,
+      144
+    ]
+  },
+  {
+    "id": 27,
+    "description": "An East Side Manhattan skyscraper.",
+    "weights": [
+      0.995980978012085,
+      0.0020646683406084776,
+      0.001954275881871581
+    ],
+    "rgb": [
+      145,
+      149,
+      154
+    ]
+  },
+  {
+    "id": 28,
+    "description": "The UN Headquarters with blue-green glass.",
+    "weights": [
+      0.9999631643295288,
+      2.492520616215188e-05,
+      1.1922405974473804e-05
+    ],
+    "rgb": [
+      4,
+      127,
+      130
+    ]
+  },
+  {
+    "id": 29,
+    "description": "An Upper East Side building.",
+    "weights": [
+      0.9907225370407104,
+      0.00444387411698699,
+      0.004833615850657225
+    ],
+    "rgb": [
+      121,
+      126,
+      128
+    ]
+  },
+  {
+    "id": 30,
+    "description": "Another Upper East Side building.",
+    "weights": [
+      0.990921676158905,
+      0.0043004280887544155,
+      0.004777861759066582
+    ],
+    "rgb": [
+      134,
+      133,
+      138
+    ]
+  },
+  {
+    "id": 31,
+    "description": "Central Park with vibrant green color.",
+    "weights": [
+      0.9995391368865967,
+      0.00028939449111931026,
+      0.0001715096295811236
+    ],
+    "rgb": [
+      32,
+      139,
+      35
+    ]
+  },
+  {
+    "id": 42,
+    "description": "Times Square with vibrant pink color.",
+    "weights": [
+      0.999529242515564,
+      0.00014892315084580332,
+      0.00032178571564145386
+    ],
+    "rgb": [
+      253,
+      4,
+      122
+    ]
+  },
+  {
+    "id": 47,
+    "description": "A yellow taxi in Manhattan.",
+    "weights": [
+      0.916796863079071,
+      0.005545222200453281,
+      0.07765790075063705
+    ],
+    "rgb": [
+      254,
+      202,
+      0
+    ]
+  },
+  {
+    "id": 48,
+    "description": "Another yellow taxi in Manhattan.",
+    "weights": [
+      0.9335214495658875,
+      0.005627747625112534,
+      0.060850776731967926
+    ],
+    "rgb": [
+      253,
+      204,
+      0
+    ]
+  },
+  {
+    "id": 49,
+    "description": "A third yellow taxi in Manhattan.",
+    "weights": [
+      0.8851184248924255,
+      0.005951454862952232,
+      0.10893017798662186
+    ],
+    "rgb": [
+      254,
+      202,
+      0
+    ]
+  },
+  {
+    "id": 50,
+    "description": "A fourth yellow taxi in Manhattan.",
+    "weights": [
+      0.9011510610580444,
+      0.0062017799355089664,
+      0.09264717251062393
+    ],
+    "rgb": [
+      253,
+      200,
+      0
+    ]
+  },
+  {
+    "id": 51,
+    "description": "The High Line with green vegetation.",
+    "weights": [
+      0.9996740818023682,
+      0.00021771321189589798,
+      0.0001082480521290563
+    ],
+    "rgb": [
+      105,
+      141,
+      37
+    ]
+  },
+  {
+    "id": 58,
+    "description": "A vertical Manhattan avenue.",
+    "weights": [
+      0.9965755343437195,
+      0.0014006366254761815,
+      0.0020237488206475973
+    ],
+    "rgb": [
+      51,
+      48,
+      51
+    ]
+  },
+  {
+    "id": 59,
+    "description": "Another vertical Manhattan avenue.",
+    "weights": [
+      0.9960434436798096,
+      0.0016936330357566476,
+      0.002262921305373311
+    ],
+    "rgb": [
+      51,
+      53,
+      51
+    ]
+  },
+  {
+    "id": 60,
+    "description": "A third vertical Manhattan avenue.",
+    "weights": [
+      0.9958667755126953,
+      0.0016314488602802157,
+      0.0025018483866006136
+    ],
+    "rgb": [
+      45,
+      49,
+      49
+    ]
+  },
+  {
+    "id": 61,
+    "description": "A fourth vertical Manhattan avenue.",
+    "weights": [
+      0.9953612685203552,
+      0.001698504202067852,
+      0.0029403564985841513
+    ],
+    "rgb": [
+      47,
+      49,
+      53
+    ]
+  },
+  {
+    "id": 62,
+    "description": "A fifth vertical Manhattan avenue.",
+    "weights": [
+      0.9957905411720276,
+      0.0015670801512897015,
+      0.0026424601674079895
+    ],
+    "rgb": [
+      49,
+      50,
+      49
+    ]
+  },
+  {
+    "id": 63,
+    "description": "A horizontal Manhattan street.",
+    "weights": [
+      0.9977867603302002,
+      0.001223006402142346,
+      0.0009902508463710546
+    ],
+    "rgb": [
+      47,
+      48,
+      50
+    ]
+  },
+  {
+    "id": 64,
+    "description": "Another horizontal Manhattan street.",
+    "weights": [
+      0.9976287484169006,
+      0.0013275165110826492,
+      0.0010437718592584133
+    ],
+    "rgb": [
+      49,
+      50,
+      50
+    ]
+  },
+  {
+    "id": 65,
+    "description": "A third horizontal Manhattan street.",
+    "weights": [
+      0.9961802959442139,
+      0.0019940712954849005,
+      0.0018255991162732244
+    ],
+    "rgb": [
+      49,
+      49,
+      51
+    ]
+  },
+  {
+    "id": 36,
+    "description": "Brooklyn Bridge left tower.",
+    "weights": [
+      0.9860510230064392,
+      0.005689126439392567,
+      0.00825983565300703
+    ],
+    "rgb": [
+      210,
+      183,
+      138
+    ]
+  },
+  {
+    "id": 37,
+    "description": "Brooklyn Bridge right tower.",
+    "weights": [
+      0.9860237836837769,
+      0.00603692838922143,
+      0.007939329370856285
+    ],
+    "rgb": [
+      208,
+      176,
+      142
+    ]
+  },
+  {
+    "id": 38,
+    "description": "Brooklyn Bridge roadway.",
+    "weights": [
+      0.997632622718811,
+      0.0012175635201856494,
+      0.0011498223757371306
+    ],
+    "rgb": [
+      78,
+      79,
+      79
+    ]
+  },
+  {
+    "id": 40,
+    "description": "The Statue of Liberty's crown.",
+    "weights": [
+      0.989777147769928,
+      0.004744274076074362,
+      0.005478488747030497
+    ],
+    "rgb": [
+      73,
+      152,
+      4
+    ]
+  },
+  {
+    "id": 41,
+    "description": "The Statue of Liberty's golden torch.",
+    "weights": [
+      0.9084720015525818,
+      0.004203059710562229,
+      0.08732497692108154
+    ],
+    "rgb": [
+      252,
+      215,
+      3
+    ]
+  },
+  {
+    "id": 13,
+    "description": "Blue-tinted windows at the top of One World Trade Center.",
+    "weights": [
+      0.9999599456787109,
+      2.426831633783877e-05,
+      1.5733579857624136e-05
+    ],
+    "rgb": [
+      98,
+      148,
+      239
+    ]
+  },
+  {
+    "id": 32,
+    "description": "A tree in Central Park.",
+    "weights": [
+      0.9988227486610413,
+      0.0007352767861448228,
+      0.00044199926196597517
+    ],
+    "rgb": [
+      19,
+      97,
+      19
+    ]
+  },
+  {
+    "id": 33,
+    "description": "Another tree in Central Park.",
+    "weights": [
+      0.9982978701591492,
+      0.0010657408274710178,
+      0.0006364654982462525
+    ],
+    "rgb": [
+      19,
+      99,
+      21
+    ]
+  },
+  {
+    "id": 34,
+    "description": "A third tree in Central Park.",
+    "weights": [
+      0.9982478618621826,
+      0.0010791660752147436,
+      0.0006729451706632972
+    ],
+    "rgb": [
+      19,
+      100,
+      21
+    ]
+  },
+  {
+    "id": 43,
+    "description": "A yellow billboard in Times Square.",
+    "weights": [
+      0.8710036873817444,
+      0.005265616346150637,
+      0.12373063713312149
+    ],
+    "rgb": [
+      254,
+      251,
+      0
+    ]
+  },
+  {
+    "id": 44,
+    "description": "A cyan billboard in Times Square.",
+    "weights": [
+      0.9998043179512024,
+      0.00012569304089993238,
+      6.996258889557794e-05
+    ],
+    "rgb": [
+      3,
+      249,
+      250
+    ]
+  },
+  {
+    "id": 45,
+    "description": "A green billboard in Times Square.",
+    "weights": [
+      0.9993005990982056,
+      0.0004472147556953132,
+      0.00025214796187356114
+    ],
+    "rgb": [
+      1,
+      249,
+      6
+    ]
+  },
+  {
+    "id": 46,
+    "description": "A magenta billboard in Times Square.",
+    "weights": [
+      0.9981024861335754,
+      0.0008651867392472923,
+      0.0010323425522074103
+    ],
+    "rgb": [
+      249,
+      8,
+      248
+    ]
+  },
+  {
+    "id": 52,
+    "description": "Plants on the High Line.",
+    "weights": [
+      0.9952752590179443,
+      0.003000593511387706,
+      0.0017241323366761208
+    ],
+    "rgb": [
+      50,
+      120,
+      51
+    ]
+  },
+  {
+    "id": 53,
+    "description": "More plants on the High Line.",
+    "weights": [
+      0.996130108833313,
+      0.002489411039277911,
+      0.0013805009657517076
+    ],
+    "rgb": [
+      46,
+      119,
+      53
+    ]
+  },
+  {
+    "id": 54,
+    "description": "Additional plants on the High Line.",
+    "weights": [
+      0.9963906407356262,
+      0.002303795190528035,
+      0.0013054838636890054
+    ],
+    "rgb": [
+      50,
+      119,
+      51
+    ]
+  },
+  {
+    "id": 55,
+    "description": "More vegetation on the High Line.",
+    "weights": [
+      0.9983564019203186,
+      0.0010803580516949296,
+      0.0005632174434140325
+    ],
+    "rgb": [
+      50,
+      120,
+      49
+    ]
+  }
+]

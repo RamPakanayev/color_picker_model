@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "description": "A black canvas containing nested shapes of various colors.",
+    "weights": [
+      0.9889599084854126,
+      0.006659325212240219,
+      0.00438079284504056
+    ],
+    "rgb": [
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A large red square covering most of the canvas.",
+    "weights": [
+      0.993819534778595,
+      0.0027851881459355354,
+      0.0033953275997191668
+    ],
+    "rgb": [
+      253,
+      2,
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A blue circle inside the red square.",
+    "weights": [
+      0.9981309771537781,
+      0.0009745188290253282,
+      0.0008945988374762237
+    ],
+    "rgb": [
+      3,
+      7,
+      248
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A green square inside the red square, opposite to the blue circle.",
+    "weights": [
+      0.9981938004493713,
+      0.001030941610224545,
+      0.0007752754609100521
+    ],
+    "rgb": [
+      4,
+      127,
+      4
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A purple diamond in the center of the red square.",
+    "weights": [
+      0.9964146614074707,
+      0.0019633190240710974,
+      0.0016219117678701878
+    ],
+    "rgb": [
+      129,
+      1,
+      124
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A yellow triangle inside the blue circle.",
+    "weights": [
+      0.5439457893371582,
+      0.00549049349501729,
+      0.4505637586116791
+    ],
+    "rgb": [
+      255,
+      253,
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "description": "An orange triangle inside the green square.",
+    "weights": [
+      0.9025426506996155,
+      0.0035530561581254005,
+      0.09390425682067871
+    ],
+    "rgb": [
+      250,
+      165,
+      0
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A small white square inside the purple diamond.",
+    "weights": [
+      0.5553182363510132,
+      0.003096560016274452,
+      0.4415853023529053
+    ],
+    "rgb": [
+      255,
+      253,
+      251
+    ]
+  },
+  {
+    "id": 8,
+    "description": "A tiny black dot inside the white square.",
+    "weights": [
+      0.9794488549232483,
+      0.010278617031872272,
+      0.01027266401797533
+    ],
+    "rgb": [
+      2,
+      5,
+      3
+    ]
+  }
+]

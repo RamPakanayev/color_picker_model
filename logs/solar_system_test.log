@@ -1,0 +1,45 @@
+[INFO] [2025-04-23 16:11:11,899] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:11:11,899] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:11:11,899] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:11:15,577] Processing shapes in order: ['0:A dark space backgro...', '1:The Sun at the cente...', '2:Mercury, the smalles...', '3:Venus, the second pl...', '4:Earth, our home plan...', '5:Mars, the red planet...', '6:Jupiter, the largest...', '7:Saturn with its dist...', '9:Uranus, the seventh ...', '10:Neptune, the eighth ...', '11:A comet passing thro...', "8:Saturn's rings surro...", "12:The comet's glowing ..."]
+[INFO] [2025-04-23 16:11:15,703] Shape 0 weights: text=0.899, context=0.013, color=0.087
+[INFO] [2025-04-23 16:11:15,703] Shape 0 - 'A dark space background with stars.' -> (9, 9, 19)
+[INFO] [2025-04-23 16:11:15,828] Shape 1 weights: text=0.829, context=0.007, color=0.164
+[INFO] [2025-04-23 16:11:15,828] Shape 1 - 'The Sun at the center of the solar system.' -> (255, 214, 2)
+[INFO] [2025-04-23 16:11:15,961] Shape 2 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:11:15,962] Shape 2 - 'Mercury, the smallest and innermost planet.' -> (170, 169, 170)
+[INFO] [2025-04-23 16:11:16,102] Shape 3 weights: text=0.964, context=0.001, color=0.035
+[INFO] [2025-04-23 16:11:16,102] Shape 3 - 'Venus, the second planet from the Sun.' -> (249, 198, 74)
+[INFO] [2025-04-23 16:11:16,256] Shape 4 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:11:16,256] Shape 4 - 'Earth, our home planet, with its blue oceans.' -> (29, 145, 246)
+[INFO] [2025-04-23 16:11:16,420] Shape 5 weights: text=0.938, context=0.002, color=0.059
+[INFO] [2025-04-23 16:11:16,420] Shape 5 - 'Mars, the red planet.' -> (251, 69, 7)
+[INFO] [2025-04-23 16:11:16,586] Shape 6 weights: text=0.939, context=0.002, color=0.059
+[INFO] [2025-04-23 16:11:16,587] Shape 6 - 'Jupiter, the largest planet in the solar system.' -> (248, 223, 173)
+[INFO] [2025-04-23 16:11:16,756] Shape 7 weights: text=0.909, context=0.001, color=0.090
+[INFO] [2025-04-23 16:11:16,756] Shape 7 - 'Saturn with its distinctive rings.' -> (240, 229, 162)
+[INFO] [2025-04-23 16:11:16,945] Shape 9 weights: text=0.981, context=0.001, color=0.018
+[INFO] [2025-04-23 16:11:16,946] Shape 9 - 'Uranus, the seventh planet from the Sun.' -> (172, 215, 231)
+[INFO] [2025-04-23 16:11:17,113] Shape 10 weights: text=0.999, context=0.001, color=0.001
+[INFO] [2025-04-23 16:11:17,114] Shape 10 - 'Neptune, the eighth and farthest planet.' -> (65, 104, 227)
+[INFO] [2025-04-23 16:11:17,283] Shape 11 weights: text=0.544, context=0.011, color=0.445
+[INFO] [2025-04-23 16:11:17,283] Shape 11 - 'A comet passing through the solar system.' -> (254, 254, 251)
+[INFO] [2025-04-23 16:11:17,486] Shape 8 weights: text=0.769, context=0.002, color=0.229
+[INFO] [2025-04-23 16:11:17,487] Shape 8 - 'Saturn's rings surrounding the planet.' -> (251, 244, 222)
+[INFO] [2025-04-23 16:11:17,677] Shape 12 weights: text=0.949, context=0.001, color=0.050
+[INFO] [2025-04-23 16:11:17,677] Shape 12 - 'The comet's glowing tail.' -> (173, 217, 232)
+[INFO] [2025-04-23 16:11:17,751] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_solar_system.png
+[INFO] [2025-04-23 16:11:17,751] Weight statistics summary:
+[INFO] [2025-04-23 16:11:17,752] Average weights: text=0.901, context=0.003, color=0.095
+[INFO] [2025-04-23 16:11:17,752] Dominant source patterns:
+[INFO] [2025-04-23 16:11:17,752]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:11:17,752]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:11:17,753]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:11:17,753] Pairwise comparisons:
+[INFO] [2025-04-23 16:11:17,753]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:11:17,753]   Context > Color: 15.4% of shapes
+[INFO] [2025-04-23 16:11:17,754]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:11:17,757] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\solar_system_weight_analysis.json
+[INFO] [2025-04-23 16:11:17,757] Highest text weight (0.999): Shape 10 - 'Neptune, the eighth and farthest planet....'
+[INFO] [2025-04-23 16:11:17,757] Highest context weight (0.013): Shape 0 - 'A dark space background with stars....'
+[INFO] [2025-04-23 16:11:17,758] Highest color weight (0.445): Shape 11 - 'A comet passing through the solar system....'

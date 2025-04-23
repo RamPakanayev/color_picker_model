@@ -1,0 +1,282 @@
+[
+  {
+    "id": 0,
+    "description": "A white technical background for the robot assembly diagram.",
+    "weights": [
+      0.4812076985836029,
+      0.0027455994859337807,
+      0.5160467624664307
+    ],
+    "rgb": [
+      246,
+      246,
+      252
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The main body chassis of the robot.",
+    "weights": [
+      0.9742171764373779,
+      0.0052496567368507385,
+      0.02053315006196499
+    ],
+    "rgb": [
+      191,
+      191,
+      197
+    ]
+  },
+  {
+    "id": 5,
+    "description": "The robot's cylindrical head.",
+    "weights": [
+      0.9669232964515686,
+      0.004260404501110315,
+      0.028816308826208115
+    ],
+    "rgb": [
+      170,
+      170,
+      176
+    ]
+  },
+  {
+    "id": 16,
+    "description": "A storage battery component for the robot.",
+    "weights": [
+      0.8182416558265686,
+      0.0037963073700666428,
+      0.17796194553375244
+    ],
+    "rgb": [
+      249,
+      216,
+      5
+    ]
+  },
+  {
+    "id": 17,
+    "description": "An extra sensor module component.",
+    "weights": [
+      0.9794917106628418,
+      0.004610790405422449,
+      0.015897490084171295
+    ],
+    "rgb": [
+      5,
+      129,
+      131
+    ]
+  },
+  {
+    "id": 18,
+    "description": "A toolbox with repair instruments.",
+    "weights": [
+      0.9881266355514526,
+      0.0064039332792162895,
+      0.0054694549180567265
+    ],
+    "rgb": [
+      164,
+      42,
+      44
+    ]
+  },
+  {
+    "id": 19,
+    "description": "Assembly instructions document.",
+    "weights": [
+      0.5234192609786987,
+      0.013935099355876446,
+      0.46264562010765076
+    ],
+    "rgb": [
+      253,
+      253,
+      252
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A blue control panel on the robot's body.",
+    "weights": [
+      0.9988683462142944,
+      0.0005032249609939754,
+      0.0006284430273808539
+    ],
+    "rgb": [
+      30,
+      146,
+      251
+    ]
+  },
+  {
+    "id": 8,
+    "description": "The left arm of the robot.",
+    "weights": [
+      0.9876428842544556,
+      0.004504700656980276,
+      0.00785239040851593
+    ],
+    "rgb": [
+      192,
+      192,
+      196
+    ]
+  },
+  {
+    "id": 10,
+    "description": "The right arm of the robot.",
+    "weights": [
+      0.9864652156829834,
+      0.006308200769126415,
+      0.007226661778986454
+    ],
+    "rgb": [
+      196,
+      195,
+      197
+    ]
+  },
+  {
+    "id": 12,
+    "description": "The left leg of the robot.",
+    "weights": [
+      0.9936919212341309,
+      0.003329753875732422,
+      0.0029783276841044426
+    ],
+    "rgb": [
+      130,
+      128,
+      133
+    ]
+  },
+  {
+    "id": 14,
+    "description": "The right leg of the robot.",
+    "weights": [
+      0.991565465927124,
+      0.004646745976060629,
+      0.003787787165492773
+    ],
+    "rgb": [
+      128,
+      132,
+      135
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A visor-like sensor array on the robot's head.",
+    "weights": [
+      0.9936756491661072,
+      0.001656685140915215,
+      0.004667556844651699
+    ],
+    "rgb": [
+      8,
+      11,
+      247
+    ]
+  },
+  {
+    "id": 7,
+    "description": "An antenna on top of the robot's head.",
+    "weights": [
+      0.9433332681655884,
+      0.002033504657447338,
+      0.05463321879506111
+    ],
+    "rgb": [
+      129,
+      128,
+      132
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A small red power button on the control panel.",
+    "weights": [
+      0.9495753049850464,
+      0.0012965193018317223,
+      0.04912808910012245
+    ],
+    "rgb": [
+      251,
+      6,
+      4
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A green status indicator light.",
+    "weights": [
+      0.9945646524429321,
+      0.0017864990513771772,
+      0.0036488501355051994
+    ],
+    "rgb": [
+      3,
+      249,
+      3
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The robot's left hand with three fingers.",
+    "weights": [
+      0.9875993728637695,
+      0.005537486635148525,
+      0.006863124668598175
+    ],
+    "rgb": [
+      169,
+      166,
+      174
+    ]
+  },
+  {
+    "id": 11,
+    "description": "The robot's right hand with three fingers.",
+    "weights": [
+      0.9858136773109436,
+      0.006161156110465527,
+      0.008025186136364937
+    ],
+    "rgb": [
+      166,
+      172,
+      174
+    ]
+  },
+  {
+    "id": 13,
+    "description": "The left foot of the robot.",
+    "weights": [
+      0.9935842156410217,
+      0.003408274380490184,
+      0.003007576335221529
+    ],
+    "rgb": [
+      105,
+      109,
+      113
+    ]
+  },
+  {
+    "id": 15,
+    "description": "The right foot of the robot.",
+    "weights": [
+      0.9943464398384094,
+      0.003223761450499296,
+      0.0024297090712934732
+    ],
+    "rgb": [
+      105,
+      103,
+      109
+    ]
+  }
+]

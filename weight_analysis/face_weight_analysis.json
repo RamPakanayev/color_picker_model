@@ -1,0 +1,156 @@
+[
+  {
+    "id": 0,
+    "description": "A white background canvas for a simple face drawing.",
+    "weights": [
+      0.5101668238639832,
+      0.00791879091411829,
+      0.48191437125205994
+    ],
+    "rgb": [
+      253,
+      250,
+      252
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A skin-colored circular face shape.",
+    "weights": [
+      0.8643995523452759,
+      0.0027935414109379053,
+      0.1328068971633911
+    ],
+    "rgb": [
+      252,
+      222,
+      170
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A pink smiling mouth on the face.",
+    "weights": [
+      0.8831055164337158,
+      0.002942075254395604,
+      0.11395236849784851
+    ],
+    "rgb": [
+      254,
+      106,
+      182
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A blue left eye.",
+    "weights": [
+      0.9983373880386353,
+      0.0009364296565763652,
+      0.0007261752616614103
+    ],
+    "rgb": [
+      3,
+      124,
+      230
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A blue right eye.",
+    "weights": [
+      0.9981318116188049,
+      0.0010559341171756387,
+      0.0008122654398903251
+    ],
+    "rgb": [
+      2,
+      123,
+      233
+    ]
+  },
+  {
+    "id": 7,
+    "description": "A small brown nose in the center of the face.",
+    "weights": [
+      0.986505925655365,
+      0.005070040002465248,
+      0.008424137718975544
+    ],
+    "rgb": [
+      137,
+      69,
+      17
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Yellow hair on top of the head.",
+    "weights": [
+      0.7947618961334229,
+      0.00288948486559093,
+      0.20234858989715576
+    ],
+    "rgb": [
+      255,
+      214,
+      1
+    ]
+  },
+  {
+    "id": 9,
+    "description": "Red cheeks on the face.",
+    "weights": [
+      0.916245698928833,
+      0.006464878562837839,
+      0.07728935778141022
+    ],
+    "rgb": [
+      252,
+      7,
+      3
+    ]
+  },
+  {
+    "id": 10,
+    "description": "Red cheeks on the other side of the face.",
+    "weights": [
+      0.9363080859184265,
+      0.00578013900667429,
+      0.057911746203899384
+    ],
+    "rgb": [
+      251,
+      8,
+      4
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A black pupil in the left eye.",
+    "weights": [
+      0.9947273135185242,
+      0.0027572151739150286,
+      0.002515465021133423
+    ],
+    "rgb": [
+      2,
+      6,
+      3
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A black pupil in the right eye.",
+    "weights": [
+      0.9953538179397583,
+      0.002536551095545292,
+      0.002109712455421686
+    ],
+    "rgb": [
+      1,
+      6,
+      4
+    ]
+  }
+]

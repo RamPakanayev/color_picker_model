@@ -1,0 +1,1591 @@
+[INFO] [2025-04-23 16:06:39,580] Found 18 JSON files in C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\shapes_jsons
+[INFO] [2025-04-23 16:06:39,580] Loaded 11 shapes from abstract_art.json
+[INFO] [2025-04-23 16:06:39,582] Loaded 14 shapes from airplane.json
+[INFO] [2025-04-23 16:06:39,582] Loaded 7 shapes from car.json
+[INFO] [2025-04-23 16:06:39,583] Loaded 9 shapes from color_conflict.json
+[INFO] [2025-04-23 16:06:39,583] Loaded 18 shapes from desert.json
+[INFO] [2025-04-23 16:06:39,584] Loaded 11 shapes from face.json
+[INFO] [2025-04-23 16:06:39,586] Loaded 18 shapes from flags.json
+[INFO] [2025-04-23 16:06:39,587] Loaded 18 shapes from forest.json
+[INFO] [2025-04-23 16:06:39,588] Loaded 7 shapes from house.json
+[INFO] [2025-04-23 16:06:39,588] Loaded 9 shapes from landscape.json
+[INFO] [2025-04-23 16:06:39,589] Loaded 9 shapes from nested_shapes.json
+[WARNING] [2025-04-23 16:06:39,589] Error loading C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\shapes_jsons\neural_network_visualization.json: Expecting value: line 1 column 1 (char 0)
+[INFO] [2025-04-23 16:06:39,590] Loaded 66 shapes from nyc.json
+[INFO] [2025-04-23 16:06:39,591] Loaded 20 shapes from robot.json
+[INFO] [2025-04-23 16:06:39,592] Loaded 3 shapes from shapes.json
+[INFO] [2025-04-23 16:06:39,594] Loaded 4 shapes from shapes2.json
+[INFO] [2025-04-23 16:06:39,594] Loaded 13 shapes from solar_system.json
+[INFO] [2025-04-23 16:06:39,596] Loaded 21 shapes from under_water.json
+[INFO] [2025-04-23 16:06:39,596] Using device: cpu
+[INFO] [2025-04-23 16:06:42,951] CLIP model loaded
+[INFO] [2025-04-23 16:06:43,059] Processing file: abstract_art.json with 11 shapes
+[INFO] [2025-04-23 16:06:43,059] Processing shapes in order: ['0:A canvas with a deep...', '1:A vibrant scarlet fl...', '2:A shape that appears...', '4:A silver crescent mo...', '6:Lavender and purple ...', '7:A dark turquoise sha...', '8:Small white star-lik...', '9:Another small white ...', '10:A third small white ...', '3:An emerald green sha...', '5:A smaller ivory shap...']
+[INFO] [2025-04-23 16:06:43,521] Processing file: airplane.json with 14 shapes
+[INFO] [2025-04-23 16:06:43,521] Processing shapes in order: ['0:The bright blue sky....', '1:The bright yellow su...', '2:A magnificent rainbo...', '3:A fluffy cloud on th...', '4:Another cloud near t...', '5:A smaller cloud in t...', '6:A commercial passeng...', '11:A bird flying to the...', '12:Another bird flying ...', '13:A third bird fly hig...', '7:The vertical tail fi...', '8:The left wing of the...', '9:The right wing of th...', '10:The cockpit windows ...']
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 0 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 1 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 2 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 3 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 4 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 5 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 6 without RGB value
+[INFO] [2025-04-23 16:06:43,522] Skipping shape 11 without RGB value
+[INFO] [2025-04-23 16:06:43,523] Skipping shape 12 without RGB value
+[INFO] [2025-04-23 16:06:43,523] Skipping shape 13 without RGB value
+[INFO] [2025-04-23 16:06:43,523] Skipping shape 7 without RGB value
+[INFO] [2025-04-23 16:06:43,523] Skipping shape 8 without RGB value
+[INFO] [2025-04-23 16:06:43,523] Skipping shape 9 without RGB value
+[INFO] [2025-04-23 16:06:43,524] Skipping shape 10 without RGB value
+[INFO] [2025-04-23 16:06:43,524] Processing file: car.json with 7 shapes
+[INFO] [2025-04-23 16:06:43,524] Processing shapes in order: ['0:A gray background ca...', '1:The red body of a sp...', '6:The asphalt black ro...', '2:The black tire on th...', '3:The black tire on th...', '4:The blue tinted glas...', '5:The yellow headlight...']
+[INFO] [2025-04-23 16:06:43,801] Processing file: color_conflict.json with 9 shapes
+[INFO] [2025-04-23 16:06:43,801] Processing shapes in order: ['0:A white canvas with ...', '1:A red container shap...', '3:A green container sh...', '5:A yellow container a...', '7:This rgb(255,0,0) sh...', '8:This shape has no ex...', '2:A blue shape inside ...', '4:This shape should be...', '6:This shape is descri...']
+[INFO] [2025-04-23 16:06:44,142] Processing file: desert.json with 18 shapes
+[INFO] [2025-04-23 16:06:44,142] Processing shapes in order: ['0:A bright blue sky ab...', '1:Golden sand dunes co...', '4:A towering red rock ...', '16:A bright yellow sun ...', '17:A vulture flying in ...', '2:A large sand dune wi...', '6:A tall green cactus ...', '9:A smaller barrel cac...', '13:A road winding throu...', '15:A small tumbleweed r...', '5:Shadow side of the r...', '3:Shadow area on the s...', '7:Left arm of the cact...', '8:Right arm of the cac...', '10:Spines on the barrel...', '11:More spines on the b...', '12:A red flower bloomin...', '14:Yellow lines painted...']
+[INFO] [2025-04-23 16:06:44,860] Processing file: face.json with 11 shapes
+[INFO] [2025-04-23 16:06:44,861] Processing shapes in order: ['0:A white background c...', '1:A skin-colored circu...', '2:A pink smiling mouth...', '3:A blue left eye....', '4:A blue right eye....', '7:A small brown nose i...', '8:Yellow hair on top o...', '9:Red cheeks on the fa...', '10:Red cheeks on the ot...', '5:A black pupil in the...', '6:A black pupil in the...']
+[INFO] [2025-04-23 16:06:45,320] Processing file: flags.json with 18 shapes
+[INFO] [2025-04-23 16:06:45,320] Processing shapes in order: ['0:A gray canvas contai...', '1:The French flag with...', '5:The German flag with...', '9:The Italian flag wit...', '13:The Japanese flag wi...', '15:The Swedish flag wit...', '2:The blue stripe of t...', '3:The white stripe of ...', '4:The red stripe of th...', '6:The black stripe of ...', '7:The red stripe of th...', '8:The yellow (gold) st...', '10:The green stripe of ...', '11:The white stripe of ...', '12:The red stripe of th...', '14:The red circle (sun ...', '16:The horizontal yello...', '17:The vertical yellow ...']
+[INFO] [2025-04-23 16:06:46,020] Processing file: forest.json with 18 shapes
+[INFO] [2025-04-23 16:06:46,020] Processing shapes in order: ['0:A light blue sky bac...', '1:Brown dirt ground at...', '2:A large oak tree wit...', '4:A pine tree with a t...', '6:A birch tree with a ...', '10:A small bush with gr...', '14:A gray rock near the...', '15:A brown rabbit sitti...', '17:A yellow sun in the ...', "3:The oak tree's green...", "5:The pine tree's tria...", '7:Black stripes on the...', '8:More black stripes o...', "9:The birch tree's rou...", '11:Red berries on the b...', '12:More red berries on ...', '13:Even more red berrie...', "16:The rabbit's white t..."]
+[INFO] [2025-04-23 16:06:46,699] Processing file: house.json with 7 shapes
+[INFO] [2025-04-23 16:06:46,700] Processing shapes in order: ['0:A black canvas that ...', '1:The white main body ...', '2:The brown roof of th...', '6:A green lawn in fron...', '3:A square window on t...', '4:A square window on t...', '5:A red door in the ce...']
+[INFO] [2025-04-23 16:06:47,006] Processing file: landscape.json with 9 shapes
+[INFO] [2025-04-23 16:06:47,007] Processing shapes in order: ['0:A blue sky backgroun...', '1:A large bright yello...', '2:Rolling green hills ...', '3:A brown mountain ran...', '5:A light blue lake at...', '6:A small wooden brown...', '8:A tall green pine tr...', '4:White snow caps on t...', '7:A red roof on top of...']
+[INFO] [2025-04-23 16:06:47,367] Processing file: nested_shapes.json with 9 shapes
+[INFO] [2025-04-23 16:06:47,367] Processing shapes in order: ['0:A black canvas conta...', '1:A large red square c...', '2:A blue circle inside...', '4:A green square insid...', '6:A purple diamond in ...', '3:A yellow triangle in...', '5:An orange triangle i...', '7:A small white square...', '8:A tiny black dot ins...']
+[INFO] [2025-04-23 16:06:47,715] Processing file: nyc.json with 66 shapes
+[INFO] [2025-04-23 16:06:47,716] Processing shapes in order: ['0:A gradient blue sky ...', '1:The golden sun in th...', '2:A fluffy white cloud...', '3:Another fluffy white...', '4:Deep blue Hudson and...', '5:The island of Manhat...', '6:Brooklyn skyline in ...', '7:Another Brooklyn bui...', '8:A third Brooklyn bui...', '9:Queens skyline build...', '10:Another Queens build...', '11:A third Queens build...', '35:Brooklyn Bridge main...', '39:The Statue of Libert...', '56:A white boat on the ...', '57:Another white boat o...', '12:One World Trade Cent...', '14:Empire State Buildin...', '15:Empire State Buildin...', '16:Empire State Buildin...', '17:Empire State Buildin...', '18:Chrysler Building ma...', '19:Chrysler Building fi...', '20:Chrysler Building se...', '21:Chrysler Building sp...', '22:A gray Manhattan sky...', '23:Another Manhattan sk...', '24:A third Manhattan sk...', '25:A Midtown Manhattan ...', '26:Another Midtown Manh...', '27:An East Side Manhatt...', '28:The UN Headquarters ...', '29:An Upper East Side b...', '30:Another Upper East S...', '31:Central Park with vi...', '42:Times Square with vi...', '47:A yellow taxi in Man...', '48:Another yellow taxi ...', '49:A third yellow taxi ...', '50:A fourth yellow taxi...', '51:The High Line with g...', '58:A vertical Manhattan...', '59:Another vertical Man...', '60:A third vertical Man...', '61:A fourth vertical Ma...', '62:A fifth vertical Man...', '63:A horizontal Manhatt...', '64:Another horizontal M...', '65:A third horizontal M...', '36:Brooklyn Bridge left...', '37:Brooklyn Bridge righ...', '38:Brooklyn Bridge road...', '40:The Statue of Libert...', '41:The Statue of Libert...', '13:Blue-tinted windows ...', '32:A tree in Central Pa...', '33:Another tree in Cent...', '34:A third tree in Cent...', '43:A yellow billboard i...', '44:A cyan billboard in ...', '45:A green billboard in...', '46:A magenta billboard ...', '52:Plants on the High L...', '53:More plants on the H...', '54:Additional plants on...', '55:More vegetation on t...']
+[INFO] [2025-04-23 16:06:50,232] Processing file: robot.json with 20 shapes
+[INFO] [2025-04-23 16:06:50,233] Processing shapes in order: ['0:A white technical ba...', '1:The main body chassi...', "5:The robot's cylindri...", '16:A storage battery co...', '17:An extra sensor modu...', '18:A toolbox with repai...', '19:Assembly instruction...', '2:A blue control panel...', '8:The left arm of the ...', '10:The right arm of the...', '12:The left leg of the ...', '14:The right leg of the...', '6:A visor-like sensor ...', '7:An antenna on top of...', '3:A small red power bu...', '4:A green status indic...', "9:The robot's left han...", "11:The robot's right ha...", '13:The left foot of the...', '15:The right foot of th...']
+[INFO] [2025-04-23 16:06:51,016] Processing file: shapes.json with 3 shapes
+[INFO] [2025-04-23 16:06:51,016] Processing shapes in order: ['0:A black canvas with ...', '1:A red shape near the...', '2:A white shape near t...']
+[INFO] [2025-04-23 16:06:51,134] Processing file: shapes2.json with 4 shapes
+[INFO] [2025-04-23 16:06:51,135] Processing shapes in order: ['0:A orange canvas with...', '2:A rgb(255,174,201) s...', '3:A rgb(0,162,232) sha...', '1:A rgb(163,73,164) sh...']
+[INFO] [2025-04-23 16:06:51,301] Processing file: solar_system.json with 13 shapes
+[INFO] [2025-04-23 16:06:51,302] Processing shapes in order: ['0:A dark space backgro...', '1:The Sun at the cente...', '2:Mercury, the smalles...', '3:Venus, the second pl...', '4:Earth, our home plan...', '5:Mars, the red planet...', '6:Jupiter, the largest...', '7:Saturn with its dist...', '9:Uranus, the seventh ...', '10:Neptune, the eighth ...', '11:A comet passing thro...', "8:Saturn's rings surro...", "12:The comet's glowing ..."]
+[INFO] [2025-04-23 16:06:51,827] Processing file: under_water.json with 21 shapes
+[INFO] [2025-04-23 16:06:51,828] Processing shapes in order: ['0:Deep blue ocean wate...', '1:Sandy ocean floor....', '2:A vibrant orange cor...', '3:A bright yellow cora...', '4:A purple sea anemone...', '5:A large rock formati...', '6:A bright orange clow...', '9:A blue tang fish....', '12:A green sea turtle s...', '16:Long green seaweed g...', '17:More seaweed growing...', '18:Sunlight rays penetr...', '19:More sunlight rays p...', '20:A school of small si...', '7:White stripes on the...', '8:Another white stripe...', '10:A yellow fin on the ...', '11:A tail fin on the bl...', "13:The sea turtle's hea...", "14:The sea turtle's rig...", "15:The sea turtle's lef..."]
+[INFO] [2025-04-23 16:06:52,662] Total dataset size: 244
+[INFO] [2025-04-23 16:06:52,700] Created unconstrained weight model with input dimension: 512
+[INFO] [2025-04-23 16:06:52,701] Model is free to determine optimal weights for each shape without constraints
+[INFO] [2025-04-23 16:06:52,701] Starting training with unconstrained weights: 200 epochs, batch size 16
+[INFO] [2025-04-23 16:06:52,837] Epoch 1/200 - Loss: 0.1357
+[INFO] [2025-04-23 16:06:52,837] Avg weights: text=0.325, context=0.319, color=0.356
+[INFO] [2025-04-23 16:06:52,838] Std weights: text=0.002, context=0.009, color=0.010
+[INFO] [2025-04-23 16:06:52,838] Min weights: text=0.322, context=0.300, color=0.339
+[INFO] [2025-04-23 16:06:52,838] Max weights: text=0.330, context=0.331, color=0.378
+[INFO] [2025-04-23 16:06:52,839] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 100.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:52,839] Context weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 100.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:52,840] Color weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 100.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:52,840] Text > Context: 68.85%
+[INFO] [2025-04-23 16:06:52,840] Context > Color: 0.00%
+[INFO] [2025-04-23 16:06:52,840] Text > Color: 0.00%
+[INFO] [2025-04-23 16:06:52,841] Text dominant: 0.00%
+[INFO] [2025-04-23 16:06:52,841] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:52,841] Color dominant: 100.00%
+[INFO] [2025-04-23 16:06:52,841] High text weight (0.330): Shape 57 - 'Another white boat on the East River....'
+[INFO] [2025-04-23 16:06:52,841] High text weight (0.330): Shape 0 - 'A blue sky background for a landscape scene....'
+[INFO] [2025-04-23 16:06:52,842] High text weight (0.330): Shape 26 - 'Another Midtown Manhattan building....'
+[INFO] [2025-04-23 16:06:52,842] High context weight (0.331): Shape 26 - 'Another Midtown Manhattan building....'
+[INFO] [2025-04-23 16:06:52,842] High context weight (0.331): Shape 7 - 'A small brown nose in the center of the face....'
+[INFO] [2025-04-23 16:06:52,842] High context weight (0.331): Shape 24 - 'A third Manhattan skyscraper....'
+[INFO] [2025-04-23 16:06:52,843] High color weight (0.378): Shape 8 - 'The yellow (gold) stripe of the German flag....'
+[INFO] [2025-04-23 16:06:52,843] High color weight (0.376): Shape 7 - 'The red stripe of the German flag....'
+[INFO] [2025-04-23 16:06:52,843] High color weight (0.374): Shape 21 - 'Chrysler Building spire....'
+[INFO] [2025-04-23 16:06:52,850] Saved best model with loss: 0.1357
+[INFO] [2025-04-23 16:06:52,939] Epoch 2/200 - Loss: 0.1315
+[INFO] [2025-04-23 16:06:52,939] Avg weights: text=0.338, context=0.299, color=0.363
+[INFO] [2025-04-23 16:06:52,940] Std weights: text=0.009, context=0.008, color=0.016
+[INFO] [2025-04-23 16:06:52,940] Min weights: text=0.324, context=0.271, color=0.316
+[INFO] [2025-04-23 16:06:52,940] Max weights: text=0.363, context=0.321, color=0.403
+[INFO] [2025-04-23 16:06:52,943] Saved best model with loss: 0.1315
+[INFO] [2025-04-23 16:06:53,030] Epoch 3/200 - Loss: 0.1260
+[INFO] [2025-04-23 16:06:53,030] Avg weights: text=0.360, context=0.299, color=0.341
+[INFO] [2025-04-23 16:06:53,030] Std weights: text=0.029, context=0.035, color=0.064
+[INFO] [2025-04-23 16:06:53,031] Min weights: text=0.284, context=0.200, color=0.210
+[INFO] [2025-04-23 16:06:53,031] Max weights: text=0.425, context=0.366, color=0.516
+[INFO] [2025-04-23 16:06:53,034] Saved best model with loss: 0.1260
+[INFO] [2025-04-23 16:06:53,120] Epoch 4/200 - Loss: 0.1164
+[INFO] [2025-04-23 16:06:53,120] Avg weights: text=0.375, context=0.284, color=0.340
+[INFO] [2025-04-23 16:06:53,120] Std weights: text=0.070, context=0.073, color=0.142
+[INFO] [2025-04-23 16:06:53,120] Min weights: text=0.203, context=0.110, color=0.134
+[INFO] [2025-04-23 16:06:53,121] Max weights: text=0.485, context=0.381, color=0.688
+[INFO] [2025-04-23 16:06:53,124] Saved best model with loss: 0.1164
+[INFO] [2025-04-23 16:06:53,211] Epoch 5/200 - Loss: 0.1089
+[INFO] [2025-04-23 16:06:53,212] Avg weights: text=0.398, context=0.281, color=0.321
+[INFO] [2025-04-23 16:06:53,212] Std weights: text=0.094, context=0.088, color=0.182
+[INFO] [2025-04-23 16:06:53,212] Min weights: text=0.178, context=0.090, color=0.092
+[INFO] [2025-04-23 16:06:53,212] Max weights: text=0.526, context=0.383, color=0.732
+[INFO] [2025-04-23 16:06:53,216] Saved best model with loss: 0.1089
+[INFO] [2025-04-23 16:06:53,304] Epoch 6/200 - Loss: 0.0978
+[INFO] [2025-04-23 16:06:53,304] Avg weights: text=0.460, context=0.243, color=0.297
+[INFO] [2025-04-23 16:06:53,304] Std weights: text=0.158, context=0.096, color=0.247
+[INFO] [2025-04-23 16:06:53,305] Min weights: text=0.100, context=0.023, color=0.016
+[INFO] [2025-04-23 16:06:53,305] Max weights: text=0.697, context=0.374, color=0.877
+[INFO] [2025-04-23 16:06:53,308] Saved best model with loss: 0.0978
+[INFO] [2025-04-23 16:06:53,395] Epoch 7/200 - Loss: 0.0806
+[INFO] [2025-04-23 16:06:53,395] Avg weights: text=0.559, context=0.146, color=0.295
+[INFO] [2025-04-23 16:06:53,395] Std weights: text=0.218, context=0.071, color=0.278
+[INFO] [2025-04-23 16:06:53,395] Min weights: text=0.082, context=0.015, color=0.011
+[INFO] [2025-04-23 16:06:53,395] Max weights: text=0.887, context=0.277, color=0.903
+[INFO] [2025-04-23 16:06:53,399] Saved best model with loss: 0.0806
+[INFO] [2025-04-23 16:06:53,514] Epoch 8/200 - Loss: 0.0693
+[INFO] [2025-04-23 16:06:53,514] Avg weights: text=0.748, context=0.086, color=0.166
+[INFO] [2025-04-23 16:06:53,515] Std weights: text=0.162, context=0.034, color=0.185
+[INFO] [2025-04-23 16:06:53,515] Min weights: text=0.280, context=0.015, color=0.005
+[INFO] [2025-04-23 16:06:53,515] Max weights: text=0.959, context=0.161, color=0.693
+[INFO] [2025-04-23 16:06:53,518] Saved best model with loss: 0.0693
+[INFO] [2025-04-23 16:06:53,608] Epoch 9/200 - Loss: 0.0546
+[INFO] [2025-04-23 16:06:53,609] Avg weights: text=0.740, context=0.057, color=0.203
+[INFO] [2025-04-23 16:06:53,609] Std weights: text=0.182, context=0.025, color=0.201
+[INFO] [2025-04-23 16:06:53,609] Min weights: text=0.291, context=0.009, color=0.007
+[INFO] [2025-04-23 16:06:53,609] Max weights: text=0.958, context=0.120, color=0.700
+[INFO] [2025-04-23 16:06:53,612] Saved best model with loss: 0.0546
+[INFO] [2025-04-23 16:06:53,702] Epoch 10/200 - Loss: 0.0461
+[INFO] [2025-04-23 16:06:53,703] Avg weights: text=0.785, context=0.052, color=0.163
+[INFO] [2025-04-23 16:06:53,703] Std weights: text=0.165, context=0.022, color=0.180
+[INFO] [2025-04-23 16:06:53,703] Min weights: text=0.381, context=0.010, color=0.004
+[INFO] [2025-04-23 16:06:53,703] Max weights: text=0.973, context=0.102, color=0.606
+[INFO] [2025-04-23 16:06:53,706] Saved best model with loss: 0.0461
+[INFO] [2025-04-23 16:06:53,791] Epoch 11/200 - Loss: 0.0364
+[INFO] [2025-04-23 16:06:53,792] Avg weights: text=0.787, context=0.044, color=0.168
+[INFO] [2025-04-23 16:06:53,792] Std weights: text=0.166, context=0.020, color=0.179
+[INFO] [2025-04-23 16:06:53,792] Min weights: text=0.380, context=0.007, color=0.005
+[INFO] [2025-04-23 16:06:53,792] Max weights: text=0.974, context=0.094, color=0.613
+[INFO] [2025-04-23 16:06:53,792] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 8.2%, high(>0.5): 91.8%
+[INFO] [2025-04-23 16:06:53,793] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:53,793] Color weight distribution: low(<0.2): 68.4%, med(0.2-0.5): 27.9%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:06:53,793] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:53,793] Context > Color: 47.13%
+[INFO] [2025-04-23 16:06:53,793] Text > Color: 93.85%
+[INFO] [2025-04-23 16:06:53,795] Text dominant: 93.85%
+[INFO] [2025-04-23 16:06:53,795] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:53,795] Color dominant: 6.15%
+[INFO] [2025-04-23 16:06:53,796] High text weight (0.974): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:53,796] High text weight (0.963): Shape 4 - 'The blue tinted glass windshield of the car....'
+[INFO] [2025-04-23 16:06:53,796] High text weight (0.962): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:53,797] High context weight (0.094): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:53,797] High context weight (0.089): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:06:53,797] High context weight (0.087): Shape 1 - 'A rgb(163,73,164) shape near the point (141, 267) ...'
+[INFO] [2025-04-23 16:06:53,797] High color weight (0.613): Shape 14 - 'Empire State Building main body with its beige col...'
+[INFO] [2025-04-23 16:06:53,798] High color weight (0.597): Shape 7 - 'Saturn with its distinctive rings....'
+[INFO] [2025-04-23 16:06:53,798] High color weight (0.580): Shape 8 - 'Saturn's rings surrounding the planet....'
+[INFO] [2025-04-23 16:06:53,801] Saved best model with loss: 0.0364
+[INFO] [2025-04-23 16:06:53,884] Epoch 12/200 - Loss: 0.0316
+[INFO] [2025-04-23 16:06:53,884] Avg weights: text=0.802, context=0.039, color=0.159
+[INFO] [2025-04-23 16:06:53,884] Std weights: text=0.157, context=0.018, color=0.168
+[INFO] [2025-04-23 16:06:53,885] Min weights: text=0.429, context=0.007, color=0.004
+[INFO] [2025-04-23 16:06:53,885] Max weights: text=0.979, context=0.083, color=0.564
+[INFO] [2025-04-23 16:06:53,888] Saved best model with loss: 0.0316
+[INFO] [2025-04-23 16:06:53,986] Epoch 13/200 - Loss: 0.0294
+[INFO] [2025-04-23 16:06:53,987] Avg weights: text=0.797, context=0.036, color=0.167
+[INFO] [2025-04-23 16:06:53,987] Std weights: text=0.161, context=0.018, color=0.172
+[INFO] [2025-04-23 16:06:53,987] Min weights: text=0.433, context=0.006, color=0.005
+[INFO] [2025-04-23 16:06:53,988] Max weights: text=0.979, context=0.082, color=0.561
+[INFO] [2025-04-23 16:06:53,990] Saved best model with loss: 0.0294
+[INFO] [2025-04-23 16:06:54,077] Epoch 14/200 - Loss: 0.0278
+[INFO] [2025-04-23 16:06:54,077] Avg weights: text=0.801, context=0.035, color=0.165
+[INFO] [2025-04-23 16:06:54,078] Std weights: text=0.163, context=0.017, color=0.174
+[INFO] [2025-04-23 16:06:54,078] Min weights: text=0.432, context=0.006, color=0.004
+[INFO] [2025-04-23 16:06:54,078] Max weights: text=0.982, context=0.079, color=0.562
+[INFO] [2025-04-23 16:06:54,082] Saved best model with loss: 0.0278
+[INFO] [2025-04-23 16:06:54,170] Epoch 15/200 - Loss: 0.0272
+[INFO] [2025-04-23 16:06:54,171] Avg weights: text=0.799, context=0.034, color=0.167
+[INFO] [2025-04-23 16:06:54,171] Std weights: text=0.166, context=0.017, color=0.177
+[INFO] [2025-04-23 16:06:54,171] Min weights: text=0.422, context=0.005, color=0.004
+[INFO] [2025-04-23 16:06:54,172] Max weights: text=0.982, context=0.079, color=0.573
+[INFO] [2025-04-23 16:06:54,175] Saved best model with loss: 0.0272
+[INFO] [2025-04-23 16:06:54,263] Epoch 16/200 - Loss: 0.0258
+[INFO] [2025-04-23 16:06:54,263] Avg weights: text=0.809, context=0.030, color=0.160
+[INFO] [2025-04-23 16:06:54,263] Std weights: text=0.160, context=0.015, color=0.170
+[INFO] [2025-04-23 16:06:54,264] Min weights: text=0.443, context=0.005, color=0.004
+[INFO] [2025-04-23 16:06:54,264] Max weights: text=0.984, context=0.069, color=0.552
+[INFO] [2025-04-23 16:06:54,267] Saved best model with loss: 0.0258
+[INFO] [2025-04-23 16:06:54,351] Epoch 17/200 - Loss: 0.0207
+[INFO] [2025-04-23 16:06:54,351] Avg weights: text=0.817, context=0.025, color=0.158
+[INFO] [2025-04-23 16:06:54,352] Std weights: text=0.171, context=0.013, color=0.178
+[INFO] [2025-04-23 16:06:54,352] Min weights: text=0.406, context=0.004, color=0.002
+[INFO] [2025-04-23 16:06:54,352] Max weights: text=0.990, context=0.062, color=0.589
+[INFO] [2025-04-23 16:06:54,355] Saved best model with loss: 0.0207
+[INFO] [2025-04-23 16:06:54,447] Epoch 18/200 - Loss: 0.0171
+[INFO] [2025-04-23 16:06:54,447] Avg weights: text=0.824, context=0.020, color=0.156
+[INFO] [2025-04-23 16:06:54,448] Std weights: text=0.168, context=0.011, color=0.174
+[INFO] [2025-04-23 16:06:54,448] Min weights: text=0.384, context=0.003, color=0.002
+[INFO] [2025-04-23 16:06:54,448] Max weights: text=0.991, context=0.062, color=0.613
+[INFO] [2025-04-23 16:06:54,452] Saved best model with loss: 0.0171
+[INFO] [2025-04-23 16:06:54,551] Epoch 19/200 - Loss: 0.0151
+[INFO] [2025-04-23 16:06:54,551] Avg weights: text=0.831, context=0.017, color=0.152
+[INFO] [2025-04-23 16:06:54,552] Std weights: text=0.177, context=0.010, color=0.182
+[INFO] [2025-04-23 16:06:54,552] Min weights: text=0.310, context=0.002, color=0.001
+[INFO] [2025-04-23 16:06:54,552] Max weights: text=0.995, context=0.061, color=0.688
+[INFO] [2025-04-23 16:06:54,555] Saved best model with loss: 0.0151
+[INFO] [2025-04-23 16:06:54,640] Epoch 20/200 - Loss: 0.0137
+[INFO] [2025-04-23 16:06:54,640] Avg weights: text=0.841, context=0.014, color=0.145
+[INFO] [2025-04-23 16:06:54,640] Std weights: text=0.165, context=0.009, color=0.169
+[INFO] [2025-04-23 16:06:54,641] Min weights: text=0.337, context=0.001, color=0.001
+[INFO] [2025-04-23 16:06:54,641] Max weights: text=0.995, context=0.046, color=0.662
+[INFO] [2025-04-23 16:06:54,644] Saved best model with loss: 0.0137
+[INFO] [2025-04-23 16:06:54,733] Epoch 21/200 - Loss: 0.0127
+[INFO] [2025-04-23 16:06:54,733] Avg weights: text=0.843, context=0.014, color=0.143
+[INFO] [2025-04-23 16:06:54,734] Std weights: text=0.172, context=0.008, color=0.176
+[INFO] [2025-04-23 16:06:54,734] Min weights: text=0.347, context=0.002, color=0.001
+[INFO] [2025-04-23 16:06:54,734] Max weights: text=0.996, context=0.049, color=0.650
+[INFO] [2025-04-23 16:06:54,735] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 5.3%, high(>0.5): 94.7%
+[INFO] [2025-04-23 16:06:54,735] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:54,735] Color weight distribution: low(<0.2): 69.7%, med(0.2-0.5): 25.4%, high(>0.5): 4.9%
+[INFO] [2025-04-23 16:06:54,735] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:54,735] Context > Color: 34.43%
+[INFO] [2025-04-23 16:06:54,736] Text > Color: 94.67%
+[INFO] [2025-04-23 16:06:54,736] Text dominant: 94.67%
+[INFO] [2025-04-23 16:06:54,736] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:54,736] Color dominant: 5.33%
+[INFO] [2025-04-23 16:06:54,737] High text weight (0.996): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:54,737] High text weight (0.995): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:54,737] High text weight (0.994): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:54,738] High context weight (0.049): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:54,738] High context weight (0.035): Shape 8 - 'Right arm of the cactus....'
+[INFO] [2025-04-23 16:06:54,738] High context weight (0.035): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:54,738] High color weight (0.650): Shape 8 - 'Saturn's rings surrounding the planet....'
+[INFO] [2025-04-23 16:06:54,739] High color weight (0.642): Shape 7 - 'Saturn with its distinctive rings....'
+[INFO] [2025-04-23 16:06:54,739] High color weight (0.615): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:54,742] Saved best model with loss: 0.0127
+[INFO] [2025-04-23 16:06:54,828] Epoch 22/200 - Loss: 0.0112
+[INFO] [2025-04-23 16:06:54,828] Avg weights: text=0.866, context=0.012, color=0.122
+[INFO] [2025-04-23 16:06:54,828] Std weights: text=0.157, context=0.007, color=0.160
+[INFO] [2025-04-23 16:06:54,828] Min weights: text=0.303, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:54,828] Max weights: text=0.998, context=0.044, color=0.694
+[INFO] [2025-04-23 16:06:54,831] Saved best model with loss: 0.0112
+[INFO] [2025-04-23 16:06:54,917] Epoch 23/200 - Loss: 0.0098
+[INFO] [2025-04-23 16:06:54,917] Avg weights: text=0.856, context=0.012, color=0.133
+[INFO] [2025-04-23 16:06:54,917] Std weights: text=0.170, context=0.007, color=0.173
+[INFO] [2025-04-23 16:06:54,918] Min weights: text=0.297, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:54,918] Max weights: text=0.998, context=0.034, color=0.702
+[INFO] [2025-04-23 16:06:54,921] Saved best model with loss: 0.0098
+[INFO] [2025-04-23 16:06:55,010] Epoch 24/200 - Loss: 0.0088
+[INFO] [2025-04-23 16:06:55,011] Avg weights: text=0.860, context=0.012, color=0.128
+[INFO] [2025-04-23 16:06:55,011] Std weights: text=0.167, context=0.007, color=0.170
+[INFO] [2025-04-23 16:06:55,011] Min weights: text=0.298, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,012] Max weights: text=0.998, context=0.031, color=0.700
+[INFO] [2025-04-23 16:06:55,014] Saved best model with loss: 0.0088
+[INFO] [2025-04-23 16:06:55,094] Epoch 25/200 - Loss: 0.0080
+[INFO] [2025-04-23 16:06:55,094] Avg weights: text=0.859, context=0.011, color=0.130
+[INFO] [2025-04-23 16:06:55,094] Std weights: text=0.167, context=0.007, color=0.170
+[INFO] [2025-04-23 16:06:55,095] Min weights: text=0.281, context=0.001, color=0.001
+[INFO] [2025-04-23 16:06:55,095] Max weights: text=0.997, context=0.032, color=0.717
+[INFO] [2025-04-23 16:06:55,098] Saved best model with loss: 0.0080
+[INFO] [2025-04-23 16:06:55,183] Epoch 26/200 - Loss: 0.0075
+[INFO] [2025-04-23 16:06:55,183] Avg weights: text=0.858, context=0.011, color=0.131
+[INFO] [2025-04-23 16:06:55,184] Std weights: text=0.168, context=0.007, color=0.171
+[INFO] [2025-04-23 16:06:55,184] Min weights: text=0.282, context=0.001, color=0.001
+[INFO] [2025-04-23 16:06:55,184] Max weights: text=0.997, context=0.031, color=0.716
+[INFO] [2025-04-23 16:06:55,188] Saved best model with loss: 0.0075
+[INFO] [2025-04-23 16:06:55,270] Epoch 27/200 - Loss: 0.0071
+[INFO] [2025-04-23 16:06:55,271] Avg weights: text=0.863, context=0.011, color=0.126
+[INFO] [2025-04-23 16:06:55,271] Std weights: text=0.164, context=0.006, color=0.167
+[INFO] [2025-04-23 16:06:55,271] Min weights: text=0.295, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,272] Max weights: text=0.998, context=0.030, color=0.703
+[INFO] [2025-04-23 16:06:55,274] Saved best model with loss: 0.0071
+[INFO] [2025-04-23 16:06:55,358] Epoch 28/200 - Loss: 0.0067
+[INFO] [2025-04-23 16:06:55,359] Avg weights: text=0.858, context=0.011, color=0.132
+[INFO] [2025-04-23 16:06:55,359] Std weights: text=0.168, context=0.006, color=0.171
+[INFO] [2025-04-23 16:06:55,359] Min weights: text=0.264, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,360] Max weights: text=0.998, context=0.032, color=0.735
+[INFO] [2025-04-23 16:06:55,363] Saved best model with loss: 0.0067
+[INFO] [2025-04-23 16:06:55,448] Epoch 29/200 - Loss: 0.0063
+[INFO] [2025-04-23 16:06:55,448] Avg weights: text=0.865, context=0.010, color=0.125
+[INFO] [2025-04-23 16:06:55,448] Std weights: text=0.161, context=0.006, color=0.164
+[INFO] [2025-04-23 16:06:55,449] Min weights: text=0.281, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,449] Max weights: text=0.998, context=0.031, color=0.717
+[INFO] [2025-04-23 16:06:55,451] Saved best model with loss: 0.0063
+[INFO] [2025-04-23 16:06:55,540] Epoch 30/200 - Loss: 0.0062
+[INFO] [2025-04-23 16:06:55,540] Avg weights: text=0.863, context=0.010, color=0.127
+[INFO] [2025-04-23 16:06:55,540] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:55,540] Min weights: text=0.269, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,541] Max weights: text=0.998, context=0.031, color=0.729
+[INFO] [2025-04-23 16:06:55,543] Saved best model with loss: 0.0062
+[INFO] [2025-04-23 16:06:55,636] Epoch 31/200 - Loss: 0.0060
+[INFO] [2025-04-23 16:06:55,637] Avg weights: text=0.863, context=0.010, color=0.127
+[INFO] [2025-04-23 16:06:55,638] Std weights: text=0.164, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:55,638] Min weights: text=0.269, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,638] Max weights: text=0.998, context=0.032, color=0.730
+[INFO] [2025-04-23 16:06:55,638] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 4.1%, high(>0.5): 95.9%
+[INFO] [2025-04-23 16:06:55,639] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:55,639] Color weight distribution: low(<0.2): 72.1%, med(0.2-0.5): 23.8%, high(>0.5): 4.1%
+[INFO] [2025-04-23 16:06:55,639] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:55,640] Context > Color: 36.48%
+[INFO] [2025-04-23 16:06:55,640] Text > Color: 95.90%
+[INFO] [2025-04-23 16:06:55,640] Text dominant: 95.90%
+[INFO] [2025-04-23 16:06:55,640] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:55,641] Color dominant: 4.10%
+[INFO] [2025-04-23 16:06:55,641] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:55,641] High text weight (0.998): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:55,641] High text weight (0.996): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:55,642] High context weight (0.032): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:55,642] High context weight (0.030): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:55,642] High context weight (0.029): Shape 8 - 'Right arm of the cactus....'
+[INFO] [2025-04-23 16:06:55,643] High color weight (0.730): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:55,643] High color weight (0.639): Shape 7 - 'Saturn with its distinctive rings....'
+[INFO] [2025-04-23 16:06:55,643] High color weight (0.618): Shape 8 - 'Saturn's rings surrounding the planet....'
+[INFO] [2025-04-23 16:06:55,647] Saved best model with loss: 0.0060
+[INFO] [2025-04-23 16:06:55,738] Epoch 32/200 - Loss: 0.0059
+[INFO] [2025-04-23 16:06:55,738] Avg weights: text=0.864, context=0.010, color=0.126
+[INFO] [2025-04-23 16:06:55,738] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:55,739] Min weights: text=0.265, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,739] Max weights: text=0.998, context=0.032, color=0.733
+[INFO] [2025-04-23 16:06:55,742] Saved best model with loss: 0.0059
+[INFO] [2025-04-23 16:06:55,828] Epoch 33/200 - Loss: 0.0058
+[INFO] [2025-04-23 16:06:55,828] Avg weights: text=0.864, context=0.010, color=0.126
+[INFO] [2025-04-23 16:06:55,829] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:55,829] Min weights: text=0.265, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,829] Max weights: text=0.998, context=0.032, color=0.734
+[INFO] [2025-04-23 16:06:55,833] Saved best model with loss: 0.0058
+[INFO] [2025-04-23 16:06:55,917] Epoch 34/200 - Loss: 0.0058
+[INFO] [2025-04-23 16:06:55,917] Avg weights: text=0.864, context=0.010, color=0.126
+[INFO] [2025-04-23 16:06:55,918] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:55,918] Min weights: text=0.264, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:55,918] Max weights: text=0.998, context=0.032, color=0.735
+[INFO] [2025-04-23 16:06:55,921] Saved best model with loss: 0.0058
+[INFO] [2025-04-23 16:06:56,008] Epoch 35/200 - Loss: 0.0058
+[INFO] [2025-04-23 16:06:56,009] Avg weights: text=0.864, context=0.010, color=0.126
+[INFO] [2025-04-23 16:06:56,009] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:56,009] Min weights: text=0.263, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:56,009] Max weights: text=0.998, context=0.032, color=0.735
+[INFO] [2025-04-23 16:06:56,013] Saved best model with loss: 0.0058
+[INFO] [2025-04-23 16:06:56,099] Epoch 36/200 - Loss: 0.0062
+[INFO] [2025-04-23 16:06:56,099] Avg weights: text=0.864, context=0.010, color=0.126
+[INFO] [2025-04-23 16:06:56,099] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:56,100] Min weights: text=0.261, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:56,100] Max weights: text=0.998, context=0.033, color=0.738
+[INFO] [2025-04-23 16:06:56,184] Epoch 37/200 - Loss: 0.0058
+[INFO] [2025-04-23 16:06:56,184] Avg weights: text=0.865, context=0.009, color=0.126
+[INFO] [2025-04-23 16:06:56,184] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:56,185] Min weights: text=0.259, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:56,185] Max weights: text=0.998, context=0.033, color=0.740
+[INFO] [2025-04-23 16:06:56,265] Epoch 38/200 - Loss: 0.0055
+[INFO] [2025-04-23 16:06:56,265] Avg weights: text=0.868, context=0.009, color=0.124
+[INFO] [2025-04-23 16:06:56,266] Std weights: text=0.166, context=0.006, color=0.168
+[INFO] [2025-04-23 16:06:56,266] Min weights: text=0.249, context=0.001, color=0.000
+[INFO] [2025-04-23 16:06:56,266] Max weights: text=0.998, context=0.032, color=0.750
+[INFO] [2025-04-23 16:06:56,270] Saved best model with loss: 0.0055
+[INFO] [2025-04-23 16:06:56,363] Epoch 39/200 - Loss: 0.0056
+[INFO] [2025-04-23 16:06:56,363] Avg weights: text=0.865, context=0.008, color=0.127
+[INFO] [2025-04-23 16:06:56,364] Std weights: text=0.164, context=0.006, color=0.167
+[INFO] [2025-04-23 16:06:56,364] Min weights: text=0.248, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,364] Max weights: text=0.998, context=0.033, color=0.751
+[INFO] [2025-04-23 16:06:56,459] Epoch 40/200 - Loss: 0.0051
+[INFO] [2025-04-23 16:06:56,460] Avg weights: text=0.874, context=0.008, color=0.118
+[INFO] [2025-04-23 16:06:56,460] Std weights: text=0.160, context=0.006, color=0.163
+[INFO] [2025-04-23 16:06:56,460] Min weights: text=0.240, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,460] Max weights: text=0.998, context=0.035, color=0.759
+[INFO] [2025-04-23 16:06:56,464] Saved best model with loss: 0.0051
+[INFO] [2025-04-23 16:06:56,554] Epoch 41/200 - Loss: 0.0046
+[INFO] [2025-04-23 16:06:56,554] Avg weights: text=0.868, context=0.008, color=0.124
+[INFO] [2025-04-23 16:06:56,554] Std weights: text=0.163, context=0.006, color=0.166
+[INFO] [2025-04-23 16:06:56,555] Min weights: text=0.230, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,555] Max weights: text=0.998, context=0.039, color=0.769
+[INFO] [2025-04-23 16:06:56,555] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:06:56,555] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:56,556] Color weight distribution: low(<0.2): 73.0%, med(0.2-0.5): 23.4%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:06:56,556] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:56,556] Context > Color: 31.15%
+[INFO] [2025-04-23 16:06:56,556] Text > Color: 96.31%
+[INFO] [2025-04-23 16:06:56,557] Text dominant: 96.31%
+[INFO] [2025-04-23 16:06:56,557] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:56,557] Color dominant: 3.69%
+[INFO] [2025-04-23 16:06:56,558] High text weight (0.998): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:56,558] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:56,558] High text weight (0.997): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:56,558] High context weight (0.039): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:56,558] High context weight (0.028): Shape 5 - 'Shadow side of the rock formation....'
+[INFO] [2025-04-23 16:06:56,559] High context weight (0.027): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:56,559] High color weight (0.769): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:56,559] High color weight (0.664): Shape 7 - 'Saturn with its distinctive rings....'
+[INFO] [2025-04-23 16:06:56,559] High color weight (0.662): Shape 8 - 'Saturn's rings surrounding the planet....'
+[INFO] [2025-04-23 16:06:56,563] Saved best model with loss: 0.0046
+[INFO] [2025-04-23 16:06:56,657] Epoch 42/200 - Loss: 0.0041
+[INFO] [2025-04-23 16:06:56,658] Avg weights: text=0.870, context=0.008, color=0.122
+[INFO] [2025-04-23 16:06:56,658] Std weights: text=0.164, context=0.006, color=0.167
+[INFO] [2025-04-23 16:06:56,658] Min weights: text=0.203, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,658] Max weights: text=0.998, context=0.043, color=0.797
+[INFO] [2025-04-23 16:06:56,661] Saved best model with loss: 0.0041
+[INFO] [2025-04-23 16:06:56,760] Epoch 43/200 - Loss: 0.0043
+[INFO] [2025-04-23 16:06:56,760] Avg weights: text=0.866, context=0.008, color=0.126
+[INFO] [2025-04-23 16:06:56,761] Std weights: text=0.170, context=0.006, color=0.173
+[INFO] [2025-04-23 16:06:56,761] Min weights: text=0.224, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,761] Max weights: text=0.998, context=0.045, color=0.775
+[INFO] [2025-04-23 16:06:56,853] Epoch 44/200 - Loss: 0.0038
+[INFO] [2025-04-23 16:06:56,853] Avg weights: text=0.870, context=0.008, color=0.122
+[INFO] [2025-04-23 16:06:56,853] Std weights: text=0.165, context=0.006, color=0.167
+[INFO] [2025-04-23 16:06:56,854] Min weights: text=0.215, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,854] Max weights: text=0.998, context=0.045, color=0.784
+[INFO] [2025-04-23 16:06:56,857] Saved best model with loss: 0.0038
+[INFO] [2025-04-23 16:06:56,949] Epoch 45/200 - Loss: 0.0036
+[INFO] [2025-04-23 16:06:56,950] Avg weights: text=0.876, context=0.008, color=0.116
+[INFO] [2025-04-23 16:06:56,950] Std weights: text=0.162, context=0.006, color=0.164
+[INFO] [2025-04-23 16:06:56,950] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:56,950] Max weights: text=0.999, context=0.044, color=0.786
+[INFO] [2025-04-23 16:06:56,953] Saved best model with loss: 0.0036
+[INFO] [2025-04-23 16:06:57,049] Epoch 46/200 - Loss: 0.0033
+[INFO] [2025-04-23 16:06:57,049] Avg weights: text=0.869, context=0.009, color=0.122
+[INFO] [2025-04-23 16:06:57,049] Std weights: text=0.163, context=0.007, color=0.166
+[INFO] [2025-04-23 16:06:57,050] Min weights: text=0.237, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,050] Max weights: text=0.999, context=0.050, color=0.762
+[INFO] [2025-04-23 16:06:57,053] Saved best model with loss: 0.0033
+[INFO] [2025-04-23 16:06:57,146] Epoch 47/200 - Loss: 0.0034
+[INFO] [2025-04-23 16:06:57,146] Avg weights: text=0.873, context=0.009, color=0.118
+[INFO] [2025-04-23 16:06:57,146] Std weights: text=0.160, context=0.007, color=0.163
+[INFO] [2025-04-23 16:06:57,147] Min weights: text=0.206, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,147] Max weights: text=0.999, context=0.051, color=0.793
+[INFO] [2025-04-23 16:06:57,257] Epoch 48/200 - Loss: 0.0030
+[INFO] [2025-04-23 16:06:57,258] Avg weights: text=0.873, context=0.009, color=0.117
+[INFO] [2025-04-23 16:06:57,258] Std weights: text=0.159, context=0.007, color=0.162
+[INFO] [2025-04-23 16:06:57,258] Min weights: text=0.231, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,258] Max weights: text=0.998, context=0.050, color=0.768
+[INFO] [2025-04-23 16:06:57,262] Saved best model with loss: 0.0030
+[INFO] [2025-04-23 16:06:57,355] Epoch 49/200 - Loss: 0.0028
+[INFO] [2025-04-23 16:06:57,355] Avg weights: text=0.868, context=0.010, color=0.122
+[INFO] [2025-04-23 16:06:57,355] Std weights: text=0.164, context=0.008, color=0.168
+[INFO] [2025-04-23 16:06:57,356] Min weights: text=0.228, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,356] Max weights: text=0.998, context=0.056, color=0.771
+[INFO] [2025-04-23 16:06:57,359] Saved best model with loss: 0.0028
+[INFO] [2025-04-23 16:06:57,451] Epoch 50/200 - Loss: 0.0024
+[INFO] [2025-04-23 16:06:57,451] Avg weights: text=0.868, context=0.010, color=0.122
+[INFO] [2025-04-23 16:06:57,451] Std weights: text=0.162, context=0.008, color=0.166
+[INFO] [2025-04-23 16:06:57,451] Min weights: text=0.221, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,452] Max weights: text=0.998, context=0.060, color=0.778
+[INFO] [2025-04-23 16:06:57,454] Saved best model with loss: 0.0024
+[INFO] [2025-04-23 16:06:57,577] Epoch 51/200 - Loss: 0.0023
+[INFO] [2025-04-23 16:06:57,577] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:57,578] Std weights: text=0.164, context=0.008, color=0.167
+[INFO] [2025-04-23 16:06:57,578] Min weights: text=0.218, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,578] Max weights: text=0.998, context=0.061, color=0.782
+[INFO] [2025-04-23 16:06:57,578] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.3%, high(>0.5): 96.7%
+[INFO] [2025-04-23 16:06:57,579] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:57,579] Color weight distribution: low(<0.2): 75.4%, med(0.2-0.5): 21.3%, high(>0.5): 3.3%
+[INFO] [2025-04-23 16:06:57,579] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:57,580] Context > Color: 41.39%
+[INFO] [2025-04-23 16:06:57,580] Text > Color: 96.72%
+[INFO] [2025-04-23 16:06:57,580] Text dominant: 96.72%
+[INFO] [2025-04-23 16:06:57,580] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:57,580] Color dominant: 3.28%
+[INFO] [2025-04-23 16:06:57,581] High text weight (0.998): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:57,581] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:57,581] High text weight (0.996): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:57,581] High context weight (0.061): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:57,581] High context weight (0.041): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:57,582] High context weight (0.038): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:06:57,582] High color weight (0.782): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:57,582] High color weight (0.641): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:57,582] High color weight (0.606): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:57,586] Saved best model with loss: 0.0023
+[INFO] [2025-04-23 16:06:57,679] Epoch 52/200 - Loss: 0.0021
+[INFO] [2025-04-23 16:06:57,680] Avg weights: text=0.866, context=0.010, color=0.124
+[INFO] [2025-04-23 16:06:57,680] Std weights: text=0.167, context=0.008, color=0.170
+[INFO] [2025-04-23 16:06:57,680] Min weights: text=0.194, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,680] Max weights: text=0.998, context=0.057, color=0.806
+[INFO] [2025-04-23 16:06:57,683] Saved best model with loss: 0.0021
+[INFO] [2025-04-23 16:06:57,782] Epoch 53/200 - Loss: 0.0021
+[INFO] [2025-04-23 16:06:57,783] Avg weights: text=0.868, context=0.010, color=0.122
+[INFO] [2025-04-23 16:06:57,783] Std weights: text=0.164, context=0.008, color=0.168
+[INFO] [2025-04-23 16:06:57,783] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,783] Max weights: text=0.998, context=0.057, color=0.788
+[INFO] [2025-04-23 16:06:57,786] Saved best model with loss: 0.0021
+[INFO] [2025-04-23 16:06:57,883] Epoch 54/200 - Loss: 0.0020
+[INFO] [2025-04-23 16:06:57,884] Avg weights: text=0.870, context=0.010, color=0.119
+[INFO] [2025-04-23 16:06:57,884] Std weights: text=0.162, context=0.008, color=0.166
+[INFO] [2025-04-23 16:06:57,884] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,885] Max weights: text=0.998, context=0.061, color=0.788
+[INFO] [2025-04-23 16:06:57,888] Saved best model with loss: 0.0020
+[INFO] [2025-04-23 16:06:57,981] Epoch 55/200 - Loss: 0.0019
+[INFO] [2025-04-23 16:06:57,981] Avg weights: text=0.867, context=0.010, color=0.123
+[INFO] [2025-04-23 16:06:57,982] Std weights: text=0.165, context=0.008, color=0.168
+[INFO] [2025-04-23 16:06:57,982] Min weights: text=0.199, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:57,982] Max weights: text=0.998, context=0.060, color=0.801
+[INFO] [2025-04-23 16:06:57,985] Saved best model with loss: 0.0019
+[INFO] [2025-04-23 16:06:58,081] Epoch 56/200 - Loss: 0.0018
+[INFO] [2025-04-23 16:06:58,082] Avg weights: text=0.870, context=0.010, color=0.120
+[INFO] [2025-04-23 16:06:58,082] Std weights: text=0.161, context=0.008, color=0.165
+[INFO] [2025-04-23 16:06:58,082] Min weights: text=0.205, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,082] Max weights: text=0.998, context=0.060, color=0.794
+[INFO] [2025-04-23 16:06:58,085] Saved best model with loss: 0.0018
+[INFO] [2025-04-23 16:06:58,187] Epoch 57/200 - Loss: 0.0017
+[INFO] [2025-04-23 16:06:58,187] Avg weights: text=0.870, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,187] Std weights: text=0.161, context=0.008, color=0.165
+[INFO] [2025-04-23 16:06:58,188] Min weights: text=0.206, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,188] Max weights: text=0.998, context=0.062, color=0.794
+[INFO] [2025-04-23 16:06:58,190] Saved best model with loss: 0.0017
+[INFO] [2025-04-23 16:06:58,283] Epoch 58/200 - Loss: 0.0017
+[INFO] [2025-04-23 16:06:58,283] Avg weights: text=0.869, context=0.010, color=0.120
+[INFO] [2025-04-23 16:06:58,284] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:58,284] Min weights: text=0.196, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,284] Max weights: text=0.998, context=0.061, color=0.803
+[INFO] [2025-04-23 16:06:58,287] Saved best model with loss: 0.0017
+[INFO] [2025-04-23 16:06:58,384] Epoch 59/200 - Loss: 0.0016
+[INFO] [2025-04-23 16:06:58,385] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,385] Std weights: text=0.162, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:58,385] Min weights: text=0.197, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,385] Max weights: text=0.998, context=0.063, color=0.802
+[INFO] [2025-04-23 16:06:58,389] Saved best model with loss: 0.0016
+[INFO] [2025-04-23 16:06:58,478] Epoch 60/200 - Loss: 0.0016
+[INFO] [2025-04-23 16:06:58,478] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,478] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:58,479] Min weights: text=0.198, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,479] Max weights: text=0.998, context=0.064, color=0.801
+[INFO] [2025-04-23 16:06:58,482] Saved best model with loss: 0.0016
+[INFO] [2025-04-23 16:06:58,573] Epoch 61/200 - Loss: 0.0015
+[INFO] [2025-04-23 16:06:58,573] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,574] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:06:58,574] Min weights: text=0.197, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,574] Max weights: text=0.998, context=0.064, color=0.802
+[INFO] [2025-04-23 16:06:58,574] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 3.3%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:06:58,575] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:58,575] Color weight distribution: low(<0.2): 75.4%, med(0.2-0.5): 20.9%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:06:58,575] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:58,576] Context > Color: 39.34%
+[INFO] [2025-04-23 16:06:58,576] Text > Color: 96.31%
+[INFO] [2025-04-23 16:06:58,576] Text dominant: 96.31%
+[INFO] [2025-04-23 16:06:58,576] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:58,577] Color dominant: 3.69%
+[INFO] [2025-04-23 16:06:58,577] High text weight (0.998): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:58,577] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:58,577] High text weight (0.996): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:58,578] High context weight (0.064): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:58,578] High context weight (0.045): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:06:58,578] High context weight (0.042): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:58,578] High color weight (0.802): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:58,579] High color weight (0.635): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:58,579] High color weight (0.629): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:58,582] Saved best model with loss: 0.0015
+[INFO] [2025-04-23 16:06:58,676] Epoch 62/200 - Loss: 0.0015
+[INFO] [2025-04-23 16:06:58,677] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,677] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:06:58,677] Min weights: text=0.202, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,677] Max weights: text=0.998, context=0.063, color=0.797
+[INFO] [2025-04-23 16:06:58,680] Saved best model with loss: 0.0015
+[INFO] [2025-04-23 16:06:58,775] Epoch 63/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:06:58,775] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,776] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:06:58,776] Min weights: text=0.196, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,776] Max weights: text=0.998, context=0.064, color=0.803
+[INFO] [2025-04-23 16:06:58,780] Saved best model with loss: 0.0014
+[INFO] [2025-04-23 16:06:58,872] Epoch 64/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:06:58,873] Avg weights: text=0.870, context=0.010, color=0.120
+[INFO] [2025-04-23 16:06:58,873] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:06:58,873] Min weights: text=0.195, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,873] Max weights: text=0.998, context=0.064, color=0.804
+[INFO] [2025-04-23 16:06:58,876] Saved best model with loss: 0.0014
+[INFO] [2025-04-23 16:06:58,972] Epoch 65/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:06:58,973] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:58,973] Std weights: text=0.162, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:58,973] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:58,973] Max weights: text=0.998, context=0.064, color=0.806
+[INFO] [2025-04-23 16:06:58,977] Saved best model with loss: 0.0014
+[INFO] [2025-04-23 16:06:59,072] Epoch 66/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:06:59,074] Avg weights: text=0.868, context=0.010, color=0.122
+[INFO] [2025-04-23 16:06:59,074] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,074] Min weights: text=0.194, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,074] Max weights: text=0.998, context=0.065, color=0.806
+[INFO] [2025-04-23 16:06:59,078] Saved best model with loss: 0.0014
+[INFO] [2025-04-23 16:06:59,167] Epoch 67/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:06:59,167] Avg weights: text=0.870, context=0.010, color=0.120
+[INFO] [2025-04-23 16:06:59,167] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:06:59,167] Min weights: text=0.194, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,168] Max weights: text=0.998, context=0.065, color=0.806
+[INFO] [2025-04-23 16:06:59,170] Saved best model with loss: 0.0014
+[INFO] [2025-04-23 16:06:59,264] Epoch 68/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,265] Avg weights: text=0.868, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,265] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,265] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,265] Max weights: text=0.998, context=0.065, color=0.806
+[INFO] [2025-04-23 16:06:59,269] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,359] Epoch 69/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,359] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,359] Std weights: text=0.162, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,360] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,360] Max weights: text=0.998, context=0.065, color=0.806
+[INFO] [2025-04-23 16:06:59,363] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,452] Epoch 70/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,452] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,452] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,452] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,453] Max weights: text=0.998, context=0.065, color=0.807
+[INFO] [2025-04-23 16:06:59,456] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,555] Epoch 71/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,555] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,555] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,555] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,556] Max weights: text=0.998, context=0.065, color=0.808
+[INFO] [2025-04-23 16:06:59,556] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 3.3%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:06:59,557] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:06:59,557] Color weight distribution: low(<0.2): 75.4%, med(0.2-0.5): 20.9%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:06:59,557] Text > Context: 100.00%
+[INFO] [2025-04-23 16:06:59,558] Context > Color: 38.93%
+[INFO] [2025-04-23 16:06:59,558] Text > Color: 96.31%
+[INFO] [2025-04-23 16:06:59,558] Text dominant: 96.31%
+[INFO] [2025-04-23 16:06:59,559] Context dominant: 0.00%
+[INFO] [2025-04-23 16:06:59,559] Color dominant: 3.69%
+[INFO] [2025-04-23 16:06:59,559] High text weight (0.998): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:06:59,559] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:06:59,560] High text weight (0.996): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:06:59,560] High context weight (0.065): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:06:59,560] High context weight (0.047): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:06:59,561] High context weight (0.043): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:06:59,561] High color weight (0.808): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:06:59,561] High color weight (0.644): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:59,561] High color weight (0.637): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:06:59,565] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,656] Epoch 72/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,656] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,656] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,657] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,657] Max weights: text=0.998, context=0.065, color=0.808
+[INFO] [2025-04-23 16:06:59,660] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,749] Epoch 73/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,750] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,750] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,750] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,750] Max weights: text=0.998, context=0.065, color=0.808
+[INFO] [2025-04-23 16:06:59,753] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,848] Epoch 74/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,848] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,848] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,849] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,849] Max weights: text=0.998, context=0.065, color=0.808
+[INFO] [2025-04-23 16:06:59,852] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:06:59,949] Epoch 75/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:06:59,950] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:06:59,950] Std weights: text=0.163, context=0.009, color=0.166
+[INFO] [2025-04-23 16:06:59,950] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:06:59,950] Max weights: text=0.998, context=0.065, color=0.808
+[INFO] [2025-04-23 16:06:59,954] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:07:00,053] Epoch 76/200 - Loss: 0.0014
+[INFO] [2025-04-23 16:07:00,054] Avg weights: text=0.867, context=0.010, color=0.123
+[INFO] [2025-04-23 16:07:00,054] Std weights: text=0.164, context=0.009, color=0.168
+[INFO] [2025-04-23 16:07:00,054] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:00,055] Max weights: text=0.998, context=0.065, color=0.812
+[INFO] [2025-04-23 16:07:00,150] Epoch 77/200 - Loss: 0.0018
+[INFO] [2025-04-23 16:07:00,151] Avg weights: text=0.872, context=0.010, color=0.118
+[INFO] [2025-04-23 16:07:00,151] Std weights: text=0.161, context=0.009, color=0.164
+[INFO] [2025-04-23 16:07:00,151] Min weights: text=0.210, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:00,151] Max weights: text=0.999, context=0.066, color=0.789
+[INFO] [2025-04-23 16:07:00,248] Epoch 78/200 - Loss: 0.0022
+[INFO] [2025-04-23 16:07:00,249] Avg weights: text=0.869, context=0.010, color=0.121
+[INFO] [2025-04-23 16:07:00,249] Std weights: text=0.162, context=0.009, color=0.166
+[INFO] [2025-04-23 16:07:00,249] Min weights: text=0.185, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:00,249] Max weights: text=0.998, context=0.068, color=0.814
+[INFO] [2025-04-23 16:07:00,341] Epoch 79/200 - Loss: 0.0040
+[INFO] [2025-04-23 16:07:00,341] Avg weights: text=0.876, context=0.010, color=0.114
+[INFO] [2025-04-23 16:07:00,341] Std weights: text=0.161, context=0.009, color=0.165
+[INFO] [2025-04-23 16:07:00,341] Min weights: text=0.183, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:00,342] Max weights: text=0.999, context=0.063, color=0.817
+[INFO] [2025-04-23 16:07:00,436] Epoch 80/200 - Loss: 0.0055
+[INFO] [2025-04-23 16:07:00,437] Avg weights: text=0.896, context=0.012, color=0.092
+[INFO] [2025-04-23 16:07:00,437] Std weights: text=0.136, context=0.010, color=0.140
+[INFO] [2025-04-23 16:07:00,437] Min weights: text=0.221, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,437] Max weights: text=0.999, context=0.068, color=0.778
+[INFO] [2025-04-23 16:07:00,527] Epoch 81/200 - Loss: 0.0051
+[INFO] [2025-04-23 16:07:00,528] Avg weights: text=0.900, context=0.014, color=0.087
+[INFO] [2025-04-23 16:07:00,528] Std weights: text=0.115, context=0.011, color=0.119
+[INFO] [2025-04-23 16:07:00,528] Min weights: text=0.456, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,529] Max weights: text=0.999, context=0.085, color=0.531
+[INFO] [2025-04-23 16:07:00,529] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 1.2%, high(>0.5): 98.8%
+[INFO] [2025-04-23 16:07:00,529] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:00,530] Color weight distribution: low(<0.2): 81.6%, med(0.2-0.5): 17.6%, high(>0.5): 0.8%
+[INFO] [2025-04-23 16:07:00,530] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:00,530] Context > Color: 50.82%
+[INFO] [2025-04-23 16:07:00,530] Text > Color: 99.18%
+[INFO] [2025-04-23 16:07:00,530] Text dominant: 99.18%
+[INFO] [2025-04-23 16:07:00,530] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:00,532] Color dominant: 0.82%
+[INFO] [2025-04-23 16:07:00,532] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:00,532] High text weight (0.998): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:00,532] High text weight (0.996): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:00,533] High context weight (0.085): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:00,533] High context weight (0.061): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:00,533] High context weight (0.060): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:00,533] High color weight (0.531): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:00,533] High color weight (0.526): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:00,534] High color weight (0.498): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:00,634] Epoch 82/200 - Loss: 0.0036
+[INFO] [2025-04-23 16:07:00,634] Avg weights: text=0.874, context=0.015, color=0.111
+[INFO] [2025-04-23 16:07:00,635] Std weights: text=0.154, context=0.012, color=0.158
+[INFO] [2025-04-23 16:07:00,635] Min weights: text=0.266, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,635] Max weights: text=0.999, context=0.088, color=0.732
+[INFO] [2025-04-23 16:07:00,732] Epoch 83/200 - Loss: 0.0033
+[INFO] [2025-04-23 16:07:00,732] Avg weights: text=0.868, context=0.016, color=0.115
+[INFO] [2025-04-23 16:07:00,732] Std weights: text=0.155, context=0.014, color=0.159
+[INFO] [2025-04-23 16:07:00,733] Min weights: text=0.268, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,733] Max weights: text=0.998, context=0.103, color=0.730
+[INFO] [2025-04-23 16:07:00,822] Epoch 84/200 - Loss: 0.0028
+[INFO] [2025-04-23 16:07:00,822] Avg weights: text=0.885, context=0.016, color=0.099
+[INFO] [2025-04-23 16:07:00,822] Std weights: text=0.144, context=0.013, color=0.148
+[INFO] [2025-04-23 16:07:00,823] Min weights: text=0.318, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,823] Max weights: text=0.999, context=0.081, color=0.678
+[INFO] [2025-04-23 16:07:00,914] Epoch 85/200 - Loss: 0.0028
+[INFO] [2025-04-23 16:07:00,914] Avg weights: text=0.885, context=0.014, color=0.101
+[INFO] [2025-04-23 16:07:00,914] Std weights: text=0.153, context=0.012, color=0.155
+[INFO] [2025-04-23 16:07:00,915] Min weights: text=0.255, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:00,915] Max weights: text=0.999, context=0.067, color=0.743
+[INFO] [2025-04-23 16:07:01,008] Epoch 86/200 - Loss: 0.0024
+[INFO] [2025-04-23 16:07:01,008] Avg weights: text=0.877, context=0.011, color=0.112
+[INFO] [2025-04-23 16:07:01,008] Std weights: text=0.160, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:01,008] Min weights: text=0.228, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:01,009] Max weights: text=0.999, context=0.070, color=0.770
+[INFO] [2025-04-23 16:07:01,094] Epoch 87/200 - Loss: 0.0021
+[INFO] [2025-04-23 16:07:01,095] Avg weights: text=0.899, context=0.009, color=0.092
+[INFO] [2025-04-23 16:07:01,095] Std weights: text=0.141, context=0.008, color=0.142
+[INFO] [2025-04-23 16:07:01,095] Min weights: text=0.254, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:01,095] Max weights: text=0.999, context=0.059, color=0.744
+[INFO] [2025-04-23 16:07:01,215] Epoch 88/200 - Loss: 0.0018
+[INFO] [2025-04-23 16:07:01,215] Avg weights: text=0.890, context=0.010, color=0.100
+[INFO] [2025-04-23 16:07:01,216] Std weights: text=0.147, context=0.009, color=0.149
+[INFO] [2025-04-23 16:07:01,216] Min weights: text=0.236, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:01,216] Max weights: text=0.999, context=0.068, color=0.763
+[INFO] [2025-04-23 16:07:01,321] Epoch 89/200 - Loss: 0.0013
+[INFO] [2025-04-23 16:07:01,321] Avg weights: text=0.891, context=0.011, color=0.098
+[INFO] [2025-04-23 16:07:01,321] Std weights: text=0.145, context=0.010, color=0.147
+[INFO] [2025-04-23 16:07:01,322] Min weights: text=0.246, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:01,322] Max weights: text=0.999, context=0.069, color=0.752
+[INFO] [2025-04-23 16:07:01,325] Saved best model with loss: 0.0013
+[INFO] [2025-04-23 16:07:01,425] Epoch 90/200 - Loss: 0.0011
+[INFO] [2025-04-23 16:07:01,425] Avg weights: text=0.890, context=0.011, color=0.099
+[INFO] [2025-04-23 16:07:01,425] Std weights: text=0.145, context=0.010, color=0.147
+[INFO] [2025-04-23 16:07:01,426] Min weights: text=0.245, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:01,426] Max weights: text=0.999, context=0.072, color=0.753
+[INFO] [2025-04-23 16:07:01,429] Saved best model with loss: 0.0011
+[INFO] [2025-04-23 16:07:01,526] Epoch 91/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:01,526] Avg weights: text=0.889, context=0.010, color=0.100
+[INFO] [2025-04-23 16:07:01,527] Std weights: text=0.146, context=0.010, color=0.148
+[INFO] [2025-04-23 16:07:01,527] Min weights: text=0.236, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:01,527] Max weights: text=0.999, context=0.072, color=0.763
+[INFO] [2025-04-23 16:07:01,528] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 2.0%, high(>0.5): 98.0%
+[INFO] [2025-04-23 16:07:01,528] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:01,528] Color weight distribution: low(<0.2): 79.9%, med(0.2-0.5): 18.0%, high(>0.5): 2.0%
+[INFO] [2025-04-23 16:07:01,529] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:01,529] Context > Color: 49.18%
+[INFO] [2025-04-23 16:07:01,529] Text > Color: 97.95%
+[INFO] [2025-04-23 16:07:01,529] Text dominant: 97.95%
+[INFO] [2025-04-23 16:07:01,529] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:01,530] Color dominant: 2.05%
+[INFO] [2025-04-23 16:07:01,530] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:01,530] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:01,530] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:01,531] High context weight (0.072): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:01,531] High context weight (0.066): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:01,531] High context weight (0.041): Shape 0 - 'A gray canvas containing flag designs....'
+[INFO] [2025-04-23 16:07:01,531] High color weight (0.763): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:01,532] High color weight (0.557): Shape 8 - 'The yellow (gold) stripe of the German flag....'
+[INFO] [2025-04-23 16:07:01,532] High color weight (0.546): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:01,536] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:01,628] Epoch 92/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:01,628] Avg weights: text=0.886, context=0.010, color=0.104
+[INFO] [2025-04-23 16:07:01,628] Std weights: text=0.149, context=0.009, color=0.151
+[INFO] [2025-04-23 16:07:01,629] Min weights: text=0.234, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:01,629] Max weights: text=0.999, context=0.072, color=0.765
+[INFO] [2025-04-23 16:07:01,632] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:01,757] Epoch 93/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:01,757] Avg weights: text=0.885, context=0.010, color=0.105
+[INFO] [2025-04-23 16:07:01,758] Std weights: text=0.152, context=0.010, color=0.154
+[INFO] [2025-04-23 16:07:01,758] Min weights: text=0.234, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:01,758] Max weights: text=0.999, context=0.074, color=0.764
+[INFO] [2025-04-23 16:07:01,761] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:01,856] Epoch 94/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:01,857] Avg weights: text=0.888, context=0.010, color=0.102
+[INFO] [2025-04-23 16:07:01,857] Std weights: text=0.150, context=0.010, color=0.152
+[INFO] [2025-04-23 16:07:01,857] Min weights: text=0.233, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:01,857] Max weights: text=0.999, context=0.071, color=0.765
+[INFO] [2025-04-23 16:07:01,861] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:01,955] Epoch 95/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:01,956] Avg weights: text=0.887, context=0.010, color=0.103
+[INFO] [2025-04-23 16:07:01,956] Std weights: text=0.150, context=0.010, color=0.152
+[INFO] [2025-04-23 16:07:01,956] Min weights: text=0.243, context=0.001, color=0.000
+[INFO] [2025-04-23 16:07:01,956] Max weights: text=0.999, context=0.075, color=0.756
+[INFO] [2025-04-23 16:07:02,049] Epoch 96/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:02,049] Avg weights: text=0.885, context=0.011, color=0.104
+[INFO] [2025-04-23 16:07:02,049] Std weights: text=0.152, context=0.010, color=0.155
+[INFO] [2025-04-23 16:07:02,050] Min weights: text=0.233, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,050] Max weights: text=0.999, context=0.077, color=0.765
+[INFO] [2025-04-23 16:07:02,053] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:02,145] Epoch 97/200 - Loss: 0.0011
+[INFO] [2025-04-23 16:07:02,145] Avg weights: text=0.883, context=0.011, color=0.106
+[INFO] [2025-04-23 16:07:02,145] Std weights: text=0.153, context=0.010, color=0.155
+[INFO] [2025-04-23 16:07:02,146] Min weights: text=0.238, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,146] Max weights: text=0.999, context=0.077, color=0.761
+[INFO] [2025-04-23 16:07:02,244] Epoch 98/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:02,245] Avg weights: text=0.884, context=0.010, color=0.105
+[INFO] [2025-04-23 16:07:02,245] Std weights: text=0.153, context=0.010, color=0.156
+[INFO] [2025-04-23 16:07:02,245] Min weights: text=0.238, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,245] Max weights: text=0.999, context=0.073, color=0.760
+[INFO] [2025-04-23 16:07:02,338] Epoch 99/200 - Loss: 0.0010
+[INFO] [2025-04-23 16:07:02,338] Avg weights: text=0.885, context=0.010, color=0.105
+[INFO] [2025-04-23 16:07:02,339] Std weights: text=0.153, context=0.010, color=0.155
+[INFO] [2025-04-23 16:07:02,339] Min weights: text=0.230, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,339] Max weights: text=0.999, context=0.075, color=0.769
+[INFO] [2025-04-23 16:07:02,342] Saved best model with loss: 0.0010
+[INFO] [2025-04-23 16:07:02,443] Epoch 100/200 - Loss: 0.0008
+[INFO] [2025-04-23 16:07:02,443] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:02,444] Std weights: text=0.158, context=0.010, color=0.160
+[INFO] [2025-04-23 16:07:02,444] Min weights: text=0.223, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,444] Max weights: text=0.999, context=0.073, color=0.776
+[INFO] [2025-04-23 16:07:02,449] Saved best model with loss: 0.0008
+[INFO] [2025-04-23 16:07:02,541] Epoch 101/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:02,541] Avg weights: text=0.884, context=0.009, color=0.107
+[INFO] [2025-04-23 16:07:02,542] Std weights: text=0.156, context=0.009, color=0.158
+[INFO] [2025-04-23 16:07:02,542] Min weights: text=0.228, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,542] Max weights: text=0.999, context=0.073, color=0.770
+[INFO] [2025-04-23 16:07:02,542] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.3%, high(>0.5): 96.7%
+[INFO] [2025-04-23 16:07:02,542] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:02,543] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.6%, high(>0.5): 3.3%
+[INFO] [2025-04-23 16:07:02,543] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:02,543] Context > Color: 46.31%
+[INFO] [2025-04-23 16:07:02,544] Text > Color: 96.72%
+[INFO] [2025-04-23 16:07:02,544] Text dominant: 96.72%
+[INFO] [2025-04-23 16:07:02,544] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:02,544] Color dominant: 3.28%
+[INFO] [2025-04-23 16:07:02,545] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:02,545] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:02,545] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:02,546] High context weight (0.073): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:02,546] High context weight (0.069): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:02,546] High context weight (0.040): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:02,547] High color weight (0.770): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:02,547] High color weight (0.581): Shape 9 - 'The Italian flag with vertical stripes of green, w...'
+[INFO] [2025-04-23 16:07:02,547] High color weight (0.573): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:02,551] Saved best model with loss: 0.0007
+[INFO] [2025-04-23 16:07:02,646] Epoch 102/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:02,646] Avg weights: text=0.884, context=0.009, color=0.106
+[INFO] [2025-04-23 16:07:02,646] Std weights: text=0.155, context=0.009, color=0.157
+[INFO] [2025-04-23 16:07:02,647] Min weights: text=0.223, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,647] Max weights: text=0.999, context=0.072, color=0.775
+[INFO] [2025-04-23 16:07:02,650] Saved best model with loss: 0.0006
+[INFO] [2025-04-23 16:07:02,751] Epoch 103/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:02,752] Avg weights: text=0.885, context=0.009, color=0.106
+[INFO] [2025-04-23 16:07:02,752] Std weights: text=0.155, context=0.009, color=0.157
+[INFO] [2025-04-23 16:07:02,752] Min weights: text=0.227, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,753] Max weights: text=0.999, context=0.072, color=0.771
+[INFO] [2025-04-23 16:07:02,845] Epoch 104/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:02,845] Avg weights: text=0.882, context=0.009, color=0.108
+[INFO] [2025-04-23 16:07:02,845] Std weights: text=0.158, context=0.010, color=0.160
+[INFO] [2025-04-23 16:07:02,846] Min weights: text=0.225, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,846] Max weights: text=0.999, context=0.075, color=0.774
+[INFO] [2025-04-23 16:07:02,849] Saved best model with loss: 0.0006
+[INFO] [2025-04-23 16:07:02,941] Epoch 105/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:02,942] Avg weights: text=0.884, context=0.009, color=0.107
+[INFO] [2025-04-23 16:07:02,942] Std weights: text=0.157, context=0.009, color=0.159
+[INFO] [2025-04-23 16:07:02,942] Min weights: text=0.222, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:02,942] Max weights: text=0.999, context=0.073, color=0.777
+[INFO] [2025-04-23 16:07:03,034] Epoch 106/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:03,034] Avg weights: text=0.883, context=0.010, color=0.107
+[INFO] [2025-04-23 16:07:03,034] Std weights: text=0.158, context=0.010, color=0.160
+[INFO] [2025-04-23 16:07:03,034] Min weights: text=0.217, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,035] Max weights: text=0.999, context=0.076, color=0.782
+[INFO] [2025-04-23 16:07:03,126] Epoch 107/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:03,126] Avg weights: text=0.884, context=0.010, color=0.106
+[INFO] [2025-04-23 16:07:03,127] Std weights: text=0.157, context=0.010, color=0.159
+[INFO] [2025-04-23 16:07:03,127] Min weights: text=0.227, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,127] Max weights: text=0.999, context=0.075, color=0.772
+[INFO] [2025-04-23 16:07:03,130] Saved best model with loss: 0.0006
+[INFO] [2025-04-23 16:07:03,228] Epoch 108/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:03,229] Avg weights: text=0.885, context=0.010, color=0.106
+[INFO] [2025-04-23 16:07:03,229] Std weights: text=0.157, context=0.010, color=0.158
+[INFO] [2025-04-23 16:07:03,229] Min weights: text=0.226, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,230] Max weights: text=0.999, context=0.076, color=0.773
+[INFO] [2025-04-23 16:07:03,233] Saved best model with loss: 0.0006
+[INFO] [2025-04-23 16:07:03,334] Epoch 109/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:03,334] Avg weights: text=0.884, context=0.010, color=0.107
+[INFO] [2025-04-23 16:07:03,335] Std weights: text=0.159, context=0.010, color=0.161
+[INFO] [2025-04-23 16:07:03,335] Min weights: text=0.216, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,335] Max weights: text=0.999, context=0.076, color=0.782
+[INFO] [2025-04-23 16:07:03,338] Saved best model with loss: 0.0006
+[INFO] [2025-04-23 16:07:03,434] Epoch 110/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,435] Avg weights: text=0.883, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:03,435] Std weights: text=0.159, context=0.010, color=0.161
+[INFO] [2025-04-23 16:07:03,435] Min weights: text=0.220, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,435] Max weights: text=0.999, context=0.077, color=0.778
+[INFO] [2025-04-23 16:07:03,438] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:03,540] Epoch 111/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,540] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:03,540] Std weights: text=0.160, context=0.010, color=0.162
+[INFO] [2025-04-23 16:07:03,540] Min weights: text=0.218, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,541] Max weights: text=0.999, context=0.078, color=0.781
+[INFO] [2025-04-23 16:07:03,541] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:07:03,542] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:03,542] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.6%, high(>0.5): 3.3%
+[INFO] [2025-04-23 16:07:03,542] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:03,542] Context > Color: 47.54%
+[INFO] [2025-04-23 16:07:03,544] Text > Color: 96.72%
+[INFO] [2025-04-23 16:07:03,544] Text dominant: 96.72%
+[INFO] [2025-04-23 16:07:03,544] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:03,544] Color dominant: 3.28%
+[INFO] [2025-04-23 16:07:03,544] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:03,544] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:03,546] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:03,546] High context weight (0.078): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:03,546] High context weight (0.077): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:03,547] High context weight (0.045): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:03,547] High color weight (0.781): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:03,547] High color weight (0.596): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:03,548] High color weight (0.595): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:03,551] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:03,645] Epoch 112/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,645] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:03,645] Std weights: text=0.159, context=0.010, color=0.161
+[INFO] [2025-04-23 16:07:03,646] Min weights: text=0.219, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,646] Max weights: text=0.999, context=0.078, color=0.780
+[INFO] [2025-04-23 16:07:03,649] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:03,753] Epoch 113/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,753] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:03,753] Std weights: text=0.159, context=0.010, color=0.161
+[INFO] [2025-04-23 16:07:03,753] Min weights: text=0.218, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,754] Max weights: text=0.999, context=0.080, color=0.781
+[INFO] [2025-04-23 16:07:03,757] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:03,853] Epoch 114/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,853] Avg weights: text=0.882, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:03,853] Std weights: text=0.160, context=0.010, color=0.162
+[INFO] [2025-04-23 16:07:03,853] Min weights: text=0.217, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,854] Max weights: text=0.999, context=0.081, color=0.782
+[INFO] [2025-04-23 16:07:03,857] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:03,951] Epoch 115/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:03,951] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:03,951] Std weights: text=0.160, context=0.010, color=0.162
+[INFO] [2025-04-23 16:07:03,951] Min weights: text=0.216, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:03,952] Max weights: text=0.999, context=0.080, color=0.783
+[INFO] [2025-04-23 16:07:04,054] Epoch 116/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:04,054] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,054] Std weights: text=0.161, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:04,055] Min weights: text=0.216, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,055] Max weights: text=0.999, context=0.082, color=0.783
+[INFO] [2025-04-23 16:07:04,156] Epoch 117/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:04,157] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:04,157] Std weights: text=0.160, context=0.010, color=0.162
+[INFO] [2025-04-23 16:07:04,157] Min weights: text=0.215, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,157] Max weights: text=0.999, context=0.083, color=0.783
+[INFO] [2025-04-23 16:07:04,161] Saved best model with loss: 0.0005
+[INFO] [2025-04-23 16:07:04,256] Epoch 118/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,256] Avg weights: text=0.882, context=0.010, color=0.108
+[INFO] [2025-04-23 16:07:04,256] Std weights: text=0.160, context=0.010, color=0.162
+[INFO] [2025-04-23 16:07:04,257] Min weights: text=0.216, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,257] Max weights: text=0.999, context=0.082, color=0.782
+[INFO] [2025-04-23 16:07:04,261] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,359] Epoch 119/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,359] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,359] Std weights: text=0.161, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:04,360] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,360] Max weights: text=0.999, context=0.083, color=0.785
+[INFO] [2025-04-23 16:07:04,364] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,457] Epoch 120/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,457] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,457] Std weights: text=0.161, context=0.010, color=0.164
+[INFO] [2025-04-23 16:07:04,457] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,458] Max weights: text=0.999, context=0.084, color=0.785
+[INFO] [2025-04-23 16:07:04,462] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,568] Epoch 121/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,568] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,568] Std weights: text=0.161, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:04,569] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,569] Max weights: text=0.999, context=0.083, color=0.785
+[INFO] [2025-04-23 16:07:04,569] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:07:04,570] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:04,570] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.6%, high(>0.5): 3.3%
+[INFO] [2025-04-23 16:07:04,570] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:04,571] Context > Color: 47.54%
+[INFO] [2025-04-23 16:07:04,571] Text > Color: 96.31%
+[INFO] [2025-04-23 16:07:04,571] Text dominant: 96.31%
+[INFO] [2025-04-23 16:07:04,572] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:04,572] Color dominant: 3.69%
+[INFO] [2025-04-23 16:07:04,572] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:04,572] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:04,572] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:04,573] High context weight (0.083): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:04,573] High context weight (0.080): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:04,573] High context weight (0.046): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:04,573] High color weight (0.785): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:04,574] High color weight (0.601): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:04,574] High color weight (0.599): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:04,577] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,677] Epoch 122/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,677] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,678] Std weights: text=0.161, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:04,678] Min weights: text=0.215, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,678] Max weights: text=0.999, context=0.084, color=0.784
+[INFO] [2025-04-23 16:07:04,682] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,783] Epoch 123/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,784] Avg weights: text=0.881, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:04,784] Std weights: text=0.162, context=0.010, color=0.164
+[INFO] [2025-04-23 16:07:04,784] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,784] Max weights: text=0.999, context=0.084, color=0.785
+[INFO] [2025-04-23 16:07:04,787] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,891] Epoch 124/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,892] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,892] Std weights: text=0.161, context=0.010, color=0.164
+[INFO] [2025-04-23 16:07:04,892] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,892] Max weights: text=0.999, context=0.085, color=0.785
+[INFO] [2025-04-23 16:07:04,896] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:04,998] Epoch 125/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:04,999] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:04,999] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:04,999] Min weights: text=0.214, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:04,999] Max weights: text=0.999, context=0.085, color=0.785
+[INFO] [2025-04-23 16:07:05,097] Epoch 126/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,097] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,098] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,098] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,098] Max weights: text=0.999, context=0.086, color=0.786
+[INFO] [2025-04-23 16:07:05,101] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,206] Epoch 127/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,206] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:05,206] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,207] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,207] Max weights: text=0.999, context=0.086, color=0.786
+[INFO] [2025-04-23 16:07:05,210] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,305] Epoch 128/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,305] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,306] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:05,306] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,306] Max weights: text=0.999, context=0.087, color=0.786
+[INFO] [2025-04-23 16:07:05,310] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,406] Epoch 129/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,406] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:05,407] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,407] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,407] Max weights: text=0.999, context=0.086, color=0.786
+[INFO] [2025-04-23 16:07:05,411] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,502] Epoch 130/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,503] Avg weights: text=0.881, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,503] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,503] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,503] Max weights: text=0.999, context=0.087, color=0.786
+[INFO] [2025-04-23 16:07:05,506] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,605] Epoch 131/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,605] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:05,606] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,606] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,606] Max weights: text=0.999, context=0.087, color=0.786
+[INFO] [2025-04-23 16:07:05,606] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:07:05,607] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:05,607] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.2%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:07:05,608] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:05,608] Context > Color: 47.54%
+[INFO] [2025-04-23 16:07:05,608] Text > Color: 96.31%
+[INFO] [2025-04-23 16:07:05,609] Text dominant: 96.31%
+[INFO] [2025-04-23 16:07:05,609] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:05,609] Color dominant: 3.69%
+[INFO] [2025-04-23 16:07:05,610] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:05,610] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:05,610] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:05,611] High context weight (0.087): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:05,611] High context weight (0.082): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:05,611] High context weight (0.047): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:05,612] High color weight (0.786): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:05,612] High color weight (0.605): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:05,612] High color weight (0.601): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:05,617] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,722] Epoch 132/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,722] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,723] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:05,723] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,723] Max weights: text=0.999, context=0.087, color=0.787
+[INFO] [2025-04-23 16:07:05,727] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,832] Epoch 133/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,832] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,832] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:05,833] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,833] Max weights: text=0.999, context=0.087, color=0.787
+[INFO] [2025-04-23 16:07:05,836] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:05,935] Epoch 134/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:05,936] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:05,936] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:05,936] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:05,936] Max weights: text=0.999, context=0.087, color=0.787
+[INFO] [2025-04-23 16:07:05,941] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,039] Epoch 135/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,040] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,040] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:06,040] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,040] Max weights: text=0.999, context=0.087, color=0.787
+[INFO] [2025-04-23 16:07:06,043] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,138] Epoch 136/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,139] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,139] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:06,139] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,140] Max weights: text=0.999, context=0.087, color=0.787
+[INFO] [2025-04-23 16:07:06,143] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,244] Epoch 137/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,244] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,244] Std weights: text=0.162, context=0.011, color=0.164
+[INFO] [2025-04-23 16:07:06,244] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,245] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,248] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,346] Epoch 138/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,346] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,346] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,347] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,348] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,351] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,448] Epoch 139/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,448] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,449] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,449] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,449] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,453] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,579] Epoch 140/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,580] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,580] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,580] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,580] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,585] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,683] Epoch 141/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,684] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,684] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,684] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,685] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,685] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:07:06,685] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:06,686] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.2%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:07:06,686] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:06,686] Context > Color: 47.95%
+[INFO] [2025-04-23 16:07:06,687] Text > Color: 96.31%
+[INFO] [2025-04-23 16:07:06,687] Text dominant: 96.31%
+[INFO] [2025-04-23 16:07:06,687] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:06,687] Color dominant: 3.69%
+[INFO] [2025-04-23 16:07:06,688] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:06,688] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:06,688] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:06,689] High context weight (0.088): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:06,689] High context weight (0.082): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:06,689] High context weight (0.047): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:06,689] High color weight (0.787): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:06,689] High color weight (0.606): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:06,689] High color weight (0.604): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:06,694] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,793] Epoch 142/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,794] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,794] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,794] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,794] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,798] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:06,897] Epoch 143/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:06,898] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:06,898] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:06,898] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:06,898] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:06,902] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,004] Epoch 144/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,004] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,005] Std weights: text=0.162, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,005] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,005] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,009] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,109] Epoch 145/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,109] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,109] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,109] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,110] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,113] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,215] Epoch 146/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,216] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,216] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,216] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,217] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,220] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,321] Epoch 147/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,321] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,321] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,321] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,322] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:07,325] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,417] Epoch 148/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,417] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,417] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,417] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,418] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,421] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,517] Epoch 149/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,517] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,518] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,518] Min weights: text=0.212, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,518] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,521] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,622] Epoch 150/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,623] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,623] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,623] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,623] Max weights: text=0.999, context=0.088, color=0.787
+[INFO] [2025-04-23 16:07:07,626] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,730] Epoch 151/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,730] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,731] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,731] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,731] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:07,731] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 3.7%, high(>0.5): 96.3%
+[INFO] [2025-04-23 16:07:07,732] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:07,732] Color weight distribution: low(<0.2): 79.1%, med(0.2-0.5): 17.2%, high(>0.5): 3.7%
+[INFO] [2025-04-23 16:07:07,732] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:07,734] Context > Color: 47.95%
+[INFO] [2025-04-23 16:07:07,734] Text > Color: 96.31%
+[INFO] [2025-04-23 16:07:07,734] Text dominant: 96.31%
+[INFO] [2025-04-23 16:07:07,734] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:07,735] Color dominant: 3.69%
+[INFO] [2025-04-23 16:07:07,735] High text weight (0.999): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:07,735] High text weight (0.999): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:07,735] High text weight (0.998): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:07,736] High context weight (0.088): Shape 2 - 'A rgb(255,174,201) shape near the point (191, 267)...'
+[INFO] [2025-04-23 16:07:07,736] High context weight (0.082): Shape 7 - 'This rgb(255,0,0) shape is inside a parent with am...'
+[INFO] [2025-04-23 16:07:07,736] High context weight (0.047): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:07,737] High color weight (0.788): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:07,737] High color weight (0.607): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:07,737] High color weight (0.604): Shape 10 - 'Spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:07,741] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,848] Epoch 152/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,848] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,848] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,849] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,849] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:07,852] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:07,951] Epoch 153/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:07,951] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:07,951] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:07,952] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:07,952] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:07,955] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:08,056] Epoch 154/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:08,057] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:08,057] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:08,057] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,057] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:08,060] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:08,159] Epoch 155/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:08,159] Avg weights: text=0.880, context=0.010, color=0.110
+[INFO] [2025-04-23 16:07:08,160] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:08,160] Min weights: text=0.211, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,160] Max weights: text=0.999, context=0.088, color=0.788
+[INFO] [2025-04-23 16:07:08,164] Saved best model with loss: 0.0004
+[INFO] [2025-04-23 16:07:08,266] Epoch 156/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:08,266] Avg weights: text=0.879, context=0.010, color=0.111
+[INFO] [2025-04-23 16:07:08,266] Std weights: text=0.163, context=0.011, color=0.166
+[INFO] [2025-04-23 16:07:08,267] Min weights: text=0.209, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,267] Max weights: text=0.999, context=0.088, color=0.790
+[INFO] [2025-04-23 16:07:08,361] Epoch 157/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:08,361] Avg weights: text=0.882, context=0.009, color=0.109
+[INFO] [2025-04-23 16:07:08,362] Std weights: text=0.161, context=0.010, color=0.163
+[INFO] [2025-04-23 16:07:08,362] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,362] Max weights: text=0.999, context=0.084, color=0.786
+[INFO] [2025-04-23 16:07:08,461] Epoch 158/200 - Loss: 0.0008
+[INFO] [2025-04-23 16:07:08,461] Avg weights: text=0.881, context=0.010, color=0.109
+[INFO] [2025-04-23 16:07:08,461] Std weights: text=0.163, context=0.011, color=0.165
+[INFO] [2025-04-23 16:07:08,462] Min weights: text=0.215, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,462] Max weights: text=0.999, context=0.087, color=0.784
+[INFO] [2025-04-23 16:07:08,556] Epoch 159/200 - Loss: 0.0028
+[INFO] [2025-04-23 16:07:08,556] Avg weights: text=0.886, context=0.010, color=0.104
+[INFO] [2025-04-23 16:07:08,557] Std weights: text=0.155, context=0.011, color=0.157
+[INFO] [2025-04-23 16:07:08,557] Min weights: text=0.202, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,558] Max weights: text=1.000, context=0.089, color=0.797
+[INFO] [2025-04-23 16:07:08,663] Epoch 160/200 - Loss: 0.0099
+[INFO] [2025-04-23 16:07:08,663] Avg weights: text=0.885, context=0.007, color=0.107
+[INFO] [2025-04-23 16:07:08,664] Std weights: text=0.155, context=0.011, color=0.156
+[INFO] [2025-04-23 16:07:08,664] Min weights: text=0.245, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,664] Max weights: text=1.000, context=0.095, color=0.755
+[INFO] [2025-04-23 16:07:08,785] Epoch 161/200 - Loss: 0.0127
+[INFO] [2025-04-23 16:07:08,785] Avg weights: text=0.883, context=0.007, color=0.111
+[INFO] [2025-04-23 16:07:08,785] Std weights: text=0.176, context=0.005, color=0.176
+[INFO] [2025-04-23 16:07:08,785] Min weights: text=0.213, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,786] Max weights: text=1.000, context=0.039, color=0.787
+[INFO] [2025-04-23 16:07:08,786] Text weight distribution: low(<0.2): 0.0%, med(0.2-0.5): 6.1%, high(>0.5): 93.9%
+[INFO] [2025-04-23 16:07:08,787] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:08,787] Color weight distribution: low(<0.2): 78.3%, med(0.2-0.5): 15.6%, high(>0.5): 6.1%
+[INFO] [2025-04-23 16:07:08,787] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:08,788] Context > Color: 46.31%
+[INFO] [2025-04-23 16:07:08,788] Text > Color: 93.85%
+[INFO] [2025-04-23 16:07:08,788] Text dominant: 93.85%
+[INFO] [2025-04-23 16:07:08,789] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:08,789] Color dominant: 6.15%
+[INFO] [2025-04-23 16:07:08,789] High text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:08,789] High text weight (1.000): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:08,790] High text weight (0.999): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:08,790] High context weight (0.039): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:08,790] High context weight (0.023): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:07:08,790] High context weight (0.022): Shape 15 - 'A small tumbleweed rolling across the desert....'
+[INFO] [2025-04-23 16:07:08,791] High color weight (0.787): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:08,791] High color weight (0.627): Shape 8 - 'Small white star-like shapes scattered across the ...'
+[INFO] [2025-04-23 16:07:08,791] High color weight (0.616): Shape 11 - 'A comet passing through the solar system....'
+[INFO] [2025-04-23 16:07:08,895] Epoch 162/200 - Loss: 0.0083
+[INFO] [2025-04-23 16:07:08,895] Avg weights: text=0.889, context=0.005, color=0.106
+[INFO] [2025-04-23 16:07:08,895] Std weights: text=0.167, context=0.004, color=0.167
+[INFO] [2025-04-23 16:07:08,895] Min weights: text=0.208, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,895] Max weights: text=1.000, context=0.037, color=0.792
+[INFO] [2025-04-23 16:07:08,991] Epoch 163/200 - Loss: 0.0055
+[INFO] [2025-04-23 16:07:08,991] Avg weights: text=0.906, context=0.006, color=0.088
+[INFO] [2025-04-23 16:07:08,991] Std weights: text=0.151, context=0.005, color=0.150
+[INFO] [2025-04-23 16:07:08,992] Min weights: text=0.255, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:08,992] Max weights: text=1.000, context=0.039, color=0.745
+[INFO] [2025-04-23 16:07:09,096] Epoch 164/200 - Loss: 0.0040
+[INFO] [2025-04-23 16:07:09,097] Avg weights: text=0.883, context=0.005, color=0.112
+[INFO] [2025-04-23 16:07:09,097] Std weights: text=0.182, context=0.004, color=0.182
+[INFO] [2025-04-23 16:07:09,097] Min weights: text=0.206, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,097] Max weights: text=1.000, context=0.041, color=0.794
+[INFO] [2025-04-23 16:07:09,201] Epoch 165/200 - Loss: 0.0025
+[INFO] [2025-04-23 16:07:09,202] Avg weights: text=0.911, context=0.003, color=0.086
+[INFO] [2025-04-23 16:07:09,202] Std weights: text=0.149, context=0.003, color=0.148
+[INFO] [2025-04-23 16:07:09,202] Min weights: text=0.272, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,203] Max weights: text=1.000, context=0.024, color=0.728
+[INFO] [2025-04-23 16:07:09,307] Epoch 166/200 - Loss: 0.0017
+[INFO] [2025-04-23 16:07:09,307] Avg weights: text=0.902, context=0.003, color=0.095
+[INFO] [2025-04-23 16:07:09,308] Std weights: text=0.158, context=0.003, color=0.158
+[INFO] [2025-04-23 16:07:09,308] Min weights: text=0.210, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,308] Max weights: text=1.000, context=0.027, color=0.790
+[INFO] [2025-04-23 16:07:09,436] Epoch 167/200 - Loss: 0.0011
+[INFO] [2025-04-23 16:07:09,437] Avg weights: text=0.898, context=0.004, color=0.098
+[INFO] [2025-04-23 16:07:09,437] Std weights: text=0.166, context=0.003, color=0.166
+[INFO] [2025-04-23 16:07:09,437] Min weights: text=0.207, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,438] Max weights: text=1.000, context=0.028, color=0.793
+[INFO] [2025-04-23 16:07:09,549] Epoch 168/200 - Loss: 0.0008
+[INFO] [2025-04-23 16:07:09,549] Avg weights: text=0.895, context=0.004, color=0.101
+[INFO] [2025-04-23 16:07:09,549] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:09,549] Min weights: text=0.197, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,550] Max weights: text=1.000, context=0.028, color=0.803
+[INFO] [2025-04-23 16:07:09,654] Epoch 169/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:09,654] Avg weights: text=0.898, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:09,654] Std weights: text=0.169, context=0.003, color=0.169
+[INFO] [2025-04-23 16:07:09,655] Min weights: text=0.197, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,655] Max weights: text=1.000, context=0.028, color=0.803
+[INFO] [2025-04-23 16:07:09,755] Epoch 170/200 - Loss: 0.0007
+[INFO] [2025-04-23 16:07:09,756] Avg weights: text=0.899, context=0.003, color=0.097
+[INFO] [2025-04-23 16:07:09,756] Std weights: text=0.168, context=0.003, color=0.167
+[INFO] [2025-04-23 16:07:09,756] Min weights: text=0.203, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,756] Max weights: text=1.000, context=0.029, color=0.797
+[INFO] [2025-04-23 16:07:09,861] Epoch 171/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:09,861] Avg weights: text=0.896, context=0.004, color=0.101
+[INFO] [2025-04-23 16:07:09,861] Std weights: text=0.173, context=0.003, color=0.173
+[INFO] [2025-04-23 16:07:09,862] Min weights: text=0.195, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,862] Max weights: text=1.000, context=0.029, color=0.804
+[INFO] [2025-04-23 16:07:09,862] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 4.5%, high(>0.5): 95.1%
+[INFO] [2025-04-23 16:07:09,863] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:09,863] Color weight distribution: low(<0.2): 82.8%, med(0.2-0.5): 12.3%, high(>0.5): 4.9%
+[INFO] [2025-04-23 16:07:09,863] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:09,864] Context > Color: 34.43%
+[INFO] [2025-04-23 16:07:09,864] Text > Color: 95.08%
+[INFO] [2025-04-23 16:07:09,864] Text dominant: 95.08%
+[INFO] [2025-04-23 16:07:09,864] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:09,864] Color dominant: 4.92%
+[INFO] [2025-04-23 16:07:09,865] High text weight (1.000): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:09,865] High text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:09,865] High text weight (1.000): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:09,866] High context weight (0.029): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:09,866] High context weight (0.017): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:07:09,866] High context weight (0.015): Shape 19 - 'Assembly instructions document....'
+[INFO] [2025-04-23 16:07:09,866] High color weight (0.804): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:09,867] High color weight (0.752): Shape 9 - 'The Italian flag with vertical stripes of green, w...'
+[INFO] [2025-04-23 16:07:09,867] High color weight (0.644): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:09,968] Epoch 172/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:09,968] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:09,968] Std weights: text=0.173, context=0.003, color=0.173
+[INFO] [2025-04-23 16:07:09,968] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:09,969] Max weights: text=1.000, context=0.030, color=0.808
+[INFO] [2025-04-23 16:07:10,071] Epoch 173/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:10,072] Avg weights: text=0.896, context=0.004, color=0.100
+[INFO] [2025-04-23 16:07:10,072] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:10,072] Min weights: text=0.194, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,072] Max weights: text=1.000, context=0.031, color=0.806
+[INFO] [2025-04-23 16:07:10,176] Epoch 174/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:10,176] Avg weights: text=0.895, context=0.004, color=0.101
+[INFO] [2025-04-23 16:07:10,176] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:10,177] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,177] Max weights: text=1.000, context=0.031, color=0.807
+[INFO] [2025-04-23 16:07:10,278] Epoch 175/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:10,278] Avg weights: text=0.902, context=0.004, color=0.094
+[INFO] [2025-04-23 16:07:10,278] Std weights: text=0.168, context=0.003, color=0.167
+[INFO] [2025-04-23 16:07:10,279] Min weights: text=0.203, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,279] Max weights: text=1.000, context=0.029, color=0.796
+[INFO] [2025-04-23 16:07:10,381] Epoch 176/200 - Loss: 0.0006
+[INFO] [2025-04-23 16:07:10,381] Avg weights: text=0.898, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:10,381] Std weights: text=0.172, context=0.003, color=0.172
+[INFO] [2025-04-23 16:07:10,381] Min weights: text=0.189, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,382] Max weights: text=1.000, context=0.030, color=0.810
+[INFO] [2025-04-23 16:07:10,475] Epoch 177/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:10,476] Avg weights: text=0.898, context=0.004, color=0.098
+[INFO] [2025-04-23 16:07:10,476] Std weights: text=0.172, context=0.003, color=0.171
+[INFO] [2025-04-23 16:07:10,476] Min weights: text=0.199, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,477] Max weights: text=1.000, context=0.031, color=0.800
+[INFO] [2025-04-23 16:07:10,581] Epoch 178/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:10,581] Avg weights: text=0.899, context=0.004, color=0.097
+[INFO] [2025-04-23 16:07:10,581] Std weights: text=0.171, context=0.003, color=0.171
+[INFO] [2025-04-23 16:07:10,582] Min weights: text=0.200, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,582] Max weights: text=1.000, context=0.032, color=0.799
+[INFO] [2025-04-23 16:07:10,683] Epoch 179/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:10,684] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:10,684] Std weights: text=0.175, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:10,684] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,685] Max weights: text=1.000, context=0.032, color=0.808
+[INFO] [2025-04-23 16:07:10,798] Epoch 180/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:10,798] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:10,798] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:10,799] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,799] Max weights: text=1.000, context=0.032, color=0.807
+[INFO] [2025-04-23 16:07:10,898] Epoch 181/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:10,898] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:10,898] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:10,899] Min weights: text=0.192, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:10,899] Max weights: text=1.000, context=0.031, color=0.808
+[INFO] [2025-04-23 16:07:10,899] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 4.9%, high(>0.5): 94.7%
+[INFO] [2025-04-23 16:07:10,900] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:10,900] Color weight distribution: low(<0.2): 82.4%, med(0.2-0.5): 12.3%, high(>0.5): 5.3%
+[INFO] [2025-04-23 16:07:10,900] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:10,901] Context > Color: 35.66%
+[INFO] [2025-04-23 16:07:10,901] Text > Color: 94.67%
+[INFO] [2025-04-23 16:07:10,901] Text dominant: 94.67%
+[INFO] [2025-04-23 16:07:10,901] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:10,901] Color dominant: 5.33%
+[INFO] [2025-04-23 16:07:10,902] High text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:10,902] High text weight (1.000): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:10,902] High text weight (1.000): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:10,903] High context weight (0.031): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:10,903] High context weight (0.016): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:07:10,903] High context weight (0.015): Shape 19 - 'Assembly instructions document....'
+[INFO] [2025-04-23 16:07:10,903] High color weight (0.808): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:10,903] High color weight (0.761): Shape 9 - 'The Italian flag with vertical stripes of green, w...'
+[INFO] [2025-04-23 16:07:10,903] High color weight (0.640): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:11,005] Epoch 182/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,005] Avg weights: text=0.895, context=0.004, color=0.101
+[INFO] [2025-04-23 16:07:11,005] Std weights: text=0.176, context=0.003, color=0.175
+[INFO] [2025-04-23 16:07:11,006] Min weights: text=0.187, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,006] Max weights: text=1.000, context=0.031, color=0.813
+[INFO] [2025-04-23 16:07:11,009] Saved best model with loss: 0.0003
+[INFO] [2025-04-23 16:07:11,114] Epoch 183/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:11,115] Avg weights: text=0.896, context=0.004, color=0.100
+[INFO] [2025-04-23 16:07:11,115] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:11,115] Min weights: text=0.194, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,115] Max weights: text=1.000, context=0.031, color=0.805
+[INFO] [2025-04-23 16:07:11,217] Epoch 184/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,217] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:11,217] Std weights: text=0.176, context=0.003, color=0.175
+[INFO] [2025-04-23 16:07:11,218] Min weights: text=0.183, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,218] Max weights: text=1.000, context=0.032, color=0.816
+[INFO] [2025-04-23 16:07:11,317] Epoch 185/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,317] Avg weights: text=0.896, context=0.004, color=0.100
+[INFO] [2025-04-23 16:07:11,317] Std weights: text=0.176, context=0.003, color=0.176
+[INFO] [2025-04-23 16:07:11,318] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,318] Max weights: text=1.000, context=0.032, color=0.812
+[INFO] [2025-04-23 16:07:11,321] Saved best model with loss: 0.0003
+[INFO] [2025-04-23 16:07:11,423] Epoch 186/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,424] Avg weights: text=0.897, context=0.004, color=0.099
+[INFO] [2025-04-23 16:07:11,424] Std weights: text=0.175, context=0.003, color=0.175
+[INFO] [2025-04-23 16:07:11,424] Min weights: text=0.181, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,424] Max weights: text=1.000, context=0.032, color=0.819
+[INFO] [2025-04-23 16:07:11,428] Saved best model with loss: 0.0003
+[INFO] [2025-04-23 16:07:11,523] Epoch 187/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,523] Avg weights: text=0.896, context=0.004, color=0.100
+[INFO] [2025-04-23 16:07:11,523] Std weights: text=0.176, context=0.003, color=0.176
+[INFO] [2025-04-23 16:07:11,524] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,524] Max weights: text=1.000, context=0.031, color=0.812
+[INFO] [2025-04-23 16:07:11,527] Saved best model with loss: 0.0003
+[INFO] [2025-04-23 16:07:11,646] Epoch 188/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,647] Avg weights: text=0.897, context=0.004, color=0.100
+[INFO] [2025-04-23 16:07:11,647] Std weights: text=0.177, context=0.003, color=0.177
+[INFO] [2025-04-23 16:07:11,647] Min weights: text=0.187, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,647] Max weights: text=1.000, context=0.032, color=0.813
+[INFO] [2025-04-23 16:07:11,746] Epoch 189/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:11,747] Avg weights: text=0.895, context=0.004, color=0.101
+[INFO] [2025-04-23 16:07:11,747] Std weights: text=0.179, context=0.003, color=0.179
+[INFO] [2025-04-23 16:07:11,747] Min weights: text=0.184, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,748] Max weights: text=1.000, context=0.030, color=0.816
+[INFO] [2025-04-23 16:07:11,848] Epoch 190/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:11,849] Avg weights: text=0.899, context=0.003, color=0.098
+[INFO] [2025-04-23 16:07:11,849] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:11,849] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,849] Max weights: text=1.000, context=0.029, color=0.807
+[INFO] [2025-04-23 16:07:11,951] Epoch 191/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:11,951] Avg weights: text=0.900, context=0.003, color=0.097
+[INFO] [2025-04-23 16:07:11,951] Std weights: text=0.174, context=0.003, color=0.173
+[INFO] [2025-04-23 16:07:11,951] Min weights: text=0.193, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:11,952] Max weights: text=1.000, context=0.031, color=0.807
+[INFO] [2025-04-23 16:07:11,952] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 4.5%, high(>0.5): 95.1%
+[INFO] [2025-04-23 16:07:11,952] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:11,953] Color weight distribution: low(<0.2): 82.8%, med(0.2-0.5): 12.7%, high(>0.5): 4.5%
+[INFO] [2025-04-23 16:07:11,953] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:11,953] Context > Color: 38.93%
+[INFO] [2025-04-23 16:07:11,953] Text > Color: 95.08%
+[INFO] [2025-04-23 16:07:11,953] Text dominant: 95.08%
+[INFO] [2025-04-23 16:07:11,953] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:11,954] Color dominant: 4.92%
+[INFO] [2025-04-23 16:07:11,954] High text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:11,954] High text weight (1.000): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:11,954] High text weight (1.000): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:11,955] High context weight (0.031): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:11,955] High context weight (0.016): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:07:11,955] High context weight (0.015): Shape 19 - 'Assembly instructions document....'
+[INFO] [2025-04-23 16:07:11,956] High color weight (0.807): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:11,956] High color weight (0.756): Shape 9 - 'The Italian flag with vertical stripes of green, w...'
+[INFO] [2025-04-23 16:07:11,956] High color weight (0.639): Shape 11 - 'More spines on the barrel cactus....'
+[INFO] [2025-04-23 16:07:12,051] Epoch 192/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:12,051] Avg weights: text=0.899, context=0.003, color=0.098
+[INFO] [2025-04-23 16:07:12,051] Std weights: text=0.174, context=0.003, color=0.174
+[INFO] [2025-04-23 16:07:12,051] Min weights: text=0.191, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,053] Max weights: text=1.000, context=0.031, color=0.808
+[INFO] [2025-04-23 16:07:12,149] Epoch 193/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:12,150] Avg weights: text=0.895, context=0.003, color=0.101
+[INFO] [2025-04-23 16:07:12,150] Std weights: text=0.177, context=0.003, color=0.177
+[INFO] [2025-04-23 16:07:12,150] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,150] Max weights: text=1.000, context=0.031, color=0.812
+[INFO] [2025-04-23 16:07:12,245] Epoch 194/200 - Loss: 0.0005
+[INFO] [2025-04-23 16:07:12,246] Avg weights: text=0.900, context=0.003, color=0.097
+[INFO] [2025-04-23 16:07:12,246] Std weights: text=0.173, context=0.003, color=0.173
+[INFO] [2025-04-23 16:07:12,246] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,246] Max weights: text=1.000, context=0.030, color=0.812
+[INFO] [2025-04-23 16:07:12,346] Epoch 195/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:12,347] Avg weights: text=0.898, context=0.003, color=0.099
+[INFO] [2025-04-23 16:07:12,347] Std weights: text=0.176, context=0.003, color=0.176
+[INFO] [2025-04-23 16:07:12,347] Min weights: text=0.186, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,347] Max weights: text=1.000, context=0.030, color=0.813
+[INFO] [2025-04-23 16:07:12,440] Epoch 196/200 - Loss: 0.0004
+[INFO] [2025-04-23 16:07:12,440] Avg weights: text=0.899, context=0.003, color=0.098
+[INFO] [2025-04-23 16:07:12,441] Std weights: text=0.175, context=0.003, color=0.175
+[INFO] [2025-04-23 16:07:12,441] Min weights: text=0.191, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,441] Max weights: text=1.000, context=0.031, color=0.808
+[INFO] [2025-04-23 16:07:12,543] Epoch 197/200 - Loss: 0.0003
+[INFO] [2025-04-23 16:07:12,544] Avg weights: text=0.897, context=0.003, color=0.100
+[INFO] [2025-04-23 16:07:12,544] Std weights: text=0.177, context=0.003, color=0.177
+[INFO] [2025-04-23 16:07:12,544] Min weights: text=0.191, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,544] Max weights: text=1.000, context=0.031, color=0.808
+[INFO] [2025-04-23 16:07:12,548] Saved best model with loss: 0.0003
+[INFO] [2025-04-23 16:07:12,650] Epoch 198/200 - Loss: 0.0002
+[INFO] [2025-04-23 16:07:12,650] Avg weights: text=0.895, context=0.003, color=0.102
+[INFO] [2025-04-23 16:07:12,650] Std weights: text=0.181, context=0.003, color=0.180
+[INFO] [2025-04-23 16:07:12,651] Min weights: text=0.183, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,651] Max weights: text=1.000, context=0.031, color=0.817
+[INFO] [2025-04-23 16:07:12,655] Saved best model with loss: 0.0002
+[INFO] [2025-04-23 16:07:12,759] Epoch 199/200 - Loss: 0.0002
+[INFO] [2025-04-23 16:07:12,759] Avg weights: text=0.897, context=0.003, color=0.099
+[INFO] [2025-04-23 16:07:12,759] Std weights: text=0.178, context=0.003, color=0.177
+[INFO] [2025-04-23 16:07:12,760] Min weights: text=0.187, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,760] Max weights: text=1.000, context=0.030, color=0.813
+[INFO] [2025-04-23 16:07:12,763] Saved best model with loss: 0.0002
+[INFO] [2025-04-23 16:07:12,862] Epoch 200/200 - Loss: 0.0002
+[INFO] [2025-04-23 16:07:12,863] Avg weights: text=0.897, context=0.003, color=0.100
+[INFO] [2025-04-23 16:07:12,863] Std weights: text=0.177, context=0.003, color=0.177
+[INFO] [2025-04-23 16:07:12,863] Min weights: text=0.188, context=0.000, color=0.000
+[INFO] [2025-04-23 16:07:12,863] Max weights: text=1.000, context=0.031, color=0.811
+[INFO] [2025-04-23 16:07:12,865] Text weight distribution: low(<0.2): 0.4%, med(0.2-0.5): 5.3%, high(>0.5): 94.3%
+[INFO] [2025-04-23 16:07:12,865] Context weight distribution: low(<0.2): 100.0%, med(0.2-0.5): 0.0%, high(>0.5): 0.0%
+[INFO] [2025-04-23 16:07:12,866] Color weight distribution: low(<0.2): 82.4%, med(0.2-0.5): 11.9%, high(>0.5): 5.7%
+[INFO] [2025-04-23 16:07:12,866] Text > Context: 100.00%
+[INFO] [2025-04-23 16:07:12,866] Context > Color: 37.70%
+[INFO] [2025-04-23 16:07:12,866] Text > Color: 94.26%
+[INFO] [2025-04-23 16:07:12,867] Text dominant: 94.26%
+[INFO] [2025-04-23 16:07:12,867] Context dominant: 0.00%
+[INFO] [2025-04-23 16:07:12,867] Color dominant: 5.74%
+[INFO] [2025-04-23 16:07:12,868] High text weight (1.000): Shape 28 - 'The UN Headquarters with blue-green glass....'
+[INFO] [2025-04-23 16:07:12,868] High text weight (1.000): Shape 13 - 'Blue-tinted windows at the top of One World Trade ...'
+[INFO] [2025-04-23 16:07:12,868] High text weight (1.000): Shape 7 - 'A dark turquoise shape resembling water at the bot...'
+[INFO] [2025-04-23 16:07:12,868] High context weight (0.031): Shape 9 - 'A smaller barrel cactus nearby....'
+[INFO] [2025-04-23 16:07:12,869] High context weight (0.015): Shape 8 - 'This shape has no explicit color and should inheri...'
+[INFO] [2025-04-23 16:07:12,869] High context weight (0.014): Shape 0 - 'A gray canvas containing flag designs....'
+[INFO] [2025-04-23 16:07:12,869] High color weight (0.811): Shape 5 - 'The German flag with horizontal stripes of black, ...'
+[INFO] [2025-04-23 16:07:12,869] High color weight (0.771): Shape 9 - 'The Italian flag with vertical stripes of green, w...'
+[INFO] [2025-04-23 16:07:12,870] High color weight (0.660): Shape 1 - 'The French flag with vertical stripes of blue, whi...'
+[INFO] [2025-04-23 16:07:12,873] Saved best model with loss: 0.0002
+[INFO] [2025-04-23 16:07:12,877] Final model saved as clip_to_rgb_model_unconstrained.pth
+[INFO] [2025-04-23 16:07:12,877] Best model saved as clip_to_rgb_model_unconstrained_best.pth (loss: 0.0002)
+[WARNING] [2025-04-23 16:07:12,878] Failed to save weight analysis: Object of type Tensor is not JSON serializable
+[INFO] [2025-04-23 16:07:12,880] Saved model info: {'embed_dim': 512, 'model_type': 'unconstrained_weight'}

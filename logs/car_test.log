@@ -1,0 +1,33 @@
+[INFO] [2025-04-23 16:08:44,553] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:08:44,554] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:08:44,554] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:08:47,741] Processing shapes in order: ['0:A gray background ca...', '1:The red body of a sp...', '6:The asphalt black ro...', '2:The black tire on th...', '3:The black tire on th...', '4:The blue tinted glas...', '5:The yellow headlight...']
+[INFO] [2025-04-23 16:08:47,843] Shape 0 weights: text=0.978, context=0.011, color=0.011
+[INFO] [2025-04-23 16:08:47,843] Shape 0 - 'A gray background canvas.' -> (128, 129, 130)
+[INFO] [2025-04-23 16:08:47,929] Shape 1 weights: text=0.985, context=0.001, color=0.014
+[INFO] [2025-04-23 16:08:47,930] Shape 1 - 'The red body of a sports car.' -> (254, 5, 4)
+[INFO] [2025-04-23 16:08:48,014] Shape 6 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:08:48,014] Shape 6 - 'The asphalt black road beneath the car.' -> (31, 30, 32)
+[INFO] [2025-04-23 16:08:48,085] Shape 2 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:08:48,085] Shape 2 - 'The black tire on the front left of the car.' -> (4, 5, 4)
+[INFO] [2025-04-23 16:08:48,173] Shape 3 weights: text=0.997, context=0.002, color=0.001
+[INFO] [2025-04-23 16:08:48,173] Shape 3 - 'The black tire on the back right of the car.' -> (4, 5, 4)
+[INFO] [2025-04-23 16:08:48,262] Shape 4 weights: text=1.000, context=0.000, color=0.000
+[INFO] [2025-04-23 16:08:48,262] Shape 4 - 'The blue tinted glass windshield of the car.' -> (69, 131, 183)
+[INFO] [2025-04-23 16:08:48,333] Shape 5 weights: text=0.667, context=0.003, color=0.330
+[INFO] [2025-04-23 16:08:48,334] Shape 5 - 'The yellow headlight on the front of the car.' -> (255, 252, 1)
+[INFO] [2025-04-23 16:08:48,352] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_car.png
+[INFO] [2025-04-23 16:08:48,352] Weight statistics summary:
+[INFO] [2025-04-23 16:08:48,352] Average weights: text=0.946, context=0.003, color=0.051
+[INFO] [2025-04-23 16:08:48,353] Dominant source patterns:
+[INFO] [2025-04-23 16:08:48,353]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:08:48,353]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:48,353]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:48,353] Pairwise comparisons:
+[INFO] [2025-04-23 16:08:48,353]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:08:48,353]   Context > Color: 71.4% of shapes
+[INFO] [2025-04-23 16:08:48,353]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:08:48,354] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\car_weight_analysis.json
+[INFO] [2025-04-23 16:08:48,354] Highest text weight (1.000): Shape 4 - 'The blue tinted glass windshield of the car....'
+[INFO] [2025-04-23 16:08:48,354] Highest context weight (0.011): Shape 0 - 'A gray background canvas....'
+[INFO] [2025-04-23 16:08:48,354] Highest color weight (0.330): Shape 5 - 'The yellow headlight on the front of the car....'

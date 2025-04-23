@@ -1,0 +1,254 @@
+[
+  {
+    "id": 0,
+    "description": "A bright blue sky above the desert landscape.",
+    "weights": [
+      0.9984288811683655,
+      0.0009672301239334047,
+      0.0006039428990334272
+    ],
+    "rgb": [
+      133,
+      207,
+      239
+    ]
+  },
+  {
+    "id": 1,
+    "description": "Golden sand dunes covering the desert ground.",
+    "weights": [
+      0.9743844270706177,
+      0.008392191492021084,
+      0.017223361879587173
+    ],
+    "rgb": [
+      247,
+      179,
+      140
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A towering red rock formation.",
+    "weights": [
+      0.9940274953842163,
+      0.00251568341627717,
+      0.003456759499385953
+    ],
+    "rgb": [
+      178,
+      30,
+      34
+    ]
+  },
+  {
+    "id": 16,
+    "description": "A bright yellow sun in the sky.",
+    "weights": [
+      0.6867488026618958,
+      0.0050757871940732,
+      0.30817532539367676
+    ],
+    "rgb": [
+      255,
+      253,
+      1
+    ]
+  },
+  {
+    "id": 17,
+    "description": "A vulture flying in the distance.",
+    "weights": [
+      0.9894948601722717,
+      0.003993008751422167,
+      0.006512191146612167
+    ],
+    "rgb": [
+      7,
+      9,
+      6
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A large sand dune with shadow.",
+    "weights": [
+      0.9965230226516724,
+      0.002075620461255312,
+      0.0014013777254149318
+    ],
+    "rgb": [
+      192,
+      178,
+      128
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A tall green cactus growing in the sand.",
+    "weights": [
+      0.9991070628166199,
+      0.0005800082581117749,
+      0.00031287744059227407
+    ],
+    "rgb": [
+      1,
+      99,
+      2
+    ]
+  },
+  {
+    "id": 9,
+    "description": "A smaller barrel cactus nearby.",
+    "weights": [
+      0.9291893243789673,
+      0.030660616233944893,
+      0.040150031447410583
+    ],
+    "rgb": [
+      3,
+      128,
+      4
+    ]
+  },
+  {
+    "id": 13,
+    "description": "A road winding through the desert.",
+    "weights": [
+      0.9530567526817322,
+      0.003922371193766594,
+      0.04302092269062996
+    ],
+    "rgb": [
+      169,
+      170,
+      170
+    ]
+  },
+  {
+    "id": 15,
+    "description": "A small tumbleweed rolling across the desert.",
+    "weights": [
+      0.9913544058799744,
+      0.0049867755733430386,
+      0.003658836707472801
+    ],
+    "rgb": [
+      136,
+      68,
+      19
+    ]
+  },
+  {
+    "id": 5,
+    "description": "Shadow side of the rock formation.",
+    "weights": [
+      0.9943411350250244,
+      0.0035342329647392035,
+      0.002124569844454527
+    ],
+    "rgb": [
+      137,
+      11,
+      6
+    ]
+  },
+  {
+    "id": 3,
+    "description": "Shadow area on the sand dune.",
+    "weights": [
+      0.9959653615951538,
+      0.0024727853015065193,
+      0.0015618731267750263
+    ],
+    "rgb": [
+      158,
+      140,
+      90
+    ]
+  },
+  {
+    "id": 7,
+    "description": "Left arm of the cactus.",
+    "weights": [
+      0.9835326671600342,
+      0.009461197070777416,
+      0.007006162311881781
+    ],
+    "rgb": [
+      3,
+      102,
+      3
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Right arm of the cactus.",
+    "weights": [
+      0.9855738282203674,
+      0.008585765957832336,
+      0.005840425845235586
+    ],
+    "rgb": [
+      3,
+      99,
+      4
+    ]
+  },
+  {
+    "id": 10,
+    "description": "Spines on the barrel cactus.",
+    "weights": [
+      0.35518911480903625,
+      0.008837771601974964,
+      0.6359731554985046
+    ],
+    "rgb": [
+      254,
+      254,
+      253
+    ]
+  },
+  {
+    "id": 11,
+    "description": "More spines on the barrel cactus.",
+    "weights": [
+      0.3402792513370514,
+      0.009038183838129044,
+      0.6506825685501099
+    ],
+    "rgb": [
+      255,
+      255,
+      254
+    ]
+  },
+  {
+    "id": 12,
+    "description": "A red flower blooming on top of the barrel cactus.",
+    "weights": [
+      0.8531510829925537,
+      0.006974829826503992,
+      0.13987408578395844
+    ],
+    "rgb": [
+      252,
+      4,
+      1
+    ]
+  },
+  {
+    "id": 14,
+    "description": "Yellow lines painted in the middle of the road.",
+    "weights": [
+      0.8507341742515564,
+      0.005687354598194361,
+      0.1435784250497818
+    ],
+    "rgb": [
+      254,
+      214,
+      0
+    ]
+  }
+]

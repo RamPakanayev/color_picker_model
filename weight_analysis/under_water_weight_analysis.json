@@ -1,0 +1,296 @@
+[
+  {
+    "id": 0,
+    "description": "Deep blue ocean water background.",
+    "weights": [
+      0.9982810020446777,
+      0.0011018724180758,
+      0.0006171867717057467
+    ],
+    "rgb": [
+      4,
+      105,
+      149
+    ]
+  },
+  {
+    "id": 1,
+    "description": "Sandy ocean floor.",
+    "weights": [
+      0.9913452863693237,
+      0.004693638999015093,
+      0.003961092792451382
+    ],
+    "rgb": [
+      210,
+      182,
+      143
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A vibrant orange coral reef.",
+    "weights": [
+      0.9965533018112183,
+      0.0005768050323240459,
+      0.0028699226677417755
+    ],
+    "rgb": [
+      253,
+      128,
+      81
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A bright yellow coral formation.",
+    "weights": [
+      0.8781551718711853,
+      0.002417046343907714,
+      0.11942774802446365
+    ],
+    "rgb": [
+      255,
+      215,
+      2
+    ]
+  },
+  {
+    "id": 4,
+    "description": "A purple sea anemone.",
+    "weights": [
+      0.9976325035095215,
+      0.0011237283470109105,
+      0.001243734615854919
+    ],
+    "rgb": [
+      138,
+      42,
+      227
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A large rock formation on the sea floor.",
+    "weights": [
+      0.993516206741333,
+      0.0037168790586292744,
+      0.0027668625116348267
+    ],
+    "rgb": [
+      103,
+      106,
+      107
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A bright orange clownfish.",
+    "weights": [
+      0.9421811103820801,
+      0.0002138788695447147,
+      0.05760498717427254
+    ],
+    "rgb": [
+      255,
+      140,
+      4
+    ]
+  },
+  {
+    "id": 9,
+    "description": "A blue tang fish.",
+    "weights": [
+      0.9921301007270813,
+      0.0011852751486003399,
+      0.006684508640319109
+    ],
+    "rgb": [
+      29,
+      146,
+      251
+    ]
+  },
+  {
+    "id": 12,
+    "description": "A green sea turtle swimming.",
+    "weights": [
+      0.9970362186431885,
+      0.0016618615482002497,
+      0.0013020015321671963
+    ],
+    "rgb": [
+      47,
+      140,
+      90
+    ]
+  },
+  {
+    "id": 16,
+    "description": "Long green seaweed growing from the ocean floor.",
+    "weights": [
+      0.9989516735076904,
+      0.000657041440717876,
+      0.00039126764750108123
+    ],
+    "rgb": [
+      2,
+      127,
+      3
+    ]
+  },
+  {
+    "id": 17,
+    "description": "More seaweed growing from the ocean floor.",
+    "weights": [
+      0.9962177872657776,
+      0.00227746251039207,
+      0.0015047338092699647
+    ],
+    "rgb": [
+      5,
+      128,
+      6
+    ]
+  },
+  {
+    "id": 18,
+    "description": "Sunlight rays penetrating the water surface.",
+    "weights": [
+      0.9875016212463379,
+      0.006155018229037523,
+      0.0063433414325118065
+    ],
+    "rgb": [
+      171,
+      215,
+      230
+    ]
+  },
+  {
+    "id": 19,
+    "description": "More sunlight rays penetrating the water.",
+    "weights": [
+      0.9858158826828003,
+      0.00650835782289505,
+      0.0076756891794502735
+    ],
+    "rgb": [
+      173,
+      217,
+      230
+    ]
+  },
+  {
+    "id": 20,
+    "description": "A school of small silver fish swimming together.",
+    "weights": [
+      0.9836879968643188,
+      0.004144572652876377,
+      0.012167376466095448
+    ],
+    "rgb": [
+      191,
+      193,
+      195
+    ]
+  },
+  {
+    "id": 7,
+    "description": "White stripes on the clownfish.",
+    "weights": [
+      0.4901915490627289,
+      0.00045729379053227603,
+      0.5093511343002319
+    ],
+    "rgb": [
+      255,
+      253,
+      254
+    ]
+  },
+  {
+    "id": 8,
+    "description": "Another white stripe on the clownfish.",
+    "weights": [
+      0.6163729429244995,
+      0.0008095982484519482,
+      0.38281741738319397
+    ],
+    "rgb": [
+      255,
+      255,
+      253
+    ]
+  },
+  {
+    "id": 10,
+    "description": "A yellow fin on the blue tang fish.",
+    "weights": [
+      0.7181650400161743,
+      0.001257643336430192,
+      0.28057730197906494
+    ],
+    "rgb": [
+      254,
+      250,
+      6
+    ]
+  },
+  {
+    "id": 11,
+    "description": "A tail fin on the blue tang fish.",
+    "weights": [
+      0.9783447980880737,
+      0.0009805336594581604,
+      0.02067474275827408
+    ],
+    "rgb": [
+      30,
+      144,
+      249
+    ]
+  },
+  {
+    "id": 13,
+    "description": "The sea turtle's head.",
+    "weights": [
+      0.9934216141700745,
+      0.003623591735959053,
+      0.002954867435619235
+    ],
+    "rgb": [
+      46,
+      141,
+      93
+    ]
+  },
+  {
+    "id": 14,
+    "description": "The sea turtle's right flipper.",
+    "weights": [
+      0.9914321899414062,
+      0.004769701510667801,
+      0.003798143472522497
+    ],
+    "rgb": [
+      46,
+      141,
+      90
+    ]
+  },
+  {
+    "id": 15,
+    "description": "The sea turtle's left flipper.",
+    "weights": [
+      0.9939213991165161,
+      0.0033238374162465334,
+      0.0027547290083020926
+    ],
+    "rgb": [
+      46,
+      140,
+      90
+    ]
+  }
+]

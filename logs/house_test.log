@@ -1,0 +1,34 @@
+[INFO] [2025-04-23 16:09:40,233] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:09:40,234] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:09:40,234] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:09:43,432] Processing shapes in order: ['0:A black canvas that ...', '1:The white main body ...', '2:The brown roof of th...', '6:A green lawn in fron...', '3:A square window on t...', '4:A square window on t...', '5:A red door in the ce...']
+[INFO] [2025-04-23 16:09:43,544] Shape 0 weights: text=0.994, context=0.004, color=0.002
+[INFO] [2025-04-23 16:09:43,544] Shape 0 - 'A black canvas that contains a house design.' -> (1, 2, 2)
+[INFO] [2025-04-23 16:09:43,682] Shape 1 weights: text=0.559, context=0.001, color=0.440
+[INFO] [2025-04-23 16:09:43,682] Shape 1 - 'The white main body of the house.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:43,784] Shape 2 weights: text=0.992, context=0.004, color=0.004
+[INFO] [2025-04-23 16:09:43,784] Shape 2 - 'The brown roof of the house.' -> (135, 69, 20)
+[INFO] [2025-04-23 16:09:43,884] Shape 6 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:09:43,884] Shape 6 - 'A green lawn in front of the house.' -> (32, 140, 34)
+[INFO] [2025-04-23 16:09:43,996] Shape 3 weights: text=0.460, context=0.002, color=0.538
+[INFO] [2025-04-23 16:09:43,997] Shape 3 - 'A square window on the left side of the house. Windows are typically white.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:44,099] Shape 4 weights: text=0.456, context=0.002, color=0.542
+[INFO] [2025-04-23 16:09:44,099] Shape 4 - 'A square window on the right side of the house. Windows are typically white.' -> (255, 255, 254)
+[INFO] [2025-04-23 16:09:44,199] Shape 5 weights: text=0.984, context=0.001, color=0.015
+[INFO] [2025-04-23 16:09:44,199] Shape 5 - 'A red door in the center of the house.' -> (254, 2, 3)
+[INFO] [2025-04-23 16:09:44,227] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_house.png
+[INFO] [2025-04-23 16:09:44,227] Weight statistics summary:
+[INFO] [2025-04-23 16:09:44,227] Average weights: text=0.778, context=0.002, color=0.220
+[INFO] [2025-04-23 16:09:44,228] Dominant source patterns:
+[INFO] [2025-04-23 16:09:44,228]   text dominant: 71.4% of shapes
+[INFO] [2025-04-23 16:09:44,228]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:09:44,228]   Color dominant: 28.6% of shapes
+[INFO] [2025-04-23 16:09:44,228] Pairwise comparisons:
+[INFO] [2025-04-23 16:09:44,228]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:09:44,228]   Context > Color: 42.9% of shapes
+[INFO] [2025-04-23 16:09:44,229]   text > Color: 71.4% of shapes
+[INFO] [2025-04-23 16:09:44,230] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\house_weight_analysis.json
+[INFO] [2025-04-23 16:09:44,231] Highest text weight (0.998): Shape 6 - 'A green lawn in front of the house....'
+[INFO] [2025-04-23 16:09:44,231] Highest context weight (0.004): Shape 2 - 'The brown roof of the house....'
+[INFO] [2025-04-23 16:09:44,231] Highest color weight (0.542): Shape 4 - 'A square window on the right side of the house. Wi...'
+[INFO] [2025-04-23 16:09:44,231] Example with color dominance: Shape 3 - 'A square window on the left side of the house. Win...' - weights: [0.4602585434913635, 0.00196541054174304, 0.5377760529518127]

@@ -1,0 +1,198 @@
+[
+  {
+    "id": 0,
+    "description": "The bright blue sky.",
+    "weights": [
+      0.9975293278694153,
+      0.0014833440072834492,
+      0.000987365609034896
+    ],
+    "rgb": [
+      93,
+      205,
+      232
+    ]
+  },
+  {
+    "id": 1,
+    "description": "The bright yellow sun.",
+    "weights": [
+      0.7324562668800354,
+      0.006242938805371523,
+      0.2613006830215454
+    ],
+    "rgb": [
+      255,
+      251,
+      0
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A magnificent rainbow arching across the sky.",
+    "weights": [
+      0.8080439567565918,
+      0.0023381791543215513,
+      0.18961785733699799
+    ],
+    "rgb": [
+      253,
+      218,
+      171
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A fluffy cloud on the left side.",
+    "weights": [
+      0.8953033089637756,
+      0.005983677692711353,
+      0.09871308505535126
+    ],
+    "rgb": [
+      217,
+      197,
+      173
+    ]
+  },
+  {
+    "id": 4,
+    "description": "Another cloud near the center.",
+    "weights": [
+      0.8489089012145996,
+      0.006477260496467352,
+      0.14461378753185272
+    ],
+    "rgb": [
+      226,
+      193,
+      75
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A smaller cloud in the distance.",
+    "weights": [
+      0.9425768852233887,
+      0.006221173331141472,
+      0.05120204761624336
+    ],
+    "rgb": [
+      149,
+      117,
+      42
+    ]
+  },
+  {
+    "id": 6,
+    "description": "A commercial passenger airplane flying through the sky.",
+    "weights": [
+      0.8692329525947571,
+      0.0071118781343102455,
+      0.12365519255399704
+    ],
+    "rgb": [
+      194,
+      133,
+      115
+    ]
+  },
+  {
+    "id": 11,
+    "description": "A bird flying to the left of the airplane.",
+    "weights": [
+      0.9651913046836853,
+      0.008288362063467503,
+      0.02652040682733059
+    ],
+    "rgb": [
+      75,
+      73,
+      46
+    ]
+  },
+  {
+    "id": 12,
+    "description": "Another bird flying to the right of the airplane.",
+    "weights": [
+      0.9639977216720581,
+      0.010477721691131592,
+      0.025524597615003586
+    ],
+    "rgb": [
+      77,
+      89,
+      47
+    ]
+  },
+  {
+    "id": 13,
+    "description": "A third bird fly high near the sun.",
+    "weights": [
+      0.9348435401916504,
+      0.013540687039494514,
+      0.05161584913730621
+    ],
+    "rgb": [
+      83,
+      125,
+      12
+    ]
+  },
+  {
+    "id": 7,
+    "description": "The vertical tail fin of the airplane.",
+    "weights": [
+      0.970418393611908,
+      0.0023559562396258116,
+      0.027225608006119728
+    ],
+    "rgb": [
+      109,
+      137,
+      99
+    ]
+  },
+  {
+    "id": 8,
+    "description": "The left wing of the airplane.",
+    "weights": [
+      0.9810062646865845,
+      0.00666785566136241,
+      0.012325896881520748
+    ],
+    "rgb": [
+      208,
+      172,
+      59
+    ]
+  },
+  {
+    "id": 9,
+    "description": "The right wing of the airplane.",
+    "weights": [
+      0.9678654670715332,
+      0.007416148670017719,
+      0.024718385189771652
+    ],
+    "rgb": [
+      205,
+      185,
+      87
+    ]
+  },
+  {
+    "id": 10,
+    "description": "The cockpit windows at the front of the airplane.",
+    "weights": [
+      0.7477879524230957,
+      0.004361731465905905,
+      0.24785038828849792
+    ],
+    "rgb": [
+      254,
+      241,
+      211
+    ]
+  }
+]

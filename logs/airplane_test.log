@@ -1,0 +1,47 @@
+[INFO] [2025-04-23 16:08:34,837] Using model type: unconstrained_weight
+[INFO] [2025-04-23 16:08:34,837] Using unconstrained weight model with fully dynamic weights
+[INFO] [2025-04-23 16:08:34,837] Model determines optimal importance of description/context/color for each shape
+[INFO] [2025-04-23 16:08:38,167] Processing shapes in order: ['0:The bright blue sky....', '1:The bright yellow su...', '2:A magnificent rainbo...', '3:A fluffy cloud on th...', '4:Another cloud near t...', '5:A smaller cloud in t...', '6:A commercial passeng...', '11:A bird flying to the...', '12:Another bird flying ...', '13:A third bird fly hig...', '7:The vertical tail fi...', '8:The left wing of the...', '9:The right wing of th...', '10:The cockpit windows ...']
+[INFO] [2025-04-23 16:08:38,244] Shape 0 weights: text=0.998, context=0.001, color=0.001
+[INFO] [2025-04-23 16:08:38,244] Shape 0 - 'The bright blue sky.' -> (93, 205, 232)
+[INFO] [2025-04-23 16:08:38,315] Shape 1 weights: text=0.732, context=0.006, color=0.261
+[INFO] [2025-04-23 16:08:38,315] Shape 1 - 'The bright yellow sun.' -> (255, 251, 0)
+[INFO] [2025-04-23 16:08:38,399] Shape 2 weights: text=0.808, context=0.002, color=0.190
+[INFO] [2025-04-23 16:08:38,399] Shape 2 - 'A magnificent rainbow arching across the sky.' -> (253, 218, 171)
+[INFO] [2025-04-23 16:08:38,472] Shape 3 weights: text=0.895, context=0.006, color=0.099
+[INFO] [2025-04-23 16:08:38,472] Shape 3 - 'A fluffy cloud on the left side.' -> (217, 197, 173)
+[INFO] [2025-04-23 16:08:38,556] Shape 4 weights: text=0.849, context=0.006, color=0.145
+[INFO] [2025-04-23 16:08:38,556] Shape 4 - 'Another cloud near the center.' -> (226, 193, 75)
+[INFO] [2025-04-23 16:08:38,657] Shape 5 weights: text=0.943, context=0.006, color=0.051
+[INFO] [2025-04-23 16:08:38,657] Shape 5 - 'A smaller cloud in the distance.' -> (149, 117, 42)
+[INFO] [2025-04-23 16:08:38,743] Shape 6 weights: text=0.869, context=0.007, color=0.124
+[INFO] [2025-04-23 16:08:38,743] Shape 6 - 'A commercial passenger airplane flying through the sky.' -> (194, 133, 115)
+[INFO] [2025-04-23 16:08:38,822] Shape 11 weights: text=0.965, context=0.008, color=0.027
+[INFO] [2025-04-23 16:08:38,822] Shape 11 - 'A bird flying to the left of the airplane.' -> (75, 73, 46)
+[INFO] [2025-04-23 16:08:38,902] Shape 12 weights: text=0.964, context=0.010, color=0.026
+[INFO] [2025-04-23 16:08:38,903] Shape 12 - 'Another bird flying to the right of the airplane.' -> (77, 89, 47)
+[INFO] [2025-04-23 16:08:38,983] Shape 13 weights: text=0.935, context=0.014, color=0.052
+[INFO] [2025-04-23 16:08:38,983] Shape 13 - 'A third bird fly high near the sun.' -> (83, 125, 12)
+[INFO] [2025-04-23 16:08:39,061] Shape 7 weights: text=0.970, context=0.002, color=0.027
+[INFO] [2025-04-23 16:08:39,061] Shape 7 - 'The vertical tail fin of the airplane.' -> (109, 137, 99)
+[INFO] [2025-04-23 16:08:39,134] Shape 8 weights: text=0.981, context=0.007, color=0.012
+[INFO] [2025-04-23 16:08:39,134] Shape 8 - 'The left wing of the airplane.' -> (208, 172, 59)
+[INFO] [2025-04-23 16:08:39,210] Shape 9 weights: text=0.968, context=0.007, color=0.025
+[INFO] [2025-04-23 16:08:39,210] Shape 9 - 'The right wing of the airplane.' -> (205, 185, 87)
+[INFO] [2025-04-23 16:08:39,286] Shape 10 weights: text=0.748, context=0.004, color=0.248
+[INFO] [2025-04-23 16:08:39,286] Shape 10 - 'The cockpit windows at the front of the airplane.' -> (254, 241, 211)
+[INFO] [2025-04-23 16:08:39,312] Saved image to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\results\output_airplane.png
+[INFO] [2025-04-23 16:08:39,313] Weight statistics summary:
+[INFO] [2025-04-23 16:08:39,313] Average weights: text=0.902, context=0.006, color=0.092
+[INFO] [2025-04-23 16:08:39,313] Dominant source patterns:
+[INFO] [2025-04-23 16:08:39,313]   text dominant: 100.0% of shapes
+[INFO] [2025-04-23 16:08:39,313]   Context dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:39,313]   Color dominant: 0.0% of shapes
+[INFO] [2025-04-23 16:08:39,313] Pairwise comparisons:
+[INFO] [2025-04-23 16:08:39,313]   text > Context: 100.0% of shapes
+[INFO] [2025-04-23 16:08:39,313]   Context > Color: 7.1% of shapes
+[INFO] [2025-04-23 16:08:39,313]   text > Color: 100.0% of shapes
+[INFO] [2025-04-23 16:08:39,315] Saved weight analysis to C:\Users\raman\OneDrive\Documents\GitHub\color_picker_context_based_model\weight_analysis\airplane_weight_analysis.json
+[INFO] [2025-04-23 16:08:39,315] Highest text weight (0.998): Shape 0 - 'The bright blue sky....'
+[INFO] [2025-04-23 16:08:39,315] Highest context weight (0.014): Shape 13 - 'A third bird fly high near the sun....'
+[INFO] [2025-04-23 16:08:39,315] Highest color weight (0.261): Shape 1 - 'The bright yellow sun....'

@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "description": "A white canvas with shapes that have conflicting color descriptions.",
+    "weights": [
+      0.5152220129966736,
+      0.002811112441122532,
+      0.48196694254875183
+    ],
+    "rgb": [
+      249,
+      249,
+      252
+    ]
+  },
+  {
+    "id": 1,
+    "description": "A red container shape.",
+    "weights": [
+      0.902302086353302,
+      0.0023155040107667446,
+      0.09538233280181885
+    ],
+    "rgb": [
+      252,
+      5,
+      2
+    ]
+  },
+  {
+    "id": 3,
+    "description": "A green container shape.",
+    "weights": [
+      0.9857834577560425,
+      0.005148193798959255,
+      0.009068415500223637
+    ],
+    "rgb": [
+      3,
+      129,
+      1
+    ]
+  },
+  {
+    "id": 5,
+    "description": "A yellow container at the bottom.",
+    "weights": [
+      0.5685670971870422,
+      0.005776193458586931,
+      0.4256567358970642
+    ],
+    "rgb": [
+      255,
+      248,
+      4
+    ]
+  },
+  {
+    "id": 7,
+    "description": "This rgb(255,0,0) shape is inside a parent with ambiguous coloring.",
+    "weights": [
+      0.98921799659729,
+      0.006423889193683863,
+      0.004358116537332535
+    ],
+    "rgb": [
+      251,
+      6,
+      4
+    ]
+  },
+  {
+    "id": 8,
+    "description": "This shape has no explicit color and should inherit visual cues from context.",
+    "weights": [
+      0.927696168422699,
+      0.0153982387855649,
+      0.056905679404735565
+    ],
+    "rgb": [
+      129,
+      129,
+      131
+    ]
+  },
+  {
+    "id": 2,
+    "description": "A blue shape inside the red container, but the documentation says this should remain blue despite the parent being red.",
+    "weights": [
+      0.9979227185249329,
+      0.001113809528760612,
+      0.0009634328889660537
+    ],
+    "rgb": [
+      3,
+      5,
+      249
+    ]
+  },
+  {
+    "id": 4,
+    "description": "This shape should be green like its parent.",
+    "weights": [
+      0.9896435737609863,
+      0.00582931051030755,
+      0.004527052864432335
+    ],
+    "rgb": [
+      5,
+      128,
+      6
+    ]
+  },
+  {
+    "id": 6,
+    "description": "This shape is described as purple, but its parent is yellow. The purple description should take precedence.",
+    "weights": [
+      0.9843974709510803,
+      0.0073843891732394695,
+      0.008218127302825451
+    ],
+    "rgb": [
+      125,
+      4,
+      127
+    ]
+  }
+]
